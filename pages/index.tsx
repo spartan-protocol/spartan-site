@@ -9,7 +9,7 @@ import ChainSection from 'components/Home/ChainSection'
 const Home = () => (
   <>
     <Head>
-      <title>THORChain</title>
+      <title>SPARTAN PROTOCOL</title>
     </Head>
     <HeroSection />
     <FeaturesSection />

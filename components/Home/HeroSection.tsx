@@ -7,7 +7,7 @@ export const HeroSection: FC = () => (
       <div className="container">
         <div className="row">
           <div className="col-lg-6 col-md-12">
-            <div className="row" style={{ marginTop: '100px' }}>
+            <div className="row" style={{ marginTop: '80px' }}>
               <h1 style={{ color: '#A80005' }}>SPARTAN PROTOCOL</h1>
               <br /><br /><br />
               <h5>A PROTOCOL FOR INCENTIVISED LIQUIDITY AND SYNTHETIC ASSETS ON BINANCE SMART CHAIN</h5>

@@ -3,9 +3,9 @@ import React, { FC } from 'react'
 import Logo from 'assets/spartan-logo.png'
 
 export const Footer: FC = () => (
-  <footer id="footer" className="container-fluid p-20px">
-    <div className="container" style={{ backgroundColor: '#000000'}}>
-      <div className="row"style={{ backgroundColor: '#000000'}}>
+  <footer id="footer" className="container-fluid p-20px" style={{ backgroundColor: '#000000'}}>
+    <div className="container">
+      <div className="row" >
         <div className="col-md-4" style={{ height: '30px' }}>
           <img style={{ height: '30px' }} className="img-fluid" src={Logo} />
         </div>
