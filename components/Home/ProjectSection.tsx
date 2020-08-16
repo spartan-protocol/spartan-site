@@ -24,7 +24,7 @@ export const ProjectSection: FC = () => (
               <li>The protocol is autonomous and does not need ongoing maintenance.</li>
             </ul>
           </div>
-          <div className="col-12 pt-5vh">
+          {/* <div className="col-12 pt-5vh">
             <a
               href="https://coinmarketcap.com/currencies/spartan/"
               target="_blank"
@@ -32,7 +32,7 @@ export const ProjectSection: FC = () => (
             >
               LEARN MORE
                   </a>
-          </div>
+          </div> */}
         </div>
         <div className="col-lg-4 col-md-12 pt-5vh">
           <img className="img-fluid"  src={require('assets/spartan-group.png')} />

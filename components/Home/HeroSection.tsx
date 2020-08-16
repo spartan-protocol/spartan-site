@@ -18,29 +18,29 @@ export const HeroSection: FC = () => (
             </div>
             <div className="row text-left">
               <div className="col-12" style={{ fontSize: '1.5rem' }}>
-                <a href="https://twitter.com/spartan_org" target="_blank">
+                <a href="https://spartanprotocol.org" target="_blank">
                   <i className="text-grey mx-10px fab fa-twitter" />
                 </a>
-                <a href="https://reddit.com/r/spartan" target="_blank">
+                <a href="https://spartanprotocol.org" target="_blank">
                   <i className="text-grey mx-10px fab fa-reddit" />
                 </a>
-                <a href="https://gitlab.com/spartan" target="_blank">
+                <a href="https://spartanprotocol.org" target="_blank">
                   <i className="text-grey mx-10px fab fa-gitlab" />
                 </a>
-                <a href="https://t.me/spartan_org" target="_blank">
+                <a href="https://spartanprotocol.org" target="_blank">
                   <i className="text-grey mx-10px fab fa-telegram-plane" />
                 </a>
-                <a href="https://discord.gg/V6pNp8A" target="_blank">
+                <a href="https://spartanprotocol.org" target="_blank">
                   <i className="text-grey mx-10px fab fa-discord" />
                 </a>
-                <a href="https://medium.com/spartan" target="_blank">
+                <a href="https://spartanprotocol.org" target="_blank">
                   <i className="text-grey mx-10px fab fa-medium" />
                 </a>
               </div>
               <div className="col-12" style={{ marginTop: '40px' }}>
                 <h5>
                   <a
-                    href="https://coinmarketcap.com/currencies/spartan/"
+                    href="https://github.com/spartan-protocol/resources/blob/master/whitepaper.pdf"
                     target="_blank"
                     style={{ color: '#A80005', fontSize: '18px' }}
                   >

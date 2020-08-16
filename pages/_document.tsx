@@ -34,11 +34,11 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="PERLIN" />
-          {/* <meta property="og:image" content="https://thorchain.org/images/preview-thorchain.png" /> */}
-          <meta property="og:description" content="PERLIN - digital asset liquidity engine" />
-          <meta property="og:url" content="https://spartan.finance" />
-          {/* <meta name="twitter:card" content="https://thorchain.org/images/preview-thorchain.png" /> */}
+          <meta property="og:title" content="SPARTAN PROTOCOL" />
+          <meta property="og:image" content="https://spartanprotocol.org/assets/preview-spartan.png" />
+          <meta property="og:description" content="A PROTOCOL FOR INCENTIVISED LIQUIDITY AND SYNTHETIC ASSETS" />
+          <meta property="og:url" content="https://spartanprotocol.org" />
+          <meta name="twitter:card" content="https://spartanprotocol.org/assets/preview-spartan.png" />
           <meta
             name="keywords"
             content="Liquidity, Swap Assets"
@@ -51,6 +51,11 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Roboto:300,400|Open+Sans:200,300,400|Titan+One"
             rel="stylesheet"
           />
+
+          <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
+          <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
+
+
         </Head>
         <body>
           <Main />

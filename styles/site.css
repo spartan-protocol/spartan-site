@@ -16,7 +16,9 @@
   max-height: 100%;
   overflow: auto;
 }
-
+.text-center {
+  text-align: center;
+}
 
 html,
 body {
@@ -117,10 +119,21 @@ h1 {
   border-radius: 10px;
 }
 
-.rune-img {
-  height: 50px;
-  padding-right: 10px;
+/* .img-fluid {
+  width: 100%;
+  display: none;
 }
+
+@media screen and (max-width: 600px) {
+  #img-fluid {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+} */
 
 .flash-connect-line {
   width: 5px;
@@ -141,9 +154,6 @@ h1 {
     box-shadow: 0 0 10px 0 #FF0000;
   }
 }
-
-
-
 
 
 .divider-div {

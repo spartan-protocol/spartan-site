@@ -4,14 +4,14 @@ export const FeaturesSection: FC = () => (
   <>
     <div className="container-fluid grey-bg min-h-60v pt-10vh pb-10vh">
       <div className="container">
+      <h2 className="my-5 text-center ">LIQUIDITY POOLS</h2>
         <div className="row">
           <div className="col-lg-6 min-h-40v">
-            <div className="col-12 pt-10vh">
+            <div className="col-12 pt-5vh">
               <img className="img-fluid" src={require('assets/spartan-pools.png')} />
             </div>
           </div>
           <div className="col-lg-6 col-md-12">
-            <h2 className="my-5">LIQUIDITY POOLS</h2>
             <div className="col-12 desc-paragraph">
               <p>The heart of the Spartan Protocol are its incentivised liquidity pools, driving on-market capital formation. </p>
               <p>The liquidity pools are facilitated by an automated-market-maker (AMM) algorithm with liquidity-sensitive fees.  </p>
@@ -33,16 +33,9 @@ export const FeaturesSection: FC = () => (
     </div>
     <div className="container-fluid lgrey-bg min-h-60v pt-10vh pb-10vh" id="STAKE">
       <div className="container">
+      <h2 className="my-5 text-center ">SYNTHETIC ASSET GENERATION</h2>
         <div className="row">
-          <div className="col-lg-6 text-center" />
           <div className="col-lg-6 col-md-12">
-
-          </div>
-        </div>
-        <div className="row">
-
-          <div className="col-lg-6 col-md-12">
-            <h2 className="my-5">SYNTHETIC ASSET GENERATION</h2>
             <div className="container  desc-paragraph">
               <p>The Spartan Protocol allows the generation of synthetic assets, using price anchors offered by its own liquidity pools, collaterised by liquidity pool shares. </p>
               <p>Liquidity pool shares are on-market, value-stabilised and can be instantly liquidated. </p>
@@ -62,7 +55,7 @@ export const FeaturesSection: FC = () => (
               </div>
             </div>
           </div>
-          <div className="col-lg-6 pt-20vh text-center">
+          <div className="col-lg-6 pt-10vh text-center">
             <div className="container">
               <div className="col">
                 <img className="img-fluid" src={require('assets/synthetics.png')} />
@@ -74,12 +67,12 @@ export const FeaturesSection: FC = () => (
     </div>
     <div className="container-fluid grey-bg min-h-60v pt-10vh pb-10vh" id="NODE">
       <div className="container">
+      <h2 className="my-5  text-center ">LENDING AND DERIVATIVES</h2>
         <div className="row">
-
-          <div className="col-lg-6 text-center my-5">
-            <div className="container pt-10vh">
+          <div className="col-lg-6 my-5">
+            <div className="container">
               <div className="row">
-                <div className="col mx-3 ">
+                <div className="col">
                   <img className="img-fluid" style={{ width: 200 }} src={require('assets/lending.png')} />
                 </div>
               </div>
@@ -87,7 +80,6 @@ export const FeaturesSection: FC = () => (
           </div>
 
           <div className="col-lg-6 col-md-12">
-            <h2 className="my-5">LENDING AND DERIVATIVES</h2>
             <div className="col-12 desc-paragraph">
 
               <p>Synthetic asset minters are short the value of the asset, and long the value of their collateral. By winding up their position, they can achieve leverage. The opposite is also true for those wishing to leverage long an asset.</p>

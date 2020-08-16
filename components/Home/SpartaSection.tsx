@@ -37,7 +37,7 @@ export const RuneSection: FC = () => (
           </div>
           <div className="col-12 pt-5vh">
             <a
-              href="https://coinmarketcap.com/currencies/spartan/"
+              href="https://github.com/spartan-protocol/resources/blob/master/whitepaper.pdf"
               target="_blank"
               style={{ color: '#A80005', fontSize: '18px' }}
             >
