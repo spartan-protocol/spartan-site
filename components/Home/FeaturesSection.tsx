@@ -19,11 +19,7 @@ export const FeaturesSection: FC = () => (
             </div>
             <div className="row my-5">
               <div className="col-12 py-1">
-                <h5>
-                  {/* <a href="https://app.bepswap.com" target="_blank" style={{ color: '#53AEE2' }}>
-                    LEARN MORE
-                  </a> */}
-                </h5>
+                
               </div>
             </div>
           </div>
@@ -43,15 +39,7 @@ export const FeaturesSection: FC = () => (
             </div>
             <div className="row my-5">
               <div className="col-12 py-1 mx-1">
-                <h5>
-                  {/* <a
-                    href="https://app.bepswap.com/pool/stakingintro"
-                    target="_blank"
-                    style={{ color: '#53AEE2' }}
-                  >
-                    LEARN MORE
-                  </a> */}
-                </h5>
+               
               </div>
             </div>
           </div>

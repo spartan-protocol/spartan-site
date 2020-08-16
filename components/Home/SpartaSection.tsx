@@ -1,7 +1,8 @@
 import React, { FC } from 'react'
+import Link from 'next/link'
 
-export const RuneSection: FC = () => (
-  <div className="container-fluid min-h-60v pb-10vh" id="RUNE">
+export const SpartaSection: FC = () => (
+  <div className="container-fluid lgrey-bg min-h-60v pb-10vh" id="RUNE">
     <div className="container">
       <div className="row text-center  pt-10vh">
         <div className="col-12 pb-50">
@@ -36,13 +37,9 @@ export const RuneSection: FC = () => (
             </div>
           </div>
           <div className="col-12 pt-5vh">
-            <a
-              href="https://github.com/spartan-protocol/resources/blob/master/whitepaper.pdf"
-              target="_blank"
-              style={{ color: '#A80005', fontSize: '18px' }}
-            >
-              LEARN MORE
-                  </a>
+            <Link href="/sparta">
+            <div className="btn-thor">GET SPARTA</div>
+            </Link>
           </div>
         </div>
       </div>
@@ -50,4 +47,4 @@ export const RuneSection: FC = () => (
   </div>
 )
 
-export default RuneSection
+export default SpartaSection

@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 
 export const RuneSection: FC = () => (
-  <div className="container-fluid min-h-60v pb-10vh" id="RUNE">
+  <div className="container-fluid lgrey-bg min-h-60v pb-10vh" id="RUNE">
     <div className="container">
       <div className="row text-center  pt-10vh">
         <div className="col-12 pb-50">

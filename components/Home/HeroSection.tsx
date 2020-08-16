@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import Link from 'next/link'
 
 export const HeroSection: FC = () => (
   <section id="top">
@@ -38,15 +39,15 @@ export const HeroSection: FC = () => (
                 </a>
               </div>
               <div className="col-12" style={{ marginTop: '40px' }}>
-                <h5>
-                  <a
-                    href="https://github.com/spartan-protocol/resources/blob/master/whitepaper.pdf"
+                <a href="https://github.com/spartan-protocol/resources/blob/master/whitepaper.pdf"
                     target="_blank"
-                    style={{ color: '#A80005', fontSize: '18px' }}
-                  >
-                    READ THE WHITEPAPER
+                    style={{ color: '#A80005', fontSize: '18px' }} >
+                    <div className="btn-thor">WHITEPAPER</div>
                   </a>
-                </h5>
+                <br/>
+                <Link href="/sparta">
+                <div className="btn-thor">GET SPARTA</div>
+                </Link>
               </div>
             </div>
           </div>

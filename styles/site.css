@@ -24,7 +24,7 @@ html,
 body {
   max-width: 100%;
   overflow-x: hidden;
-  background-color: #0A0001;
+  background-color: #050303;
   color: white;
 }
 
@@ -45,10 +45,10 @@ ul {
   color: rgba(255, 255, 255, 0.75);
 }
 .grey-bg {
-  background-color: #000;
+  background-color: #0A0001;
 }
 .lgrey-bg {
-  background-color: #0A0001;
+  background-color: #161616;
 }
 
 .section-divider {
@@ -92,13 +92,14 @@ h1 {
 .btn-thor {
   position: relative;
   color: white;
-  border: 4px solid transparent;
+  border: 1px solid #FF0000;
   border-radius: 10px;
   background: #0A0001;
   background-clip: padding-box;
   padding: 5px;
   transition: all 0.5s;
-  min-width: 200px;
+  width: 200px;
+  text-align: center;
 }
 
 .btn-thor:hover {
@@ -312,9 +313,10 @@ h1 {
 #top {
   width: 100vw;
   background-repeat: no-repeat;
-  background-image: url('../assets/spartan-bg.jpeg');
-  background-size: 70%;
+  background-image: url('../assets/spartan-bg.jpg');
+  background-size: 100%;
   background-position: 100% 0%;
+  background-color: '#050303'
 }
 
 
