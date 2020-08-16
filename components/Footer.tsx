@@ -17,8 +17,8 @@ export const Footer: FC = () => (
                 <a href="https://spartanprotocol.org" target="_blank">
                   <i className="text-grey mx-10px fab fa-reddit" />
                 </a>
-                <a href="https://spartanprotocol.org" target="_blank">
-                  <i className="text-grey mx-10px fab fa-gitlab" />
+                <a href="https://github.com/spartan-protocol" target="_blank">
+                  <i className="text-grey mx-10px fab fa-github" />
                 </a>
                 <a href="https://spartanprotocol.org" target="_blank">
                   <i className="text-grey mx-10px fab fa-telegram-plane" />
