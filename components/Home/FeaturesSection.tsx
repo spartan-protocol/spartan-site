@@ -7,7 +7,7 @@ export const FeaturesSection: FC = () => (
       <h2 className="my-5 text-center ">LIQUIDITY POOLS</h2>
         <div className="row">
           <div className="col-lg-6 min-h-40v">
-            <div className="col-12 pt-5vh">
+            <div className="col-12">
               <img className="img-fluid" src={require('assets/spartan-pools.png')} />
             </div>
           </div>
@@ -57,11 +57,11 @@ export const FeaturesSection: FC = () => (
       <div className="container">
       <h2 className="my-5  text-center ">LENDING AND DERIVATIVES</h2>
         <div className="row">
-          <div className="col-lg-6 my-5">
+          <div className="col-lg-6">
             <div className="container">
               <div className="row">
                 <div className="col">
-                  <img className="img-fluid" style={{ width: 200 }} src={require('assets/lending.png')} />
+                  <img className="img-fluid" style={{ width: 400 }} src={require('assets/lending.png')} />
                 </div>
               </div>
             </div>
