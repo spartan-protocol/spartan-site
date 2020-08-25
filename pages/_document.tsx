@@ -47,6 +47,7 @@ export default class MyDocument extends Document {
             name="viewport"
             content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"
           />
+          <meta name="google-site-verification" content="lMyRmPCukXIx7zODSb7jqgrMw-67IjkVHZNbkNGfgXs" />
           <link
             href="https://fonts.googleapis.com/css?family=Roboto:300,400|Open+Sans:200,300,400|Titan+One"
             rel="stylesheet"
@@ -54,7 +55,6 @@ export default class MyDocument extends Document {
 
           <link rel="shortcut icon" href="/static/favicon.png" type="image/x-icon" />
           <link rel="icon" href="/static/favicon.png" type="image/x-icon" />
-
 
         </Head>
         <body>
