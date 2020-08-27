@@ -34,11 +34,11 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="SPARTAN PROTOCOL" />
-          <meta property="og:image" content="https://spartanprotocol.org/static/preview-spartan.png" />
-          <meta property="og:description" content="A PROTOCOL FOR INCENTIVISED LIQUIDITY AND SYNTHETIC TOKEN" />
+          <meta property="og:title" content="Spartan Protocol" />
+          <meta property="og:image" content="https://spartanprotocol.org/spartan-preview.png" />
+          <meta property="og:description" content="A protocol for incentivised liquidity and synthetic tokens" />
           <meta property="og:url" content="https://spartanprotocol.org" />
-          <meta name="twitter:card" content="https://spartanprotocol.org/static/preview-spartan.png" />
+          <meta name="twitter:card" content="https://spartanprotocol.org/spartan-preview.png" />
           <meta
             name="keywords"
             content="Liquidity, Swap Assets"
@@ -53,8 +53,8 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          <link rel="shortcut icon" href="/static/favicon.png" type="image/ico" />
-          <link rel="icon" href="/static/favicon.png" type="image/ico" />
+          <link rel="shortcut icon" href="/favicon.png" type="image/ico" />
+          <link rel="icon" href="/favicon.png" type="image/ico" />
 
         </Head>
         <body>
