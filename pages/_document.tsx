@@ -36,7 +36,7 @@ export default class MyDocument extends Document {
           <meta property="og:type" content="website" />
           <meta property="og:title" content="SPARTAN PROTOCOL" />
           <meta property="og:image" content="https://spartanprotocol.org/static/preview-spartan.png" />
-          <meta property="og:description" content="A PROTOCOL FOR INCENTIVISED LIQUIDITY AND SYNTHETIC ASSETS" />
+          <meta property="og:description" content="A PROTOCOL FOR INCENTIVISED LIQUIDITY AND SYNTHETIC TOKEN" />
           <meta property="og:url" content="https://spartanprotocol.org" />
           <meta name="twitter:card" content="https://spartanprotocol.org/static/preview-spartan.png" />
           <meta

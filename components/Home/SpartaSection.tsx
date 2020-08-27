@@ -11,7 +11,7 @@ export const SpartaSection: FC = () => (
             className="bg-spartan-gradient-center"
             style={{ margin: '20px auto', height: '2px', width: '75%' }}
           />
-          <h5>A programmable incentive asset, fixed in supply, emitted for participation.</h5>
+          <h5>A programmable incentive token, fixed in supply, emitted for participation.</h5>
         </div>
       </div>
       <div className="row pt-5vh">
@@ -20,7 +20,7 @@ export const SpartaSection: FC = () => (
           <div className="container">
             <div className="row">
               <div className="col">
-                <img className="img-fluid" style={{ width: 200 }} src={require('assets/supply-circle.png')} />
+                <img className="img-fluid" style={{ width: 200 }} src={require('tokens/supply-circle.png')} />
               </div>
             </div>
           </div>
@@ -29,7 +29,7 @@ export const SpartaSection: FC = () => (
           <div className="col-12">
             <div className="container desc-paragraph">
               <ul>
-                <li>A programmable incentive asset with a reward stream. </li>
+                <li>A programmable incentive token with a reward stream. </li>
                 <li>Initial supply of 100 million distributed to a minimum of 9000 members from 30 selected Binance Chain projects using Proof-of-Burn.</li>
                 <li>Daily liquidity incentives beginning at 30% APY reducing over 10 years.</li>
                 <li>Maximum supply of 300 million.</li>

@@ -13,7 +13,7 @@ export const HeroSection: FC = () => (
               <h5>A PROTOCOL FOR INCENTIVISED LIQUIDITY AND SYNTHETIC ASSETS ON BINANCE SMART CHAIN</h5>
               <br /><br />
               <p  style={{ fontSize: 20 }} className="desc-paragraph">
-                The Spartan Protocol incentivises the formation of capital in liquidity pools, such that they can be used for synthetic asset generation, lending, derivatives and more.
+                The Spartan Protocol incentivises the formation of capital in liquidity pools, such that they can be used for synthetic token generation, lending, derivatives and more.
                 </p>
               <br />
             </div>

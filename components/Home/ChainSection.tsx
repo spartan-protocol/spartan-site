@@ -19,7 +19,7 @@ export const RuneSection: FC = () => (
           <div className="container pt-10vh">
             <div className="row">
               <div className="col">
-                <img className="img-fluid" style={{ width: 200 }} src={require('assets/bsc.png')} />
+                <img className="img-fluid" style={{ width: 200 }} src={require('tokens/bsc.png')} />
               </div>
             </div>
           </div>
@@ -30,7 +30,7 @@ export const RuneSection: FC = () => (
               <ul>
                 <li>The project is a directional bet on Binance Smart Chain. Do not acquire $SPARTA if you do not subscribe to this direction.</li>
                 <li>Binance Smart Chain is an EVM-compatible delegated-PoS blockchain, with fast (3-sec) blocktimes, good developer support and sufficient decentralisation.</li>
-                <li>The BEP2 asset community is second only to the ERC-20 community, and all can be linked to Binance Smart Chain. </li>
+                <li>The BEP2 token community is second only to the ERC-20 community, and all can be linked to Binance Smart Chain. </li>
                 <li>This project may fail, despite best attempts. Know the risks. </li>
               </ul>
             </div>

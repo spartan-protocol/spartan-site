@@ -313,7 +313,7 @@ h1 {
 #top {
   width: 100vw;
   background-repeat: no-repeat;
-  background-image: url('../assets/spartan-bg.jpg');
+  background-image: url('../tokens/spartan-bg.jpg');
   background-size: 100%;
   background-position: 100% 0%;
   background-color: '#050303'
