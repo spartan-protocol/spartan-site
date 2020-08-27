@@ -18,7 +18,7 @@ export const ProjectSection: FC = () => (
           <div className="container desc-paragraph">
             <ul>
               <li>The project is galvanized by the communities of former Binance Chain projects.</li>
-              <li>Individual token holders destroy their previous tokens to acquire $SPARTA.</li>
+              <li>Individual token holders destroy their previous assets to acquire $SPARTA.</li>
               <li>30 Binance Chain projects selected to participate.</li>
               <li>The project begins decentralised from Day 0; there is no official team and no treasury.</li>
               <li>The protocol is autonomous and does not need ongoing maintenance.</li>
@@ -35,7 +35,7 @@ export const ProjectSection: FC = () => (
           </div> */}
         </div>
         <div className="col-lg-4 col-md-12 pt-5vh">
-          <img className="img-fluid"  src={require('tokens/spartan-group.png')} />
+          <img className="img-fluid"  src={require('assets/spartan-group.png')} />
         </div>
       </div>
     </div>

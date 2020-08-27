@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-// import Logo from 'tokens/spartan-logo.png'
+// import Logo from 'assets/spartan-logo.png'
 
 export const Header: FC = () => (
   <nav id="mainNav" className="navbar navbar-expand-lg">

@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-import Logo from 'tokens/spartan-logo.png'
+import Logo from 'assets/spartan-logo.png'
 
 export const Footer: FC = () => (
   <footer id="footer" className="container-fluid p-20px" style={{ backgroundColor: '#000000'}}>

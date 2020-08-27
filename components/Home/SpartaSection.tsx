@@ -20,7 +20,7 @@ export const SpartaSection: FC = () => (
           <div className="container">
             <div className="row">
               <div className="col">
-                <img className="img-fluid" style={{ width: 200 }} src={require('tokens/supply-circle.png')} />
+                <img className="img-fluid" style={{ width: 200 }} src={require('assets/supply-circle.png')} />
               </div>
             </div>
           </div>

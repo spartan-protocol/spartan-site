@@ -8,7 +8,7 @@ export const FeaturesSection: FC = () => (
         <div className="row">
           <div className="col-lg-6 min-h-40v">
             <div className="col-12">
-              <img className="img-fluid" src={require('tokens/spartan-pools.png')} />
+              <img className="img-fluid" src={require('assets/spartan-pools.png')} />
             </div>
           </div>
           <div className="col-lg-6 col-md-12">
@@ -33,7 +33,7 @@ export const FeaturesSection: FC = () => (
         <div className="row">
           <div className="col-lg-6 col-md-12">
             <div className="container  desc-paragraph">
-              <p>The Spartan Protocol allows the generation of synthetic tokens, using price anchors offered by its own liquidity pools, collaterised by liquidity pool shares. </p>
+              <p>The Spartan Protocol allows the generation of synthetic assets, using price anchors offered by its own liquidity pools, collaterised by liquidity pool shares. </p>
               <p>Liquidity pool shares are on-market, value-stabilised and can be instantly liquidated. </p>
               <p>Liquidity-sensitive fees ensure positions taken up scale with the depth of available liquidity, preventing deleveraging spirals common to other systems.</p>
             </div>
@@ -46,7 +46,7 @@ export const FeaturesSection: FC = () => (
           <div className="col-lg-6 pt-10vh text-center">
             <div className="container">
               <div className="col">
-                <img className="img-fluid" src={require('tokens/synthetics.png')} />
+                <img className="img-fluid" src={require('assets/synthetics.png')} />
               </div>
             </div>
           </div>
@@ -61,7 +61,7 @@ export const FeaturesSection: FC = () => (
             <div className="container">
               <div className="row">
                 <div className="col">
-                  <img className="img-fluid" style={{ width: 400 }} src={require('tokens/lending.png')} />
+                  <img className="img-fluid" style={{ width: 400 }} src={require('assets/lending.png')} />
                 </div>
               </div>
             </div>

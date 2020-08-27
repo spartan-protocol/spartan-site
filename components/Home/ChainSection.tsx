@@ -19,7 +19,7 @@ export const RuneSection: FC = () => (
           <div className="container pt-10vh">
             <div className="row">
               <div className="col">
-                <img className="img-fluid" style={{ width: 200 }} src={require('tokens/bsc.png')} />
+                <img className="img-fluid" style={{ width: 200 }} src={require('assets/bsc.png')} />
               </div>
             </div>
           </div>
@@ -39,7 +39,7 @@ export const RuneSection: FC = () => (
             <a
               href="https://www.binance.org/en/smartChain"
               target="_blank"
-              style={{ color: '#A80005', fontSize: '18px' }}
+              style={{ color: '#C7692B', fontSize: '18px' }}
             >
               LEARN MORE
                   </a>

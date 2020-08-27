@@ -92,7 +92,7 @@ h1 {
 .btn-thor {
   position: relative;
   color: white;
-  border: 1px solid #FF0000;
+  border: 1px solid #C7692B;
   border-radius: 10px;
   background: #0A0001;
   background-clip: padding-box;
@@ -103,7 +103,7 @@ h1 {
 }
 
 .btn-thor:hover {
-  background: #FF0000;
+  background: #C7692B;
   color: white;
   transition: all 0.5s;
 }
@@ -114,7 +114,7 @@ h1 {
   bottom: -2px;
   left: -2px;
   right: -2px;
-  background: linear-gradient(45deg, #A80005, #FF0000);
+  background: linear-gradient(45deg, #A80005, #C7692B);
   content: '';
   z-index: -1;
   border-radius: 10px;
@@ -146,13 +146,13 @@ h1 {
 }
 @keyframes flashShadowsGreen {
   0% {
-    box-shadow: 0 0 10px 0 #FF0000;
+    box-shadow: 0 0 10px 0 #C7692B;
   }
   50% {
     box-shadow: 0 0 10px 0 #A80005;
   }
   100% {
-    box-shadow: 0 0 10px 0 #FF0000;
+    box-shadow: 0 0 10px 0 #C7692B;
   }
 }
 
@@ -173,16 +173,16 @@ h1 {
 
 
 .bg-spartan-blue {
-  background-color: #FF0000;
+  background-color: #C7692B;
 }
 .bg-spartan-green {
   background-color: #A80005;
 }
 .green-bg-transparent-left {
-  background: linear-gradient(90deg, #FF0000 0%, #A80005 100%);
+  background: linear-gradient(90deg, #C7692B 0%, #A80005 100%);
 }
 .green-bg-transparent-right {
-  background: linear-gradient(90deg, #FF0000 100%, #A80005 0%);
+  background: linear-gradient(90deg, #C7692B 100%, #A80005 0%);
 }
 .blue-bg-transparent-left {
   background: linear-gradient(90deg, rgba(0, 204, 255, 0) 0%, #A80005 100%);
@@ -203,37 +203,37 @@ h1 {
   background: linear-gradient(
     to left,
     #A80005 0%,
-    #FF0000
+    #C7692B
   ); /* w3c */
 }
 .bg-spartan-gradient-right {
   background: linear-gradient(
     90deg,
     #A80005 0%,
-    #FF0000
+    #C7692B
   ); /* w3c */
 }
 .bg-spartan-gradient-left-solid {
   background: linear-gradient(
     to left,
-    #FF0000 0%,
+    #C7692B 0%,
     #A80005 100%
   ); /* w3c */
 }
 .bg-spartan-gradient-right-solid {
-  background: linear-gradient(90deg, #FF0000 0%, #A80005 100%); /* w3c */
+  background: linear-gradient(90deg, #C7692B 0%, #A80005 100%); /* w3c */
 }
 .bg-spartan-gradient-top-solid {
   background: linear-gradient(
     to top,
-    #FF0000 0%,
+    #C7692B 0%,
     #A80005 100%
   ); /* w3c */
 }
 .bg-spartan-gradient-bottom-solid {
   background: linear-gradient(
     to bottom,
-    #FF0000 0%,
+    #C7692B 0%,
     #A80005 100%
   ); /* w3c */
 }
@@ -244,7 +244,7 @@ h1 {
   text-decoration: none;
 }
 .spartan-component {
-  background: #FF0000;
+  background: #C7692B;
   color: white;
   text-decoration: none;
   min-height: 150px;
@@ -277,16 +277,16 @@ h1 {
 .bg-spartan-gradient-center-solid {
   background: linear-gradient(
     90deg,
-    #FF0000 0%,
+    #C7692B 0%,
     #A80005 50%,
-    #FF0000 100%
+    #C7692B 100%
   ); /* w3c */
 }
 .bg-spartan-gradient-center {
   background: linear-gradient(
     90deg,
     #A80005 0%,
-    #FF0000 50%,
+    #C7692B 50%,
     #A80005 100%
   ); /* w3c */
 }
@@ -303,7 +303,7 @@ h1 {
 .social-icon-gradient,
 .social-icon-gradient:before {
   font-size: 1.5rem;
-  background: linear-gradient(to right, #FF0000 0%, #A80005 100%);
+  background: linear-gradient(to right, #C7692B 0%, #A80005 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -313,7 +313,7 @@ h1 {
 #top {
   width: 100vw;
   background-repeat: no-repeat;
-  background-image: url('../tokens/spartan-bg.jpg');
+  background-image: url('../assets/spartan-bg.jpg');
   background-size: 100%;
   background-position: 100% 0%;
   background-color: '#050303'

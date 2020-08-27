@@ -12,7 +12,7 @@ export const HeroSection: FC = () => (
               <br /><br /><br />
               <h5>A PROTOCOL FOR INCENTIVISED LIQUIDITY AND SYNTHETIC ASSETS ON BINANCE SMART CHAIN</h5>
               <br /><br />
-              <p  style={{ fontSize: 20 }} className="desc-paragraph">
+              <p style={{ fontSize: 20 }} className="desc-paragraph">
                 The Spartan Protocol incentivises the formation of capital in liquidity pools, such that they can be used for synthetic token generation, lending, derivatives and more.
                 </p>
               <br />
@@ -40,13 +40,21 @@ export const HeroSection: FC = () => (
               </div>
               <div className="col-12" style={{ marginTop: '40px' }}>
                 <a href="https://github.com/spartan-protocol/resources/blob/master/whitepaper.pdf"
-                    target="_blank"
-                    style={{ color: '#A80005', fontSize: '18px' }} >
-                    <div className="btn-thor">WHITEPAPER</div>
-                  </a>
-                <br/>
+                  target="_blank"
+                  style={{ color: '#C7692B', fontSize: '18px' }} >
+                  <div className="btn-thor">WHITEPAPER</div>
+                </a>
+                <br />
+                <a href="https://spartanswap.org/"
+                  target="_blank"
+                  style={{ color: '#C7692B', fontSize: '18px' }} >
+                  <div className="btn-thor">VIEW TESTNET</div>
+                </a>
+                <br />
                 <Link href="/sparta">
-                <div className="btn-thor">GET SPARTA</div>
+                  <a style={{ color: '#C7692B', fontSize: '28px', fontWeight:800 }}>
+                    GET SPARTA &gt;&gt;
+                  </a>
                 </Link>
               </div>
             </div>
@@ -54,7 +62,7 @@ export const HeroSection: FC = () => (
         </div>
       </div>
     </div>
- </section>
+  </section>
 )
 
 export default HeroSection
