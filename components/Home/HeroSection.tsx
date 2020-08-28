@@ -39,12 +39,12 @@ export const HeroSection: FC = () => (
                 </a>
               </div>
               <div className="col-12" style={{ marginTop: '40px' }}>
-                {/* <a href="https://github.com/spartan-protocol/resources/blob/master/whitepaper.pdf"
+                <a href="https://github.com/spartan-protocol/resources/blob/master/whitepaper.pdf"
                   target="_blank"
                   style={{ color: '#C7692B', fontSize: '18px' }} >
                   <div className="btn-thor">WHITEPAPER</div>
                 </a>
-                <br /> */}
+                <br />
                 <a href="https://spartanswap.org/"
                   target="_blank"
                   style={{ color: '#C7692B', fontSize: '18px' }} >
