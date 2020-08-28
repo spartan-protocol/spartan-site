@@ -51,11 +51,11 @@ export const HeroSection: FC = () => (
                   <div className="btn-thor">VIEW TESTNET</div>
                 </a>
                 <br />
-                <Link href="/sparta">
+                {/* <Link href="/sparta">
                   <a style={{ color: '#C7692B', fontSize: '28px', fontWeight:800 }}>
                     GET SPARTA &gt;&gt;
                   </a>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
