@@ -43,11 +43,13 @@ export const SpartaSection: FC = () => (
               </div>
             </div>
           </div>
+          {/*
           <div className="col-lg-12 pt-10vh  text-center">
             <div className="container">
                 <img className="img-fluid" src={require('assets/allocation.png')} />
             </div>
           </div>
+          */}
           <div className="col-lg-12 pt-10vh">
           <div className="container  text-center desc-paragraph">
                 <p>All burnt assets will be sent to the 0x0 address on Binance Smart Chain and will be forever destroyed. </p>
