@@ -21,6 +21,16 @@ export const SpartaSection: FC = () => (
                 <p>Sparta’s Initial Distribution is via Proof-of-Burn. Participants burn their previous assets in order to acquire a share of 100,000,000 $SPARTA. </p>
                 <p>The remaining 200,000,000 $SPARTA is emitted to participants for the provision of liquidity in liquidity pools via a supply-responsive emission schedule. </p>
                 <p>A protocol fee-burn ensures 300,000,000 is never reached, and eventually fees will offset emissions. </p>
+                <p>The token distribution phase has not yet commenced, to know exactly when launch is hapening; make sure you are subscribed:</p>
+                <a href="https://medium.com/@spartanprotocol" target="_blank">
+                  <p>Spartan Protocol's Medium</p>
+                </a>
+                <a href="https://t.me/SpartanProtocolAnn" target="_blank">
+                  <p>Telegram Announcement Channel</p>
+                </a>
+                <a href="https://twitter.com/SpartanProtocol" target="_blank">
+                  <p>Twitter Account</p>
+                </a>
               </div>
               <div className="row my-5">
                 <div className="col-12 py-1 mx-1">
@@ -58,6 +68,9 @@ export const SpartaSection: FC = () => (
                 <p>If all assets are burnt, then SPARTA will have absorbed roughly $30m in capital.</p>
               </div>
           </div>
+
+
+
         </div>
       </div>
 
