@@ -14,7 +14,7 @@ export const Footer: FC = () => (
           <a href="https://twitter.com/SpartanProtocol" target="_blank">
                   <i className="text-grey mx-10px fab fa-twitter" />
                 </a>
-                <a href="https://www.reddit.com/user/Spartan_Protocol" target="_blank">
+                <a href="https://www.reddit.com/r/SpartanProtocol" target="_blank">
                   <i className="text-grey mx-10px fab fa-reddit" />
                 </a>
                 <a href="https://github.com/spartan-protocol" target="_blank">
@@ -22,9 +22,6 @@ export const Footer: FC = () => (
                 </a>
                 <a href="https://t.me/SpartanProtocolOrg" target="_blank">
                   <i className="text-grey mx-10px fab fa-telegram-plane" />
-                </a>
-                <a href="https://discord.gg/vqWaYN3" target="_blank">
-                  <i className="text-grey mx-10px fab fa-discord" />
                 </a>
                 <a href="https://medium.com/@spartanprotocol" target="_blank">
                   <i className="text-grey mx-10px fab fa-medium" />
