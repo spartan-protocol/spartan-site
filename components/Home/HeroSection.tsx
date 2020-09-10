@@ -45,7 +45,7 @@ export const HeroSection: FC = () => (
                 <a href="https://spartanswap.org/"
                   target="_blank"
                   style={{ color: '#C7692B', fontSize: '18px' }} >
-                  <div className="btn-thor">VIEW TESTNET</div>
+                  <div className="btn-thor">GET SPARTA</div>
                 </a>
                 <br />
                 {/* <Link href="/sparta">
