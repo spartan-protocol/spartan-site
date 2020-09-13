@@ -19,7 +19,7 @@ export const FeaturesSection: FC = () => (
             </div>
             <div className="row my-5">
               <div className="col-12 py-1">
-                
+
               </div>
             </div>
           </div>
@@ -39,7 +39,7 @@ export const FeaturesSection: FC = () => (
             </div>
             <div className="row my-5">
               <div className="col-12 py-1 mx-1">
-               
+
               </div>
             </div>
           </div>
@@ -70,7 +70,7 @@ export const FeaturesSection: FC = () => (
           <div className="col-lg-6 col-md-12">
             <div className="col-12 desc-paragraph">
 
-              <p>Synthetic token minters are short the value of the token, and long the value of their collateral. By winding up their position, they can achieve leverage. The opposite is also true for those wishing to leverage long an token.</p>
+              <p>Synthetic token minters are short the value of the token, and long the value of their collateral. By winding up their position, they can achieve leverage. The opposite is also true for those wishing to leverage long a token.</p>
               <p>Lending is possible using a system of fees and collaterised debt.</p>
               <p>Liquidations of unhealthy positions are done instantly via liquidity pools, ensuring the system is always safe. </p>
 
