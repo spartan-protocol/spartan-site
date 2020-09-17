@@ -68,7 +68,7 @@ export const SpartaSection: FC = () => (
                 <div className="faq-question">
                     <h3 className="faq-q">I see this is a community project, so how can I contribute or influence the direction of Spartan Protocol?</h3>
                     <div>
-                         <p className="faq-a">When the protocol is launched, all token holders have the power to vote on changes within the network by partaking in the DAO governance. Every token holder has a voice.
+                         <p className="faq-a">When the protocol is launched, all token holders have the power to vote on changes within the network by partaking in the DAO governance launching soon there-after. Every token holder has a voice.
               </p><p>Right now you can contribute by being a part of these community channels and asking good questions. What is said in these channels directly influences what happens leading up to launch as each of you are a part of the decentralised team.
               </p><p>If you are a developer please feel free to contribute to the open source project at <a href="https://github.com/spartan-protocol">Github</a>.
               </p><p>If you are not, contribute your words or put your hand up for other jobs in the community channels at the bottom of this page. This FAQ was curated by the community, many hands make light work!
@@ -80,15 +80,15 @@ export const SpartaSection: FC = () => (
                     <h3 className="faq-q">How do I obtain SPARTA tokens?</h3>
                     <div>
                          <p className="faq-a">Spartan Protocol starts decentralised from day one. To acquire SPARTA you will need to send your tokens through a smart contract on the Spartan Protocol DApp. The tokens you send through this contract will be ‘burnt’.
-              </p><p>Your tokens will be sent to a 0x0 burn address and will no longer be usable by anyone. The smart contract will then send your freshly minted SPARTA of equivalent value to your BSC address once the old tokens have been confirmed burned.
-              </p><p>There is minimal wait compared to smart contracts on Ethereum, most of these processes take only 1–5 seconds.</p>
+              </p><p>Your tokens will be sent to a this burn address (<a href="https://bscscan.com/address/0x000000000000000000000000000000000000dead">0x000000000000000000000000000000000000dEaD</a>) and will no longer be usable by anyone. The smart contract will then send your freshly minted SPARTA of equivalent value to your BSC address once the old tokens have been confirmed burned.
+              </p><p>There is minimal wait compared to smart contracts on Ethereum, most processes take only 1–5 seconds.</p>
                     </div>
                 </div>
 
                 <div className="faq-question">
                     <h3 className="faq-q">So do I need to buy coins to get tokens?</h3>
                     <div>
-                         <p className="faq-a">Not necessarily; to obtain SPARTA tokens you will need to have tokens from one of the chosen 30 BEP projects to burn in exchange to SPARTA.
+                         <p className="faq-a">Not necessarily; to obtain SPARTA tokens you will need to have BEP20 tokens from the chosen projects to burn in exchange for SPARTA.
               </p><p>There might be some you already own, some you already hold, some you want to sell but can’t get the right price, or some that you decide to acquire deliberately for the purpose of getting Sparta.
               </p>
                     </div>
@@ -107,15 +107,18 @@ export const SpartaSection: FC = () => (
                 <div className="faq-question">
                     <h3 className="faq-q">What happens if the whole 100m SPARTA allocation is not burned? Is there any expiry date to burn my tokens?</h3>
                     <div>
-                         <p className="faq-a">If the 100m of proof-of-burn obtained tokens are not fully acquired, it stays open indefinitely until it does. Or until the incentives erode the other 200m and squeeze the tokens out.
-              </p><p>The team predicts that as use and value is captured by Spartan Protocol it will provide an arbitrage opportunity for those with a keen eye to buy BEP projects and burn to use up the remaining allocations.</p>
+                         <p className="faq-a">If the 100m of proof-of-burn obtained tokens are not fully acquired, it stays open indefinitely until it does.</p>
+                         <p className="faq-a">The team predicts that as use and value is captured by Spartan Protocol it will provide an arbitrage opportunity for those with a keen eye to buy tokens and burn to use up the remaining allocations.</p>
+                         <p className="faq-a">However, once a total of 100M tokens have been emitted (including tokens minted by the liquidity incentives) then a phase-shift begins. In this phase the liquidity incentives are favoured and the claim rates for SPARTA minted during burning are gradually eroded and made less attractive.</p>
+                         <p className="faq-a">This will shift incentives from 'burning' to contributing to the ecosystem instead!</p>
                     </div>
                 </div>
 
                 <div className="faq-question">
                     <h3 className="faq-q">I am interested but not keen to risk a lot of money! Is there a minimum amount i can burn?</h3>
                     <div>
-                         <p className="faq-a">There is no minimum qty! Binance Smart Chain fees are also very low which allows for smaller token holders to participate.</p>
+                         <p className="faq-a">There is no minimum qty! Binance Smart Chain fees are also very low allowing for smaller token holders to participate.</p>
+                         <p className="faq-a">However; the current MetaMask implementation REQUIRES AT LEAST 0.51BNB in your wallet for the DApp to work properly! If MetaMask comes up with a crazy fees-price, then this is the issue, make sure you get more BNB in your wallet!</p>
                     </div>
                 </div>
 
@@ -131,8 +134,8 @@ export const SpartaSection: FC = () => (
                 <div className="faq-question">
                     <h3 className="faq-q">Do I need BNB to use Spartan Protocol?</h3>
                     <div>
-                         <p className="faq-a">Yes, you will require a small amount of BNB in your wallet to pay for transactions, other operations and staking. BNB performs the same function as ETH for Ethereum (aka ‘gas’)
-              </p><p>However one of the biggest differences is that Binance Smart Chain’s fees are extremely low (and fast) compared to Ethereum! We are talking single digit cents, none of these $80-dollar Ethereum transactions!</p>
+                    <p className="faq-a">Yes, please make sure you have at least 0.51BNB in your wallet to interact with MetaMask properly. You will use less than 0.05BNB to pay for transactions, other operations and staking. BNB performs the same function as ETH for Ethereum (aka 'gas')</p>
+                    <p className="faq-a">However one of the biggest differences is that Binance Smart Chain's fees are extremely low (and fast) compared to Ethereum! We are talking single digit cents, none of these $80-dollar Ethereum transactions!</p>
                     </div>
                 </div>
 
@@ -148,7 +151,7 @@ export const SpartaSection: FC = () => (
                 <div className="faq-question">
                     <h3 className="faq-q">Can other tokens be burnt for SPARTA tokens?</h3>
                     <div>
-                         <p className="faq-a">Only 30 exclusive projects have been selected for the burning event, but once the DApp is live you will be able to swap a vast array of tokens for SPARTA and vice versa.</p>
+                         <p className="faq-a">Only 30 exclusive projects have been selected for the burning event, but once the liquidity pools are live you will be able to swap a vast array of tokens for SPARTA and vice versa.</p>
                     </div>
                 </div>
 
@@ -165,8 +168,8 @@ export const SpartaSection: FC = () => (
                 <div className="faq-question">
                     <h3 className="faq-q">How is the snapshot price determined?</h3>
                     <div>
-                         <p className="faq-a">The snapshot price for each token enabled for the burn will be locked on the burn date. It will be based on a 14 day rolling average price of each token.
-              </p><p>ie. If BNB’s 14-day average is $20.00 and SPARTA is set at $0.30 then the ratio will be 66.666 SPARTA for every 1 BNB.
+                         <p className="faq-a">The snapshot price for each token enabled for the burn will be locked on the burn date. It will be based on a rolling average price for each token.
+              </p><p>ie. If BNB's average is $20.00 and SPARTA is set at $0.30 then the ratio will be 66.666 SPARTA for every 1 BNB.
               </p><p>If BNB’s price goes down following the snapshot, this may create an arb-opportunity for peers to buy BNB on exchange and send it in for ‘cheaper’ SPARTA.
               </p>
                     </div>
@@ -209,8 +212,8 @@ export const SpartaSection: FC = () => (
                 <div className="faq-question">
                     <h3 className="faq-q">What wallets are compatible with Spartan Protocol?</h3>
                     <div>
-                         <p className="faq-a">Most existing Ethereum tooling is compatible with BSC, however currently we have only integrated MetaMask with the Spartan protocol DApp thus far.
-              </p><p>We plan to integrate WalletConnect next for easy access with Math Wallet, Trust Wallet etc.
+                         <p className="faq-a">Most existing Ethereum tooling is compatible with BSC, however we have only integrated MetaMask with the Spartan protocol DApp thus far.
+              </p><p>We plan to integrate Binance Chain wallet & WalletConnect next for easy access with Math Wallet, Trust Wallet etc.
               </p><p><a href="https://medium.com/@spartanprotocol/connecting-metamask-to-bsc-mainnet-23e434bc670f">Guide to connect MetaMask to BSC mainnet.</a></p>
                     </div>
                 </div>
