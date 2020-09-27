@@ -37,9 +37,9 @@ export const SpartaSection: FC = () => (
             </div>
           </div>
           <div className="col-12 pt-5vh">
-            <Link href="/sparta">
+            <a href="https://spartanswap.org/">
             <div className="btn-thor">GET SPARTA</div>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

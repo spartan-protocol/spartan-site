@@ -83,6 +83,12 @@ h1 {
   color: '#A80005'
 }
 
+a {
+  color:#C7692B;
+  font-weight:600;
+  font-size: 22px;
+}
+
 .component-row p {
   font-size: 14px;
 }
@@ -319,4 +325,15 @@ h1 {
   background-color: '#050303'
 }
 
+.faq-q {
+  color: #A80005;
+  font-weight: bold;
+}
 
+.disp-flex {
+  display:flex;
+}
+
+.vert-mid {
+  margin:auto
+}
