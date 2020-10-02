@@ -42,12 +42,22 @@ export const HeroSection: FC = () => (
                   <div className="btn-thor">WHITEPAPER</div>
                 </a>
                 <br />
+                <a href="/faq"
+                  style={{ color: '#C7692B', fontSize: '18px' }} >
+                  <div className="btn-thor">FAQs</div>
+                </a>
+                <br />
                 <a href="https://spartanswap.org/"
                   target="_blank"
                   style={{ color: '#C7692B', fontSize: '18px' }} >
                   <div className="btn-thor">GET SPARTA</div>
                 </a>
                 <br />
+                <a href="https://pools.spartanprotocol.org/"
+                  target="_blank"
+                  style={{ color: '#C7692B', fontSize: '18px' }} >
+                  <div className="btn-thor">JOIN LIQUIDITY POOLS</div>
+                </a>
                 {/* <Link href="/sparta">
                   <a style={{ color: '#C7692B', fontSize: '28px', fontWeight:800 }}>
                     GET SPARTA &gt;&gt;
