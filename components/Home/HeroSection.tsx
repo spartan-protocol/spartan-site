@@ -13,7 +13,7 @@ export const HeroSection: FC = () => (
               <h5>A PROTOCOL FOR INCENTIVISED LIQUIDITY AND SYNTHETIC ASSETS ON BINANCE SMART CHAIN</h5>
               <br /><br />
               <p style={{ fontSize: 20 }} className="desc-paragraph">
-                The Spartan Protocol incentivises the formation of capital in liquidity pools, such that they can be used for synthetic token generation, lending, derivatives and more.
+                The Spartan Protocol incentivises the formation of capital in <a href="https://medium.com/spartanprotocol/spartan-protocol-liquidity-pools-a-deep-dive-a8419cefd9ee" target='blank'>liquidity pools</a>, such that they can be used for synthetic token generation, lending, derivatives and more.
                 </p>
               <br />
             </div>
@@ -47,16 +47,16 @@ export const HeroSection: FC = () => (
                   <div className="btn-thor">FAQs</div>
                 </a>
                 <br />
-                <a href="https://spartanswap.org/"
-                  target="_blank"
-                  style={{ color: '#C7692B', fontSize: '18px' }} >
-                  <div className="btn-thor">GET SPARTA</div>
-                </a>
-                <br />
                 <a href="https://pools.spartanprotocol.org/"
                   target="_blank"
                   style={{ color: '#C7692B', fontSize: '18px' }} >
-                  <div className="btn-thor">JOIN LIQUIDITY POOLS</div>
+                  <div className="btn-thor">SWAP SPARTA</div>
+                </a>
+                <br />
+                <a href="https://www.binance.com/en/trade/SPARTA_BNB"
+                  target="_blank"
+                  style={{ color: '#C7692B', fontSize: '18px' }} >
+                  <div className="btn-thor">BUY SPARTA<img src="./Binance-Horizontal.svg"></img></div>
                 </a>
                 {/* <Link href="/sparta">
                   <a style={{ color: '#C7692B', fontSize: '28px', fontWeight:800 }}>
