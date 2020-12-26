@@ -13,7 +13,7 @@ export const FeaturesSection: FC = () => (
           </div>
           <div className="col-lg-6 col-md-12">
             <div className="col-12 desc-paragraph">
-              <p>The heart of the Spartan Protocol are its incentivised liquidity pools, driving on-market capital formation. </p>
+              <p>The heart of the Spartan Protocol are its incentivised <a href="https://medium.com/spartanprotocol/spartan-protocol-liquidity-pools-a-deep-dive-a8419cefd9ee" target='blank'>liquidity pools</a>, driving on-market capital formation. </p>
               <p>The liquidity pools are facilitated by an automated-market-maker (AMM) algorithm with liquidity-sensitive fees.  </p>
               <p>Liquidity-sensitive fees ensure the system can sense correct token purchasing power at all times, allowing scalable and risk-tolerant growth.</p>
             </div>

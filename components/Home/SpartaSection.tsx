@@ -30,15 +30,29 @@ export const SpartaSection: FC = () => (
             <div className="container desc-paragraph">
               <ul>
                 <li>A programmable incentive token with a reward stream. </li>
-                <li>Initial supply of 100 million distributed to a minimum of 9000 members from 30 selected Binance Chain projects using Proof-of-Burn.</li>
+                <li>Initial supply of 100 million distributed using Proof-of-Burn & Bond+Mint.</li>
                 <li>Daily liquidity incentives beginning at 30% APY reducing over 10 years.</li>
-                <li>Maximum supply of 300 million.</li>
+                <li><a href="https://medium.com/spartanprotocol/sparta-token-distribution-a327ee09e95b" target='blank'>Maximum supply of 300 million.</a></li>
               </ul>
             </div>
           </div>
           <div className="col-12 pt-5vh">
-            <a href="https://spartanswap.org/">
-            <div className="btn-thor">GET SPARTA</div>
+            <a href="https://coinmarketcap.com/currencies/spartan-protocol/"
+              target="_blank"
+              style={{ color: '#C7692B', fontSize: '18px' }} >
+              <div className="btn-thor">VIEW ON CMC</div>
+            </a>
+            <br />
+            <a href="https://pools.spartanprotocol.org/"
+              target="_blank"
+              style={{ color: '#C7692B', fontSize: '18px' }} >
+              <div className="btn-thor">SWAP SPARTA</div>
+            </a>
+            <br />
+            <a href="https://www.binance.com/en/trade/SPARTA_BNB"
+              target="_blank"
+              style={{ color: '#C7692B', fontSize: '18px' }} >
+              <div className="btn-thor">BUY SPARTA<img src="./Binance-Horizontal.svg"></img></div>
             </a>
           </div>
         </div>
