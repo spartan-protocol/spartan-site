@@ -53,6 +53,28 @@ body {
     background-color: black;
 }
 
+.kreon-bold-white-48px {
+    color: rgba(255, 255, 255, 1.0);
+    font-family: 'Kreon', Helvetica, Arial, serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.hero {
+    background-image: url(../assets/bg_spartan.jpg);
+    background-size: cover;
+    background-position-x: right;
+    height: 95vh;
+}
+
+.hero-overlay {
+    background-image: url(../assets/header@1x.png);
+    background-color: rgb(0 0 0 / 42%);
+    padding-top: 15%;
+    height: 100%;
+}
+
 /* BUTTONS */
 
 .button-icon {
