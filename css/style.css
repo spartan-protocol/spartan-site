@@ -33,6 +33,11 @@ body {
     display: flex;
 }
 
+.header-right {
+    margin-left: auto;
+    display: flex;
+}
+
 .menu-item {
     color: rgba(235, 233, 233, 1.0);
     font-family: 'Kreon', Helvetica, Arial, serif;
@@ -48,22 +53,45 @@ body {
     background-color: black;
 }
 
+/* BUTTONS */
+
+.button-icon {
+    height: 25px;
+    margin-right: 5px;
+}
+
+.red-button {
+    background-color: rgba(183, 0, 0, 1.0);
+    transition: all 0.2s ease;
+    border-radius: 10px;
+    height: 35px;
+    margin-top: auto;
+    margin-bottom: auto;
+    line-height: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 /* FOOTER SECTION */
 
 .footer {
     background-color: black;
     height: 45px;
     display: flex;
-    position: absolute;
     width: 100%;
-    bottom: 0;
 }
 
 .footer-text {
     line-height: 45px;
     font-family: 'Kreon', Helvetica, Arial, serif;
+    min-width: fit-content;
 }
 
 .footer-icon {
     padding: 10px;
+}
+
+.footer-right {
+    display: flex;
+    margin-left: auto;
 }
