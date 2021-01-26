@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sparatan Protocol</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <link rel="shortcut icon" href="./img/favicon.png"/>
+    <meta name="og:type" content="website"/>
+    <meta name="twitter:card" content="photo"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Kreon:700|Roboto:700,500,400|Manrope:700");
+
+        .component-wrapper a,
+        .screen a {
+            text-decoration: none;
+            display: contents;
+        }
+
+        .full-width-a {
+            width: 100%;
+        }
+
+        .full-height-a {
+            height: 100%;
+        }
+
+        .screen textarea:focus,
+        .screen input:focus {
+            outline: none;
+        }
+
+        .screen *,
+        .component-wrapper * {
+            box-sizing: border-box;
+        }
+
+        .screen div {
+            -webkit-text-size-adjust: none;
+        }
+
+        .container-center-vertical,
+        .container-center-horizontal {
+            pointer-events: none;
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container-center-vertical {
+            align-items: center;
+            height: 100%;
+        }
+
+        .container-center-horizontal {
+            justify-content: center;
+            width: 100%;
+        }
+
+        .container-center-vertical > *,
+        .container-center-horizontal > * {
+            pointer-events: auto;
+            flex-shrink: 0;
+        }
+
+        .component-wrapper,
+        .screen {
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-all;
+            word-break: break-word;
+        }
+
+        .auto-animated div {
+            opacity: 0;
+            position: absolute;
+            --z-index: -1;
+        }
+
+        .auto-animated .container-center-vertical,
+        .auto-animated .container-center-horizontal {
+            opacity: 1;
+        }
+
+        .overlay {
+            position: absolute;
+            opacity: 0;
+            display: none;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+        }
+
+        .animate-appear {
+            opacity: 0;
+            display: block;
+            animation: reveal 0.3s ease-in-out 1 normal forwards;
+        }
+
+        .animate-disappear {
+            opacity: 1;
+            display: block;
+            animation: reveal 0.3s ease-in-out 1 reverse forwards;
+        }
+
+        .animate-nodelay {
+            animation-delay: 0s;
+        }
+
+        @keyframes reveal {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .align-self-flex-start {
+            align-self: flex-start;
+        }
+
+        .align-self-flex-end {
+            align-self: flex-end;
+        }
+
+        .align-self-flex-center {
+            align-self: center;
+        }
+
+        .valign-text-middle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .valign-text-bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .component-wrapper,
+        .component-wrapper * {
+            pointer-events: none;
+        }
+
+        .component-wrapper a *,
+        .component-wrapper a,
+        .component-wrapper input,
+        .component-wrapper video,
+        .component-wrapper iframe,
+        .listeners-active,
+        .listeners-active * {
+            pointer-events: auto;
+        }
+
+        .hidden,
+        .hidden * {
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .smart-layers-pointers,
+        .smart-layers-pointers * {
+            pointer-events: auto;
+            visibility: visible;
+        }
+
+        .component-wrapper.not-ready,
+        .component-wrapper.not-ready * {
+            visibility: hidden !important;
+        }
+
+        .listeners-active-click,
+        .listeners-active-click * {
+            cursor: pointer;
+        }
+    </style>
+    <meta name="author" content="Spartan Protocol"/>
+</head>
+<body>
+<!--  Mobile -->
+<input type="hidden" id="anPageName" name="page" value="spartan-mobile"/>
+<div class="spartan-mobile screen">
+    <div class="rectangle-592-C61RwL"></div>
+    <img class="rectangle-593-C61RwL" src="img/bg.png"/>
+    <img class="group-1-C61RwL" src="img/lines.png"/>
+    <div class="a-protocol-mart-chain-C61RwL kreon-bold-white-40px">
+        A protocol for incentivised liquidity and synthetic assets on Binance Smart Chain
+    </div>
+    <div class="header-text">
+        <span class="span1-TIyeF8">The Spartan Protocol incentivises the formation of capital in </span
+        ><span class="span2-TIyeF8">liquidity pools</span
+    ><span class="span3-TIyeF8"
+    >, such that they can be used for synthetic token generation, lending, derivatives and more.</span
+    >
+    </div>
+    <div class="adjustable-mary-large-C61RwL">
+        <div class="label-6YtxXZ">Buy SPARTA</div>
+        <div class="frame-6YtxXZ">
+            <img class="vector-YiCiT5" src="img/vector@2x.png"/>
+            <img class="vector-uqpMFx" src="img/vector_onderkant.png"/>
+            <img class="vector-hHDFYe" src="img/vector-2@2x.png"/>
+            <img class="vector-S0V0b2" src="img/vector-2@2x.png"/>
+            <img class="vector-kaJ8c3" src="img/vector-2@2x.png"/>
+        </div>
+    </div>
+    <img class="ellipse-2-C61RwL" src="img/ellipse-2@2x.png"/>
+    <div class="icons8-twitter-1-C61RwL"><img class="vector-mast3W" src="img/vector-5@2x.png"/></div>
+    <img class="ellipse-3-C61RwL" src="img/ellipse-2@2x.png"/>
+    <div class="icons8-reddit-1-C61RwL"><img class="vector-KEtxh2" src="img/vector-6@2x.png"/></div>
+    <img class="ellipse-4-C61RwL" src="img/ellipse-2@2x.png"/>
+    <div class="icons8-github-1-C61RwL"><img class="vector-PExMYM" src="img/vector-7@2x.png"/></div>
+    <img class="ellipse-6-C61RwL" src="img/ellipse-2@2x.png"/>
+    <div class="icons8-medium-1-C61RwL"><img class="vector-bKG6dm" src="img/vector-8@2x.png"/></div>
+    <img class="ellipse-5-C61RwL" src="img/ellipse-2@2x.png"/>
+    <div class="icons8-tel-gramapp-1-C61RwL"><img class="vector-Qo2xzn" src="img/vector-9@2x.png"/></div>
+    <img class="back-C61RwL" src="img/back@2x.png"/>
+    <div class="adjustable-mary-large-VMr6Om">
+        <div class="label-1D3bxx">Trade SPARTA</div>
+        <div class="frame-1D3bxx"></div>
+    </div>
+    <div class="feature-multiple-2-C61RwL">
+        <div class="title-6-co-left-align-zXOxXd">
+            <div class="section-title-zLhINx kreon-bold-white-40px">
+                A programmable incentive token, fixed in supply, emitted for participation.
+            </div>
+        </div>
+        <div class="x1-zXOxXd">
+            <div class="feature-ic-ith-circle-fAsUpu"><img class="vector-nG9BSp" src="img/vector-11@2x.png"/></div>
+            <div class="details-fAsUpu">
+                <div class="headline-x1fScO kreon-bold-cararra-24px">Reward stream</div>
+                <div class="description-x1fScO roboto-normal-white-16px">
+                    A programmable incentive token with a reward stream.
+                </div>
+            </div>
+        </div>
+        <div class="x2-zXOxXd">
+            <div class="feature-ic-ith-circle-lnlQ0X"><img class="vector-45VZri" src="img/vector-12@2x.png"/></div>
+            <div class="details-lnlQ0X">
+                <div class="headline-AqyhLu kreon-bold-cararra-24px">100M</div>
+                <div class="description-AqyhLu roboto-normal-white-16px">
+                    Initial supply of 100 million distributed using Proof-of-Burn &amp; Bond+Mint.
+                </div>
+            </div>
+        </div>
+        <div class="x3-zXOxXd">
+            <div class="feature-ic-ith-circle-Fd9LUg"><img class="vector-Uwse9B" src="img/vector-13@2x.png"/></div>
+            <div class="details-Fd9LUg">
+                <div class="headline-0dAfXw kreon-bold-cararra-24px">30% APY</div>
+                <div class="description-0dAfXw roboto-normal-white-16px">
+                    Daily liquidity incentives beginning at 30% APY reducing over 10 years.
+                </div>
+            </div>
+        </div>
+        <div class="x4-zXOxXd">
+            <div class="feature-ic-ith-circle-2Ebz9g"><img class="vector-PXvuK0" src="img/vector-14@2x.png"/></div>
+            <div class="details-2Ebz9g">
+                <div class="headline-sH2gnf kreon-bold-cararra-24px">300M</div>
+                <div class="description-sH2gnf roboto-normal-white-16px">Maximum supply of 300 million.</div>
+            </div>
+        </div>
+        <div class="adjustable-ary-medium-zXOxXd">
+            <div class="buy-now-VCTr7w">Buy Sparta</div>
+            <div class="frame-VCTr7w">
+                <img class="vector-ZNvG9U" src="img/vector@2x.png"/>
+                <img class="vector-ZYLFMA" src="img/vector_onderkant.png"/>
+                <img class="vector-ZIbN7I" src="img/vector-2@2x.png"/>
+                <img class="vector-LeNtIg" src="img/vector-2@2x.png"/>
+                <img class="vector-fMQxoS" src="img/vector-2@2x.png"/>
+            </div>
+        </div>
+        <div class="adjustable-ary-medium-BkypG6">
+            <div class="buy-now-X8ksWv roboto-bold-white-14px">View on CMC</div>
+        </div>
+        <div class="adjustable-ary-medium-blYTlB">
+            <div class="buy-now-Wmk96A roboto-bold-white-14px">Swap Sparta</div>
+        </div>
+    </div>
+    <div class="feature-single-1-C61RwL">
+        <div class="feature-header-j0MyS7">
+            <div class="section-label-a7aPgX">Project</div>
+            <div class="headline-a7aPgX kreon-bold-white-40px">A decentralised effort from the community.</div>
+        </div>
+        <div class="description-j0MyS7">
+          <span class="span1-znyfMj"
+          >The project is galvanized by the communities of former Binance Chain projects. Individual token holders
+            destroy their previous assets to acquire $SPARTA.<br/></span
+          ><span class="span2-znyfMj">30 Binance Chain</span
+        ><span class="span3-znyfMj">
+            projects selected to participate. <br/><br/>It begins decentralised from Day 0; there is no official team
+            and no treasury.<br/>The protocol is </span
+        ><span class="span4-znyfMj">autonomous</span
+        ><span class="span5-znyfMj"> and does not need ongoing maintenance.<br/></span>
+        </div>
+    </div>
+    <div class="feature-multiple-2-VMr6Om">
+        <div class="section-title-fC6vTt kreon-bold-white-40px">Binance smart chain</div>
+        <div class="headline-fC6vTt">A bet on the future economic value of the Binance DeFi Ecosystem</div>
+        <div class="x1-fC6vTt">
+            <div class="feature-ic-ith-circle-x3fPSv">
+                <img class="vector-ERj3rJ" src="img/vector-20@2x.png"/>
+                <img class="vector-p9jDZk" src="img/vector-21@2x.png"/>
+                <img class="vector-MlkVGP" src="img/vector-22@2x.png"/>
+                <img class="vector-PUTQcH" src="img/vector-23@2x.png"/>
+                <img class="vector-XiG0Ed" src="img/vector-24@2x.png"/>
+            </div>
+            <div class="details-x3fPSv">
+                <div class="headline-9J00xx kreon-bold-white-24px">$SPARTA</div>
+                <div class="description-9J00xx roboto-normal-white-16px">
+                    The project is a directional bet on Binance Smart Chain. Do not acquire $SPARTA if you do not
+                    subscribe to
+                    this direction.
+                </div>
+            </div>
+        </div>
+        <div class="x3-fC6vTt">
+            <div class="feature-ic-ith-circle-nwzlOH"><img class="vector-Ixtah8" src="img/vector-25@2x.png"/></div>
+            <div class="details-nwzlOH">
+                <div class="headline-lgx6D6 kreon-bold-white-24px">ERC-20</div>
+                <div class="description-lgx6D6 roboto-normal-white-16px">
+                    The BEP2 token community is second only to the ERC-20 community, and all can be linked to Binance
+                    Smart
+                    Chain.
+                </div>
+            </div>
+        </div>
+        <div class="x4-fC6vTt">
+            <div class="feature-ic-ith-circle-tnxOdF"><img class="vector-FWxtMx" src="img/vector-26@2x.png"/></div>
+            <div class="details-tnxOdF">
+                <div class="headline-bJzQ3B kreon-bold-white-24px">Be aware</div>
+                <div class="description-bJzQ3B roboto-normal-white-16px">
+                    This project may fail, despite best attempts. Know the risk.
+                </div>
+            </div>
+        </div>
+        <div class="x2-fC6vTt">
+            <div class="feature-ic-ith-circle-sCDOyI"><img class="vector-U6fSCI" src="img/vector-27@2x.png"/></div>
+            <div class="details-sCDOyI">
+                <div class="headline-RmEYxY kreon-bold-white-24px">PoS blockchain</div>
+                <div class="description-RmEYxY roboto-normal-white-16px">
+                    Binance Smart Chain is an EVM-compatible delegated-PoS blockchain, with fast (3-sec) blocktimes,
+                    good
+                    developer support and sufficient decentralisation.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-mini-6-C61RwL">
+        <div class="logotype-light-EtXFYq">
+            <div class="logotype-light-CoZmxq">
+                <img class="vector-KFE4oG" src="img/vector-28@2x.png"/>
+                <div class="spartan-protocol-KFE4oG kreon-bold-cararra-24px">Spartan Protocol</div>
+            </div>
+        </div>
+        <div class="x2021-spart-s-reserved-EtXFYq">© 2021 Spartan Protocol. All rights reserved</div>
+        <img class="ellipse-2-EtXFYq" src="img/ellipse-2@2x.png"/>
+        <div class="icons8-twitter-1-EtXFYq"><img class="vector-J7lhsc" src="img/vector-5@2x.png"/></div>
+        <img class="ellipse-3-EtXFYq" src="img/ellipse-2@2x.png"/>
+        <div class="icons8-reddit-1-EtXFYq"><img class="vector-v4cndk" src="img/vector-6@2x.png"/></div>
+        <img class="ellipse-4-EtXFYq" src="img/ellipse-2@2x.png"/>
+        <div class="icons8-github-1-EtXFYq"><img class="vector-K9N6SX" src="img/vector-7@2x.png"/></div>
+        <img class="ellipse-6-EtXFYq" src="img/ellipse-2@2x.png"/>
+        <div class="icons8-medium-1-EtXFYq"><img class="vector-AZkc9x" src="img/vector-8@2x.png"/></div>
+        <img class="ellipse-5-EtXFYq" src="img/ellipse-2@2x.png"/>
+        <div class="icons8-tel-gramapp-1-EtXFYq"><img class="vector-v6fwdo" src="img/vector-9@2x.png"/></div>
+    </div>
+    <div class="rectangle-595-C61RwL"></div>
+    <div class="frame-C61RwL">
+        <div class="frame-gufFyG"><img class="vector-1xT3KA" src="img/vector-35@2x.png"/></div>
+    </div>
+    <div class="frame-VMr6Om"><img class="vector-xe5316" src="img/vector-36@2x.png"/></div>
+    <div class="headline-C61RwL kreon-bold-white-48px">Liquidity pools</div>
+    <div class="description-C61RwL roboto-normal-white-16px">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur nisi eu mauris semper congue eleifend
+        id augue. Integer id felis nisi. Sed tincidunt, arcu in suscipit auctor, massa lacus fermentum sapien, non
+        varius magna ex vitae magna.
+    </div>
+    <div class="adjustable-ary-medium-C61RwL">
+        <div class="label-d2vVNu roboto-bold-white-14px">Join the Pools</div>
+    </div>
+    <div class="frame-mzXdH9">
+        <div class="frame-lhIED7"><img class="vector-FcCzLM" src="img/vector-35@2x.png"/></div>
+    </div>
+    <div class="frame-QxM5SU">
+        <img class="vector-QkxtFb" src="img/vector-39@2x.png"/>
+        <img class="vector-dEQgd2" src="img/vector-40@2x.png"/>
+        <img class="vector-rMNmJk" src="img/vector-41@2x.png"/>
+        <img class="vector-0uYZWb" src="img/vector-42@2x.png"/>
+        <img class="vector-hhvxxS" src="img/vector-43@2x.png"/>
+    </div>
+    <div class="headline-VMr6Om kreon-bold-white-48px">Synthetic token generation</div>
+    <div class="description-VMr6Om roboto-normal-white-16px">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur nisi eu mauris semper congue eleifend
+        id augue. Integer id felis nisi. Sed tincidunt, arcu in suscipit auctor, massa lacus fermentum sapien, non
+        varius magna ex vitae magna.
+    </div>
+    <div class="adjustable-ary-medium-VMr6Om">
+        <div class="label-GdeY7L roboto-bold-white-14px">Synths dApp</div>
+    </div>
+    <img class="bg-C61RwL" src="img/bg@2x.png"/>
+    <img class="vector-C61RwL" src="img/logo.png"/>
+    <div class="spartan-protocol-C61RwL kreon-bold-cararra-24px">Spartan Protocol</div>
+    <img class="menu-C61RwL" src="img/menu@2x.png"/>
+    <div class="rectangle-595-VMr6Om"></div>
+    <div class="frame-2P4qUJ">
+        <div class="frame-PHUopP"><img class="vector-6StFF0" src="img/vector-35@2x.png"/></div>
+    </div>
+    <div class="frame-qr8e7q">
+        <img class="vector-eMxzyJ" src="img/vector-47@2x.png"/>
+        <img class="vector-WKyBh7" src="img/vector-48@2x.png"/>
+        <img class="vector-iJ90dW" src="img/vector-49@2x.png"/>
+    </div>
+    <div class="headline-mzXdH9 kreon-bold-white-48px">Lending and derivates</div>
+    <div class="description-mzXdH9 roboto-normal-white-16px">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur nisi eu mauris semper congue eleifend
+        id augue. Integer id felis nisi. Sed tincidunt, arcu in suscipit auctor, massa lacus fermentum sapien, non
+        varius magna ex vitae magna.
+    </div>
+    <div class="adjustable-ary-medium-mzXdH9">
+        <div class="label-CXhsD5 roboto-bold-white-14px">Lending dApp</div>
+    </div>
+</div>
+<!--  Desktop -->
+<div class="spartan-desktop screen">
+    <img class="bg-image-C61RwL" src="img/bg-image@1x.png"/>
+    <div class="footer-C61RwL">
+        <img class="ellipse-4-iPe1yZ" src="img/ellipse-4@2x.png"/>
+        <div class="icons8-github-1-iPe1yZ"><img class="vector-pjjSX2" src="img/vector-7@2x.png"/></div>
+        <img class="ellipse-3-iPe1yZ" src="img/ellipse-4@2x.png"/>
+        <div class="icons8-reddit-1-iPe1yZ"><img class="vector-LgjYPy" src="img/vector-1@2x.png"/></div>
+        <img class="ellipse-2-iPe1yZ" src="img/ellipse-4@2x.png"/>
+        <div class="icons8-twitter-1-iPe1yZ"><img class="vector-s0N8Pz" src="img/vector-5@2x.png"/></div>
+        <img class="ellipse-6-iPe1yZ" src="img/ellipse-4@2x.png"/>
+        <div class="icons8-medium-1-iPe1yZ"><img class="vector-473l9h" src="img/vector-3@2x.png"/></div>
+        <img class="ellipse-5-iPe1yZ" src="img/ellipse-4@2x.png"/>
+        <div class="icons8-tel-gramapp-1-iPe1yZ"><img class="vector-LQr7hx" src="img/vector-4@2x.png"/></div>
+        <div class="logotype-light-iPe1yZ">
+            <div class="logotype-light-34aLFy">
+                <img class="vector-WEaw3o" src="img/vector-28@2x.png"/>
+                <div class="spartan-protocol-WEaw3o kreon-bold-cararra-24px">Spartan Protocol</div>
+            </div>
+        </div>
+        <div class="x2021-spart-s-reserved-iPe1yZ">© 2021 Spartan Protocol. All rights reserved</div>
+    </div>
+    <div class="section-5--ogrammable-C61RwL">
+        <div class="title-6-co-left-align-6kBDJ5">
+            <div class="section-title-guixln kreon-bold-white-48px">
+                A programmable incentive token, fixed in supply, emitted for participation.
+            </div>
+        </div>
+        <div class="row-1-6kBDJ5">
+            <div class="x1-FHkLH3">
+                <img class="pictoreward-nicDuJ" src="img/picto-reward@1x.png"/>
+                <div class="details-nicDuJ">
+                    <div class="headline-NfL5fO kreon-bold-cararra-24px">Reward stream</div>
+                    <div class="description-NfL5fO roboto-normal-white-16px">
+                        A programmable incentive token with a reward stream.
+                    </div>
+                </div>
+            </div>
+            <div class="x2-FHkLH3">
+                <img class="pictoburn-ejr2x9" src="img/picto-burn@1x.png"/>
+                <div class="details-ejr2x9">
+                    <div class="headline-DKhVpI kreon-bold-cararra-24px">100M</div>
+                    <div class="description-DKhVpI roboto-normal-white-16px">
+                        Initial supply of 100 million distributed using Proof-of-Burn &amp; Bond+Mint.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-2-6kBDJ5">
+            <div class="x3-1WPspV">
+                <img class="pictoapy-thkGQT" src="img/picto-apy@1x.png"/>
+                <div class="details-thkGQT">
+                    <div class="headline-0eBjLW kreon-bold-cararra-24px">30% APY</div>
+                    <div class="description-0eBjLW roboto-normal-white-16px">
+                        Daily liquidity incentives beginning at 30% APY reducing over 10 years.
+                    </div>
+                </div>
+            </div>
+            <div class="x4-1WPspV">
+                <img class="pictosupply-9mnsYY" src="img/picto-supply@1x.png"/>
+                <div class="details-9mnsYY">
+                    <div class="headline-pPb1Vg kreon-bold-cararra-24px">300M</div>
+                    <div class="description-pPb1Vg roboto-normal-white-16px">Maximum supply of 300 million.</div>
+                </div>
+            </div>
+        </div>
+        <div class="adjustable-ary-medium-6kBDJ5 smart-layers-pointers">
+            <div class="buy-now-ec8l4w">Buy Sparta</div>
+            <div class="frame-ec8l4w">
+                <img class="vector-SPgzwk" src="img/vector@2x.png"/>
+                <img class="vector-cqXkFG" src="img/vector.png"/>
+                <img class="vector-Lgd4XG" src="img/vector-2@2x.png"/>
+                <img class="vector-dlrxFa" src="img/vector-2@2x.png"/>
+                <img class="vector-X5Lux0" src="img/vector-2@2x.png"/>
+            </div>
+        </div>
+        <div class="adjustable-ary-medium-OI7dOn smart-layers-pointers">
+            <div class="buy-now-Zg4DCF roboto-bold-white-14px">View on CMC</div>
+        </div>
+        <div class="adjustable-ary-medium-hR0dFY smart-layers-pointers">
+            <div class="buy-now-ssJ1Tx roboto-bold-white-14px smart-layers-pointers">Swap Sparta</div>
+        </div>
+    </div>
+    <div class="secyion-4--mart-chain-C61RwL">
+        <div class="title-6-co-left-align-Pel2xx">
+            <div class="section-title-Yl5oYC kreon-bold-white-48px">Binance smart chain</div>
+            <div class="headline-Yl5oYC">A bet on the future economic value of the Binance DeFi Ecosystem</div>
+        </div>
+        <div class="row-1-Pel2xx">
+            <div class="x1-T6nswo">
+                <img class="pictosparta-a7EKjR" src="img/picto-sparta@1x.png"/>
+                <div class="details-a7EKjR">
+                    <div class="headline-Vx6OHC kreon-bold-white-24px">$SPARTA</div>
+                    <div class="description-Vx6OHC roboto-normal-white-16px">
+                        The project is a directional bet on Binance Smart Chain. Do not acquire $SPARTA if you do not
+                        subscribe
+                        to this direction.
+                    </div>
+                </div>
+            </div>
+            <div class="x2-T6nswo">
+                <img class="pictoblockchain-reFyhl" src="img/picto-blockchain@1x.png"/>
+                <div class="details-reFyhl">
+                    <div class="headline-sNzTfT kreon-bold-white-24px">PoS blockchain</div>
+                    <div class="description-sNzTfT roboto-normal-white-16px">
+                        Binance Smart Chain is an EVM-compatible delegated-PoS blockchain, with fast (3-sec) blocktimes,
+                        good
+                        developer support and sufficient decentralisation.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-2-Pel2xx">
+            <div class="x3-K9rVpS">
+                <img class="pictoerc20-e5xxp2" src="img/picto-erc20@1x.png"/>
+                <div class="details-e5xxp2">
+                    <div class="headline-Rb0D8x kreon-bold-white-24px">ERC-20</div>
+                    <div class="description-Rb0D8x roboto-normal-white-16px">
+                        The BEP2 token community is second only to the ERC-20 community, and all can be linked to
+                        Binance Smart
+                        Chain.
+                    </div>
+                </div>
+            </div>
+            <div class="x4-K9rVpS">
+                <img class="pictoaware-oPwKEy" src="img/picto-aware@1x.png"/>
+                <div class="details-oPwKEy">
+                    <div class="headline-jCxyut kreon-bold-white-24px">Be aware</div>
+                    <div class="description-jCxyut roboto-normal-white-16px">
+                        This project may fail, despite best attempts. Know the risk.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-3--entralized-C61RwL">
+        <img class="illproject-ndxp4f" src="img/ill-project@1x.png"/>
+        <div class="content-ndxp4f">
+            <div class="feature-header-7t7Rjf">
+                <div class="section-label-pxPwxn">Project</div>
+                <div class="headline-pxPwxn kreon-bold-white-48px">A decentralised effort from the community.</div>
+            </div>
+            <div class="description-7t7Rjf">
+            <span class="span1-5kO8Om"
+            >The project is galvanized by the communities of former Binance Chain projects. Individual token holders
+              destroy their previous assets to acquire $SPARTA.<br/></span
+            ><span class="span2-5kO8Om">30 Binance Chain</span
+            ><span class="span3-5kO8Om">
+              projects selected to participate. <br/><br/>It begins decentralised from Day 0; there is no official
+              team and no treasury.<br/>The protocol is </span
+            ><span class="span4-5kO8Om">autonomous</span
+            ><span class="span5-5kO8Om"> and does not need ongoing maintenance.<br/></span>
+            </div>
+        </div>
+    </div>
+    <div class="rectangle-595-C61RwL"></div>
+    <div class="button-lending-C61RwL smart-layers-pointers">
+        <div class="label-DLpKDD manrope-bold-white-16px">Lending dApp</div>
+    </div>
+    <img class="pictolending-C61RwL" src="img/picto-lending@1x.png"/>
+    <div class="description-C61RwL roboto-normal-white-16px">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur nisi eu mauris semper congue eleifend
+        id augue. Integer id felis nisi. Sed tincidunt, arcu in suscipit auctor, massa lacus fermentum sapien, non
+        varius magna ex vitae magna.
+    </div>
+    <div class="headline-C61RwL kreon-bold-white-48px">Lending and derivates</div>
+    <div class="button-d-app-C61RwL smart-layers-pointers">
+        <div class="label-s9S1WN manrope-bold-white-16px">Synths dAPP</div>
+    </div>
+    <img class="pictosynt-etictoken-C61RwL" src="img/picto-synthetic-token@1x.png"/>
+    <div class="headline-VMr6Om kreon-bold-white-48px">Synthetic token generation</div>
+    <div class="description-VMr6Om roboto-normal-white-16px">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur nisi eu mauris semper congue eleifend
+        id augue. Integer id felis nisi. Sed tincidunt, arcu in suscipit auctor, massa lacus fermentum sapien, non
+        varius magna ex vitae magna.
+    </div>
+    <div class="rectangle-595-VMr6Om"></div>
+    <div class="button-trade-sparta-C61RwL smart-layers-pointers">
+        <div class="label-UPDgpi manrope-bold-white-16px">Join the Pools</div>
+    </div>
+    <img class="pictoliqu-ditypools-C61RwL" src="img/picto-liquidity-pools@1x.png"/>
+    <div class="description-mzXdH9 roboto-normal-white-16px">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur nisi eu mauris semper congue eleifend
+        id augue. Integer id felis nisi. Sed tincidunt, arcu in suscipit auctor, massa lacus fermentum sapien, non
+        varius magna ex vitae magna.
+    </div>
+    <div class="headline-mzXdH9 kreon-bold-white-48px">Liquidity pools</div>
+    <img class="header-C61RwL" src="img/header@1x.png"/>
+    <div class="header-text">
+        <span class="span1-TIyeF8">The Spartan Protocol incentivises the formation of capital in </span
+        ><span class="span2-TIyeF8">liquidity pools</span
+    ><span class="span3-TIyeF8"
+    >, such that they can be used for synthetic token generation, lending, derivatives and more.</span
+    >
+    </div>
+    <div class="a-protocol-mart-chain-C61RwL kreon-bold-white-48px">
+        A protocol for incentivised liquidity and synthetic assets on Binance Smart Chain
+    </div>
+    <img class="ellipse-6-C61RwL" src="img/ellipse-2@2x.png"/>
+    <img class="icmedium-C61RwL" src="img/ic-medium@1x.png"/>
+    <img class="ellipse-5-C61RwL" src="img/ellipse-2@2x.png"/>
+    <img class="ictelegram-C61RwL" src="img/ic-telegram@1x.png"/>
+    <img class="ellipse-4-C61RwL" src="img/ellipse-2@2x.png"/>
+    <img class="icgithub-C61RwL" src="img/ic-github@1x.png"/>
+    <img class="ellipse-3-C61RwL" src="img/ellipse-2@2x.png"/>
+    <img class="icreddit-C61RwL" src="img/ic-reddit@1x.png"/>
+    <img class="ellipse-2-C61RwL" src="img/ellipse-2@2x.png"/>
+    <img class="ictwitter-C61RwL" src="img/ic-twitter@1x.png"/>
+    <div class="button-buy-sparta-C61RwL smart-layers-pointers">
+        <div class="label-jbPK1R">Buy SPARTA</div>
+        <div class="frame-jbPK1R"></div>
+    </div>
+    <img class="back-C61RwL smart-layers-pointers" src="img/back@2x.png"/>
+    <div class="button-trade-sparta-VMr6Om smart-layers-pointers">
+        <div class="label-0S86UL">Trade SPARTA</div>
+        <div class="frame-0S86UL"></div>
+    </div>
+    <div class="topbar-C61RwL">
+        <div class="nav-items-D4Fpyb">
+            <div class="header-menu-default-oTSOtI"></div>
+            <div class="header-menu-default-MaMTKA"></div>
+            <div class="header-menu-default-oeyXDn">
+                <div class="label-AuOTiS manrope-bold-white-14px">Swap Sparta</div>
+            </div>
+            <div class="header-menu-default-udaL9k">
+                <div class="label-Gtsxua manrope-bold-white-14px">Whitepaper</div>
+            </div>
+            <div class="header-menu-default-Xg8l4c">
+                <div class="label-veEzIN manrope-bold-white-14px">FAQ</div>
+            </div>
+        </div>
+        <div class="header-button-D4Fpyb smart-layers-pointers">
+            <div class="join-the-pools-6s2yBB roboto-bold-white-14px">Join the pools</div>
+            <img class="icon-spar-n-protocol-6s2yBB" src="img/icon-spartanprotocol@1x.png"/>
+        </div>
+        <img class="logo-spar-n-protocol-D4Fpyb" src="img/sparta_logo.svg"/>
+        <div class="spartan-protocol-D4Fpyb">Spartan Protocol</div>
+    </div>
+</div>
+</body>
+</html>
