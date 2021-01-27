@@ -70,6 +70,7 @@ body {
 
 .hero-overlay {
     background-image: url(../assets/header@1x.png);
+    background-size: cover;
     background-color: rgb(0 0 0 / 42%);
     padding-top: 15%;
     height: 100%;
