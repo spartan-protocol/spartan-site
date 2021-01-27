@@ -1,9 +1,10 @@
 body {
     margin:0;
     color: rgba(255, 255, 255, 1.0);
-    font-family: 'Roboto', Helvetica, Arial, serif;
+    font-family: 'Poppins', Helvetica, Arial, serif;
     font-style: normal;
     font-weight: 500;
+    background-color: #000;
 }
 
 /* HEADER SECTION */
@@ -39,11 +40,8 @@ body {
 }
 
 .menu-item {
-    color: rgba(235, 233, 233, 1.0);
-    font-family: 'Kreon', Helvetica, Arial, serif;
-    font-size: 16px;
-    line-height: 70px;
-    text-align: left;
+    width: 100px;
+    justify-content: center;
 }
 
 /* BODY SECTION */
@@ -53,10 +51,47 @@ body {
     background-color: black;
 }
 
-.kreon-bold-white-48px {
+span {
+    font-family: 'Poppins', Helvetica, Arial, serif;
+    font-weight: 500;
+}
+
+p {
+    color: rgba(255, 255, 255, 1.0);
+    font-family: 'Poppins', Helvetica, Arial, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+p1 {
+    color: rgba(255, 255, 255, 1.0);
+    font-family: 'Roboto', Helvetica, Arial, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+h1 {
     color: rgba(255, 255, 255, 1.0);
     font-family: 'Kreon', Helvetica, Arial, serif;
     font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+h2 {
+    color: rgba(255, 255, 255, 1.0);
+    font-family: 'Kreon', Helvetica, Arial, serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+h3 {
+    color: rgba(255, 255, 255, 1.0);
+    font-family: 'Kreon', Helvetica, Arial, serif;
+    font-size: 24px;
     font-style: normal;
     font-weight: 700;
 }
@@ -71,28 +106,50 @@ body {
 .hero-overlay {
     background-image: url(../assets/header@1x.png);
     background-size: cover;
-    background-color: rgb(0 0 0 / 42%);
-    padding-top: 15%;
     height: 100%;
+    display: flex;
+}
+
+.text-overlay {
+    border-radius: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.feature-img {
+    max-width: inherit;
+}
+
+.feature-pools {
+    background-image: url(../assets/Illustrations/ill_liquidity_pools@2x.png);
+    background-size: contain;
+}
+
+.feature-synths {
+    background-image: url(../assets/Illustrations/ill_synthetic_token@2x.png);
+    background-size: contain;
+}
+
+.feature-cdps {
+    background-image: url(../assets/Illustrations/ill_lending@2x.png);
+    background-size: contain;
 }
 
 /* BUTTONS */
 
-.button-icon {
-    height: 25px;
-    margin-right: 5px;
+.bg-red {
+    background-color: rgba(183, 0, 0, 1.0);
+    color: black;
 }
 
-.red-button {
-    background-color: rgba(183, 0, 0, 1.0);
-    transition: all 0.2s ease;
-    border-radius: 10px;
-    height: 35px;
-    margin-top: auto;
-    margin-bottom: auto;
-    line-height: 35px;
-    padding-left: 10px;
-    padding-right: 10px;
+.bg-yellow {
+    background-color: rgba(245, 178, 22, 1.0);
+    color: black;
+}
+
+.bg-grey {
+    background-color: rgba(100, 100, 100, 1.0);
+    color: black;
 }
 
 /* FOOTER SECTION */
@@ -111,7 +168,10 @@ body {
 }
 
 .footer-icon {
-    padding: 10px;
+    padding: 5px;
+    height: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .footer-right {
