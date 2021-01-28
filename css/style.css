@@ -125,22 +125,69 @@ h4 {
 }
 
 .feature-img {
-    max-width: inherit;
+    max-width: 270px;
+    height: 250px;
+}
+
+.feature-block {
+    max-width: 800px;
+    min-height: 300px;
 }
 
 .feature-pools {
     background-image: url(../assets/Illustrations/ill_liquidity_pools@2x.png);
     background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .feature-synths {
     background-image: url(../assets/Illustrations/ill_synthetic_token@2x.png);
     background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .feature-cdps {
     background-image: url(../assets/Illustrations/ill_lending@2x.png);
     background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.supply-block {
+    max-width: 1200px;
+}
+
+.supply-reward {
+    background-image: url(../assets/Pictograms/PNG/picto_reward.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 80px;
+}
+
+.supply-initial {
+    background-image: url(../assets/Pictograms/PNG/picto_burn.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 80px;
+}
+
+.supply-apy {
+    background-image: url(../assets/Pictograms/PNG/picto_apy.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 80px;
+}
+
+.supply-max {
+    background-image: url(../assets/Pictograms/PNG/picto_supply.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 80px;
 }
 
 /* BUTTONS */
