@@ -83,7 +83,7 @@ h1 {
 h2 {
     color: rgba(255, 255, 255, 1.0);
     font-family: 'Kreon', Helvetica, Arial, serif;
-    font-size: 36px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 700;
 }
@@ -91,7 +91,7 @@ h2 {
 h3 {
     color: rgba(255, 255, 255, 1.0);
     font-family: 'Kreon', Helvetica, Arial, serif;
-    font-size: 24px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 700;
 }
@@ -99,7 +99,15 @@ h3 {
 h4 {
     color: rgba(255, 255, 255, 1.0);
     font-family: 'Kreon', Helvetica, Arial, serif;
-    font-size: 12px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+h5 {
+    color: rgba(255, 255, 255, 1.0);
+    font-family: 'Kreon', Helvetica, Arial, serif;
+    font-size: 16px;
     font-style: normal;
     font-weight: 700;
 }
