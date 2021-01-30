@@ -130,6 +130,7 @@ h5 {
     border-radius: 20px;
     margin-top: auto;
     margin-bottom: auto;
+    max-width: 600px;
 }
 
 .feature-img {
@@ -196,6 +197,19 @@ h5 {
     background-repeat: no-repeat;
     background-position: left;
     padding-left: 80px;
+}
+
+.project {
+    background-image: url(../assets/Illustrations/ill_project@2x.png);
+    background-size: contain;
+    background-position-x: right;
+    background-repeat: no-repeat;
+    height: 95vh;
+}
+
+.project-overlay {
+    height: 100%;
+    display: flex;
 }
 
 /* BUTTONS */
