@@ -215,6 +215,16 @@ h5 {
     color: white;
 }
 
+.btn-lg {
+    max-width: 180px;
+}
+
+@media (min-width: 576px) {
+    .supply-btn-block {
+        padding-left: 76px!important;
+    }
+}
+
 /* FOOTER SECTION */
 
 .footer {

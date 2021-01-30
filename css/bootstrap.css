@@ -8663,6 +8663,10 @@ textarea.form-control-lg {
     text-align: justify !important;
   }
 
+  .w-md-25 {
+    width: 25% !important;
+  }
+
   .w-md-50 {
     width: 50% !important;
   }
@@ -9328,6 +9332,22 @@ textarea.form-control-lg {
 
   .text-lg-center {
     text-align: center !important;
+  }
+
+  .w-lg-25 {
+    width: 25% !important;
+  }
+
+  .w-lg-50 {
+    width: 50% !important;
+  }
+
+  .w-lg-75 {
+    width: 75% !important;
+  }
+
+  .w-lg-100 {
+    width: 100% !important;
   }
 }
 @media (min-width: 1200px) {
