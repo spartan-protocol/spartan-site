@@ -231,6 +231,16 @@ h5 {
     display: flex;
 }
 
+.bsc-block {
+    max-width: 1200px;
+    background-image: url(../assets/Icons/SVG/Icon_BinanceYellow.svg);
+    background-size: 1000px;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    background-position-y: -250px;
+    background-position-x: -300px;
+}
+
 /* BUTTONS */
 
 .bg-red {
