@@ -13,6 +13,10 @@ body {
     color: inherit;
 }
 
+.no-dec {
+    text-decoration: none;
+}
+
 /* HEADER SECTION */
 
 .header {
@@ -136,7 +140,6 @@ h5 {
     border-radius: 20px;
     margin-top: auto;
     margin-bottom: auto;
-    max-width: 600px;
 }
 
 .feature-img {
@@ -175,6 +178,16 @@ h5 {
 
 .supply-block {
     max-width: 1200px;
+    background-image: url(../assets/Icons/SVG/Logo_SpartanProtocol.svg);
+    background-size: 1000px;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    background-position-y: -250px;
+    background-position-x: -300px;
+}
+
+.supply-title {
+    margin-left: 55px;
 }
 
 .supply-reward {
@@ -239,11 +252,21 @@ h5 {
     max-width: 180px;
 }
 
+.button-icon {
+    height: 25px;
+}
+
 @media (min-width: 576px) {
     .supply-btn-block {
         padding-left: 76px!important;
     }
 }
+
+.disabled {
+    pointer-events: none;
+    filter: none;
+    opacity: 0.75;
+  }
 
 /* FOOTER SECTION */
 
