@@ -7,6 +7,10 @@ body {
     background-color: #000;
 }
 
+.wrapper {
+    max-width: 1000px;
+}
+
 .link-no-format {
     text-decoration: none;
     display: contents;
