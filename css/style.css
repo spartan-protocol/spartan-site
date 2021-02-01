@@ -79,7 +79,7 @@ p1 {
     font-family: 'Poppins', Helvetica, Arial, serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 h1 {
@@ -117,7 +117,7 @@ h4 {
 h5 {
     color: rgba(255, 255, 255, 1.0);
     font-family: 'Kreon', Helvetica, Arial, serif;
-    font-size: 16px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
 }
@@ -294,8 +294,8 @@ h5 {
 }
 
 .footer-icon {
-    padding: 5px;
-    height: 30px;
+    padding: 2px;
+    height: 35px;
     margin-top: auto;
     margin-bottom: auto;
 }
