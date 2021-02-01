@@ -153,27 +153,27 @@ h5 {
 }
 
 .feature-pools {
-    background-image: url(../assets/Illustrations/ill_liquidity_pools@2x.png);
-    background-size: contain;
+    background-image: url(../assets/Illustrations/ill_liquidity_pools.svg);
     background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
     background-attachment: fixed;
-    background-position: center;
 }
 
 .feature-synths {
-    background-image: url(../assets/Illustrations/ill_synthetic_token@2x.png);
-    background-size: contain;
+    background-image: url(../assets/Illustrations/ill_synthetic_token.svg);
     background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
     background-attachment: fixed;
-    background-position: center;
 }
 
 .feature-cdps {
-    background-image: url(../assets/Illustrations/ill_lending@2x.png);
-    background-size: contain;
+    background-image: url(../assets/Illustrations/ill_lending.svg);
     background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
     background-attachment: fixed;
-    background-position: center;
 }
 
 .supply-block {
@@ -219,11 +219,11 @@ h5 {
 }
 
 .project {
-    background-image: url(../assets/Illustrations/ill_project@2x.png);
-    background-size: contain;
-    background-position-x: right;
+    background-image: url(../assets/Illustrations/ill_project.svg);
     background-repeat: no-repeat;
-    height: 95vh;
+    background-position-x: right;
+    background-position-y: center;
+    background-size: contain;
 }
 
 .project-overlay {
@@ -236,7 +236,7 @@ h5 {
     background-image: url(../assets/Icons/SVG/Icon_BinanceYellow.svg);
     background-size: 1000px;
     background-repeat: no-repeat;
-    border-radius: 20px;
+    border-radius: 25px;
     background-position-y: -250px;
     background-position-x: -300px;
 }
