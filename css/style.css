@@ -159,25 +159,40 @@ h5 {
 .feature-pools {
     background-image: url(../assets/Illustrations/ill_liquidity_pools.svg);
     background-repeat: no-repeat;
-    background-position-x: right;
     background-position-y: center;
-    background-attachment: fixed;
+}
+
+@media (min-width: 768px) {
+    .feature-pools {
+        background-size: 24vmin;
+        padding-left: 26vmin;
+    }
 }
 
 .feature-synths {
     background-image: url(../assets/Illustrations/ill_synthetic_token.svg);
     background-repeat: no-repeat;
-    background-position-x: right;
     background-position-y: center;
-    background-attachment: fixed;
+}
+
+@media (min-width: 768px) {
+    .feature-synths {
+        background-size: 24vmin;
+        padding-left: 26vmin;
+    }
 }
 
 .feature-cdps {
     background-image: url(../assets/Illustrations/ill_lending.svg);
     background-repeat: no-repeat;
-    background-position-x: right;
     background-position-y: center;
-    background-attachment: fixed;
+}
+
+@media (min-width: 768px) {
+    .feature-cdps {
+        background-size: 24vmin;
+        padding-left: 26vmin;
+    }
 }
 
 .supply-block {
@@ -195,44 +210,54 @@ h5 {
 }
 
 .supply-reward {
-    background-image: url(../assets/Pictograms/PNG/picto_reward.png);
+    background-image: url(../assets/Pictograms/SVG/picto_reward.svg);
     background-repeat: no-repeat;
     background-position: left;
     padding-left: 80px;
 }
 
 .supply-initial {
-    background-image: url(../assets/Pictograms/PNG/picto_burn.png);
+    background-image: url(../assets/Pictograms/SVG/picto_burn.svg);
     background-repeat: no-repeat;
     background-position: left;
     padding-left: 80px;
 }
 
 .supply-apy {
-    background-image: url(../assets/Pictograms/PNG/picto_apy.png);
+    background-image: url(../assets/Pictograms/SVG/picto_apy.svg);
     background-repeat: no-repeat;
     background-position: left;
     padding-left: 80px;
 }
 
 .supply-max {
-    background-image: url(../assets/Pictograms/PNG/picto_supply.png);
+    background-image: url(../assets/Pictograms/SVG/picto_supply.svg);
     background-repeat: no-repeat;
     background-position: left;
     padding-left: 80px;
 }
 
 .project {
-    background-image: url(../assets/Illustrations/ill_project.svg);
+    background-image: url(../assets/Illustrations/ill_project_2.svg);
     background-repeat: no-repeat;
-    background-position-x: right;
+    background-position-x: center;
     background-position-y: center;
-    background-size: contain;
+    background-size: 80vw;
+}
+
+@media (min-width: 768px) {
+    .project {
+        background-position-x: -15px;
+        background-size: 32vmin;
+        padding-left: 26vmin;
+    }
 }
 
 .project-overlay {
     height: 100%;
     display: flex;
+    max-width: 800px;
+    min-height: 400px;
 }
 
 .bsc-block {
@@ -243,6 +268,34 @@ h5 {
     border-radius: 25px;
     background-position-y: -250px;
     background-position-x: -300px;
+}
+
+.bsc-sparta {
+    background-image: url(../assets/Pictograms/SVG/picto_sparta.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 80px;
+}
+
+.bsc-blockchain {
+    background-image: url(../assets/Pictograms/SVG/picto_blockchain.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 80px;
+}
+
+.bsc-erc20 {
+    background-image: url(../assets/Pictograms/SVG/picto_erc20.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 80px;
+}
+
+.bsc-aware {
+    background-image: url(../assets/Pictograms/SVG/picto_aware.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 80px;
 }
 
 /* BUTTONS */
