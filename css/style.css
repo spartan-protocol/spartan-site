@@ -1,10 +1,11 @@
 body {
     margin:0;
     color: rgba(255, 255, 255, 1.0);
-    font-family: 'Poppins', Helvetica, Arial, serif;
+    font-family: 'Roboto';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     background-color: #000;
+    letter-spacing: 1px;
 }
 
 .wrapper {
@@ -27,6 +28,7 @@ body {
     background-color: black;
     height: 70px;
     display: flex;
+    max-width: 2100px;
 }
 
 .header-logo {
@@ -35,8 +37,10 @@ body {
 
 .header-title {
     color: rgba(235, 233, 233, 1.0);
-    font-family: 'Kreon', Helvetica, Arial, serif;
+    font-family: 'Kreon';
+    font-weight: 500;
     font-size: 32px;
+    letter-spacing: 1px;
     line-height: 70px;
     text-align: left;
     min-width: fit-content;
@@ -48,6 +52,10 @@ body {
     display: flex;
 }
 
+.navbar-toggler-icon {
+    background-image: url(../assets/Icons/PNG/menu_white.png);
+  }
+
 .header-right {
     margin-left: auto;
     display: flex;
@@ -56,6 +64,9 @@ body {
 .menu-item {
     width: 100px;
     justify-content: center;
+    color: #d4d4d4;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 /* BODY SECTION */
@@ -66,64 +77,89 @@ body {
 }
 
 span {
-    font-family: 'Poppins', Helvetica, Arial, serif;
-    font-weight: 500;
+    font-family: 'Roboto';
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    vertical-align: middle;
 }
 
 p {
     color: rgba(255, 255, 255, 1.0);
-    font-family: 'Poppins', Helvetica, Arial, serif;
-    font-style: normal;
+    font-family: 'Roboto';
     font-weight: 400;
     font-size: 1rem;
+    line-height: 1.5;
 }
 
-p1 {
-    color: rgba(255, 255, 255, 1.0);
-    font-family: 'Poppins', Helvetica, Arial, serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 0.9rem;
+@media (min-width: 768px) {
+    p {
+        line-height: 1.8;
+    }
 }
 
 h1 {
     color: rgba(255, 255, 255, 1.0);
-    font-family: 'Kreon', Helvetica, Arial, serif;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
+    font-family: 'Kreon';
+    font-size: 38px;
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 3.2vmax;
+    }
 }
 
 h2 {
     color: rgba(255, 255, 255, 1.0);
-    font-family: 'Kreon', Helvetica, Arial, serif;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 700;
+    font-family: 'Kreon';
+    font-size: 34px;
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    h2 {
+        font-size: 2.5vmax;
+    }
 }
 
 h3 {
     color: rgba(255, 255, 255, 1.0);
-    font-family: 'Kreon', Helvetica, Arial, serif;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
+    font-family: 'Kreon';
+    font-size: 30px;
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    h2 {
+        font-size: 2.25vmax;
+    }
 }
 
 h4 {
     color: rgba(255, 255, 255, 1.0);
-    font-family: 'Kreon', Helvetica, Arial, serif;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
+    font-family: 'Kreon';
+    font-size: 26px;
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    h4 {
+        font-size: 2vmax;
+    }
 }
 
 h5 {
     color: rgba(255, 255, 255, 1.0);
-    font-family: 'Kreon', Helvetica, Arial, serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
+    font-family: 'Kreon';
+    font-size: 22px;
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    h5 {
+        font-size: 1.5vmax;
+    }
 }
 
 .hero {
@@ -131,6 +167,10 @@ h5 {
     background-size: cover;
     background-position-x: right;
     height: 95vh;
+}
+
+.hero-max-width {
+    max-width: 800px;
 }
 
 .hero-overlay {
@@ -222,8 +262,10 @@ h5 {
     background-position-x: -300px;
 }
 
-.supply-title {
-    margin-left: 55px;
+@media (min-width: 768px) {
+    .supply-title {
+        margin-left: 55px;
+    }
 }
 
 .supply-reward {
@@ -294,6 +336,12 @@ h5 {
     background-position-x: -300px;
 }
 
+@media (min-width: 768px) {
+    .bsc-title {
+        margin-left: 55px;
+    }
+}
+
 .bsc-sparta {
     background-image: url(../assets/Pictograms/SVG/picto_sparta.svg);
     background-repeat: no-repeat;
@@ -325,8 +373,8 @@ h5 {
 /* BUTTONS */
 
 .bg-red {
-    background-color: rgba(183, 0, 0, 1.0);
-    color: black;
+    background-color: #a80005;
+    color: whitesmoke;
 }
 
 .bg-yellow {
@@ -340,7 +388,7 @@ h5 {
 }
 
 .btn-lg {
-    max-width: 180px;
+    max-width: 200px;
 }
 
 .button-icon {

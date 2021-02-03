@@ -29,6 +29,7 @@
   --bs-dark: #212529;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-overlay: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.75));
   --bs-gradient: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.25));
   --bs-gradient-rev: linear-gradient(90deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 1));
 }
@@ -7234,6 +7235,10 @@ textarea.form-control-lg {
 
 .bg-transparent {
   background-color: transparent !important;
+}
+
+.bg-overlay {
+  background-image: var(--bs-overlay) !important;
 }
 
 .bg-gradient {
