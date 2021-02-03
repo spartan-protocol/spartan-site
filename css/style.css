@@ -154,6 +154,13 @@ h5 {
 .feature-block {
     max-width: 800px;
     min-height: 300px;
+    background-image: var(--bs-gradient);
+}
+
+@media (min-width: 768px) {
+    .feature-block {
+        background-image: none;
+    }
 }
 
 .feature-pools {
@@ -165,7 +172,7 @@ h5 {
 @media (min-width: 768px) {
     .feature-pools {
         background-size: 24vmin;
-        padding-left: 26vmin;
+        padding-left: 28vmin;
     }
 }
 
@@ -178,7 +185,7 @@ h5 {
 @media (min-width: 768px) {
     .feature-synths {
         background-size: 24vmin;
-        padding-left: 26vmin;
+        padding-left: 28vmin;
     }
 }
 
@@ -191,7 +198,17 @@ h5 {
 @media (min-width: 768px) {
     .feature-cdps {
         background-size: 24vmin;
-        padding-left: 26vmin;
+        padding-left: 28vmin;
+    }
+}
+
+.min-height-block {
+    min-height: 100px;
+}
+
+@media (min-width: 768px) {
+    .min-height-block {
+        min-height: 600px;
     }
 }
 
@@ -238,7 +255,7 @@ h5 {
 }
 
 .project {
-    background-image: url(../assets/Illustrations/ill_project_2.svg);
+    background-image: url(../assets/Illustrations/ill_project.svg);
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
@@ -247,9 +264,9 @@ h5 {
 
 @media (min-width: 768px) {
     .project {
-        background-position-x: -15px;
-        background-size: 32vmin;
-        padding-left: 26vmin;
+        background-position-x: 30px;
+        background-size: 37vmin;
+        padding-left: 35vmin;
     }
 }
 
@@ -257,7 +274,14 @@ h5 {
     height: 100%;
     display: flex;
     max-width: 800px;
-    min-height: 400px;
+    min-height: 500px;
+    background-image: var(--bs-gradient);
+}
+
+@media (min-width: 768px) {
+    .project-overlay {
+        background-image: none;
+    }
 }
 
 .bsc-block {
