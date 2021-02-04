@@ -9,7 +9,13 @@ body {
 }
 
 .wrapper {
-    max-width: 1000px;
+    max-width: 86vw;
+}
+
+@media (min-width: 1200px) {
+    wrapper {
+        max-width: 1000px;
+    }
 }
 
 .link-no-format {
