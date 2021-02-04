@@ -176,12 +176,6 @@ h4 {
     font-weight: 600;
 }
 
-@media (min-width: 1200px) {
-    h4 {
-        font-size: 2vmax;
-    }
-}
-
 h5 {
     color: rgba(255, 255, 255, 1.0);
     font-family: 'Kreon';
@@ -189,10 +183,25 @@ h5 {
     font-weight: 600;
 }
 
-@media (min-width: 1200px) {
-    h5 {
-        font-size: 1.5vmax;
+.cta {
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .cta {
+        height: 95vh;
     }
+}
+
+.cta-bg {
+    background-image: url(../assets/Spartan_Feature_B.jpeg);
+    background-size: contain;
+    background-position-x: right;
+    background-repeat: no-repeat;
+}
+
+.cta-max-width {
+    max-width: 500px;
 }
 
 .hero {

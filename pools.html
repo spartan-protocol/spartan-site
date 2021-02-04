@@ -50,62 +50,99 @@
 
         <!-- BODY SECTION -->
 
-        <!-- BODY - LEADER -->
-        <div class="wrapper mx-auto mt-5">
-            <div class="leader-title">
-                <h1>Spartan Protocol Liquidity Pools</h1>
-                <h3></h3>
+        <!-- BODY - CALL TO ACTION -->
+        <div class="pt-3 cta">
+            <div class="wrapper mx-auto d-flex h-100 cta-bg">
+                <div class="text-overlay bg-overlay p-2 p-md-4 cta-max-width">
+                    <h1 class="mb-4">Liquidity Pools</h1>
+                    <h5 class="mb-4">Slippery when wet!</h5>
+                    <p class="mb-4">
+                        Before running over to the pools, we recommend reading the below documentation.
+                        However! If you feel you are ready, feel free to come and join the other LP'ers now!
+                    </p>
+                    <div class="mt-3 my-1 p-0 text-center text-md-start">
+                        <a href="#leader" class='link-no-format'>
+                            <div class="btn-lg bg-yellow text-center w-100 w-sm-50 d-inline-block m-1"><span>Documentation</span></div>
+                        </a>
+                        <a href="https://pools.spartanprotocol.org/" class='link-no-format' target="_blank">
+                            <div class="btn-lg bg-red text-center w-100 w-sm-50 d-inline-block m-1"><span>Liquidity Pools</span></div>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="row my-4">
-                <div class="col-6 col-md-3 my-2 pools-leader-design">
-                    <img src="./assets/Pictograms/SVG/picto_aware.svg" />
-                    <h5 class="">Liquidity Pools Design</h5>
-                    <p>What is the design of Spartan's liquidity pools?</p>
-                    <a href="#design" class="align-bottom">Go to -></a>
+        </div>
+
+        <!-- BODY - LEADER -->
+        <div class="bg-grey py-4">
+            <div class="wrapper mx-auto">
+                <div class="leader-title" id="leader">
+                    <h1>LP Documentation</h1>
+                    <h3 class="fs-1">Choose a section</h3>
                 </div>
-                <div class="col-6 col-md-3 my-2 pools-leader-utility">
-                    <img src="./assets/Pictograms/SVG/picto_aware.svg" />
-                    <h5 class="">LP Token Utility</h5>
-                    <p>What utility do the LP tokens have in the Spartan ecosystem?</p>
-                    <a href="#utility">Go to -></a>
-                </div>
-                <div class="col-6 col-md-3 my-2 pools-leader-howto">
-                    <img src="./assets/Pictograms/SVG/picto_aware.svg" />
-                    <h5 class="">How to Use</h5>
-                    <p>How do i add/remove liquidity in Spartan's pools?</p>
-                    <a href="#howto">Go to -></a>
-                </div>
-                <div class="col-6 col-md-3 my-2 pools-leader-yield">
-                    <img src="./assets/Pictograms/SVG/picto_aware.svg" />
-                    <h5 class="">Assess Yield</h5>
-                    <p>Fixed maximum total SPARTA token supply of 300 million.</p>
-                    <a href="#yield">Go to -></a>
+                <div class="row my-4">
+                    <div class="col-6 col-md-3 my-2 pools-leader-design">
+                        <img src="./assets/Pictograms/SVG/picto_supply.svg" />
+                        <h5 class="">Liquidity Pools Design</h5>
+                        <p>What is the design of Spartan's liquidity pools?</p>
+                        <a href="#design" class="align-bottom">Go to -></a>
+                    </div>
+                    <div class="col-6 col-md-3 my-2 pools-leader-utility">
+                        <img src="./assets/Pictograms/SVG/picto_reward.svg" />
+                        <h5 class="">LP Token Utility</h5>
+                        <p>What utility do the LP tokens have in the Spartan ecosystem?</p>
+                        <a href="#utility">Go to -></a>
+                    </div>
+                    <div class="col-6 col-md-3 my-2 pools-leader-howto">
+                        <img src="./assets/Pictograms/SVG/picto_blockchain.svg" />
+                        <h5 class="">How to Use</h5>
+                        <p>How do i add/remove liquidity in Spartan's pools?</p>
+                        <a href="#howto">*Coming Soon*</a>
+                    </div>
+                    <div class="col-6 col-md-3 my-2 pools-leader-yield">
+                        <img src="./assets/Pictograms/SVG/picto_apy.svg" />
+                        <h5 class="">Assess Yield</h5>
+                        <p>Fixed maximum total SPARTA token supply of 300 million.</p>
+                        <a href="#yield">*Coming Soon*</a>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- BODY - LIQUIDITY POOLS DESIGN -->
-        <div class="pt-3 bg-grey">
-            <div class="wrapper mx-auto">
+        <div class="py-4 min-height-block d-flex">
+            <div class="row wrapper mx-auto my-auto">
                 <h2 id="design">Liquidity Pools Design</h2>
-                <p>
-                    Spartan Protocol enables users to create liquidity pools for BEP20 assets on Binance Smart Chain.
-                    All of these liquidity pools contain two assets:
-                    <li>The base asset (SPARTA)</li>
-                    <li>& the paired asset (any BEP20 token)</li>
-                </p>
-                <img src="assets/examples/balance_of_pool.png" class="rounded" />
-                <p class="fst-italic">Both assets held in the SPARTA:BTCB are equal in USD value (circled in red)</p>
-                <p>
-                    As seen in the example above; the assets held in the SPARTA:BTCB pool are driven to be equal in USD value.
-                    By pairing all BEP20 tokens with SPARTA we have a common asset to price all other assets in.
-                    Therefore there is no reliance on external oracles to calculate the value of one asset against another.
-                </p>
+                <div class="col-12 col-lg-6">
+                    <p>
+                        Spartan Protocol enables users to create liquidity pools for BEP20 assets on Binance Smart Chain.<br/>
+                        All of these liquidity pools contain two assets:<br/>
+                        <p>
+                            <img src="./assets/Icons/SVG/Logo_SpartanProtocol_Red.svg" class="me-2" style="height: 50px;" />
+                            The base asset: SPARTA
+                        </p>
+                        <p>
+                            <img src="./assets/Icons/SVG/Icon_BinanceYellow.svg" class="me-2" style="height: 50px;" />
+                            The paired BEP20 asset
+                        </p>
+                    </p>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <img src="assets/examples/balance_of_pool.png" class="rounded mw-100" />
+                    <p class="fst-italic">Both assets held in the SPARTA:BTCB are equal in USD value (circled in red)</p>
+                    
+                </div>
+                <div class="col-12 col-lg-6">
+                    <p>
+                        As seen in SPARTA:BTCB example above; the assets held in the liquidity pools are driven to be equal in USD value.
+                        By pairing the BEP20 tokens with SPARTA we have a common asset to price all other assets in.
+                        Therefore there is no reliance on external oracles to calculate the value of one asset against another.
+                    </p>
+                </div>
             </div>
         </div>
 
         <!-- BODY - LIQUIDITY TOKENS UTILITY -->
-        <div class="wrapper mx-auto pt-3">
+        <div class="min-height-block wrapper mx-auto py-4">
             <h2 id="utility">Liquidity Tokens Utility</h2>
             <p>
                 When users add SPARTA & BEP20 assets to the liquidity pools; they receive LP tokens in exchange.
@@ -129,7 +166,7 @@
                 Pools that are in the 'Curated' list are eligible to receive SPARTA dividends from the ROUTER contract.
                 The SPARTA dividends being injected into the pools will help offset some concerns that liquidity providers might have about impermanent loss and provide great benefit to liquidity providers.
                 <a href="https://medium.com/spartanprotocol/spartancontracts-router-v2-dividends-3ae4b49d7c41">Read more about dividends here.</a>
-                <h5>Slip Fees</h5>
+                <h5 class="pt-2">Slip Fees</h5>
                 Every time someone places a swap trde using the pools, there is a slip-based fee calculated, then taken during the trade and sent directly to that pool's balance of held assets.
                 These fees grow the total pooled asset balance and therefore the redemption value of each LP token in that pool.
             </p>
