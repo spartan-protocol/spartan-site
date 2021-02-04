@@ -1,0 +1,339 @@
+@import url(https://use.fontawesome.com/releases/v5.2.0/css/all.css);
+
+@font-face {
+  font-family: 'Spartan';
+  src: local('Spartan'), url(../assets/font/Spartan-Regular.ttf) format('truetype');
+}
+
+.centered {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+}
+.text-center {
+  text-align: center;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: #050303;
+  color: white;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+
+.img-mask {
+  border-radius: 5px;
+}
+
+.img-maskr {
+  border-radius: 10% !important;
+}
+
+.text-grey {
+  color: rgba(255, 255, 255, 0.75);
+}
+.grey-bg {
+  background-color: #0A0001;
+}
+.lgrey-bg {
+  background-color: #161616;
+}
+
+.section-divider {
+  margin: 0 auto;
+  height: 2px;
+  width: 50%;
+}
+ul li {
+  font-family: 'Spartan', sans-serif;
+  font-size: 20px;
+  line-height: 2;
+}
+p,
+label,
+a,
+b,
+i {
+  font-family: 'Spartan', sans-serif;
+  font-size: 20px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+button {
+  font-family: 'Spartan', 'Spartan', sans-serif;
+  letter-spacing: 2.75px;
+}
+
+h1 {
+  color: '#A80005'
+}
+
+a {
+  color:#C7692B;
+  font-weight:600;
+  font-size: 22px;
+}
+
+.component-row p {
+  font-size: 14px;
+}
+.btn {
+  letter-spacing: 1.5px;
+}
+.btn-thor {
+  position: relative;
+  color: white;
+  border: 1px solid #C7692B;
+  border-radius: 10px;
+  background: #0A0001;
+  background-clip: padding-box;
+  padding: 5px;
+  transition: all 0.5s;
+  width: 200px;
+  text-align: center;
+}
+
+.btn-thor:hover {
+  background: #C7692B;
+  color: white;
+  transition: all 0.5s;
+}
+
+.btn-thor::after {
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background: linear-gradient(45deg, #A80005, #C7692B);
+  content: '';
+  z-index: -1;
+  border-radius: 10px;
+}
+
+/* .img-fluid {
+  width: 100%;
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  #img-fluid {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+} */
+
+.flash-connect-line {
+  width: 5px;
+  height: 35px;
+  background-color: #A80005;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: flashShadowsGreen;
+}
+@keyframes flashShadowsGreen {
+  0% {
+    box-shadow: 0 0 10px 0 #C7692B;
+  }
+  50% {
+    box-shadow: 0 0 10px 0 #A80005;
+  }
+  100% {
+    box-shadow: 0 0 10px 0 #C7692B;
+  }
+}
+
+
+.divider-div {
+  width: 100px;
+  height: 2.5px;
+  margin: 0 auto;
+}
+
+
+.desc-paragraph {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 200;
+  letter-spacing: 1.5px;
+  font-size: 14px;
+}
+
+
+.bg-spartan-blue {
+  background-color: #C7692B;
+}
+.bg-spartan-green {
+  background-color: #A80005;
+}
+.green-bg-transparent-left {
+  background: linear-gradient(90deg, #C7692B 0%, #A80005 100%);
+}
+.green-bg-transparent-right {
+  background: linear-gradient(90deg, #C7692B 100%, #A80005 0%);
+}
+.blue-bg-transparent-left {
+  background: linear-gradient(90deg, rgba(0, 204, 255, 0) 0%, #A80005 100%);
+}
+.blue-bg-transparent-right {
+  background: linear-gradient(to left, rgba(0, 204, 255, 0) 0%, #A80005 100%);
+}
+.blue-bg-transparent-center {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 204, 255, 0) 0%,
+    #A80005 40%,
+    #A80005 80%,
+    rgba(0, 204, 255, 0) 100%
+  );
+}
+.bg-spartan-gradient-left {
+  background: linear-gradient(
+    to left,
+    #A80005 0%,
+    #C7692B
+  ); /* w3c */
+}
+.bg-spartan-gradient-right {
+  background: linear-gradient(
+    90deg,
+    #A80005 0%,
+    #C7692B
+  ); /* w3c */
+}
+.bg-spartan-gradient-left-solid {
+  background: linear-gradient(
+    to left,
+    #C7692B 0%,
+    #A80005 100%
+  ); /* w3c */
+}
+.bg-spartan-gradient-right-solid {
+  background: linear-gradient(90deg, #C7692B 0%, #A80005 100%); /* w3c */
+}
+.bg-spartan-gradient-top-solid {
+  background: linear-gradient(
+    to top,
+    #C7692B 0%,
+    #A80005 100%
+  ); /* w3c */
+}
+.bg-spartan-gradient-bottom-solid {
+  background: linear-gradient(
+    to bottom,
+    #C7692B 0%,
+    #A80005 100%
+  ); /* w3c */
+}
+.social-mini-row a {
+  text-decoration: none;
+}
+#ecosystem a {
+  text-decoration: none;
+}
+.spartan-component {
+  background: #C7692B;
+  color: white;
+  text-decoration: none;
+  min-height: 150px;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px;
+  background-size: 1px 400px;
+  transition: all 1s;
+}
+.spartan-component h4 {
+  line-height: 30px;
+  font-size: 18px;
+}
+.spartan-component:hover {
+  background: #3b4f5f;
+}
+
+.pill-component {
+  background: #48515d;
+  color: white;
+  text-decoration: none;
+  font-weight: 200;
+  border-radius: 5px;
+  height: 27px;
+  width: 200px;
+  padding: 1px;
+  text-align: center;
+}
+
+.bg-spartan-gradient-center-solid {
+  background: linear-gradient(
+    90deg,
+    #C7692B 0%,
+    #A80005 50%,
+    #C7692B 100%
+  ); /* w3c */
+}
+.bg-spartan-gradient-center {
+  background: linear-gradient(
+    90deg,
+    #A80005 0%,
+    #C7692B 50%,
+    #A80005 100%
+  ); /* w3c */
+}
+
+.border-bg-spartan-gradient-center {
+  border-image: linear-gradient(
+    to bottom,
+    #A80005 0%,
+    #A80005 100%
+  ); /* w3c */
+}
+
+
+.social-icon-gradient,
+.social-icon-gradient:before {
+  font-size: 1.5rem;
+  background: linear-gradient(to right, #C7692B 0%, #A80005 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: initial; /* reset Font Awesome's display:inline-block */
+}
+
+#top {
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-image: url('../assets/spartan-bg.jpg');
+  background-size: 100%;
+  background-position: 100% 0%;
+  background-color: '#050303'
+}
+
+.faq-q {
+  color: #A80005;
+  font-weight: bold;
+}
+
+.disp-flex {
+  display:flex;
+}
+
+.vert-mid {
+  margin:auto
+}
