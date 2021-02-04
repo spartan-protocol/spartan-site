@@ -121,7 +121,7 @@ h1 {
 
 @media (min-width: 1200px) {
     h1 {
-        font-size: 3.2vmax;
+        font-size: 48pt;
     }
 }
 
@@ -134,7 +134,7 @@ h2 {
 
 @media (min-width: 1200px) {
     h2 {
-        font-size: 2.5vmax;
+        font-size: 44pt;
     }
 }
 
