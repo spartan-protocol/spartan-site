@@ -439,3 +439,104 @@ h5 {
     display: flex;
     margin-left: auto;
 }
+
+/* Burger Menu */
+
+.above-all-else {
+    z-index:1000000;
+}
+
+.burger {
+    margin-bottom: 25px;
+	display: inline-block;
+    border: 0;
+	background: none;
+	outline: 0;
+	padding: 0;
+	cursor: pointer;
+	border-bottom: 4px solid currentColor;
+	width: 28px;
+	transition: border-bottom 1s ease-in-out;
+	-webkit-transition: border-bottom 1s ease-in-out; 
+
+}
+
+.burger:before {
+    margin-top: 23px;
+    margin-bottom: 5px;
+    content: "";
+    display: block;
+    border-bottom: 4px solid currentColor;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;    
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;        
+}
+
+.burger:after {
+    content: "";
+    display: block;
+    border-bottom: 4px solid currentColor;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+
+.burger-check {
+  display: none;
+}
+
+.burger-check:checked ~ .burger {
+  border-bottom: 4px solid transparent;
+  transition: border-bottom 0.8s ease-in-out;
+  -webkit-transition: border-bottom 0.8s ease-in-out;
+
+}
+
+.burger-check:checked ~ .burger:before {
+  transform: rotate(-405deg) translateY(1px) translateX(-3px);
+  -webkit-transform: rotate(-405deg) translateY(1px) translateX(-3px);      
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+
+.burger-check:checked ~ .burger:after {
+  transform: rotate(405deg) translateY(-4px) translateX(-5px); 
+  -webkit-transform: rotate(405deg) translateY(-4px) translateX(-5px);       
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+
+.navigation {
+    overflow: hidden;
+    max-height: 0;
+    max-width: 0;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.burger-check:checked ~ .navigation {
+    overflow: visible;
+    max-height: 500px;
+    transition: max-height 0.5s ease-in-out;
+    width: 100vw;
+    z-index: 1000;
+    position: absolute;
+    top: 70px;
+    left: 0;
+}
+
+.burger-check:checked ~ .navigation ul {
+    text-align: start;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100vw;
+    list-style-type: none;
+    font-size: 22px;
+    line-height: 45px;
+    color: blanchedalmond;
+    padding-left: 95px;
+}
+
+@media (min-width: 768px) {
+    .burger-check:checked ~ .navigation ul {
+        padding-left: 332px;
+    }
+}
