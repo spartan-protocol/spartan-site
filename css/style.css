@@ -166,7 +166,13 @@ h5 {
     background-image: url(../assets/bg_spartan.jpg);
     background-size: cover;
     background-position-x: right;
-    height: 95vh;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        height: 95vh;
+    }
 }
 
 .hero-max-width {
@@ -297,7 +303,7 @@ h5 {
 }
 
 .project {
-    background-image: url(../assets/Illustrations/ill_project_2.svg);
+    background-image: url(../assets/Illustrations/ill_project.svg);
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
