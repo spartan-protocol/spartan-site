@@ -1,5 +1,0 @@
-package.json
-*.json
-*.min.d.ts
-*.min.js
-/README.md
