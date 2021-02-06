@@ -51,21 +51,21 @@
         <!-- BODY SECTION -->
 
         <!-- BODY - CALL TO ACTION -->
-        <div class="cta">
-            <div class="wrapper mx-auto d-flex h-100 cta-bg">
+        <div class="cta cta-bg text-center text-sm-start">
+            <div class="wrapper mx-auto d-flex h-100">
                 <div class="text-overlay bg-overlay p-2 p-md-4 cta-max-width">
                     <h1 class="mb-4">Liquidity Pools</h1>
                     <h5 class="mb-4">Slippery when wet!</h5>
                     <p class="mb-4">
                         Before running over to the pools, we recommend reading the below documentation.
-                        However! If you feel you are ready, feel free to come and join the other LP'ers now!
+                        When you are ready, feel free to come and join the other LP'ers!
                     </p>
                     <div class="mt-3 my-1 p-0 text-center text-md-start">
                         <a href="#leader" class='link-no-format'>
-                            <div class="btn-lg bg-yellow text-center w-100 w-sm-50 d-inline-block m-1"><span>Documentation</span></div>
+                            <div class="btn-lg bg-yellow text-center w-100 w-sm-50 d-inline-block m-1"><span>Read Docs</span></div>
                         </a>
                         <a href="https://pools.spartanprotocol.org/" class='link-no-format' target="_blank">
-                            <div class="btn-lg bg-red text-center w-100 w-sm-50 d-inline-block m-1"><span>Liquidity Pools</span></div>
+                            <div class="btn-lg bg-red text-center w-100 w-sm-50 d-inline-block m-1"><span>Join Pools</span></div>
                         </a>
                     </div>
                 </div>
@@ -73,35 +73,34 @@
         </div>
 
         <!-- BODY - LEADER -->
-        <div class="bg-grey py-4">
+        <div class="bg-grey py-4 bg-body-gradient">
             <div class="wrapper mx-auto">
-                <div class="leader-title" id="leader">
+                <!-- <div class="leader-title" id="leader">
                     <h1>LP Documentation</h1>
-                    <h3 class="fs-1">Choose a section</h3>
-                </div>
-                <div class="row my-4">
-                    <div class="col-6 col-md-3 my-2 pools-leader-design">
+                </div> -->
+                <div class="row">
+                    <div class="col-6 col-md-3 mb-2 pools-leader-design">
                         <img src="./assets/Pictograms/SVG/picto_supply.svg" />
-                        <h5 class="">Liquidity Pools Design</h5>
-                        <p>What is the design of Spartan's liquidity pools?</p>
-                        <a href="#design" class="align-bottom">Go to -></a>
+                        <h5 class="">Pools Design</h5>
+                        <p>How are Spartan Protocol's liquidity pools designed to work?</p>
+                        <a href="#design">Go to -></a>
                     </div>
-                    <div class="col-6 col-md-3 my-2 pools-leader-utility">
+                    <div class="col-6 col-md-3 mb-2 pools-leader-utility">
                         <img src="./assets/Pictograms/SVG/picto_reward.svg" />
                         <h5 class="">LP Token Utility</h5>
                         <p>What utility do the LP tokens have in the Spartan ecosystem?</p>
                         <a href="#utility">Go to -></a>
                     </div>
-                    <div class="col-6 col-md-3 my-2 pools-leader-howto">
+                    <div class="col-6 col-md-3 mb-2 pools-leader-howto">
                         <img src="./assets/Pictograms/SVG/picto_blockchain.svg" />
                         <h5 class="">How to Use</h5>
-                        <p>How do i add/remove liquidity in Spartan's pools?</p>
-                        <a href="#howto">*Coming Soon*</a>
+                        <p>How do i add and remove liquidity from Spartan's pools?</p>
+                        <a href="#howto">Go to -></a>
                     </div>
-                    <div class="col-6 col-md-3 my-2 pools-leader-yield">
+                    <div class="col-6 col-md-3 mb-2 pools-leader-yield">
                         <img src="./assets/Pictograms/SVG/picto_apy.svg" />
                         <h5 class="">Assess Yield</h5>
-                        <p>Fixed maximum total SPARTA token supply of 300 million.</p>
+                        <p>How do i assess my positions? Am i up? By how much?</p>
                         <a href="#yield">*Coming Soon*</a>
                     </div>
                 </div>
@@ -109,24 +108,24 @@
         </div>
 
         <!-- BODY - LIQUIDITY POOLS DESIGN -->
-        <div class="py-4 min-height-block d-flex">
+        <div class="py-4 min-height-block d-flex bg-body-gradient-rev">
             <div class="row wrapper mx-auto my-auto">
                 <h2 id="design" class="mb-4">Liquidity Pools Design</h2>
-                <div class="col-12 col-lg-6 d-flex">
+                <div class="col-12 col-xl-6 d-flex">
                     <p class="d-block">
-                        Spartan Protocol enables users to create liquidity pools for BEP20 assets on Binance Smart Chain.<br/><br/>
-                        All of these liquidity pools contain two assets:<br/><br/>
-                        <img src="./assets/Icons/SVG/Logo_SpartanProtocol_Red.svg" class="me-2" style="height: 50px;" />
-                        The base asset: SPARTA<br/>
-                        <img src="./assets/Icons/SVG/Icon_BinanceYellow.svg" class="me-2" style="height: 50px;" />
-                        The paired BEP20 asset<br/>
+                        Spartan Protocol enables users to create liquidity pools for BEP20 assets on Binance Smart Chain.<br/>
+                        The liquidity pools contain two assets each:<br/><br/>
+                        <img src="./assets/Icons/SVG/Logo_SpartanProtocol_Red.svg" class="me-2" style="height: 40px;" />
+                        Base asset (SPARTA)<br/><br/>
+                        <img src="./assets/Icons/SVG/Icon_BinanceYellow.svg" class="me-2" style="height: 40px;" />
+                        Paired asset (BEP20)<br/>
                     </p>
                 </div>
-                <div class="col-12 col-lg-6">
-                    <img src="assets/examples/balance_of_pool.png" class="rounded mw-100" />
-                    <p>Both assets held in the SPARTA:BTCB are equal in USD value</p>
+                <div class="col-12 col-xl-6">
+                    <img src="assets/examples/balance_of_pool.png" class="rounded mw-100" /><br/>
+                    <p1>Both pooled assets; equal in value</p1>
                 </div>
-                <div class="col-12 col-lg-6 d-flex align-items-center">
+                <div class="col-12 col-xl-6 d-flex align-items-center mt-3">
                     <p>
                         As hinted in the SPARTA:BTCB example above; the assets held in the liquidity pools are driven to be equal in USD value.
                         By pairing the BEP20 tokens with SPARTA we have a common asset to price all other assets in.
@@ -139,11 +138,11 @@
                         The difference between the spot rate and end-rate is called the 'slip fee'. This goes directly into the pools to incentivize liquidity providers.
                     </p>
                 </div>
-                <div class="col-12 col-lg-6">
-                    <img src="assets/examples/swap.png" class="rounded mw-100" />
-                    <p>Both assets held in the SPARTA:BTCB are equal in USD value</p>
+                <div class="col-12 col-xl-6">
+                    <img src="assets/examples/swap.png" class="rounded mw-100" /><br/>
+                    <p1>The SpartanSwap interface</p1>
                 </div>
-                <div class="col-12 col-lg-6 d-flex align-items-center">
+                <div class="col-12 col-xl-6 d-flex align-items-center">
                     <p>
 
                         
@@ -153,47 +152,54 @@
         </div>
 
         <!-- BODY - LIQUIDITY TOKENS UTILITY -->
-        <div class="min-height-block wrapper mx-auto py-4">
-            <h2 id="utility" class="mb-4">LP Token Utility</h2>
-            <p>
-                When users add SPARTA & BEP20 assets to the liquidity pools; they receive LP tokens in exchange.
-                How LP tokens can be utilized:
-                <li>Redeem them for a percentage of assets from the pool</li>
-                <li>Or simply HODl them whilst they accrue more purchasing power through collecting 'Slip Fees' & 'Dividends'</li>
-                <li>Stake them in the DAO to gain voting rights with governing the protocol</li>
-                <li>Staking in DAO also enables you to earn extra SPARTA through 'Harvesting' in 'Lock+Earn'</li>
-                <li>Offer them up as collateral in Synths/Lending to mint synthetic assets</li>
-            </p>
-            <h4 class="mb-3">LP Token Utility - Redemption Value</h3>
-            <p>
-                Each LP token has redemption value calculated quite simply using the base asset (SPARTA).
-                When you remove liquidity from a pool, you turn in the LP tokens and receive a calculated quantity of the relative BEP20 asset along with SPARTA.
-                The calculation involves dividing the quantity of LP tokens being redeemed by the total amount in existence (this gives us the % of the pool represented by those LP tokens)
-                Quite simply; you are entitled to get that percentage of the total assets in the pool upon redemption of those LP tokens.
-            </p>
-            <h4 class="mb-3">LP Token Utility - Slip Fees & Dividends</h3>
-            <p>
-                At the time of writing this, there are two major methods driving incentives into the liquidity pools:
+        <div class="min-height-block mx-auto py-4 bg-body-gradient">
+            <div class="row wrapper mx-auto my-auto">
+                <h2 id="utility" class="mb-4">LP Token Utility</h2>
+                <p>
+                    When users add SPARTA & BEP20 assets to the liquidity pools; they receive LP tokens in exchange.
+                    How LP tokens can be utilized:
+                    <li>Redeem them for a percentage of assets from the pool</li>
+                    <li>Or simply HODl them whilst they accrue more purchasing power through collecting 'Slip Fees' & 'Dividends'</li>
+                    <li>Stake them in the DAO to gain voting rights with governing the protocol</li>
+                    <li>Staking in DAO also enables you to earn extra SPARTA through 'Harvesting' in 'Lock+Earn'</li>
+                    <li>Offer them up as collateral in Synths/Lending to mint synthetic assets</li>
+                </p>
+                <h4 class="mb-3">LP Token Utility - Redemption Value</h3>
+                <p>
+                    Each LP token has redemption value calculated quite simply using the base asset (SPARTA).
+                    When you remove liquidity from a pool, you turn in the LP tokens and receive a calculated quantity of the relative BEP20 asset along with SPARTA.
+                    The calculation involves dividing the quantity of LP tokens being redeemed by the total amount in existence (this gives us the % of the pool represented by those LP tokens)
+                    Quite simply; you are entitled to get that percentage of the total assets in the pool upon redemption of those LP tokens.
+                </p>
+                <h4 class="mb-3">LP Token Utility - Slip Fees & Dividends</h3>
+                <p>
+                    At the time of writing this, there are two major methods driving incentives into the liquidity pools:
+                </p>
                 <h5>Dividends</h5>
-                Pools that are in the 'Curated' list are eligible to receive SPARTA dividends from the ROUTER contract.
-                The SPARTA dividends being injected into the pools will help offset some concerns that liquidity providers might have about impermanent loss and provide great benefit to liquidity providers.
-                <a href="https://medium.com/spartanprotocol/spartancontracts-router-v2-dividends-3ae4b49d7c41" target="_blank">Read more about dividends here.</a>
+                <p>
+                    Pools that are in the 'Curated' list are eligible to receive SPARTA dividends from the ROUTER contract.
+                    The SPARTA dividends being injected into the pools will help offset some concerns that liquidity providers might have about impermanent loss and provide great benefit to liquidity providers.
+                    <a href="https://medium.com/spartanprotocol/spartancontracts-router-v2-dividends-3ae4b49d7c41" target="_blank">Read more about dividends here.</a>
+                </p>
                 <h5 class="pt-2">Slip Fees</h5>
-                Every time someone places a swap trade using the pools, there is a slip-based fee calculated, then taken during the trade and sent directly to that pool's balance of held assets.
-                These fees grow the total pooled asset balance and therefore the redemption value of each LP token in that pool.
-            </p>
-            <h4 class="mb-3">LP Token Utility - Stake in DAO</h3>
-            <p>
-                LP Tokens can be staked in the DAO to provide the user with voting weight on proposals in the DAO.
-                An important aspect of Spartan Protocol is it's community-programmable nature.
-                The DAO will be able to control a significant amount of variables and functions and help shape the future of the protocol.
-                DAO weight obtained from staking also enables the user to visit the DAO as often as they like to 'Harvest' SPARTA rewards directly to their wallet.
-                <a href="./dao.html">More on the DAO here.</a>
-            </p>
-            <h4 class="mb-3">LP Token Utility - Collateral</h3>
-            <p>
-                The current proposed 'Synths' implementation requires LP tokens to be used as collateral when minting synthetic assets.
-            </p>
+                <p>
+                    Every time someone places a swap trade using the pools, there is a slip-based fee calculated, then taken during the trade and sent directly to that pool's balance of held assets.
+                    These fees grow the total pooled asset balance and therefore the redemption value of each LP token in that pool.
+                </p>
+                <p>
+                <h4 class="mb-3">LP Token Utility - Stake in DAO</h3>
+                <p>
+                    LP Tokens can be staked in the DAO to provide the user with voting weight on proposals in the DAO.
+                    An important aspect of Spartan Protocol is it's community-programmable nature.
+                    The DAO will be able to control a significant amount of variables and functions and help shape the future of the protocol.
+                    DAO weight obtained from staking also enables the user to visit the DAO as often as they like to 'Harvest' SPARTA rewards directly to their wallet.
+                    <a href="./dao.html">More on the DAO here.</a>
+                </p>
+                <h4 class="mb-3">LP Token Utility - Collateral</h3>
+                <p>
+                    The current proposed 'Synths' implementation requires LP tokens to be used as collateral when minting synthetic assets.
+                </p>
+            </div>
         </div>
 
         <!-- FOOTER SECTION -->
