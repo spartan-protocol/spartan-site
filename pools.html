@@ -73,7 +73,7 @@
         </div>
 
         <!-- BODY - LEADER -->
-        <div class="bg-grey py-4 bg-body-gradient">
+        <div id="leader" class="bg-grey py-4 bg-body-gradient">
             <div class="wrapper mx-auto">
                 <!-- <div class="leader-title" id="leader">
                     <h1>LP Documentation</h1>
@@ -101,7 +101,7 @@
                         <img src="./assets/Pictograms/SVG/picto_apy.svg" />
                         <h5 class="">Assess Yield</h5>
                         <p>How do i assess my positions? Am i up? By how much?</p>
-                        <a href="#yield">*Coming Soon*</a>
+                        <a href="#yield">Go to -></a>
                     </div>
                 </div>
             </div>
@@ -132,8 +132,8 @@
                         Therefore there is no reliance on external oracles to calculate the value of one asset against another.
                         <br/><br/>
                         When someone swaps between two assets in a pool, they add one asset and remove the other at a rate defined by how much of each asset exist in the pool.
-                        In the next example you will see that the rate is almost 100,000 SPARTA. This means that there are 100,000 more SPARTA than BTCB units in the pool.
-                        To prevent manipulation, there is an algorithm which scales the rate exponentially with larger trades.
+                        In the next example you will see that the rate is almost 100,000 SPARTA. This means that there are 100,000 times more SPARTA than BTCB units in the pool.
+                        To prevent manipulation, there is an algorithm which scales the rate exponentially when the trade size is a larger portion of the overall pool's size.
                         Therefore pool manipulators pay very high fees (making the pools manipulation-resistant)
                         The difference between the spot rate and end-rate is called the 'slip fee'. This goes directly into the pools to incentivize liquidity providers.
                     </p>
@@ -141,12 +141,6 @@
                 <div class="col-12 col-xl-6">
                     <img src="assets/examples/swap.png" class="rounded mw-100" /><br/>
                     <p1>The SpartanSwap interface</p1>
-                </div>
-                <div class="col-12 col-xl-6 d-flex align-items-center">
-                    <p>
-
-                        
-                    </p>
                 </div>
             </div>
         </div>
@@ -198,6 +192,55 @@
                 <h4 class="mb-3">LP Token Utility - Collateral</h3>
                 <p>
                     The current proposed 'Synths' implementation requires LP tokens to be used as collateral when minting synthetic assets.
+                </p>
+            </div>
+        </div>
+
+        <!-- BODY - HOW TO GUIDES -->
+        <div class="py-4 min-height-block d-flex bg-body-gradient-rev">
+            <div class="row wrapper mx-auto my-auto">
+                <h2 id="howto" class="mb-4">How-to Guides</h2>
+                <p>
+                    The Spartan community are always working on documentation to make it easier for users to navigate the confusing land of DApps!
+                    The below is a quick summary of some of the guides already available relating the the use of the SpartanPools.
+                </p>
+                <h5>Swapping BEP20 assets</h5>
+                <p>
+                    In-depth community-built guide for swapping in the SpartanPools: <a href="https://spartanprotocol.medium.com/how-to-swap-in-spartanpools-1c1e5faa0d95" target="_blank">Click Here</a>
+                </p>
+                <h5>Adding & removing liquidity</h5>
+                <p>
+                    In-depth community-built guide for managing assets in the SpartanPools: <a href="https://medium.com/spartanprotocol/liquidity-provision-in-spartan-protocol-e58c8700b919" target="_blank">Click Here</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- BODY - ASSESS YIELD -->
+        <div class="py-4 min-height-block d-flex bg-body-gradient">
+            <div class="row wrapper mx-auto my-auto">
+                <h2 id="yield" class="mb-4">Assess Your Liquidity Position</h2>
+                <p>Now that I have added liquidity and my assets are working hard to earn revenue from dividends and slip fees. What do I do next?</p>
+                <h5>'Assess those GAINZ!'</h5>
+                <p>You are probably wondering how?</p>
+                <h5>Positions Page *COMING SOON*</h5>
+                <p>Contributors are currently working on delivering a ‘positions’ page so that users can easily see:</p>
+                <li>How much of each asset they have ‘added’ to the pools</li>
+                <li>How much of each asset they have ‘removed’ from the pools</li>
+                <li>Bond+Mint asset ‘adds’</li>
+                <li>The current redemption value of their LP holdings</li>
+                <p>
+                    Using all that, you will be able to assess whether you are up or down in USD/unit terms.
+                    Users may opt to shift their liquidity to a higher-performing pool or play out whatever strategy makes sense based on the data they have.
+                </p>
+                <h5>In the Meantime</h5>
+                <p>For now, you can at least assess the redemption value of your LP tokens within the DApp without having to:</p>
+                <li>Remove your LP units from the Lock+Earn (DAO)</li>
+                <li>Visit a chain explorer</li>
+                <li>Find batteries for your scientific calculator</li>
+                <br/><br/>
+                <h5>Assess Redemption Value of LP Tokens</h5>
+                <p>
+                    For the quick guide: <a href="https://medium.com/spartanprotocol/how-to-check-your-redemption-value-f8575bad65ac" target="_blank">Click Here</a>
                 </p>
             </div>
         </div>
