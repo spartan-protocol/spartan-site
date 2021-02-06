@@ -32,6 +32,9 @@
   --bs-overlay: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.75));
   --bs-gradient: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.25));
   --bs-gradient-rev: linear-gradient(90deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 1));
+  --bs-gradient-light: linear-gradient(90deg, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 1));
+  --bs-gradient-into-dark: linear-gradient(180deg, #212529, #343a40);
+  --bs-gradient-from-dark: linear-gradient(0deg, #212529, #343a40);
 }
 
 *,
@@ -7247,6 +7250,26 @@ textarea.form-control-lg {
 
 .bg-gradient-rev {
   background-image: var(--bs-gradient-rev) !important;
+}
+
+.bg-gradient-light {
+  background-image: var(--bs-gradient-light) !important;
+}
+
+.bg-gradient-into-dark {
+  background-image: var(--bs-gradient-into-dark) !important;
+}
+
+.bg-gradient-from-dark {
+  background-image: var(--bs-gradient-from-dark) !important;
+}
+
+.bg-body-gradient {
+  background-image: linear-gradient(180deg, #212529 0%, #343a40 5px);
+}
+
+.bg-body-gradient-rev {
+  background-image: linear-gradient(180deg, #343a40 0%, #212529 5px);
 }
 
 .text-wrap {
