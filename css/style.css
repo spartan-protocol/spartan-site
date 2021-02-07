@@ -202,8 +202,8 @@ h5 {
 }
 
 .cta-bg {
-    background-image: url(../assets/Spartan_Feature_B.jpeg);
-    background-size: auto;
+    background-image: url(../assets/Spartan-feature-C.jpg);
+    background-size: cover;
     background-position-x: right;
     background-repeat: no-repeat;
 }
