@@ -49,6 +49,7 @@ body {
     letter-spacing: 1px;
     line-height: 70px;
     text-align: left;
+    min-width: -moz-fit-content;	
     min-width: fit-content;
 }
 
