@@ -44,22 +44,22 @@
                 class="burger mx-4 d-inline-block d-lg-none"></label></input>
             <div class='header-right'>
                 <a href="./pools.html" class='link-no-format'>
-                    <div class="my-auto d-none d-lg-flex menu-item ms-2">Pools</div>
+                    <div class="my-auto d-none d-lg-flex menu-item ms-2 zoomsm">Pools</div>
                 </a>
                 <a href="./dao.html" class='link-no-format'>
-                    <div class="my-auto d-none d-lg-flex menu-item">DAO</div>
+                    <div class="my-auto d-none d-lg-flex menu-item zoomsm">DAO</div>
                 </a>
                 <a href="./synths.html" class='link-no-format'>
-                    <div class="my-auto d-none d-lg-flex menu-item menu-item-active">Synths</div>
+                    <div class="my-auto d-none d-lg-flex menu-item menu-item-active zoomsm">Synths</div>
                 </a>
                 <a href="./lending.html" class='link-no-format'>
-                    <div class="my-auto d-none d-lg-flex menu-item">Lending</div>
+                    <div class="my-auto d-none d-lg-flex menu-item zoomsm">Lending</div>
                 </a>
                 <a href="./faq.html" class='link-no-format'>
-                    <div class="my-auto d-none d-lg-flex menu-item">FAQ</div>
+                    <div class="my-auto d-none d-lg-flex menu-item zoomsm">FAQ</div>
                 </a>
                 <a href="https://dapp.spartanprotocol.org/" class='link-no-format' target="_blank">
-                    <div class="btn-sm bg-red mx-1 mt-auto mb-auto">
+                    <div class="btn-sm bg-red mx-1 mt-auto mb-auto zoomsm">
                         <img class="button-icon me-1"
                             src="./assets/Icons/SVG/Icon_SpartanProtocol.svg" /><span>DAppV2</span>
                     </div>
@@ -86,8 +86,31 @@
                         <div class="my-auto nav-menu-item">FAQ</div>
                     </a>
                 </div>
-            </nav>
+                </a>
         </div>
+        <nav id="navigation1" class="navigation">
+            <div class="navi-custom d-flex justify-content-around bg-grey">
+                <a href="./index.html" class='link-no-format'>
+                    <div class="my-auto nav-menu-item">Home</div>
+                </a>
+                <a href="./pools.html" class='link-no-format'>
+                    <div class="my-auto nav-menu-item">Pools</div>
+                </a>
+                <a href="./dao.html" class='link-no-format'>
+                    <div class="my-auto nav-menu-item">DAO</div>
+                </a>
+                <a href="./synths.html" class='link-no-format'>
+                    <div class="my-auto nav-menu-item nav-menu-item-active">Synths</div>
+                </a>
+                <a href="./lending.html" class='link-no-format'>
+                    <div class="my-auto nav-menu-item">Lending</div>
+                </a>
+                <a href="./faq.html" class='link-no-format'>
+                    <div class="my-auto nav-menu-item">FAQ</div>
+                </a>
+            </div>
+        </nav>
+    </div>
     </div>
 
     <!-- BODY SECTION -->
@@ -97,24 +120,26 @@
         <div class="wrapper mx-auto d-flex h-100">
             <div class="text-overlay bg-overlay p-2 p-md-4 cta-max-width">
                 <h1 class="mb-4">SpartanSynths</h1>
-                <h5 class="mb-4">Synthetic Assets Coming Soon!</h5>
+                <h5 class="mb-4">The only place in DeFi with leveraged synthetics</h5>
                 <p class="mb-4">
-                    The Spartan Protocol allows the generation of synthetic assets (synths) of curated BEP20 pooled
-                    assets, using price anchors offered by its own liquidity pools, collateralised by (staking) SPARTA
-                    tokens.
+                    Spartan Protocol allows the generation of synthetic assets (synths) of curated BEP20 pooled assets,
+                    using price anchors offered by its own liquidity pools, minted by any listed BEP20 token and
+                    collateralised by the relevant underlying LP tokens.
                 </p>
                 <div class="mt-3 my-1 p-0 text-center text-md-start">
                     <a href="#leader" class='link-no-format'>
-                        <div class="btn-lg bg-yellow text-center w-100 w-sm-50 d-inline-block m-1"><span>Read
-                                Docs</span></div>
+                        <div class="btn-lg bg-yellow text-center w-100 w-sm-50 d-inline-block m-1 zoomsm"><span>Read
+                                More</span></div>
                     </a>
                     <a href="https://dapp.spartanprotocol.org/synths" class='link-no-format' target="_blank">
-                        <div class="btn-lg bg-red text-center w-100 w-sm-50 d-inline-block m-1"><span>V2 Testnet</span>
+                        <div class="btn-lg bg-red text-center w-100 w-sm-50 d-inline-block m-1 zoomsm"><span>V2
+                                Testnet</span>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <!-- BODY - LEADER -->
@@ -148,6 +173,7 @@
                     <p>How can I mint synthetic assets?</p>
                     <a href="#howto">Go to -></a>
                 </div>
+
             </div>
         </div>
     </div>
@@ -155,22 +181,28 @@
     <!-- BODY - SYNTHS INFO -->
     <div class="py-4 min-height-block d-flex bg-body-gradient-rev">
         <div class="row wrapper mx-auto my-auto">
-            <h2 id="info" class="mb-4"><img src="./assets/Pictograms/SVG/picto_supply.svg" />SpartanSynths Info</h2>
+            <h2 id="info" class="mb-4"><img src="./assets/Pictograms/SVG/picto_supply.svg" />What is A Synthetic Asset
+                (Synth)</h2>
             <div class="col-12 col-xl-6 d-flex">
                 <p class="d-block">
+                    Synthetic assets are relatively new in the rapidly evolving world of DeFi. They are digital
+                    cryptographic assets that represent commodities like gold and silver, stablecoins, fiat currencies,
+                    and similar
+                    financial instruments.<br /><br />
+                    This innovative capability gives investors the opportunity to invest using leverage into traditional
+                    asset classes through Sparta's underlying protocol.<br /><br />
                     The Spartan Protocol allows the generation of synthetic assets (synths) of curated BEP20 pooled
-                    assets, using price anchors offered by its own liquidity pools, collateralised by (staking) SPARTA
-                    tokens.<br /><br />
+                    assets, using price anchors offered by its own liquidity pools, minted using any listed BEP20 token
+                    and collateralised
+                    by the relevant underlying LP tokens.<br /><br />
                     This is done through the use of code. As the Spartan Protocol is decentralized and community-driven,
                     you do not need to rely on any intermediary. It is a trustless process.<br /><br />
-                    All assets on the platform are pegged to the price of the protocol's token:<br />
-                    <img src="./assets/spartan-coin.png" height="80px"><br /><br />
-                    Therefore, there is no need for the use of any oracles.<br /><br />
-                    Liquidity pool shares are on-market, value-stabilised and can be instantly liquidated.
-                    Liquidity-sensitive fees ensure positions taken up will scale with the depth of available liquidity,
-                    preventing deleveraging spirals common to other systems.<br /><br />
-                    Read about Liquidity Pools <a href='./pools.html'>here</a> for more info.
+                    All assets on the platform are pegged to the price of the protocol's token; Therefore, there is no
+                    need for the use of any oracles.<br /><br />
                 </p>
+            </div>
+            <div class="col-12 col-xl-6">
+                <img src="./assets/page-images/dao/synths-spartan.png" class="rounded mw-100" /><br />
             </div>
             <!-- <div class="col-12 col-xl-6">
                     <img src="assets/examples/balance_of_pool.png" class="rounded mw-100" /><br/>
@@ -185,13 +217,16 @@
             <h2 id="utility" class="mb-4"><img src="./assets/Pictograms/SVG/picto_reward.svg" />Synthetic Asset Utility
             </h2>
             <p>
+                Leveraged synthetic assets (synths) are one of the fundamental reasons we're developing Spartan
+                Protocol. These derivatives are completely unique to the Spartan Protocol
+                and can not be found anywhere else in DeFi.<br /><br />
                 Based on the currently proposed implementation; for the first phase of SpartanSynths, the main utility
                 of synths will be to enable its users to open long-
                 or short positions on any BEP-20 assets with leverage, without the need of know-your-customer processes
                 and without relying on any centralized exchange.<br /><br />
                 At first, the assets with the deepest liquidity pools on the platform will be supported. These assets
                 are liquid enough to support minting synths and leverage trading.<br /><br />
-                Synths will likely include at first (but not be limited to):
+                Synths will include at first (but not be limited to):
             </p>
             <li>BNB</li>
             <li>BUSD</li>
@@ -200,9 +235,10 @@
             <p>
                 <br />
                 Future phases could theoretically include supporting a basket of BEP20 assets, rather than 1 particular
-                asset. As well as any gold-backed or stock-backed BEP-20 asset.<br />
+                asset. As well as any gold-backed or stock-backed BEP-20 asset.<br /><br />
             </p>
         </div>
+    </div>
     </div>
 
     <!-- BODY - SYNTHS DESIGN -->
@@ -238,15 +274,14 @@
                 is that there is a focus on providing the ability for decentralised peers to leverage up their positions
                 in this ecosystem!
                 <br /><br />
-                The protocol uses internal pricing directly connected to the liquidity pool values. This means there is
-                no reliance on other oracles or externalities.
-                <br /><br />
-                On top of this, the community contributors are considering introducing the 'Loan Contract' aka
-                'SpartanLending'. This would enable users to deposit LP tokens or SPARTA tokens into the contract to
-                receive interest.
-                Read about Lending <a href='./lending.html'>here</a> for more info.
+                Liquidity pool shares are on-market, value-stabilised and can be instantly liquidated.
+                Liquidity-sensitive fees ensure positions taken up will scale with the depth of available liquidity,
+                preventing deleveraging spirals common to other systems.<br /><br />
+                Read about Liquidity Pools
+                <a href='./pools.html'>here</a> for more info.
             </p>
         </div>
+    </div>
     </div>
 
     <!-- BODY - SYNTHS HOW-TO -->
@@ -278,23 +313,41 @@
         <div class='footer-text d-none d-md-flex'>A Spartan Community Project</div>
         <div class='w-100 d-flex'>
             <div class="footer-right me-auto me-md-0">
-                <a href="https://docs.spartanprotocol.org/" class='link-no-format' target="_blank">
-                    <img class="footer-icon" src="./assets/Icons/SVG/gitbook-icon.svg" />
-                </a>
-                <a href="https://twitter.com/spartanprotocol" class='link-no-format' target="_blank">
-                    <img class="footer-icon" src="./assets/Icons/SVG/ic_twitter.svg" />
-                </a>
-                <a href="https://github.com/spartan-protocol" class='link-no-format' target="_blank">
-                    <img class="footer-icon" src="./assets/Icons/SVG/ic_github.svg" />
-                </a>
-                <a href="https://spartanprotocol.medium.com/" class='link-no-format' target="_blank">
-                    <img class="footer-icon" src="./assets/Icons/SVG/ic_medium.svg" />
-                </a>
-                <a href="https://t.me/SpartanProtocolOrg" class='link-no-format' target="_blank">
-                    <img class="footer-icon" src="./assets/Icons/SVG/ic_telegram.svg" />
-                </a>
+                <div class="tooltipbtm zoom">
+                    <a href="https://docs.spartanprotocol.org/" class='link-no-format' target="_blank">
+                        <img class="footer-icon" src="./assets/Icons/SVG/gitbook-icon.svg" />
+                        <span class="tooltiptext">Gitbook</span>
+                    </a>
+                </div>
+                <div class="tooltipbtm zoom">
+                    <a href="https://twitter.com/SpartanProtocol?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                        class='link-no-format' target="_blank">
+                        <img class="footer-icon" src="./assets/Icons/SVG/ic_twitter.svg" />
+                        <span class="tooltiptext">Twitter</span>
+                    </a>
+                </div>
+                <div class="tooltipbtm zoom">
+                    <a href="https://github.com/spartan-protocol" class='link-no-format' target="_blank">
+                        <img class="footer-icon" src="./assets/Icons/SVG/ic_github.svg" />
+                        <span class="tooltiptext">Github</span>
+                    </a>
+                </div>
+                <div class="tooltipbtm zoom">
+                    <a href="https://spartanprotocol.medium.com/" class='link-no-format' target="_blank">
+                        <img class="footer-icon" src="./assets/Icons/SVG/ic_medium.svg" />
+                        <span class="tooltiptext">Medium</span>
+                    </a>
+                </div>
+                <div class="tooltipbtm zoom">
+                    <a href="https://t.me/SpartanProtocolOrg" class='link-no-format' target="_blank">
+                        <img class="footer-icon" src="./assets/Icons/SVG/ic_telegram.svg" />
+                        <span class="tooltiptext">Telegram</span>
+                    </a>
+                </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
 </body>
 
