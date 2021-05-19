@@ -1,297 +1,391 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-        <!-- Primary Meta Tags -->
-        <title>Spartan Protocol | Liquidity Pools</title>
-        <meta name="title" content="Spartan Protocol | Liquidity Pools">
-        <meta name="description" content="Spartan Protocol provides community-governed and programmable token emissions functions to incentivize the formation of deep liquidity pools"/>
-        <link rel="shortcut icon" href="./img/favicon.png"/>
-        <meta name="author" content="Spartan Protocol Community"/>
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://SpartanProtocol.org/pools"/>
-        <meta property="og:title" content="Spartan Protocol | Liquidity Pools on BSC"/>
-        <meta property="og:image" content="https://spartanprotocol.org/assets/meta-images/opengraph-image.png"/>
-        <meta property="og:description" content="Spartan Protocol provides community-governed and programmable token emissions functions to incentivize the formation of deep liquidity pools"/>
-        <!-- Twitter -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Spartan Protocol | Liquidity Pools on BSC"/>
-        <meta name="twitter:description" content="Spartan Protocol provides community-governed and programmable token emissions functions to incentivize the formation of deep liquidity pools"/>
-        <meta name="twitter:url" content="https://SpartanProtocol.org/pools"/>
-        <meta name="twitter:image" content="https://spartanprotocol.org/assets/twitter-image.png"/>
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
-        <link rel="stylesheet" type="text/css" href="css/style.css"/>
-        <style>
-            @import url("https://fonts.googleapis.com/css?family=Kreon:300,400,500,600|Roboto:300,400,500,600");
-        </style>
-    </head>
-    <body>
-        <!-- HEADER SECTION -->
-        <div class="header pe-3 mx-auto">
-            <a href="./index.html" class='link-no-format'>
-                <img class='header-logo' src='./assets/Icons/SVG/Logo_SpartanProtocol_Red.svg' />
-                <div class='d-none d-md-block header-title'>Spartan Protocol</div>
-            </a>
-            <div class="header-menu">
-                <input class="burger-check" id="burger-check" type="checkbox"><label for="burger-check" class="burger mx-4 d-inline-block d-lg-none"></label></input>
-                <div class='header-right'>
-                    <a href="./pools.html" class='link-no-format'><div class="my-auto d-none d-lg-flex menu-item menu-item-active ms-2 zoomsm">Pools</div></a>
-                    <a href="./dao.html" class='link-no-format'><div class="my-auto d-none d-lg-flex menu-item zoomsm">DAO</div></a>
-                    <a href="./synths.html" class='link-no-format'><div class="my-auto d-none d-lg-flex menu-item zoomsm">Synths</div></a>
-                    <a href="./lending.html" class='link-no-format'><div class="my-auto d-none d-lg-flex menu-item zoomsm">Lending</div></a>
-                    <a href="./faq.html" class='link-no-format'><div class="my-auto d-none d-lg-flex menu-item zoomsm">FAQ</div></a>
-                    <a href="https://pools.spartanprotocol.org/" class='link-no-format'>
-                        <div class="btn-sm bg-red mx-1 mt-auto mb-auto zoomsm">
-                            <img class="button-icon me-1" src="./assets/Icons/SVG/Icon_SpartanProtocol.svg"/><span>Join Pools</span>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <!-- Primary Meta Tags -->
+    <title>Spartan Protocol | Liquidity Pools</title>
+    <meta name="title" content="Spartan Protocol | Liquidity Pools">
+    <meta name="description"
+        content="Spartan Protocol provides community-governed and programmable token emissions functions to incentivize the formation of deep liquidity pools" />
+    <link rel="shortcut icon" href="./img/favicon.png" />
+    <meta name="author" content="Spartan Protocol Community" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://SpartanProtocol.org/pools" />
+    <meta property="og:title" content="Spartan Protocol | Liquidity Pools on BSC" />
+    <meta property="og:image" content="https://spartanprotocol.org/assets/meta-images/opengraph-image.png" />
+    <meta property="og:description"
+        content="Spartan Protocol provides community-governed and programmable token emissions functions to incentivize the formation of deep liquidity pools" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Spartan Protocol | Liquidity Pools on BSC" />
+    <meta name="twitter:description"
+        content="Spartan Protocol provides community-governed and programmable token emissions functions to incentivize the formation of deep liquidity pools" />
+    <meta name="twitter:url" content="https://SpartanProtocol.org/pools" />
+    <meta name="twitter:image" content="https://spartanprotocol.org/assets/twitter-image.png" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Kreon:300,400,500,600|Roboto:300,400,500,600");
+    </style>
+</head>
+
+<body>
+    <!-- HEADER SECTION -->
+    <div class="header pe-3 mx-auto">
+        <a href="./index.html" class='link-no-format'>
+            <img class='header-logo' src='./assets/Icons/SVG/Logo_SpartanProtocol_Red.svg' />
+            <div class='d-none d-md-block header-title'>Spartan Protocol</div>
+        </a>
+        <div class="header-menu">
+            <input class="burger-check" id="burger-check" type="checkbox"><label for="burger-check"
+                class="burger mx-4 d-inline-block d-lg-none"></label></input>
+            <div class='header-right'>
+                <a href="./pools.html" class='link-no-format'>
+                    <div class="my-auto d-none d-lg-flex menu-item menu-item-active ms-2 zoomsm">Pools</div>
+                </a>
+                <a href="./dao.html" class='link-no-format'>
+                    <div class="my-auto d-none d-lg-flex menu-item zoomsm">DAO</div>
+                </a>
+                <a href="./synths.html" class='link-no-format'>
+                    <div class="my-auto d-none d-lg-flex menu-item zoomsm">Synths</div>
+                </a>
+                <a href="./lending.html" class='link-no-format'>
+                    <div class="my-auto d-none d-lg-flex menu-item zoomsm">Lending</div>
+                </a>
+                <a href="./faq.html" class='link-no-format'>
+                    <div class="my-auto d-none d-lg-flex menu-item zoomsm">FAQ</div>
+                </a>
+                <a href="https://dapp.spartanprotocol.org/" class='link-no-format' target="_blank">
+                    <div class="btn-sm bg-red mx-1 mt-auto mb-auto zoomsm">
+                        <img class="button-icon me-1"
+                            src="./assets/Icons/SVG/Icon_SpartanProtocol.svg" /><span>DAppV2</span>
+                    </div>
+                </a>
+            </div>
+            <nav id="navigation1" class="navigation">
+                <div class="navi-custom d-flex justify-content-around bg-grey">
+                    <a href="./index.html" class='link-no-format'>
+                        <div class="my-auto nav-menu-item">Home</div>
+                    </a>
+                    <a href="./pools.html" class='link-no-format'>
+                        <div class="my-auto nav-menu-item nav-menu-item-active">Pools</div>
+                    </a>
+                    <a href="./dao.html" class='link-no-format'>
+                        <div class="my-auto nav-menu-item">DAO</div>
+                    </a>
+                    <a href="./synths.html" class='link-no-format'>
+                        <div class="my-auto nav-menu-item">Synths</div>
+                    </a>
+                    <a href="./lending.html" class='link-no-format'>
+                        <div class="my-auto nav-menu-item">Lending</div>
+                    </a>
+                    <a href="./faq.html" class='link-no-format'>
+                        <div class="my-auto nav-menu-item">FAQ</div>
+                    </a>
+                </div>
+                </a>
+        </div>
+        <nav id="navigation1" class="navigation">
+            <div class="navi-custom d-flex justify-content-around bg-grey">
+                <a href="./index.html" class='link-no-format'>
+                    <div class="my-auto nav-menu-item">Home</div>
+                </a>
+                <a href="./pools.html" class='link-no-format'>
+                    <div class="my-auto nav-menu-item nav-menu-item-active">Pools</div>
+                </a>
+                <a href="./dao.html" class='link-no-format'>
+                    <div class="my-auto nav-menu-item">DAO</div>
+                </a>
+                <a href="./synths.html" class='link-no-format'>
+                    <div class="my-auto nav-menu-item">Synths</div>
+                </a>
+                <a href="./lending.html" class='link-no-format'>
+                    <div class="my-auto nav-menu-item">Lending</div>
+                </a>
+                <a href="./faq.html" class='link-no-format'>
+                    <div class="my-auto nav-menu-item">FAQ</div>
+                </a>
+            </div>
+        </nav>
+    </div>
+    </div>
+
+    <!-- BODY SECTION -->
+
+    <!-- BODY - CALL TO ACTION -->
+    <div class="cta cta-bg text-center text-sm-start">
+        <div class="wrapper mx-auto d-flex h-100">
+            <div class="text-overlay bg-overlay p-2 p-md-4 cta-max-width">
+                <h1 class="mb-4">Liquidity Pools</h1>
+                <h5 class="mb-4">Slippery when wet!</h5>
+                <p class="mb-4">
+                    Before running over to the pools, we recommend reading the below documentation.
+                    When you are ready, feel free to come and join the other LP'ers!
+                </p>
+                <div class="mt-3 my-1 p-0 text-center text-md-start">
+                    <a href="#leader" class='link-no-format'>
+                        <div class="btn-lg bg-yellow text-center w-100 w-sm-50 d-inline-block m-1 zoomsm"><span>Read
+                                Docs</span></div>
+                    </a>
+                    <a href="https://pools.spartanprotocol.org/" class='link-no-format' target="_blank">
+                        <div class="btn-lg bg-red text-center w-100 w-sm-50 d-inline-block m-1 zoomsm"><span>V1
+                                Pools</span>
+                        </div>
+                    </a>
+                    <a href="https://dapp.spartanprotocol.org/" class='link-no-format' target="_blank">
+                        <div class="btn-lg bg-red text-center w-100 w-sm-50 d-inline-block m-1 zoomsm"><span>V2
+                                Testnet</span>
                         </div>
                     </a>
                 </div>
-                <nav id="navigation1" class="navigation">
-                    <div class="navi-custom d-flex justify-content-around bg-grey">
-                        <a href="./index.html" class='link-no-format'><div class="my-auto nav-menu-item">Home</div></a>
-                        <a href="./pools.html" class='link-no-format'><div class="my-auto nav-menu-item nav-menu-item-active">Pools</div></a>
-                        <a href="./dao.html" class='link-no-format'><div class="my-auto nav-menu-item">DAO</div></a>
-                        <a href="./synths.html" class='link-no-format'><div class="my-auto nav-menu-item">Synths</div></a>
-                        <a href="./lending.html" class='link-no-format'><div class="my-auto nav-menu-item">Lending</div></a>
-                        <a href="./faq.html" class='link-no-format'><div class="my-auto nav-menu-item">FAQ</div></a>
-                    </div>
-                </nav>
             </div>
         </div>
+    </div>
 
-        <!-- BODY SECTION -->
-
-        <!-- BODY - CALL TO ACTION -->
-        <div class="cta cta-bg text-center text-sm-start">
-            <div class="wrapper mx-auto d-flex h-100">
-                <div class="text-overlay bg-overlay p-2 p-md-4 cta-max-width">
-                    <h1 class="mb-4">Liquidity Pools</h1>
-                    <h5 class="mb-4">Slippery when wet!</h5>
-                    <p class="mb-4">
-                        Before running over to the pools, we recommend reading the below documentation.
-                        When you are ready, feel free to come and join the other LP'ers!
-                    </p>
-                    <div class="mt-3 my-1 p-0 text-center text-md-start">
-                        <a href="#leader" class='link-no-format'>
-                            <div class="btn-lg bg-yellow text-center w-100 w-sm-50 d-inline-block m-1 zoomsm"><span>Read More</span></div>
-                        </a>
-                        <a href="https://pools.spartanprotocol.org/" class='link-no-format' target="_blank">
-                            <div class="btn-lg bg-red text-center w-100 w-sm-50 d-inline-block m-1 zoomsm"><span>Join Pools</span></div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- BODY - LEADER -->
-        <div id="leader" class="bg-grey py-4 bg-body-gradient">
-            <div class="wrapper mx-auto">
-                <!-- <div class="leader-title" id="leader">
+    <!-- BODY - LEADER -->
+    <div id="leader" class="bg-grey py-4 bg-body-gradient">
+        <div class="wrapper mx-auto">
+            <!-- <div class="leader-title" id="leader">
                     <h1>LP Documentation</h1>
                 </div> -->
-                <div class="row">
-                    <div class="col-6 col-md-3 mb-2 pools-leader-design">
-                        <img src="./assets/Pictograms/SVG/picto_supply.svg" />
-                        <h5 class="">Pools Design</h5>
-                        <p>How are Spartan Protocol's liquidity pools designed to work?</p>
-                        <a href="#design">Go to -></a>
-                    </div>
-                    <div class="col-6 col-md-3 mb-2 pools-leader-utility">
-                        <img src="./assets/Pictograms/SVG/picto_reward.svg" />
-                        <h5 class="">LP Token Utility</h5>
-                        <p>What utility do the LP tokens have in the Spartan ecosystem?</p>
-                        <a href="#utility">Go to -></a>
-                    </div>
-                    <div class="col-6 col-md-3 mb-2 pools-leader-howto">
-                        <img src="./assets/Pictograms/SVG/picto_blockchain.svg" />
-                        <h5 class="">How to Use</h5>
-                        <p>How do i add and remove liquidity from Spartan's pools?</p>
-                        <a href="#howto">Go to -></a>
-                    </div>
-                    <div class="col-6 col-md-3 mb-2 pools-leader-yield">
-                        <img src="./assets/Pictograms/SVG/picto_apy.svg" />
-                        <h5 class="">Assess Yield</h5>
-                        <p>How do i assess my positions? Am i up? By how much?</p>
-                        <a href="#yield">Go to -></a>
-                    </div>
+            <div class="row">
+                <div class="col-6 col-md-3 mb-2 pools-leader-design">
+                    <img src="./assets/Pictograms/SVG/picto_supply.svg" />
+                    <h5 class="">Pools Design</h5>
+                    <p>How are Spartan Protocol's liquidity pools designed to work?</p>
+                    <a href="#design">Go to -></a>
+                </div>
+                <div class="col-6 col-md-3 mb-2 pools-leader-utility">
+                    <img src="./assets/Pictograms/SVG/picto_reward.svg" />
+                    <h5 class="">LP Token Utility</h5>
+                    <p>What utility do the LP tokens have in the Spartan ecosystem?</p>
+                    <a href="#utility">Go to -></a>
+                </div>
+                <div class="col-6 col-md-3 mb-2 pools-leader-howto">
+                    <img src="./assets/Pictograms/SVG/picto_blockchain.svg" />
+                    <h5 class="">How to Use</h5>
+                    <p>How do i add and remove liquidity from Spartan's pools?</p>
+                    <a href="#howto">Go to -></a>
+                </div>
+                <div class="col-6 col-md-3 mb-2 pools-leader-yield">
+                    <img src="./assets/Pictograms/SVG/picto_apy.svg" />
+                    <h5 class="">Assess Yield</h5>
+                    <p>How do i assess my positions? Am i up? By how much?</p>
+                    <a href="#yield">Go to -></a>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- BODY - LIQUIDITY POOLS DESIGN -->
-        <div class="py-4 min-height-block d-flex bg-body-gradient-rev">
-            <div class="row wrapper mx-auto my-auto">
-                <h2 id="design" class="mb-4">Liquidity Pools Design</h2>
-                <div class="col-12 col-xl-6 d-flex">
-                    <p class="d-block">
-                        Spartan Protocol enables users to create liquidity pools for BEP20 assets on Binance Smart Chain.<br/>
-                        The liquidity pools contain two assets each:<br/><br/>
-                        <img src="./assets/Icons/SVG/Logo_SpartanProtocol_Red.svg" class="me-2" style="height: 40px;" />
-                        Base asset (SPARTA)<br/><br/>
-                        <img src="./assets/Icons/SVG/Icon_BinanceYellow.svg" class="me-2" style="height: 40px;" />
-                        Paired asset (BEP20)<br/>
-                    </p>
-                </div>
-                <div class="col-12 col-xl-6">
-                    <img src="assets/examples/balance_of_pool.png" class="rounded mw-100" /><br/>
-                    <p1>Both pooled assets; equal in value</p1>
-                </div>
-                <div class="col-12 col-xl-6 d-flex align-items-center mt-3">
-                    <p>
-                        As hinted in the SPARTA:BTCB example above; the assets held in the liquidity pools are driven to be equal in USD value.
-                        By pairing the BEP20 tokens with SPARTA we have a common asset to price all other assets in.
-                        Therefore there is no reliance on external oracles to calculate the value of one asset against another.
-                        <br/><br/>
-                        When someone swaps between two assets in a pool, they add one asset and remove the other at a rate defined by how much of each asset exist in the pool.
-                        In the next example you will see that the rate is almost 100,000 SPARTA. This means that there are 100,000 times more SPARTA than BTCB units in the pool.
-                        To prevent manipulation, there is an algorithm which scales the rate exponentially when the trade size is a larger portion of the overall pool's size.
-                        Therefore pool manipulators pay very high fees (making the pools manipulation-resistant)
-                        The difference between the spot rate and end-rate is called the 'slip fee'. This goes directly into the pools to incentivize liquidity providers.
-                    </p>
-                </div>
-                <div class="col-12 col-xl-6">
-                    <img src="assets/examples/swap.png" class="rounded mw-100" /><br/>
-                    <p1>The SpartanSwap interface</p1>
-                </div>
-            </div>
-        </div>
-
-        <!-- BODY - LIQUIDITY TOKENS UTILITY -->
-        <div class="min-height-block mx-auto py-4 bg-body-gradient">
-            <div class="row wrapper mx-auto my-auto">
-                <h2 id="utility" class="mb-4">LP Token Utility</h2>
-                <p>
-                    When users add SPARTA & BEP20 assets to the liquidity pools; they receive LP tokens in exchange.
-                    How LP tokens can be utilized:
-                    <li>Redeem them for a percentage of assets from the pool</li>
-                    <li>Or simply HODl them whilst they accrue more purchasing power through collecting 'Slip Fees' & 'Dividends'</li>
-                    <li>Stake them in the DAO to gain voting rights with governing the protocol</li>
-                    <li>Staking in DAO also enables you to earn extra SPARTA through 'Harvesting' in 'Lock+Earn'</li>
-                    <li>Offer them up as collateral in Synths/Lending to mint synthetic assets</li>
+    <!-- BODY - LIQUIDITY POOLS DESIGN -->
+    <div class="py-4 min-height-block d-flex bg-body-gradient-rev">
+        <div class="row wrapper mx-auto my-auto">
+            <h2 id="design" class="mb-4">Liquidity Pools Design</h2>
+            <div class="col-12 col-xl-6 d-flex">
+                <p class="d-block">
+                    Spartan Protocol enables users to create liquidity pools for BEP20 assets on Binance Smart
+                    Chain.<br />
+                    The liquidity pools contain two assets each:<br /><br />
+                    <img src="./assets/Icons/SVG/Logo_SpartanProtocol_Red.svg" class="me-2" style="height: 40px;" />
+                    Base asset (SPARTA)<br /><br />
+                    <img src="./assets/Icons/SVG/Icon_BinanceYellow.svg" class="me-2" style="height: 40px;" />
+                    Paired asset (BEP20)<br />
                 </p>
-                <h4 class="mb-3">LP Token Utility - Redemption Value</h3>
+            </div>
+            <div class="col-12 col-xl-6">
+                <img src="assets/examples/balance_of_pool.png" class="rounded mw-100" /><br />
+                <p1>Both pooled assets; equal in value</p1>
+            </div>
+            <div class="col-12 col-xl-6 d-flex align-items-center mt-3">
+                <p>
+                    As hinted in the SPARTA:BTCB example above; the assets held in the liquidity pools are driven to be
+                    equal in USD value.
+                    By pairing the BEP20 tokens with SPARTA we have a common asset to price all other assets in.
+                    Therefore there is no reliance on external oracles to calculate the value of one asset against
+                    another.
+                    <br /><br />
+                    When someone swaps between two assets in a pool, they add one asset and remove the other at a rate
+                    defined by how much of each asset exist in the pool.
+                    In the next example you will see that the rate is almost 100,000 SPARTA. This means that there are
+                    100,000 times more SPARTA than BTCB units in the pool.
+                    To prevent manipulation, there is an algorithm which scales the rate exponentially when the trade
+                    size is a larger portion of the overall pool's size.
+                    Therefore pool manipulators pay very high fees (making the pools manipulation-resistant)
+                    The difference between the spot rate and end-rate is called the 'slip fee'. This goes directly into
+                    the pools to incentivize liquidity providers.
+                </p>
+            </div>
+            <div class="col-12 col-xl-6">
+                <img src="assets/examples/swap.png" class="rounded mw-100" /><br />
+                <p1>The SpartanSwap interface</p1>
+            </div>
+        </div>
+    </div>
+
+    <!-- BODY - LIQUIDITY TOKENS UTILITY -->
+    <div class="min-height-block mx-auto py-4 bg-body-gradient">
+        <div class="row wrapper mx-auto my-auto">
+            <h2 id="utility" class="mb-4">LP Token Utility</h2>
+            <p>
+                When users add SPARTA & BEP20 assets to the liquidity pools; they receive LP tokens in exchange.
+                How LP tokens can be utilized:
+                <li>Redeem them for a percentage of assets from the pool</li>
+                <li>Or simply HODl them whilst they accrue more purchasing power through collecting 'Slip Fees' &
+                    'Dividends'</li>
+                <li>Stake them in the DAO to gain voting rights with governing the protocol</li>
+                <li>Staking in DAO also enables you to earn extra SPARTA through 'Harvesting' in 'Lock+Earn'</li>
+                <li>Offer them up as collateral in Synths/Lending to mint synthetic assets</li>
+            </p>
+            <h4 class="mb-3">LP Token Utility - Redemption Value</h3>
                 <p>
                     Each LP token has redemption value calculated quite simply using the base asset (SPARTA).
-                    When you remove liquidity from a pool, you turn in the LP tokens and receive a calculated quantity of the relative BEP20 asset along with SPARTA.
-                    The calculation involves dividing the quantity of LP tokens being redeemed by the total amount in existence (this gives us the % of the pool represented by those LP tokens)
-                    Quite simply; you are entitled to get that percentage of the total assets in the pool upon redemption of those LP tokens.
+                    When you remove liquidity from a pool, you turn in the LP tokens and receive a calculated quantity
+                    of the relative BEP20 asset along with SPARTA.
+                    The calculation involves dividing the quantity of LP tokens being redeemed by the total amount in
+                    existence (this gives us the % of the pool represented by those LP tokens)
+                    Quite simply; you are entitled to get that percentage of the total assets in the pool upon
+                    redemption of those LP tokens.
                 </p>
                 <h4 class="mb-3">LP Token Utility - Slip Fees & Dividends</h3>
-                <p>
-                    At the time of writing this, there are two major methods driving incentives into the liquidity pools:
-                </p>
-                <h5>Dividends</h5>
-                <p>
-                    Pools that are in the 'Curated' list are eligible to receive SPARTA dividends from the ROUTER contract.
-                    The SPARTA dividends being injected into the pools will help offset some concerns that liquidity providers might have about impermanent loss and provide great benefit to liquidity providers.
-                    <a href="https://medium.com/spartanprotocol/spartancontracts-router-v2-dividends-3ae4b49d7c41" target="_blank">Read more about dividends here.</a>
-                </p>
-                <h5 class="pt-2">Slip Fees</h5>
-                <p>
-                    Every time someone places a swap trade using the pools, there is a slip-based fee calculated, then taken during the trade and sent directly to that pool's balance of held assets.
-                    These fees grow the total pooled asset balance and therefore the redemption value of each LP token in that pool.
-                </p>
-                <p>
-                <h4 class="mb-3">LP Token Utility - Stake in DAO</h3>
-                <p>
-                    LP Tokens can be staked in the DAO to provide the user with voting weight on proposals in the DAO.
-                    An important aspect of Spartan Protocol is it's community-programmable nature.
-                    The DAO will be able to control a significant amount of variables and functions and help shape the future of the protocol.
-                    DAO weight obtained from staking also enables the user to visit the DAO as often as they like to 'Harvest' SPARTA rewards directly to their wallet.
-                    <a href="./dao.html">More on the DAO here.</a>
-                </p>
-                <h4 class="mb-3">LP Token Utility - Collateral</h3>
-                <p>
-                    The current proposed 'Synths' implementation requires LP tokens to be used as collateral when minting synthetic assets.
-                </p>
-            </div>
+                    <p>
+                        At the time of writing this, there are two major methods driving incentives into the liquidity
+                        pools:
+                    </p>
+                    <h5>Dividends</h5>
+                    <p>
+                        Pools that are in the 'Curated' list are eligible to receive SPARTA dividends from the ROUTER
+                        contract.
+                        The SPARTA dividends being injected into the pools will help offset some concerns that liquidity
+                        providers might have about impermanent loss and provide great benefit to liquidity providers.
+                        <a href="https://medium.com/spartanprotocol/spartancontracts-router-v2-dividends-3ae4b49d7c41"
+                            target="_blank">Read more about dividends here.</a>
+                    </p>
+                    <h5 class="pt-2">Slip Fees</h5>
+                    <p>
+                        Every time someone places a swap trade using the pools, there is a slip-based fee calculated,
+                        then taken during the trade and sent directly to that pool's balance of held assets.
+                        These fees grow the total pooled asset balance and therefore the redemption value of each LP
+                        token in that pool.
+                    </p>
+                    <p>
+                    <h4 class="mb-3">LP Token Utility - Stake in DAO</h3>
+                        <p>
+                            LP Tokens can be staked in the DAO to provide the user with voting weight on proposals in
+                            the DAO.
+                            An important aspect of Spartan Protocol is it's community-programmable nature.
+                            The DAO will be able to control a significant amount of variables and functions and help
+                            shape the future of the protocol.
+                            DAO weight obtained from staking also enables the user to visit the DAO as often as they
+                            like to 'Harvest' SPARTA rewards directly to their wallet.
+                            <a href="./dao.html">More on the DAO here.</a>
+                        </p>
+                        <h4 class="mb-3">LP Token Utility - Collateral</h3>
+                            <p>
+                                The current proposed 'Synths' implementation requires LP tokens to be used as collateral
+                                when minting synthetic assets.
+                            </p>
         </div>
+    </div>
 
-        <!-- BODY - HOW TO GUIDES -->
-        <div class="py-4 min-height-block d-flex bg-body-gradient-rev">
-            <div class="row wrapper mx-auto my-auto">
-                <h2 id="howto" class="mb-4">How-to Guides</h2>
-                <p>
-                    The Spartan community are always working on documentation to make it easier for users to navigate the confusing land of DApps!
-                    The below is a quick summary of some of the guides already available relating the the use of the SpartanPools.
-                </p>
-                <h5>Swapping BEP20 assets</h5>
-                <p>
-                    In-depth community-built guide for swapping in the SpartanPools: <a href="https://spartanprotocol.medium.com/how-to-swap-in-spartanpools-1c1e5faa0d95" target="_blank">Click Here</a>
-                </p>
-                <h5>Adding & removing liquidity</h5>
-                <p>
-                    In-depth community-built guide for managing assets in the SpartanPools: <a href="https://medium.com/spartanprotocol/liquidity-provision-in-spartan-protocol-e58c8700b919" target="_blank">Click Here</a>
-                </p>
-            </div>
+    <!-- BODY - HOW TO GUIDES -->
+    <div class="py-4 min-height-block d-flex bg-body-gradient-rev">
+        <div class="row wrapper mx-auto my-auto">
+            <h2 id="howto" class="mb-4">How-to Guides</h2>
+            <p>
+                The Spartan community are always working on documentation to make it easier for users to navigate the
+                confusing land of DApps!
+                The below is a quick summary of some of the guides already available relating the the use of the
+                SpartanPools.
+            </p>
+            <h5>Swapping BEP20 assets</h5>
+            <p>
+                In-depth community-built guide for swapping in the SpartanPools: <a
+                    href="https://spartanprotocol.medium.com/how-to-swap-in-spartanpools-1c1e5faa0d95"
+                    target="_blank">Click Here</a>
+            </p>
+            <h5>Adding & removing liquidity</h5>
+            <p>
+                In-depth community-built guide for managing assets in the SpartanPools: <a
+                    href="https://medium.com/spartanprotocol/liquidity-provision-in-spartan-protocol-e58c8700b919"
+                    target="_blank">Click Here</a>
+            </p>
         </div>
+    </div>
 
-        <!-- BODY - ASSESS YIELD -->
-        <div class="py-4 min-height-block d-flex bg-body-gradient">
-            <div class="row wrapper mx-auto my-auto">
-                <h2 id="yield" class="mb-4">Assess Your Liquidity Position</h2>
-                <p>Now that I have added liquidity and my assets are working hard to earn revenue from dividends and slip fees. What do I do next?</p>
-                <h5>'Assess those GAINZ!'</h5>
-                <p>You are probably wondering how?</p>
-                <img src="assets/examples/positions.png" class="rounded mw-100" /><br/>
-                <h5 class="mt-3">Positions Page</h5>
-                <p>Contributors have finished delivering a first iteration of the ‘positions’ page so that users can easily see:</p>
-                <li>How much of each asset they have ‘added’ to the pools</li>
-                <li>How much of each asset they have ‘removed’ from the pools</li>
-                <li>Bond+Mint asset ‘adds’</li>
-                <li>The current redemption value of their LP holdings</li>
-                <p>
-                    Using all that, you will be able to assess whether you are up or down in USD/unit terms.
-                    Users may opt to shift their liquidity to a higher-performing pool or play out whatever strategy makes sense based on the data they have.
-                </p>
-                <br/><br/>
-                <h5>Assess Redemption Value of LP Tokens</h5>
-                <p>
-                    Visit the positions-page here: <a href="https://pools.spartanprotocol.org/positions" target="_blank">Click Here</a>
-                </p>
-            </div>
+    <!-- BODY - ASSESS YIELD -->
+    <div class="py-4 min-height-block d-flex bg-body-gradient">
+        <div class="row wrapper mx-auto my-auto">
+            <h2 id="yield" class="mb-4">Assess Your Liquidity Position</h2>
+            <p>Now that I have added liquidity and my assets are working hard to earn revenue from dividends and slip
+                fees. What do I do next?</p>
+            <h5>'Assess those GAINZ!'</h5>
+            <p>You are probably wondering how?</p>
+            <img src="assets/examples/positions.png" class="rounded mw-100" /><br />
+            <h5 class="mt-3">Positions Page</h5>
+            <p>Contributors have finished delivering a first iteration of the ‘positions’ page so that users can easily
+                see:</p>
+            <li>How much of each asset they have ‘added’ to the pools</li>
+            <li>How much of each asset they have ‘removed’ from the pools</li>
+            <li>Bond+Mint asset ‘adds’</li>
+            <li>The current redemption value of their LP holdings</li>
+            <p>
+                Using all that, you will be able to assess whether you are up or down in USD/unit terms.
+                Users may opt to shift their liquidity to a higher-performing pool or play out whatever strategy makes
+                sense based on the data they have.
+            </p>
+            <br /><br />
+            <h5>Assess Redemption Value of LP Tokens</h5>
+            <p>
+                Visit the V1 positions-page here: <a href="https://pools.spartanprotocol.org/positions"
+                    target="_blank">Click Here</a>
+            </p>
         </div>
-        <!-- FOOTER SECTION -->
+    </div>
+
+    <!-- FOOTER SECTION -->
     <div class="footer px-3">
         <div class='footer-text d-none d-md-flex'>A Spartan Community Project</div>
-            <div class='w-100 d-flex'>
+        <div class='w-100 d-flex'>
+            <div class="footer-right me-auto me-md-0">
                 <div class="footer-right me-auto me-md-0">
-                    <div class="footer-right me-auto me-md-0">
-                        <div class="tooltipbtm zoom">
-                            <a href="https://docs.spartanprotocol.org/" class='link-no-format' target="_blank">
-                            <img class="footer-icon" src="./assets/Icons/SVG/gitbook-icon.svg"/>
+                    <div class="tooltipbtm zoom">
+                        <a href="https://docs.spartanprotocol.org/" class='link-no-format' target="_blank">
+                            <img class="footer-icon" src="./assets/Icons/SVG/gitbook-icon.svg" />
                             <span class="tooltiptext">Gitbook</span>
-                            </a>
-                        </div>
-                        <div class="tooltipbtm zoom">
-                            <a href="https://twitter.com/SpartanProtocol?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class='link-no-format' target="_blank">
-                            <img class="footer-icon" src="./assets/Icons/SVG/ic_twitter.svg"/>
+                        </a>
+                    </div>
+                    <div class="tooltipbtm zoom">
+                        <a href="https://twitter.com/SpartanProtocol?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                            class='link-no-format' target="_blank">
+                            <img class="footer-icon" src="./assets/Icons/SVG/ic_twitter.svg" />
                             <span class="tooltiptext">Twitter</span>
-                            </a>
-                        </div>
-                        <div class="tooltipbtm zoom">
-                            <a href="https://github.com/spartan-protocol" class='link-no-format' target="_blank">
-                            <img class="footer-icon" src="./assets/Icons/SVG/ic_github.svg"/>
+                        </a>
+                    </div>
+                    <div class="tooltipbtm zoom">
+                        <a href="https://github.com/spartan-protocol" class='link-no-format' target="_blank">
+                            <img class="footer-icon" src="./assets/Icons/SVG/ic_github.svg" />
                             <span class="tooltiptext">Github</span>
-                            </a>
-                        </div>
-                        <div class="tooltipbtm zoom">
+                        </a>
+                    </div>
+                    <div class="tooltipbtm zoom">
                         <a href="https://spartanprotocol.medium.com/" class='link-no-format' target="_blank">
-                            <img class="footer-icon" src="./assets/Icons/SVG/ic_medium.svg"/>
+                            <img class="footer-icon" src="./assets/Icons/SVG/ic_medium.svg" />
                             <span class="tooltiptext">Medium</span>
-                            </a>
-                        </div>
-                        <div class="tooltipbtm zoom">
-                            <a href="https://t.me/SpartanProtocolOrg" class='link-no-format' target="_blank">
-                            <img class="footer-icon" src="./assets/Icons/SVG/ic_telegram.svg"/>
+                        </a>
+                    </div>
+                    <div class="tooltipbtm zoom">
+                        <a href="https://t.me/SpartanProtocolOrg" class='link-no-format' target="_blank">
+                            <img class="footer-icon" src="./assets/Icons/SVG/ic_telegram.svg" />
                             <span class="tooltiptext">Telegram</span>
-                            </a>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
