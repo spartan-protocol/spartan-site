@@ -1,223 +1,281 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-        <!-- Primary Meta Tags -->
-        <title>Spartan Protocol | Lending | CDPs</title>
-        <meta name="title" content="Spartan Protocol | Lending | CDPs">
-        <meta name="description" content="Spartan Protocol provides community-governed and programmable token emissions functions to incentivize the formation of deep liquidity pools">
-        <link rel="shortcut icon" href="./img/favicon.png"/>
-        <meta name="author" content="Spartan Protocol Community"/>
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://SpartanProtocol.org/lending.html"/>
-        <meta property="og:title" content="Spartan Protocol | Lending | CDPs"/>
-        <meta property="og:image" content="https://spartanprotocol.org/assets/meta-images/opengraph-image.png"/>
-        <meta property="og:description" content="Spartan Protocol provides community-governed and programmable token emissions functions to incentivize the formation of deep liquidity pools"/>
-        <!-- Twitter -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Spartan Protocol | Lending | CDPs"/>
-        <meta name="twitter:description" content="Spartan Protocol provides community-governed and programmable token emissions functions to incentivize the formation of deep liquidity pools"/>
-        <meta name="twitter:url" content="https://SpartanProtocol.org/lending.html"/>
-        <meta name="twitter:image" content="https://spartanprotocol.org/assets/twitter-image.png"/>
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
-        <link rel="stylesheet" type="text/css" href="css/style.css"/>
-        <style>
-            @import url("https://fonts.googleapis.com/css?family=Kreon:300,400,500,600|Roboto:300,400,500,600");
-        </style>
-    </head>
-    <body>
-        <!-- HEADER SECTION -->
-        <div class="header pe-3 mx-auto">
-            <a href="./index.html" class='link-no-format'>
-                <img class='header-logo' src='./assets/Icons/SVG/Logo_SpartanProtocol_Red.svg' />
-                <div class='d-none d-md-block header-title'>Spartan Protocol</div>
-            </a>
-            <div class="header-menu">
-                <input class="burger-check" id="burger-check" type="checkbox"><label for="burger-check" class="burger mx-4 d-inline-block d-lg-none"></label></input>
-                <div class='header-right'>
-                    <a href="./pools.html" class='link-no-format'><div class="my-auto d-none d-lg-flex menu-item ms-2 zoomsm">Pools</div></a>
-                    <a href="./dao.html" class='link-no-format'><div class="my-auto d-none d-lg-flex menu-item zoomsm">DAO</div></a>
-                    <a href="./synths.html" class='link-no-format'><div class="my-auto d-none d-lg-flex menu-item zoomsm">Synths</div></a>
-                    <a href="./lending.html" class='link-no-format'><div class="my-auto d-none d-lg-flex menu-item menu-item-active zoomsm">Lending</div></a>
-                    <a href="./faq.html" class='link-no-format'><div class="my-auto d-none d-lg-flex menu-item zoomsm">FAQ</div></a>
-                    <a href="https://pools.spartanprotocol.org/" class='link-no-format'>
-                        <div class="btn-sm bg-red mx-1 mt-auto mb-auto zoomsm">
-                            <img class="button-icon me-1" src="./assets/Icons/SVG/Icon_SpartanProtocol.svg"/><span>Join Pools</span>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <!-- Primary Meta Tags -->
+    <title>Spartan Protocol | Lending | CDPs</title>
+    <meta name="title" content="Spartan Protocol | Lending | CDPs">
+    <meta name="description"
+        content="Spartan Protocol provides community-governed and programmable token emissions functions to incentivize the formation of deep liquidity pools">
+    <link rel="shortcut icon" href="./img/favicon.png" />
+    <meta name="author" content="Spartan Protocol Community" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://SpartanProtocol.org/lending.html" />
+    <meta property="og:title" content="Spartan Protocol | Lending | CDPs" />
+    <meta property="og:image" content="https://spartanprotocol.org/assets/meta-images/opengraph-image.png" />
+    <meta property="og:description"
+        content="Spartan Protocol provides community-governed and programmable token emissions functions to incentivize the formation of deep liquidity pools" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Spartan Protocol | Lending | CDPs" />
+    <meta name="twitter:description"
+        content="Spartan Protocol provides community-governed and programmable token emissions functions to incentivize the formation of deep liquidity pools" />
+    <meta name="twitter:url" content="https://SpartanProtocol.org/lending.html" />
+    <meta name="twitter:image" content="https://spartanprotocol.org/assets/twitter-image.png" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Kreon:300,400,500,600|Roboto:300,400,500,600");
+    </style>
+</head>
+
+<body>
+    <!-- HEADER SECTION -->
+    <div class="header pe-3 mx-auto">
+        <a href="./index.html" class='link-no-format'>
+            <img class='header-logo' src='./assets/Icons/SVG/Logo_SpartanProtocol_Red.svg' />
+            <div class='d-none d-md-block header-title'>Spartan Protocol</div>
+        </a>
+        <div class="header-menu">
+            <input class="burger-check" id="burger-check" type="checkbox"><label for="burger-check"
+                class="burger mx-4 d-inline-block d-lg-none"></label></input>
+            <div class='header-right'>
+                <a href="./pools.html" class='link-no-format'>
+                    <div class="my-auto d-none d-lg-flex menu-item ms-2 zoomsm">Pools</div>
+                </a>
+                <a href="./dao.html" class='link-no-format'>
+                    <div class="my-auto d-none d-lg-flex menu-item zoomsm">DAO</div>
+                </a>
+                <a href="./synths.html" class='link-no-format'>
+                    <div class="my-auto d-none d-lg-flex menu-item zoomsm">Synths</div>
+                </a>
+                <a href="./lending.html" class='link-no-format'>
+                    <div class="my-auto d-none d-lg-flex menu-item menu-item-active zoomsm">Lending</div>
+                </a>
+                <a href="./faq.html" class='link-no-format'>
+                    <div class="my-auto d-none d-lg-flex menu-item zoomsm">FAQ</div>
+                </a>
+                <a href="https://pools.spartanprotocol.org/" class='link-no-format'>
+                    <div class="btn-sm bg-red mx-1 mt-auto mb-auto zoomsm">
+                        <img class="button-icon me-1" src="./assets/Icons/SVG/Icon_SpartanProtocol.svg" /><span>Join
+                            Pools</span>
+                    </div>
+                </a>
+            </div>
+            <nav id="navigation1" class="navigation">
+                <div class="navi-custom d-flex justify-content-around bg-grey">
+                    <a href="./index.html" class='link-no-format'>
+                        <div class="my-auto nav-menu-item">Home</div>
+                    </a>
+                    <a href="./pools.html" class='link-no-format'>
+                        <div class="my-auto nav-menu-item">Pools</div>
+                    </a>
+                    <a href="./dao.html" class='link-no-format'>
+                        <div class="my-auto nav-menu-item">DAO</div>
+                    </a>
+                    <a href="./synths.html" class='link-no-format'>
+                        <div class="my-auto nav-menu-item">Synths</div>
+                    </a>
+                    <a href="./lending.html" class='link-no-format'>
+                        <div class="my-auto nav-menu-item nav-menu-item-active">Lending</div>
+                    </a>
+                    <a href="./faq.html" class='link-no-format'>
+                        <div class="my-auto nav-menu-item">FAQ</div>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- BODY SECTION -->
+
+    <!-- BODY - CALL TO ACTION -->
+    <div class="pt-3 cta cta-bg text-center text-sm-start">
+        <div class="wrapper mx-auto d-flex h-100">
+            <div class="text-overlay bg-overlay p-2 p-md-4 cta-max-width">
+                <h1 class="mb-4">SpartanLending</h1>
+                <h5 class="mb-4">Spartans don't need banks!</h5>
+                <p class="mb-4">
+                    Smart Spartans don't let their money sit idly by. Prepare to join the rest of community by
+                    becoming a lender and earn passive income by accuring interest on your tokens.
+                </p>
+                <div class="mt-3 my-1 p-0 text-center text-md-start">
+                    <a href="#leader" class='link-no-format'>
+                        <div class="btn-lg bg-yellow text-center w-100 w-sm-50 d-inline-block m-1 zoomsm"><span>Read
+                                More</span></div>
+                    </a>
+                    <a href="https://pools.spartanprotocol.org/" class='link-no-format' target="_blank">
+                        <div class="btn-lg bg-red text-center w-100 w-sm-50 d-inline-block m-1 zoomsm"><span>DApp</span>
                         </div>
                     </a>
                 </div>
-                <nav id="navigation1" class="navigation">
-                    <div class="navi-custom d-flex justify-content-around bg-grey">
-                        <a href="./index.html" class='link-no-format'><div class="my-auto nav-menu-item">Home</div></a>
-                        <a href="./pools.html" class='link-no-format'><div class="my-auto nav-menu-item">Pools</div></a>
-                        <a href="./dao.html" class='link-no-format'><div class="my-auto nav-menu-item">DAO</div></a>
-                        <a href="./synths.html" class='link-no-format'><div class="my-auto nav-menu-item">Synths</div></a>
-                        <a href="./lending.html" class='link-no-format'><div class="my-auto nav-menu-item nav-menu-item-active">Lending</div></a>
-                        <a href="./faq.html" class='link-no-format'><div class="my-auto nav-menu-item">FAQ</div></a>
-                    </div>
-                </nav>
             </div>
         </div>
-
-        <!-- BODY SECTION -->
-
-        <!-- BODY - CALL TO ACTION -->
-        <div class="pt-3 cta cta-bg text-center text-sm-start">
-            <div class="wrapper mx-auto d-flex h-100">
-                <div class="text-overlay bg-overlay p-2 p-md-4 cta-max-width">
-                    <h1 class="mb-4">SpartanLending</h1>
-                    <h5 class="mb-4">Spartans don't need banks!</h5>
-                    <p class="mb-4">
-                        Smart Spartans don't let their money sit idly by. Join the rest of community today by
-                        becoming a lender and earn passive income by accuring interest on your tokens. 
-                    </p>
-                    <div class="mt-3 my-1 p-0 text-center text-md-start">
-                        <a href="#leader" class='link-no-format'>
-                            <div class="btn-lg bg-yellow text-center w-100 w-sm-50 d-inline-block m-1 zoomsm"><span>Read More</span></div>
-                        </a>
-                        <a href="https://pools.spartanprotocol.org/" class='link-no-format' target="_blank">
-                            <div class="btn-lg bg-red text-center w-100 w-sm-50 d-inline-block m-1 zoomsm"><span>DApp</span></div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- BODY - LEADER -->
-        <div id="leader" class="bg-grey py-4 bg-body-gradient">
-            <div class="wrapper mx-auto">
-                <!-- <div class="leader-title" id="leader">
-                    <h1>DAO Documentation</h1>
+    </div>
+    <!-- BODY - LEADER -->
+    <div id="leader" class="bg-grey py-4 bg-body-gradient">
+        <div class="wrapper mx-auto">
+            <!-- <div class="leader-title" id="leader">
+                    <h1>Lending Documentation</h1>
                 </div> -->
-                <div class="row">
-                    <div class="col-6 col-md-3 mb-2 pools-leader-design">
-                        <img src="./assets/Pictograms/SVG/picto_supply.svg" />
-                        <h5 class="">What is Lending</h5>
-                        <p>An overview of blockchain lending</p>
-                        <a href="#whatIsLending">Go to -></a>
-                    </div>
-                    <div class="col-6 col-md-3 mb-2 pools-leader-utility">
-                        <img src="./assets/Pictograms/SVG/picto_reward.svg" />
-                        <h5 class="">How Does It Work</h5>
-                        <p>Dive into the technical details</p>
-                        <a href="#howDoesItWork">Go to -></a>
-                    </div>
-                    <div class="col-6 col-md-3 mb-2 pools-leader-howto">
-                        <img src="./assets/Pictograms/SVG/picto_blockchain.svg" />
-                        <h5 class="">How to Use</h5>
-                        <p>Make your money work for you </p>
-                        <a href="#howToUse">Go to -></a>
-                    </div>
-                    <div class="col-6 col-md-3 mb-2 pools-leader-yield">
-                        <img src="./assets/Pictograms/SVG/picto_apy.svg" />
-                        <h5 class="">Assess Yields</h5>
-                        <p>How to assess your positions and yields</p>
-                        <a href="#assessYields">Go to -></a>
-                    </div>
+            <div class="row">
+                <div class="col-6 col-md-3 mb-2 pools-leader-design">
+                    <img src="./assets/Pictograms/SVG/picto_supply.svg" />
+                    <h5 class="">What is Lending</h5>
+                    <p>An overview of blockchain lending</p>
+                    <a href="#whatIsLending">Go to -></a>
+                </div>
+                <div class="col-6 col-md-3 mb-2 pools-leader-utility">
+                    <img src="./assets/Pictograms/SVG/picto_reward.svg" />
+                    <h5 class="">How Does It Work</h5>
+                    <p>Dive into the technical details</p>
+                    <a href="#howDoesItWork">Go to -></a>
+                </div>
+                <div class="col-6 col-md-3 mb-2 pools-leader-howto">
+                    <img src="./assets/Pictograms/SVG/picto_blockchain.svg" />
+                    <h5 class="">How to Use</h5>
+                    <p>Make your money work for you </p>
+                    <a href="#howToUse">Go to -></a>
+                </div>
+                <div class="col-6 col-md-3 mb-2 pools-leader-yield">
+                    <img src="./assets/Pictograms/SVG/picto_apy.svg" />
+                    <h5 class="">Assess Yields</h5>
+                    <p>How to assess your positions and yields</p>
+                    <a href="#assessYields">Go to -></a>
                 </div>
             </div>
-        <!-- BODY - WHAT IS A DAO -->
-            <div class="py-4 min-height-block d-flex bg-body-gradient-rev">
-                <div class="row wrapper mx-auto my-auto">
-                    <h2 id="whatIsLending" class="mb-4"><img src="./assets/Pictograms/SVG/picto_supply.svg" />What is Lending</h2>
-		            <div class="col-12 col-xl-6 d-flex">
-                  	    <p class="d-block">	
-                        Crypto assets sitting in a wallet don’t accrue interest. The underlying value may increase or decrease, but you don't earn anything for holding that particular cryptocurrency- 
-                        This is where Spartan Lending come in.<br/><br/> Imagine being able to utilise a smart contract, to safely and securely lend your crypto to someone else and earn interest whilst doing so. That's 
-                        how bank loans currently work, but it's a service that is constrained by several economic factors, credit checks, and KYC verification to name a few.<br/><br/>
-                        In the world of Spartan Lending, anyone can become a lender. By loaning your crypto assets to others, you are able to generate passive income by accruing interest on those assets. 
-                        Spartan Lending is essentially the loan office of a traditional bank, but accessible to anyone and secured through smart contracts with Spartan's underlying protocol.   <br/><br/>
-                        </p>
-			        </div>
-                        <div class="col-12 col-xl-6">
-                   	        <img src="assets/photo-inserts/Spartanlending.png" class="rounded mw-100" /><br/>
-			            </div>
-                        <P>DeFi offers the same products as traditional financial institutions (lending, borrowing, trading, investing, etc.), but uses blockchain to do so with additional benefits:
-                            <li>DeFi is decentralized and anonymous</li> 
-                            <li> You can join a large community of lenders earning interest by joining a lending pool</li>
-                            <li>Borrowers have to over-collateralize their loan to protect against sudden drops in value, which makes it safer for lenders</li> 
-                        </P>
+        </div>
+        <!-- BODY - WHAT IS LENDING -->
+        <div class="py-4 min-height-block d-flex bg-body-gradient-rev">
+            <div class="row wrapper mx-auto my-auto">
+                <h2 id="whatIsLending" class="mb-4"><img src="./assets/Pictograms/SVG/picto_supply.svg" />What is
+                    Lending</h2>
+                <div class="col-12 col-xl-6 d-flex">
+                    <p class="d-block">
+                        Crypto assets sitting in a wallet don’t accrue interest. The underlying value may increase or
+                        decrease, but you don't earn anything for holding that particular cryptocurrency-
+                        This is where Spartan Lending comes in.<br /><br /> Imagine being able to utilise a smart
+                        contract, to lend your crypto to someone else and earn interest whilst doing so. That's
+                        how bank loans currently work, but it's a service that is constrained by several economic
+                        factors; credit checks, and KYC verification to name a couple.<br /><br />
+                        In the world of Spartan Lending, anyone can become a lender. By loaning your crypto assets to
+                        others, you are able to generate passive income by accruing interest on those assets.
+                        Spartan Lending is essentially the loan office of a traditional bank, but accessible to anyone
+                        and secured through smart contracts with Spartan's underlying protocol. <br /><br />
+                    </p>
                 </div>
-            </div>                                  
+                <div class="col-12 col-xl-6">
+                    <img src="assets/photo-inserts/Spartanlending.png" class="rounded mw-100" /><br />
+                </div>
+                <P>DeFi offers the same products as traditional financial institutions (lending, borrowing, trading,
+                    investing, etc.), but uses blockchain to do so with additional benefits:
+                    <li>DeFi is more decentralized and anonymous</li>
+                    <li>You can join a large community of lenders earning interest in a lending pool</li>
+                    <li>Borrowers have to over-collateralize their loan to protect against sudden drops in value, making
+                        it safer for lenders</li>
+                </P>
+            </div>
+        </div>
         <!-- BODY - SPARTAN DAO -->
         <div class="min-height-block mx-auto py-4 bg-body-gradient">
             <div class="row wrapper mx-auto my-auto">
-                <h2 id="howDoesItWork" class="mb-4"><img src="./assets/Pictograms/SVG/picto_reward.svg" />How Does It Work</h2>
-                <p> When a borrower goes to get a loan at a bank, they would need collateral for that loan; If you get a car loan, the car itself is the collateral. If you stop paying on the loan, the bank 
-                    will take your car. That makes sense, right? But given that a decentralized system is A) anonymous and B) doesn’t have physical property that can be used as collateral, another system has 
-                    to be put in place to ensure the lenders get their money back.<br/><br/>                 
-                    When a borrower wants to take out a loan, they have to offer something more valuable than the amount of the loan. That means they need to deposit via a smart contract, an amount of currency 
-                    that is at least of equal value to the amount they'd like to take out. The collateral can be in a wide variety of currencies, so if you want to borrow one BNB, you’d need to deposit the current 
-                    price for one BNB in SPARTA.<br/><br/>
-                    A few months later, when you’re finished with the loan and pay back your BNB +10%, you'll receive your SPARTA back. The borrower is happy because they received their original SPARTA 
-                    back without having to sell them, and the pool is happy because they can now distribute the 10% interest fee, in BNB, back to the investors.<br/><br/>
-                    It's important to bear in mind that the prices can be volatile, especially when dealing with different crypto assets. We’ve all seen the ups and downs of BNB's price over the last few months.</p><br/>
-                    <h4>What would happen if the price of the collateral drops below the price of the loan?</h4><br/><br/>
-                    <p>To ensure there are always funds left to pay the lender back, Spartan Protocol would have it written in the contract that it requires borrowers to collateralize their loan at a
-                    minimum of. For example, 150% of the value of the loan. So, let’s say you want to borrow 100 BNB at 150% of the value of the loan; you would have to collateralize your loan with a minimum of 150 BNB in SPARTA. 
-                    Therefore, if your collateral drops below the 150 BNB / Sparta value, your loan would then be subject to a liquidation penalty, ensuring that the lenders will always receive their money back.
+                <h2 id="howDoesItWork" class="mb-4"><img src="./assets/Pictograms/SVG/picto_reward.svg" />How Does It
+                    Work</h2>
+                <p> When a borrower goes to get a loan at a bank, they would need collateral for that loan; If you get a
+                    car loan, the car itself is the collateral. If you stop paying on the loan, the bank
+                    will take your car. That makes sense, right? But given that a decentralized system is A) anonymous
+                    and B) doesn’t have physical property that can be used as collateral, another system has
+                    to be put in place to ensure the lenders get their money back.<br /><br />
+                    When a borrower wants to take out a loan, they have to offer something more valuable than the amount
+                    of the loan. That means they need to deposit via a smart contract, an amount of currency
+                    that is at least of equal value to the amount they'd like to take out. The collateral can be in a
+                    wide variety of currencies, so if you want to borrow one BNB, you’d need to deposit the current
+                    price for one BNB in SPARTA.<br /><br />
+                    A few months later, when you’re finished with the loan and pay back your BNB +10%, you'll receive
+                    your SPARTA back. The borrower is happy because they received their original SPARTA
+                    back without having to sell them, and the pool is happy because they can now distribute the 10%
+                    interest fee, in BNB, back to the investors.<br /><br />
+                    It's important to bear in mind that the prices can be volatile, especially when dealing with
+                    different crypto assets. We’ve all seen the ups and downs of BNB's price over the last few months.
+                </p><br />
+                <h4>What would happen if the price of the collateral drops below the price of the loan?</h4><br /><br />
+                <p>To ensure there are always funds left to pay the lender back, Spartan Protocol would have it written
+                    in the contract that it requires borrowers to collateralize their loan at a
+                    minimum of for example; 150% of the value of the loan. So, let’s say you want to borrow 100 BNB at
+                    150% of the value of the loan; you would have to collateralize your loan with a minimum of 150 BNB
+                    value in SPARTA.
+                    Therefore, if your collateral drops below the 150 BNB / Sparta value, your loan would then be
+                    subject to a liquidation penalty, ensuring that the lenders will always receive their money back.
                 </p>
-	        </div>
-	    </div>
- <!-- BODY - HOW TO USE -->
+            </div>
+        </div>
+        <!-- BODY - HOW TO USE -->
         <div class="min-height-block mx-auto py-4 bg-body-gradient-rev">
             <div class="row wrapper mx-auto my-auto">
                 <h2 id="howToUse" class="mb-4"><img src="./assets/Pictograms/SVG/picto_blockchain.svg" />How To Use</h2>
                 <h4>Coming Soon...</h4>
-                <p>We're still working on the contracts in the protocol which is what we need to deliver this little bundle of joy.
-                   To keep yourself up to date on all developments, follow us on any of our social channels or check out our Gitbook where we have inscribed further details about Spartan Protocol.
-			    </P>
-		    </div>
-	    </div>
-<!-- BODY - ASSESS YIELDS -->
+                <p>We're still working on the contracts in the protocol which is what we need to deliver this little
+                    bundle of joy.
+                    To keep yourself up to date on all developments, follow us on any of our social channels or check
+                    out our Gitbook where we have inscribed further details about Spartan Protocol.
+                </P>
+            </div>
+        </div>
+        <!-- BODY - ASSESS YIELDS -->
         <div class="min-height-block mx-auto py-4 bg-body-gradient">
             <div class="row wrapper mx-auto my-auto">
-                <h2 id="assessYields" class="mb-4"><img src="./assets/Pictograms/SVG/picto_apy.svg" />Assess Your Yields</h2>
+                <h2 id="assessYields" class="mb-4"><img src="./assets/Pictograms/SVG/picto_apy.svg" />Assess Your Yields
+                </h2>
                 <h4>Coming Soon...</h4>
-                <p>Once Spartan Lending is up and running, come here and find out exactly how to look at your positions and learn how your money is working for you.
+                <p>Once Spartan Lending is up and running, come here and find out exactly how to look at your positions
+                    and learn how your money is working for you.
                 </p>
             </div>
-		</div>
-	</div>
-           <!-- FOOTER SECTION -->
+        </div>
+    </div>
+    <!-- FOOTER SECTION -->
     <div class="footer px-3">
         <div class='footer-text d-none d-md-flex'>A Spartan Community Project</div>
-            <div class='w-100 d-flex'>
-                <div class="footer-right me-auto me-md-0">
-                    <div class="tooltipbtm zoom">
-                        <a href="https://docs.spartanprotocol.org/" class='link-no-format' target="_blank">
-                        <img class="footer-icon" src="./assets/Icons/SVG/gitbook-icon.svg"/>
+        <div class='w-100 d-flex'>
+            <div class="footer-right me-auto me-md-0">
+                <div class="tooltipbtm zoom">
+                    <a href="https://docs.spartanprotocol.org/" class='link-no-format' target="_blank">
+                        <img class="footer-icon" src="./assets/Icons/SVG/gitbook-icon.svg" />
                         <span class="tooltiptext">Gitbook</span>
-                        </a>
-                    </div>
-                    <div class="tooltipbtm zoom">
-                        <a href="https://twitter.com/SpartanProtocol?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class='link-no-format' target="_blank">
-                        <img class="footer-icon" src="./assets/Icons/SVG/ic_twitter.svg"/>
+                    </a>
+                </div>
+                <div class="tooltipbtm zoom">
+                    <a href="https://twitter.com/SpartanProtocol?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                        class='link-no-format' target="_blank">
+                        <img class="footer-icon" src="./assets/Icons/SVG/ic_twitter.svg" />
                         <span class="tooltiptext">Twitter</span>
-                        </a>
-                    </div>
-                    <div class="tooltipbtm zoom">
-                        <a href="https://github.com/spartan-protocol" class='link-no-format' target="_blank">
-                        <img class="footer-icon" src="./assets/Icons/SVG/ic_github.svg"/>
+                    </a>
+                </div>
+                <div class="tooltipbtm zoom">
+                    <a href="https://github.com/spartan-protocol" class='link-no-format' target="_blank">
+                        <img class="footer-icon" src="./assets/Icons/SVG/ic_github.svg" />
                         <span class="tooltiptext">Github</span>
-                        </a>
-                    </div>
-                    <div class="tooltipbtm zoom">
+                    </a>
+                </div>
+                <div class="tooltipbtm zoom">
                     <a href="https://spartanprotocol.medium.com/" class='link-no-format' target="_blank">
-                        <img class="footer-icon" src="./assets/Icons/SVG/ic_medium.svg"/>
+                        <img class="footer-icon" src="./assets/Icons/SVG/ic_medium.svg" />
                         <span class="tooltiptext">Medium</span>
-                        </a>
-                    </div>
-                    <div class="tooltipbtm zoom">
-                        <a href="https://t.me/SpartanProtocolOrg" class='link-no-format' target="_blank">
-                        <img class="footer-icon" src="./assets/Icons/SVG/ic_telegram.svg"/>
+                    </a>
+                </div>
+                <div class="tooltipbtm zoom">
+                    <a href="https://t.me/SpartanProtocolOrg" class='link-no-format' target="_blank">
+                        <img class="footer-icon" src="./assets/Icons/SVG/ic_telegram.svg" />
                         <span class="tooltiptext">Telegram</span>
-                        </a>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+    </div>
+</body>
+
 </html>
