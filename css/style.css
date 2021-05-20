@@ -639,7 +639,7 @@ h5 {
 .tooltipbtm {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black;
+    border-bottom: 0px dotted black;
   }
   
   .tooltipbtm .tooltiptext {
@@ -663,3 +663,38 @@ h5 {
     visibility: visible;
     font-size: 9px
   }
+
+  .tooltipbtmbtm {
+    position: relative;
+    display: inline-block;
+    border-bottom: 0px dotted black;
+  }
+  
+  .tooltipbtmbtm .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: transparent;
+    color: #aacdff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 3px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+  }
+  
+  .tooltipbtmbtm:hover .tooltiptext {
+    visibility: visible;
+    font-size: 12px
+  }
+
+  .inline {
+    background-color:transparent;
+    display:block;
+  }
+
+  
