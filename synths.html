@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <!-- Primary Meta Tags -->
-    <title>Spartan Protocol | Synthetic Assets</title>
+    <title>DeFi | Synthetic Assets | Spartan Protocol</title>
     <meta name="title" content="Spartan Protocol | Synthetic Assets">
     <meta name="description"
         content="Spartan Protocol allows the generation of synthetic assets by leveraging the price anchors offered by it's own liquidity pools" />
@@ -34,6 +34,30 @@
 
 <body>
     <!-- HEADER SECTION -->
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <div class="tooltipbtm zoom">
+            <img class="footer-icon" src="./assets/Icons/SVG/escalator-up.svg" />
+                <span class="tooltiptext">Go To Top</span>
+        </div>
+    </button>
+    <script>
+        // THIS IS A SCROLL TO TOP TAB THAT APPEARS WHEN YOU SCROLL DOWN
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function() {scrollFunction()};        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+                function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+
     <div class="header pe-3 mx-auto">
         <a href="./index.html" class='link-no-format'>
             <img class='header-logo' src='./assets/Icons/SVG/Logo_SpartanProtocol_Red.svg' />
@@ -119,10 +143,10 @@
     <div class="pt-3 cta cta-bg text-center text-sm-start">
         <div class="wrapper mx-auto d-flex h-100">
             <div class="text-overlay bg-overlay p-2 p-md-4 cta-max-width">
-                <h1 class="mb-4">SpartanSynths</h1>
-                <h5 class="mb-4">The only place in DeFi with leveraged synthetics</h5>
+                <h1 class="mb-4">Spartan Synthetic Assets</h1>
+                <h5 class="mb-4">The only place in DeFi with leveraged synthetic assets</h5>
                 <p class="mb-4">
-                    Spartan Protocol allows the generation of synthetic assets (synths) of curated BEP20 pooled assets,
+                    Spartan Protocol allows the generation of synthetic assets (synths) of curated BEP20 pooled assets on the Binance Smart Chain (BSC),
                     using price anchors offered by its own liquidity pools, minted by any listed BEP20 token and
                     collateralised by the relevant underlying LP tokens.
                 </p>
@@ -219,11 +243,10 @@
                     and similar
                     financial instruments.<br /><br />
                     This innovative capability gives investors the opportunity to invest using leverage into traditional
-                    asset classes through Sparta's underlying protocol.<br /><br />
+                    asset classes on the Binance Smart Chain, through Sparta's underlying protocol.<br /><br />
                     The Spartan Protocol allows the generation of synthetic assets (synths) of curated BEP20 pooled
                     assets, using price anchors offered by its own liquidity pools, minted using any listed BEP20 token
-                    and collateralised
-                    by the relevant underlying LP tokens.<br /><br />
+                    and collateralised by the relevant underlying LP tokens.<br /><br />
                     This is done through the use of code. As the Spartan Protocol is decentralized and community-driven,
                     you do not need to rely on any intermediary. It is a trustless process.<br /><br />
                     All assets on the platform are pegged to the price of the protocol's token; Therefore, there is no
@@ -275,7 +298,7 @@
         <div class="row wrapper mx-auto my-auto">
             <h2 id="design" class="mb-4"><img src="./assets/Pictograms/SVG/picto_blockchain.svg" />How It Works</h2>
             <p>
-                In order to create synths on the Spartan Protocol, users need to first hold (or purchase) SPARTA tokens.
+                In order to create a synthetic asset on the Spartan Protocol, users need to first hold (or purchase) SPARTA tokens.
                 With these tokens, users can interact with the Synth Contract.
                 This SPARTA is then added as an asymmetric-liquidity-add to the relevant pool.
                 These LP tokens are then held at the SynthFactory; which handles the minting of synthetic assets.

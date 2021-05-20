@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <!-- Primary Meta Tags -->
-    <title>Spartan Protocol | Lending | CDPs</title>
+    <title>DeFi | Lending | Spartan Protocol</title>
     <meta name="title" content="Spartan Protocol | Lending | CDPs">
     <meta name="description"
         content="Spartan Protocol provides community-governed and programmable token emissions functions to incentivize the formation of deep liquidity pools">
@@ -34,6 +34,30 @@
 
 <body>
     <!-- HEADER SECTION -->
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <div class="tooltipbtm zoom">
+            <img class="footer-icon" src="./assets/Icons/SVG/escalator-up.svg" />
+                <span class="tooltiptext">Go To Top</span>
+        </div>
+    </button>
+    <script>
+        // THIS IS A SCROLL TO TOP TAB THAT APPEARS WHEN YOU SCROLL DOWN
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function() {scrollFunction()};        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+                function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+
     <div class="header pe-3 mx-auto">
         <a href="./index.html" class='link-no-format'>
             <img class='header-logo' src='./assets/Icons/SVG/Logo_SpartanProtocol_Red.svg' />
@@ -97,11 +121,11 @@
         <div class="wrapper mx-auto d-flex h-100">
             <div class="text-overlay bg-overlay p-2 p-md-4 cta-max-width">
                 <!-- Back to top button -->
-                <h1 class="mb-4">SpartanLending</h1>
+                <h1 class="mb-4">Spartan Lending</h1>
                 <h5 class="mb-4">Spartans don't need banks!</h5>
                 <p class="mb-4">
-                    Smart Spartans don't let their money sit idly by. Prepare to join the rest of community by
-                    becoming a lender and earn passive income by accuring interest on your tokens.
+                    Smart Spartans don't let their money sit idly by. Join the rest of the DeFi community by
+                    becoming a lender, earning passive income by accuring interest on your crypto.
                 </p>
                 <div class="mt-3 my-1 p-0 text-center text-md-start">
                     <a href="#leader" class='link-no-format'>
