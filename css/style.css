@@ -625,9 +625,9 @@ h5 {
 }
 
 .zoom:hover {
-    -ms-transform: scale(1.4); /* IE 9 */
-    -webkit-transform: scale(1.4); /* Safari 3-8 */
-    transform: scale(1.4);
+    -ms-transform: scale(1.3); /* IE 9 */
+    -webkit-transform: scale(1.3); /* Safari 3-8 */
+    transform: scale(1.3);
 }
 
 .zoomsm:hover {
@@ -697,4 +697,22 @@ h5 {
     display:block;
   }
 
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    left: 0px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
   
+  #myBtn:hover {
+    background-color: transparent;
+  }

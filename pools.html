@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <!-- Primary Meta Tags -->
-    <title>Spartan Protocol | Liquidity Pools</title>
+    <title>DeFi | Liquidity Pools | Spartan Protocol</title>
     <meta name="title" content="Spartan Protocol | Liquidity Pools">
     <meta name="description"
         content="Spartan Protocol provides community-governed and programmable token emissions functions to incentivize the formation of deep liquidity pools" />
@@ -34,6 +34,30 @@
 
 <body>
     <!-- HEADER SECTION -->
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <div class="tooltipbtm zoom">
+            <img class="footer-icon" src="./assets/Icons/SVG/escalator-up.svg" />
+                <span class="tooltiptext">Go To Top</span>
+        </div>
+    </button>
+    <script>
+        // THIS IS A SCROLL TO TOP TAB THAT APPEARS WHEN YOU SCROLL DOWN
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function() {scrollFunction()};        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+                function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+
     <div class="header pe-3 mx-auto">
         <a href="./index.html" class='link-no-format'>
             <img class='header-logo' src='./assets/Icons/SVG/Logo_SpartanProtocol_Red.svg' />
@@ -122,8 +146,9 @@
                 <h1 class="mb-4">Liquidity Pools</h1>
                 <h5 class="mb-4">Slippery when wet!</h5>
                     <p class="mb-4">
-                    Before running over to the pools, we recommend reading the below documentation.
-                    When you are ready, feel free to come and join the other LP'ers!
+                    Before running over to the pools, we recommend reading the below documentation to familiarise yourself 
+                    with what DeFi and liquidity pools are all about.<br/>
+                    When you are ready, come and join the rest of the community by becoming a Liquidity Provider(LP)!
                     </p>
                         <div class="mt-3 my-1 p-0 text-center text-md-start">
                             <a href="#leader" class='link-no-format'>
