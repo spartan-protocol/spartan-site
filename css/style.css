@@ -697,7 +697,7 @@ h5 {
     display:block;
   }
 
-  #myBtn {
+  #scrollUpButton {
     display: none;
     position: fixed;
     bottom: 30px;
@@ -713,6 +713,6 @@ h5 {
     border-radius: 4px;
   }
   
-  #myBtn:hover {
+  #scrollUpButton:hover {
     background-color: transparent;
   }
