@@ -40,7 +40,7 @@ class Header extends HTMLElement {
                     <nav id="navigation1" class="navigation">
                         <div class="navi-custom d-flex justify-content-around bg-grey">
                             <a href="./index.html" class='link-no-format'>
-                                <div class="my-auto nav-menu-item nav-menu-item-active">Home</div>
+                                <div class="my-auto nav-menu-item">Home</div>
                             </a>
                             <a href="./pools.html" class='link-no-format'>
                                 <div class="my-auto nav-menu-item">Pools</div>
@@ -62,6 +62,23 @@ class Header extends HTMLElement {
                 </div>
             </div>
         `;
+
+        var current = window.location.pathname.split('/');
+        current = current[current.length - 1];
+        if (current === "") return;
+        var menuItems = document.querySelectorAll('div.header-menu a');
+        for (var i = 0, len = menuItems.length; i < len; i++) {
+            if (menuItems[i].getAttribute("href").toLowerCase().indexOf(current.toLowerCase()) > -1) {
+                var count = menuItems[i].querySelectorAll('div.menu-item');
+                if (count.length > 0) {
+                    count[0].className += " menu-item-active";
+                }
+                count = menuItems[i].querySelectorAll('div.nav-menu-item');
+                if (count.length > 0) {
+                    count[0].className += " nav-menu-item-active";
+                }
+            }
+        }
     }
 }
 
