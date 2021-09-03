@@ -41,10 +41,10 @@
     <button onclick="topFunction()" id="scrollUpButton" title="Go to top">
         <div class="tooltipbtm zoom">
             <img class="footer-icon" src="./assets/Icons/SVG/escalator-up.svg" />
-                <span class="tooltiptext">Go To Top</span>
+            <span class="tooltiptext">Go To Top</span>
         </div>
     </button>
-    
+
     <header-component></header-component>
 
     <!-- BODY SECTION -->
@@ -55,34 +55,35 @@
             <div class="text-overlay bg-overlay p-2 p-md-4 cta-max-width">
                 <h1 class="mb-4">Liquidity Pools</h1>
                 <h5 class="mb-4">Slippery when wet!</h5>
-                    <p class="mb-4">
-                    Before running over to the pools, we recommend reading the below documentation to familiarise yourself 
-                    with what DeFi and liquidity pools are all about.<br/>
-                    When you are ready, come and join the rest of the community by becoming a Liquidity Provider(LP)!
-                    </p>
-                        <div class="mt-3 my-1 p-0 text-center text-md-start">
-                            <a href="#leader" class='link-no-format'>
-                                <div class="btn-lg bg-yellow text-center w-100 w-sm-50 d-inline-block m-1 zoomsm">
-                                    <span>Read More</span>
-                                        <img class="button-icon ms-2"src="./assets/Icons/SVG/read.svg" />
-                                </div>
-                            </a>
-                            <a href="https://pools.spartanprotocol.org/" class='link-no-format' target="_blank">
-                                <div class="btn-lg bg-red text-center w-100 w-sm-50 d-inline-block m-1 zoomsm">
-                                    <span>V1 Pools</span>
-                                        <img class="button-icon ms-2"src="./assets/Icons/SVG/Icon_SpartanProtocol.svg" />
-                                </div>
-                            </a>
-                            <a href="https://dapp.spartanprotocol.org/" class='link-no-format' target="_blank">
-                                <div class="btn-lg bg-red text-center w-100 w-sm-50 d-inline-block m-1 zoomsm">
-                                    <span>V2 Testnet</span>
-                                        <img class="button-icon ms-2"src="./assets/Icons/SVG/Icon_SpartanProtocol.svg" />
-                                </div>
-                            </a>
+                <p class="mb-4">
+                    Before running over to the pools, we recommend reading the below documentation to familiarise
+                    yourself
+                    with what DeFi and liquidity pools are all about.<br />
+                    When you are ready, come and join the rest of the community by becoming a Liquidity Provider!
+                </p>
+                <div class="mt-3 my-1 p-0 text-center text-md-start">
+                    <a href="#leader" class='link-no-format'>
+                        <div class="btn-lg bg-yellow text-center w-100 w-sm-50 d-inline-block m-1 zoomsm">
+                            <span>Read More</span>
+                            <img class="button-icon ms-2" src="./assets/Icons/SVG/read.svg" />
                         </div>
+                    </a>
+                    <a href="https://pools.spartanprotocol.org/" class='link-no-format' target="_blank">
+                        <div class="btn-lg bg-red text-center w-100 w-sm-50 d-inline-block m-1 zoomsm">
+                            <span>V1 Pools</span>
+                            <img class="button-icon ms-2" src="./assets/Icons/SVG/Icon_SpartanProtocol.svg" />
+                        </div>
+                    </a>
+                    <a href="https://dapp.spartanprotocol.org/" class='link-no-format' target="_blank">
+                        <div class="btn-lg bg-red text-center w-100 w-sm-50 d-inline-block m-1 zoomsm">
+                            <span>V2 Testnet</span>
+                            <img class="button-icon ms-2" src="./assets/Icons/SVG/Icon_SpartanProtocol.svg" />
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <!-- BODY - LEADER -->
@@ -165,7 +166,8 @@
             </div>
             <div class="col-12 col-xl-6 d-flex align-items-center mt-3">
                 <p>
-                    As hinted in the SPARTA:BTCB example above; the assets held in the liquidity pools are driven to be
+                    As hinted in the SPARTA:BTCB example above; the assets held in the liquidity pools are economically
+                    driven to be
                     equal in USD value.
                     By pairing the BEP20 tokens with SPARTA we have a common asset to price all other assets in.
                     Therefore there is no reliance on external oracles to calculate the value of one asset against
@@ -175,16 +177,17 @@
                     defined by how much of each asset exist in the pool.
                     In the next example you will see that the rate is almost 100,000 SPARTA. This means that there are
                     100,000 times more SPARTA than BTCB units in the pool.
-                    To prevent manipulation, there is an algorithm which scales the rate exponentially when the trade
+                    To resist manipulation, there is an algorithm which scales the rate exponentially when the trade
                     size is a larger portion of the overall pool's size.
                     Therefore pool manipulators pay very high fees (making the pools manipulation-resistant)
                     The difference between the spot rate and end-rate is called the 'slip fee'. This goes directly into
-                    the pools to incentivize liquidity providers.
+                    the pool to incentivize liquidity providers. 100% of all pool-fees are directed to the liquidity
+                    providers.
                 </p>
             </div>
             <div class="col-12 col-xl-6">
                 <img src="assets/examples/swap.png" class="rounded mw-100" /><br />
-                <p1>The SpartanSwap interface</p1>
+                <p1>The V1 swap interface</p1>
             </div>
         </div>
     </div>
@@ -196,12 +199,12 @@
             <p>
                 When users add SPARTA & BEP20 assets to the liquidity pools; they receive LP tokens in exchange.
                 How LP tokens can be utilized:
-                <li>Redeem them for a percentage of assets from the pool</li>
-                <li>Or simply HODl them whilst they accrue more purchasing power through collecting 'Slip Fees' &
-                    'Dividends'</li>
-                <li>Stake them in the DAO to gain voting rights with governing the protocol</li>
-                <li>Staking in DAO also enables you to earn extra SPARTA through 'Harvesting' in 'Lock+Earn'</li>
-                <li>Offer them up as collateral in Synths/Lending to mint synthetic assets</li>
+                <li>You could of course simply HODl them whilst they collect 'Slip Fees' & 'Dividends'</li>
+                <li>Ideally though, you stake them in the DAOVault to gain voting rights with governing the protocol
+                </li>
+                <li>Staking in DAOVault also enables you to earn extra SPARTA yield through 'Harvesting'</li>
+                <li>When you are ready to remove your liquidity, you can redeem them for a percentage of assets from the
+                    pool (Remove liquidity)</li>
             </p>
             <h4 class="mb-3">LP Token Utility - Redemption Value</h3>
                 <p>
@@ -216,14 +219,15 @@
                 <h4 class="mb-3">LP Token Utility - Slip Fees & Dividends</h3>
                     <p>
                         At the time of writing this, there are two major methods driving incentives into the liquidity
-                        pools:
+                        pools, both involve driving SPARTA into one side of the pool; causing a small arbitrage
+                        opportunity and therefore swap activity and more incentives:
                     </p>
                     <h5>Dividends</h5>
                     <p>
-                        Pools that are in the 'Curated' list are eligible to receive SPARTA dividends from the ROUTER
+                        Pools that are in the 'Curated' list are eligible to receive SPARTA dividends from the RESERVE
                         contract.
                         The SPARTA dividends being injected into the pools will help offset some concerns that liquidity
-                        providers might have about impermanent loss and provide great benefit to liquidity providers.
+                        providers might have about impermanent loss and provide great benefits to liquidity providers.
                         <a href="https://medium.com/spartanprotocol/spartancontracts-router-v2-dividends-3ae4b49d7c41"
                             target="_blank">Read more about dividends here.</a>
                     </p>
@@ -235,7 +239,7 @@
                         token in that pool.
                     </p>
                     <p>
-                    <h4 class="mb-3">LP Token Utility - Stake in DAO</h3>
+                    <h4 class="mb-3">LP Token Utility - Stake in DAOVault</h3>
                         <p>
                             LP Tokens can be staked in the DAO to provide the user with voting weight on proposals in
                             the DAO.
@@ -246,11 +250,6 @@
                             like to 'Harvest' SPARTA rewards directly to their wallet.
                             <a href="./dao.html">More on the DAO here.</a>
                         </p>
-                        <h4 class="mb-3">LP Token Utility - Collateral</h3>
-                            <p>
-                                The current proposed 'Synths' implementation requires LP tokens to be used as collateral
-                                when minting synthetic assets.
-                            </p>
         </div>
     </div>
 
@@ -261,8 +260,8 @@
             <p>
                 The Spartan community are always working on documentation to make it easier for users to navigate the
                 confusing land of DApps!
-                The below is a quick summary of some of the guides already available relating the the use of the
-                SpartanPools.
+                The below is a quick summary of some of the guides already available relating to the use of the
+                Spartan Protocol pools.
             </p>
             <h5>Swapping BEP20 assets</h5>
             <p>
