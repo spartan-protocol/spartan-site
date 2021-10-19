@@ -2,11 +2,15 @@ class Footer extends HTMLElement {
     constructor() {
         super();
     }
-  
+
     connectedCallback() {
-    this.innerHTML = `
+        this.innerHTML = `
         <div class="footer px-3">
-            <div class='footer-text d-none d-md-flex'>A Spartan Community Project</div>
+            <div class='footer-text d-none d-md-flex'>
+                <a href="https://vercel.com/?utm_source=[spartan-team]&utm_campaign=oss" class='link-no-format' target="_blank">
+                    <img class="footer-icon" src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" />
+                </a>
+            </div>
                 <div class='w-100 d-flex'>
                     <div class="footer-right me-auto me-md-0 py-1">
                         <div class="tooltipbtm zoom">
@@ -59,5 +63,5 @@ class Footer extends HTMLElement {
     `;
     }
 }
-  
-customElements.define('footer-component', Footer);
+
+customElements.define("footer-component", Footer);
