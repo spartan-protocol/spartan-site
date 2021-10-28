@@ -9,7 +9,9 @@
     <meta name="title" content="Spartan Protocol | Liquidity Pools">
     <meta name="description"
         content="Spartan Protocol provides community-governed and programmable token emissions functions to incentivize the formation of deep liquidity pools" />
-    <link rel="shortcut icon" href="./img/spartav2.svg" />
+        <link rel="icon" href="img/favicon.ico" sizes="any" />
+        <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
     <meta name="author" content="Spartan Protocol Community" />
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -68,15 +70,9 @@
                             <img class="button-icon ms-2" src="./assets/Icons/SVG/read.svg" />
                         </div>
                     </a>
-                    <a href="https://pools.spartanprotocol.org/" class='link-no-format' target="_blank">
-                        <div class="btn-lg bg-red text-center w-100 w-sm-50 d-inline-block m-1 zoomsm">
-                            <span>V1 Pools</span>
-                            <img class="button-icon ms-2" src="./assets/Icons/SVG/Icon_SpartanProtocol.svg" />
-                        </div>
-                    </a>
                     <a href="https://dapp.spartanprotocol.org/" class='link-no-format' target="_blank">
                         <div class="btn-lg bg-red text-center w-100 w-sm-50 d-inline-block m-1 zoomsm">
-                            <span>V2 Testnet</span>
+                            <span>V2 Pools</span>
                             <img class="button-icon ms-2" src="./assets/Icons/SVG/Icon_SpartanProtocol.svg" />
                         </div>
                     </a>
@@ -149,45 +145,41 @@
     <div class="py-4 min-height-block d-flex bg-body-gradient-rev">
         <div class="row wrapper mx-auto my-auto">
             <h2 id="design" class="mb-4">Liquidity Pools Design</h2>
-            <div class="col-12 col-xl-6 d-flex">
-                <p class="d-block">
-                    Spartan Protocol enables users to create liquidity pools for BEP20 assets on Binance Smart
-                    Chain.<br />
-                    The liquidity pools contain two assets each:<br /><br />
-                    <img src="./assets/Icons/SVG/Logo_SpartanProtocol_Red.svg" class="me-2" style="height: 40px;" />
-                    Base asset (SPARTA)<br /><br />
-                    <img src="./assets/Icons/SVG/Icon_BinanceYellow.svg" class="me-2" style="height: 40px;" />
-                    Paired asset (BEP20)<br />
-                </p>
+            <div class="col-12 d-flex">
+                <div class="row">
+                    <div class="col d-flex"><p class="d-block">
+                        Spartan Protocol enables users to add liquidity to pools for BEP20 assets on Binance Smart
+                        Chain to expose their assets to yield generating revenue.<br /><br />
+                        The liquidity pools contain two assets each that are incentivized to be balanced in $USD value by users swapping between the assets in the pool.<br /><br />
+                        <img src="./assets/Icons/SVG/spartav2.svg" class="me-2" style="height: 40px;" />
+                            Base asset (SPARTA)<br /><br />
+                            <img src="./assets/Icons/SVG/Icon_BinanceYellow.svg" class="me-2" style="height: 40px;" />
+                            Paired asset (BEP20)<br />
+                        </p></div>
+                        <div class="col-auto d-flex"><img src="assets/examples/pools/pool-item.png" class="rounded mw-100" /></div>
+                </div>
+            
             </div>
-            <div class="col-12 col-xl-6">
-                <img src="assets/examples/balance_of_pool.png" class="rounded mw-100" /><br />
-                <p1>Both pooled assets; equal in value</p1>
-            </div>
-            <div class="col-12 col-xl-6 d-flex align-items-center mt-3">
+            <div class="col-12 d-flex align-items-center mt-3">
                 <p>
-                    As hinted in the SPARTA:BTCB example above; the assets held in the liquidity pools are economically
+                    As touched on above; the assets held in the liquidity pools are economically
                     driven to be
                     equal in USD value.
                     By pairing the BEP20 tokens with SPARTA we have a common asset to price all other assets in.
                     Therefore there is no reliance on external oracles to calculate the value of one asset against
                     another.
                     <br /><br />
+                    <img src="assets/examples/pools/pool-bscscan.png" class="rounded mw-100" />
+                        <br /><br />
                     When someone swaps between two assets in a pool, they add one asset and remove the other at a rate
                     defined by how much of each asset exist in the pool.
-                    In the next example you will see that the rate is almost 100,000 SPARTA. This means that there are
-                    100,000 times more SPARTA than BTCB units in the pool.
                     To resist manipulation, there is an algorithm which scales the rate exponentially when the trade
                     size is a larger portion of the overall pool's size.
                     Therefore pool manipulators pay very high fees (making the pools manipulation-resistant)
-                    The difference between the spot rate and end-rate is called the 'slip fee'. This goes directly into
+                    The difference between the spot rate and end-rate is called the 'slip'. This goes directly into
                     the pool to incentivize liquidity providers. 100% of all pool-fees are directed to the liquidity
                     providers.
                 </p>
-            </div>
-            <div class="col-12 col-xl-6">
-                <img src="assets/examples/swap.png" class="rounded mw-100" /><br />
-                <p1>The V1 swap interface</p1>
             </div>
         </div>
     </div>
@@ -263,16 +255,16 @@
                 The below is a quick summary of some of the guides already available relating to the use of the
                 Spartan Protocol pools.
             </p>
-            <h5>Swapping BEP20 assets</h5>
-            <p>
-                In-depth community-built guide for swapping in the SpartanPools: <a
-                    href="https://spartanprotocol.medium.com/how-to-swap-in-spartanpools-1c1e5faa0d95"
-                    target="_blank">Click Here</a>
-            </p>
             <h5>Adding & removing liquidity</h5>
             <p>
-                In-depth community-built guide for managing assets in the SpartanPools: <a
-                    href="https://medium.com/spartanprotocol/liquidity-provision-in-spartan-protocol-e58c8700b919"
+                Collection of community-built guides for managing assets in the SpartanPools: <a
+                    href="https://docs.spartanprotocol.org/guides/liquidity"
+                    target="_blank">Click Here</a>
+            </p>
+            <h5>Swapping pooled assets</h5>
+            <p>
+                Collection of community-built guides for swapping in the SpartanProtocol Pools: <a
+                    href="https://docs.spartanprotocol.org/guides/swap"
                     target="_blank">Click Here</a>
             </p>
         </div>
@@ -286,23 +278,23 @@
                 fees. What do I do next?</p>
             <h5>'Assess those GAINZ!'</h5>
             <p>You are probably wondering how?</p>
-            <img src="assets/examples/positions.png" class="rounded mw-100" /><br />
+            <!-- <img src="assets/examples/positions.png" class="rounded mw-100" /><br /> -->
             <h5 class="mt-3">Positions Page</h5>
-            <p>Contributors have finished delivering a first iteration of the ‘positions’ page so that users can easily
-                see:</p>
+            <p>Contributors are working on a positions page for the V2 pools to assess your position via different scopes:</p>
             <li>How much of each asset they have ‘added’ to the pools</li>
             <li>How much of each asset they have ‘removed’ from the pools</li>
-            <li>Bond+Mint asset ‘adds’</li>
+            <li>Bond asset ‘adds’</li>
             <li>The current redemption value of their LP holdings</li>
+            <li>Harvest earnings</li>
             <p>
-                Using all that, you will be able to assess whether you are up or down in USD/unit terms.
+                Using all that, you will be able to assess your position in both 'vs holding $USD' and 'vs holding same tokens'.
                 Users may opt to shift their liquidity to a higher-performing pool or play out whatever strategy makes
-                sense based on the data they have.
+                sense based on the data they have & their preferred held assets.
             </p>
             <br /><br />
             <h5>Assess Redemption Value of LP Tokens</h5>
             <p>
-                Visit the V1 positions-page here: <a href="https://pools.spartanprotocol.org/positions"
+                Until the positions page is complete, you can assess your held LP token's redemtion value in your wallet in the DApp, check out the 'LPs Tab' section in the guide here: <a href="https://docs.spartanprotocol.org/guides/wallets/exploring-your-wallet"
                     target="_blank">Click Here</a>
             </p>
         </div>
