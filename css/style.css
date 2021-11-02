@@ -512,34 +512,34 @@ h5 {
 }
 
 .burger {
-  margin-bottom: 25px;
+  margin-bottom: 37px;
   display: inline-block;
   border: 0;
   background: none;
   outline: 0;
   padding: 0;
   cursor: pointer;
-  border-bottom: 4px solid currentColor;
-  width: 28px;
+  border-bottom: 2px solid currentColor;
+  width: 20px;
   transition: border-bottom 1s ease-in-out;
   -webkit-transition: border-bottom 1s ease-in-out;
 }
 
 .burger:before {
-  margin-top: 23px;
-  margin-bottom: 5px;
+  margin-top: 36px;
   content: "";
   display: block;
-  border-bottom: 4px solid currentColor;
+  border-bottom: 2px solid currentColor;
   width: 100%;
   transition: transform 0.5s ease-in-out;
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
 }
 
 .burger:after {
+  margin-top: 3px;
   content: "";
   display: block;
-  border-bottom: 4px solid currentColor;
+  border-bottom: 2px solid currentColor;
   width: 100%;
   transition: transform 0.5s ease-in-out;
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
@@ -550,7 +550,7 @@ h5 {
 }
 
 .burger-check:checked ~ .burger {
-  border-bottom: 4px solid transparent;
+  border-bottom: 2px solid transparent;
   transition: border-bottom 0.8s ease-in-out;
   -webkit-transition: border-bottom 0.8s ease-in-out;
 }

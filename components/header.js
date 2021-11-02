@@ -12,7 +12,7 @@ class Header extends HTMLElement {
                 </a>
                 <div class="header-menu">
                     <input class="burger-check" id="burger-check" type="checkbox">
-                        <label for="burger-check" class="burger mx-4 d-inline-block d-lg-none"></label>
+                        <label for="burger-check" class="burger mx-2 d-inline-block d-lg-none"></label>
                     </input>
                     <div class='header-right'>
                         <a href="./pools.html" class='link-no-format'>
@@ -27,8 +27,17 @@ class Header extends HTMLElement {
                         <a href="./lending.html" class='link-no-format'>
                             <div class="my-auto d-none d-lg-flex menu-item zoomsm">Lending</div>
                         </a>
-                        <a href="./faq.html" class='link-no-format'>
-                            <div class="my-auto d-none d-lg-flex menu-item zoomsm">FAQ</div>
+                        <a href="https://www.immunefi.com/bounty/spartanprotocol" class='link-no-format' target="_blank">
+                        <div class="d-flex d-lg-none btn-sm bg-dark mx-1 mt-auto mb-auto zoomsm">
+                            <img class="button-icon"
+                            src="./assets/Icons/SVG/immunefi-mini.svg" />
+                        </div>
+                    </a>
+                        <a href="https://www.immunefi.com/bounty/spartanprotocol" class='link-no-format' target="_blank">
+                            <div class="d-none d-lg-flex btn-sm bg-dark mx-1 mt-auto mb-auto zoomsm">
+                                <img class="button-icon"
+                                src="./assets/Icons/SVG/immunefi-wht.svg" />
+                            </div>
                         </a>
                         <a href="https://dapp.spartanprotocol.org/" class='link-no-format' target="_blank">
                             <div class="btn-sm bg-dark mx-1 mt-auto mb-auto zoomsm">
