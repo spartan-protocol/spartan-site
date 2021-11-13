@@ -27,19 +27,19 @@ class Header extends HTMLElement {
                         <a href="./lending.html" class='link-no-format'>
                             <div class="my-auto d-none d-lg-flex menu-item zoomsm">Lending</div>
                         </a>
-                        <a href="https://www.immunefi.com/bounty/spartanprotocol" class='link-no-format' target="_blank">
+                        <a href="https://www.immunefi.com/bounty/spartanprotocol" class='link-no-format'>
                         <div class="d-flex d-lg-none btn-sm bg-dark mx-1 mt-auto mb-auto zoomsm">
                             <img class="button-icon"
                             src="./assets/Icons/SVG/immunefi-mini.svg" />
                         </div>
                     </a>
-                        <a href="https://www.immunefi.com/bounty/spartanprotocol" class='link-no-format' target="_blank">
+                        <a href="https://www.immunefi.com/bounty/spartanprotocol" class='link-no-format'>
                             <div class="d-none d-lg-flex btn-sm bg-dark mx-1 mt-auto mb-auto zoomsm">
                                 <img class="button-icon"
                                 src="./assets/Icons/SVG/immunefi-wht.svg" />
                             </div>
                         </a>
-                        <a href="https://dapp.spartanprotocol.org/" class='link-no-format' target="_blank">
+                        <a href="https://dapp.spartanprotocol.org/" class='link-no-format'>
                             <div class="btn-sm bg-dark mx-1 mt-auto mb-auto zoomsm">
                                 <img class="button-icon me-1"
                                     src="./assets/Icons/SVG/spartav2.svg" /><span>DAppV2</span>
