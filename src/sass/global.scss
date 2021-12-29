@@ -1,0 +1,21 @@
+@import "./variables.scss";
+
+body {
+  background: $bg;
+  margin: 0;
+  font-family: $font;
+  margin-top: 80px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,70 @@
+@import "../../sass/variables.scss";
+
+.hero-block {
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.hero-left {
+  max-width: 445px;
+}
+
+.hero-right {
+  max-width: 445px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 54px;
+  line-height: 130%;
+  color: $black;
+}
+
+.subtitle {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 130%;
+  color: $black;
+  margin-bottom: 15px;
+}
+
+.desc {
+  font-size: 24px;
+  line-height: 37px;
+  color: $black;
+  margin-bottom: 15px;
+}
+
+.cta {
+  background: linear-gradient(90deg, #fb2715 0%, #ea3a63 52.6%, #a32d5b 100%);
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 0.457143px;
+  color: $white;
+  width: 160px;
+  height:38px;
+  margin-right: 5px;
+}
+
+.cta-info {
+  background: $white;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 0.457143px;
+  color: $black;
+  width: 160px;
+  height:38px;
+  margin-left: 5px;
+}
+
+.feat-img {
+  max-width: 445px;
+  height: auto;
+  border-radius: 44px;
+}

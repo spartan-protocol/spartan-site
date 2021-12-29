@@ -1,0 +1,16 @@
+@import "../../sass/variables.scss";
+
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  background-color: $bg-overlay;
+  backdrop-filter: blur(5px);
+  height: 70px;
+
+  h1 {
+    margin: 0;
+  }
+}
