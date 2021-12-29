@@ -1,0 +1,27 @@
+{
+  "name": "spartan-protocol",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Spartan Protocol",
+  "author": "Samus",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@fontsource/titillium-web": "^4.5.0",
+    "gatsby": "^4.4.0",
+    "gatsby-plugin-manifest": "^4.4.0",
+    "gatsby-plugin-react-helmet": "^5.4.0",
+    "gatsby-plugin-sitemap": "^5.4.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0"
+  }
+}
