@@ -14,3 +14,41 @@
     margin: 0;
   }
 }
+
+.brand {
+  margin-top: 10px;
+}
+
+.title {
+  color: white;
+  margin-left: 20px;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.links {
+  color: white;
+  li {
+    margin: 0 10px;
+    display: inline-block;
+    a {
+      color: white;
+    }
+  }
+}
+
+.dappBtn {
+  color: white;
+  background: $bg-btn;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.docsBtn {
+  color: white;
+  background: $bg-btn;
+  padding: 5px 10px;
+  border-radius: 5px;
+}

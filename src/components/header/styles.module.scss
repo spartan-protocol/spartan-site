@@ -1,0 +1,47 @@
+@import "../../sass/variables.scss";
+
+.header {
+  padding-top: 100px;
+  padding-bottom: 60px;
+  background-color: black;
+  color: #ffffff;
+}
+
+.headerTitle {
+  max-width: 633px;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 72px;
+  margin-bottom: 50px;
+}
+
+.headerItem {
+  width: 100%;
+  max-width: 30%;
+  min-width: 250px;
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 10px;
+  :last-child {
+    margin-right: 0;
+  }
+}
+
+.headerItemTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.headerItemBody {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 5px 0;
+}
+
+.button {
+  color: white;
+  background: $bg-btn;
+  padding: 5px 10px;
+  border-radius: 5px;
+}

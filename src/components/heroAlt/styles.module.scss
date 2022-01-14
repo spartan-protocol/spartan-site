@@ -1,16 +1,16 @@
 @import "../../sass/variables.scss";
 
 .hero-block {
-  margin-top: 25px;
-  flex-grow: 1;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .hero-left {
-  max-width: 600px;
+  max-width: 445px;
 }
 
 .hero-right {
-  max-width: 400px;
+  max-width: 445px;
 }
 
 .title {
@@ -45,7 +45,7 @@
   letter-spacing: 0.457143px;
   color: $white;
   width: 160px;
-  height: 38px;
+  height:38px;
   margin-right: 5px;
 }
 
@@ -59,11 +59,12 @@
   letter-spacing: 0.457143px;
   color: $black;
   width: 160px;
-  height: 38px;
+  height:38px;
   margin-left: 5px;
 }
 
 .feat-img {
-  max-width: 300px;
+  max-width: 445px;
+  height: auto;
   border-radius: 44px;
 }
