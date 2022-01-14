@@ -4,73 +4,40 @@ import Container from "../container";
 import * as styles from "./styles.module.scss";
 
 import DownIcon from "./assets/down.svg";
+import BinanceIcon from "./assets/binance.svg";
+import DiscordIcon from "./assets/discord.svg";
+import GithubIcon from "./assets/github.svg";
+import TelegramIcon from "./assets/telegram.svg";
+import TwitterIcon from "./assets/twitter.svg";
 
 const Header = () => {
   return (
     <div className={styles.header}>
-      <Container type='center'>
-        <div className='full-width'>
-          <div className={styles.headerTitle}>
-            Your DeFi protocol for incentivised liquidity & synthetic assets
+      <div className={styles.wrapper}>
+        <div className={styles.headerSpartan}>SPARTAN</div>
+        <div className={styles.headerProtocol}>PROTOCOL</div>
+        <div className={styles.headerSubtitle}>
+          Incentivized liquidity & synthetic assets on BSC
+        </div>
+        <div className={styles.headerBinance}>
+          <BinanceIcon height='190px' />
+        </div>
+        <div className={styles.headerBtn}>Open DApp</div>
+        <div className={styles.headerSocials}>
+          <div className={styles.headerSocialItem}>
+            <TwitterIcon fill='white' height='49px' />
+          </div>
+          <div className={styles.headerSocialItem}>
+            <TelegramIcon fill='white' height='49px' />
+          </div>
+          <div className={styles.headerSocialItem}>
+            <GithubIcon fill='white' height='49px' />
+          </div>
+          <div className={styles.headerSocialItem}>
+            <DiscordIcon fill='white' height='49px' />
           </div>
         </div>
-        <div className="hide-sm">
-          <div className={styles.headerItem}>
-            <div className={styles.headerItemTitle}>Swap</div>
-            <div className={styles.headerItemBody}>
-              Trade BSC assets, fast & private!
-            </div>
-            <a href='#swap'>
-              <DownIcon fill='white' height='25px' />
-            </a>
-          </div>
-          <div className={styles.headerItem}>
-            <div className={styles.headerItemTitle}>Pool</div>
-            <div className={styles.headerItemBody}>
-              Provide liquidity, without fees!
-            </div>
-            <a href='#pool'>
-              <DownIcon fill='white' height='25px' />
-            </a>
-          </div>
-          <div className={styles.headerItem}>
-            <div className={styles.headerItemTitle}>Stake</div>
-            <div className={styles.headerItemBody}>
-              Stake LP's, earn extra yield!
-            </div>
-            <a href='#stake'>
-              <DownIcon fill='white' height='25px' />
-            </a>
-          </div>
-          <div className={styles.headerItem}>
-            <div className={styles.headerItemTitle}>Synths</div>
-            <div className={styles.headerItemBody}>
-              Forge Synths, play the market!
-            </div>
-            <a href='#synths'>
-              <DownIcon fill='white' height='25px' />
-            </a>
-          </div>
-          <div className={styles.headerItem}>
-            <div className={styles.headerItemTitle}>DAO</div>
-            <div className={styles.headerItemBody}>
-              Vote to govern the protocol!
-            </div>
-            <a href='#dao'>
-              <DownIcon fill='white' height='25px' />
-            </a>
-          </div>
-          <div className={styles.headerItem}>
-            <div className={styles.headerItemTitle}>Socials</div>
-            <div className={styles.headerItemBody}>
-              <DownIcon fill='white' height='49px' />
-              <DownIcon fill='white' height='49px' />
-              <DownIcon fill='white' height='49px' />
-              <DownIcon fill='white' height='49px' />
-            </div>
-          </div>
-        </div>
-      </Container>
+      </div>
     </div>
   );
 };

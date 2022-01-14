@@ -1,8 +1,8 @@
 @import "../../sass/variables.scss";
 
 .footer {
+  grid-area: footer;
   background-color: $black;
   min-height: 400px;
   color: $white;
-  margin-top: 30px;
 }

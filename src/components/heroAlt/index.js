@@ -9,7 +9,7 @@ const Hero = ({ data }) => {
   const remainder = subtitle.slice(1).join(" ");
 
   return (
-    <Container type="spread" className={styles.heroBlock}>
+    <Container className={styles.heroBlock}>
       <div className={styles.heroLeft}>
         <div className={styles.title}>{data.title}</div>
         <div className={styles.subtitle}>

@@ -1,5 +1,38 @@
 @import "./variables.scss";
 
+.wrapper {
+  display: grid;
+  column-gap: 20px;
+  grid-template-areas:
+    "header"
+    "swap"
+    "pool"
+    "stake"
+    "synths"
+    "dao"
+    "footer";
+}
+
+.swap {
+  grid-area: swap;
+}
+
+.pool {
+  grid-area: pool;
+}
+
+.stake {
+  grid-area: stake;
+}
+
+.synths {
+  grid-area: synths;
+}
+
+.dao {
+  grid-area: dao;
+}
+
 body {
   background: $bg;
   margin: 0;
@@ -14,38 +47,19 @@ a {
   text-decoration-line: underline;
 }
 
-.full-width {
+.w-100 {
   width: 100%;
 }
 
-.full-height {
+.h-100 {
   height: 100%;
 }
 
-.head-vertical {
-  min-height: 100vh;
-  display: flex;
-  flex-flow: column;
-}
-
-.d-flex {
-  display: flex;
-  align-items: center;
-}
-
-.flex-center {
-  justify-content: center;
-}
-
-.flex-even {
-  justify-content: space-evenly;
-}
-
-.flex-spread {
-  justify-content: space-between;
-}
-
-#swap, #pool, #stake, #synths, #dao {
+#swap,
+#pool,
+#stake,
+#synths,
+#dao {
   scroll-margin-top: 80px;
 }
 

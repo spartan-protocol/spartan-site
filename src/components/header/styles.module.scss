@@ -1,42 +1,71 @@
 @import "../../sass/variables.scss";
 
 .header {
-  padding-top: 100px;
-  padding-bottom: 60px;
+  grid-area: header;
+  padding: 100px 20px 20px 20px;
   background-color: black;
   color: #ffffff;
 }
 
-.headerTitle {
-  max-width: 633px;
-  font-weight: 600;
-  font-size: 64px;
-  line-height: 72px;
-  margin-bottom: 50px;
+.wrapper {
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "spartan  binance"
+    "protocol binance"
+    "subtitle binance"
+    "dapp     dapp"
+    "socials  socials";
 }
 
-.headerItem {
-  width: 100%;
-  max-width: 30%;
-  min-width: 250px;
-  display: inline-block;
-  margin-top: 20px;
-  margin-right: 10px;
-  :last-child {
-    margin-right: 0;
-  }
+.headerSpartan {
+  grid-area: spartan;
+  width: 190px;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0.1em;
 }
 
-.headerItemTitle {
-  font-weight: 600;
+.headerProtocol {
+  grid-area: protocol;
+  font-weight: bold;
+  width: 190px;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.headerSubtitle {
+  grid-area: subtitle;
+  width: 267px;
+  max-width: 267px;
+  font-size: 26px;
+  line-height: 40px;
+}
+
+.headerBinance {
+  grid-area: binance;
+  overflow-x: hidden;
+}
+
+.headerBtn {
+  grid-area: dapp;
+  max-width: 275px;
+  background: linear-gradient(90deg, #fb2715 0%, #ea3a63 52.6%, #a32d5b 100%);
+  border-radius: 4px;
+  font-weight: 400;
   font-size: 20px;
-  line-height: 24px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 0.5px;
 }
 
-.headerItemBody {
-  font-size: 16px;
-  line-height: 24px;
-  margin: 5px 0;
+.headerSocials {
+  grid-area: socials;
+}
+
+.headerSocialItem {
+  display: inline-block;
+  margin: 0 5px;
 }
 
 .button {

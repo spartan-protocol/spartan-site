@@ -9,6 +9,7 @@ import Hero from "../components/hero";
 import FeatureBar from "../components/featurebar";
 import Footer from "../components/footer";
 import Header from "../components/header";
+import Container from "../components/container";
 
 const IndexPage = () => {
   const data = useStaticQuery(
@@ -42,26 +43,17 @@ const IndexPage = () => {
 
   return (
     <>
-      <main>
-        <Navbar />
-        <div className='head-vertical'>
-          <Header />
-          <div id='swap' />
-          <Hero data={data.allContentfulHeroSection.edges[0].node} />
-        </div>
-        <FeatureBar>FEAT BAR</FeatureBar>
-        <div id='pool' />
-        <Hero data={data.allContentfulHeroSection.edges[1].node} />
-        <FeatureBar>FEAT BAR</FeatureBar>
-        <div id='stake' />
-        <Hero data={data.allContentfulHeroSection.edges[2].node} />
-        <FeatureBar>FEAT BAR</FeatureBar>
-        <div id='synths' />
-        <Hero data={data.allContentfulHeroSection.edges[3].node} />
-        <div id='dao' />
-        <Hero data={data.allContentfulHeroSection.edges[3].node} />
+      <Navbar />
+      <div class='wrapper'>
+        <Header />
+        <Hero data={data.allContentfulHeroSection.edges[0].node} id='swap' />
+        {/* <FeatureBar>FEAT BAR</FeatureBar> */}
+        <Hero data={data.allContentfulHeroSection.edges[1].node} id='pool' />
+        <Hero data={data.allContentfulHeroSection.edges[2].node} id='stake' />
+        <Hero data={data.allContentfulHeroSection.edges[3].node} id='synths' />
+        <Hero data={data.allContentfulHeroSection.edges[4].node} id='dao' />
         <Footer />
-      </main>
+      </div>
     </>
   );
 };
