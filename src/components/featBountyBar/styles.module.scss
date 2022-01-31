@@ -1,0 +1,63 @@
+@import "../../sass/variables.scss";
+
+.featureBar {
+  padding: 20px;
+  background-color: $black;
+  min-height: 200px;
+  color: $white;
+}
+
+.wrapper {
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "feeTitle"
+    "feeDesc"
+    "secureTitle"
+    "secureDesc"
+    "oracleTitle"
+    "oracleDesc";
+}
+
+.feeTitle {
+  grid-area: feeTitle;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.feeDesc {
+  grid-area: feeDesc;
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 36px;
+}
+
+.secureTitle {
+  grid-area: secureTitle;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.secureDesc {
+  grid-area: secureDesc;
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 36px;
+}
+
+.oracleTitle {
+  grid-area: oracleTitle;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.oracleDesc {
+  grid-area: oracleDesc;
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 36px;
+}
+

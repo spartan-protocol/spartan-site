@@ -1,0 +1,54 @@
+@import "../../sass/variables.scss";
+
+.featureBar {
+  padding: 20px;
+  background-color: $black;
+  min-height: 200px;
+  color: $white;
+  text-align: center;
+  height: 100%;
+}
+
+.wrapper {
+  display: grid;
+  gap: 5px;
+  grid-template-areas:
+    "arenaLogo"
+    "arena"
+    "certikLogo"
+    "certik"
+    "githubLogo"
+    "github";
+}
+
+.arenaLogo {
+  grid-area: arenaLogo;
+}
+
+.arena {
+  grid-area: arena;
+  font-size: 24px;
+  line-height: 37px;
+}
+
+.certikLogo {
+  margin-top: 20px;
+  grid-area: certikLogo;
+}
+
+.certik {
+  grid-area: certik;
+  font-size: 24px;
+  line-height: 37px;
+}
+
+.githubLogo {
+  margin-top: 20px;
+  grid-area: githubLogo;
+}
+
+.github {
+  grid-area: github;
+  font-size: 24px;
+  line-height: 37px;
+}

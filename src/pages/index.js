@@ -6,10 +6,12 @@ import "../sass/global.scss";
 
 import Navbar from "../components/navbar";
 import Hero from "../components/hero";
-import FeatureBar from "../components/featurebar";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import Container from "../components/container";
+import FeatSwapBar from "../components/featSwapBar";
+import FeatAuditBar from "../components/featAuditBar";
+import FeatBountyBar from "../components/featBountyBar";
 
 const IndexPage = () => {
   const data = useStaticQuery(
@@ -44,12 +46,14 @@ const IndexPage = () => {
   return (
     <>
       <Navbar />
-      <div class='wrapper'>
+      <div className='wrapper'>
         <Header />
         <Hero data={data.allContentfulHeroSection.edges[0].node} id='swap' />
-        {/* <FeatureBar>FEAT BAR</FeatureBar> */}
+        <FeatSwapBar />
         <Hero data={data.allContentfulHeroSection.edges[1].node} id='pool' />
+        <FeatAuditBar />
         <Hero data={data.allContentfulHeroSection.edges[2].node} id='stake' />
+        <FeatBountyBar />
         <Hero data={data.allContentfulHeroSection.edges[3].node} id='synths' />
         <Hero data={data.allContentfulHeroSection.edges[4].node} id='dao' />
         <Footer />
