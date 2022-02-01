@@ -28,12 +28,8 @@ const Hero = ({ data, id }) => {
           </a>
         </div>
       </div>
-      <div className={styles.featImgBlock}>
-        <img
-          className={styles.featImg}
-          src={data.featureImage.file.url}
-          alt={data.featureImage.file.filename}
-        />
+      <div className={styles.featImgBlock} style={{backgroundImage: 'url(' + data.featureImage.file.url + ')'}}>
+        
       </div>
     </div>
   );
