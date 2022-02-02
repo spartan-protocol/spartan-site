@@ -7,7 +7,8 @@
   height: 100vh;
   background-size: cover;
   background-image: url("/art/athena-xs.jpg");
-  text-shadow: #FFF 0 0 2px;
+  text-shadow: #fff 0 0 2px;
+  box-shadow: rgba(255, 255, 255, 0.125) 0 0 0 2000px inset;
 }
 
 @media (min-width: 481px) {
@@ -88,7 +89,7 @@
   text-align: center;
   letter-spacing: 0.5px;
   text-shadow: none;
-  color: #FFF;
+  color: #fff;
 }
 
 .headerSocials {

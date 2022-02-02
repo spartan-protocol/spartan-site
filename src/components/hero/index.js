@@ -1,7 +1,7 @@
 import * as React from "react";
-import Container from "../container";
 
 import * as styles from "./styles.module.scss";
+import SwapFeat from "./swapFeats";
 
 const Hero = ({ data, id }) => {
   const subtitle = data.subtitle.split(" ");
@@ -17,19 +17,22 @@ const Hero = ({ data, id }) => {
       </div>
       <div className={styles.desc}>{data.description.description}</div>
       <div className={styles.buttons}>
-        <div className={styles.btnItems}>
+        <div className={styles.btnItem}>
           <a href={data.buttonLink1}>
             <div className={styles.cta}>{data.buttonLabel1}</div>
           </a>
         </div>
-        <div className={styles.btnItems}>
+        <div className={styles.btnItem}>
           <a href={data.buttonLink2}>
             <div className={styles.ctaInfo}>{data.buttonLabel2}</div>
           </a>
         </div>
       </div>
-      <div className={styles.featImgBlock} style={{backgroundImage: 'url(' + data.featureImage.file.url + ')'}}>
-        
+      <div
+        className={styles.featImgBlock}
+        style={{ backgroundImage: "url(" + data.featureImage.file.url + ")" }}
+      >
+        {id === "swap" && <SwapFeat />}
       </div>
     </div>
   );

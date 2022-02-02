@@ -10,19 +10,19 @@
   bottom: auto;
   background-color: $bg-overlay;
   backdrop-filter: blur(5px);
-  height: 70px;
+  height: 60px;
   color: #000;
   h1 {
     margin: 0;
   }
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 .firstSection {
   display: flex;
   margin-left: 20px;
   align-items: center;
-  height: 70px;
+  height: 60px;
 }
 
 .brand {
@@ -34,7 +34,7 @@
   display: none;
   font-weight: 600;
   font-size: 28px;
-  line-height: 70px;
+  line-height: 60px;
   margin-left: 10px;
 }
 
@@ -45,14 +45,14 @@
 }
 
 .links {
-  height: 70px;
+  height: 60px;
   display: none;
   ul {
-    height: 70px;
+    height: 60px;
     margin: 0;
     li {
       margin: 0 10px;
-      line-height: 70px;
+      line-height: 60px;
       display: inline-block;
       a {
         color: #000;
@@ -70,7 +70,7 @@
 .btnSection {
   display: flex;
   align-items: center;
-  height: 70px;
+  height: 60px;
 }
 
 .mobileLinks {
