@@ -19,22 +19,22 @@ const Header = () => {
         <div className={styles.headerSubtitle}>
           Incentivized liquidity & synthetic assets on BSC
         </div>
-        <div className={styles.headerBinance}>
+        {/* <div className={styles.headerBinance}>
           <BinanceIcon height='190px' />
-        </div>
+        </div> */}
         <div className={styles.headerBtn}>Open DApp</div>
         <div className={styles.headerSocials}>
           <div className={styles.headerSocialItem}>
-            <TwitterIcon fill='white' height='49px' />
+            <TwitterIcon fill='black' height='49px' />
           </div>
           <div className={styles.headerSocialItem}>
-            <TelegramIcon fill='white' height='49px' />
+            <TelegramIcon fill='black' height='49px' />
           </div>
           <div className={styles.headerSocialItem}>
-            <GithubIcon fill='white' height='49px' />
+            <GithubIcon fill='black' height='49px' />
           </div>
           <div className={styles.headerSocialItem}>
-            <DiscordIcon fill='white' height='49px' />
+            <DiscordIcon fill='black' height='49px' />
           </div>
         </div>
       </div>

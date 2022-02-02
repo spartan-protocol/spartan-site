@@ -13,7 +13,7 @@ const Navbar = () => {
           <img
             src='./icons/icon-90x90.png'
             alt='Spartan Protocol V2 token icon'
-            height='50px'
+            height='40px'
           />
         </div>
         {/* <div className={styles.title}>Spartan Protocol</div> */}
