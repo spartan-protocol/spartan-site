@@ -1,8 +1,9 @@
 @import "../../sass/variables.scss";
 
 .header {
-  padding-top: 1px;
   grid-area: header;
+  padding-top: 1px;
+  margin-bottom: 20px;
   color: #000;
   height: 100vh;
   background-size: cover;
@@ -81,6 +82,9 @@
 .headerBtn {
   grid-area: dapp;
   max-width: 135px;
+}
+
+.headerBtn1 {
   background: linear-gradient(90deg, #fb2715 0%, #ea3a63 52.6%, #a32d5b 100%);
   border-radius: 4px;
   font-weight: 400;

@@ -6,11 +6,8 @@
   grid-template-areas:
     "header"
     "swap"
-    "swapFeat"
     "pool"
-    "auditFeat"
     "stake"
-    "bountyFeat"
     "synths"
     "dao"
     "footer";
@@ -56,6 +53,10 @@ a {
 
 .h-100 {
   height: 100%;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .me-1 {

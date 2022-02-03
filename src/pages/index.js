@@ -8,13 +8,9 @@ import Navbar from "../components/navbar";
 import Hero from "../components/hero";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import Container from "../components/container";
-import FeatSwapBar from "../components/featSwapBar";
-import FeatAuditBar from "../components/featAuditBar";
-import FeatBountyBar from "../components/featBountyBar";
 
 const IndexPage = () => {
-  const data = useStaticQuery(
+  const heroData = useStaticQuery(
     graphql`
       query {
         allContentfulHeroSection(sort: { fields: order, order: ASC }) {
@@ -36,6 +32,21 @@ const IndexPage = () => {
                   fileName
                 }
               }
+              feature {
+                title
+                description
+              }
+              richFeature {
+                logo {
+                  file {
+                    url
+                    fileName
+                  }
+                }
+                description
+                buttonLabel
+                buttonLink
+              }
             }
           }
         }
@@ -48,15 +59,27 @@ const IndexPage = () => {
       <Navbar />
       <div className='wrapper'>
         <Header />
-        <Hero data={data.allContentfulHeroSection.edges[0].node} id='swap' />
-        <FeatSwapBar />
-        <Hero data={data.allContentfulHeroSection.edges[1].node} id='pool' />
-        <FeatAuditBar />
-        <Hero data={data.allContentfulHeroSection.edges[2].node} id='stake' />
-        <FeatBountyBar />
-        <Hero data={data.allContentfulHeroSection.edges[3].node} id='synths' />
-        <Hero data={data.allContentfulHeroSection.edges[4].node} id='dao' />
-        <Footer />
+        <Hero
+          heroData={heroData.allContentfulHeroSection.edges[0].node}
+          id='swap'
+        />
+        <Hero
+          heroData={heroData.allContentfulHeroSection.edges[1].node}
+          id='pool'
+        />
+        <Hero
+          heroData={heroData.allContentfulHeroSection.edges[2].node}
+          id='stake'
+        />
+        <Hero
+          heroData={heroData.allContentfulHeroSection.edges[3].node}
+          id='synths'
+        />
+        <Hero
+          heroData={heroData.allContentfulHeroSection.edges[4].node}
+          id='dao'
+        />
+        <Footer id="footer" />
       </div>
     </>
   );

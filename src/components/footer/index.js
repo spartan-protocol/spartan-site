@@ -30,8 +30,6 @@ const Footer = () => {
           <span className={styles.noWeak}>No</span> Team Allocation
         </div>
       </div>
-      <br />
-      <div>MAX SUPPLY | BURNED SUPPLY | CIRCULATING SUPPLY</div>
     </div>
   );
 };

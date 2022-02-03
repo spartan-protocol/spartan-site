@@ -1,5 +1,4 @@
 import * as React from "react";
-import Container from "../container";
 
 import * as styles from "./styles.module.scss";
 
@@ -9,34 +8,36 @@ const Navbar = () => {
   return (
     <div className={styles.navbar}>
       <div className={styles.firstSection}>
-        <div className={styles.brand}>
-          <img
-            src='./icons/icon-90x90.png'
-            alt='Spartan Protocol V2 token icon'
-            height='40px'
-          />
-        </div>
+        <a href='/'>
+          <div className={styles.brand}>
+            <img
+              src='./icons/icon-90x90.png'
+              alt='Spartan Protocol V2 token icon'
+              height='40px'
+            />
+          </div>
+        </a>
         {/* <div className={styles.title}>Spartan Protocol</div> */}
       </div>
       <div className={styles.links}>
         <ul>
           <li>
-            <a href='#'>Swap</a>
+            <a href='/#swap'>Swap</a>
           </li>
           <li>
-            <a href='#'>Pool</a>
+            <a href='/#pool'>Pool</a>
           </li>
           <li>
-            <a href='#'>Stake</a>
+            <a href='/#stake'>Stake</a>
           </li>
           <li>
-            <a href='#'>Synth</a>
+            <a href='/#synths'>Synths</a>
           </li>
           <li>
-            <a href='#'>Token</a>
+            <a href='/#dao'>DAO</a>
           </li>
           <li>
-            <a href='#'>DAO</a>
+            <a href='/#footer'>Token</a>
           </li>
         </ul>
       </div>

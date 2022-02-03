@@ -1,0 +1,60 @@
+@import "../../../sass/variables.scss";
+
+.wrapper {
+  align-content: center;
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "title"
+    "desc"
+    "button";
+}
+
+.multiWrapper {
+  margin: 40px 0;
+  align-content: center;
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "title"
+    "desc"
+    "button";
+}
+
+.title {
+  grid-area: title;
+  margin: 0 20px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.desc {
+  grid-area: desc;
+  margin: 0 20px;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(233, 233, 233);
+}
+
+.logo {
+  grid-area: title;
+  margin: 0 20px;
+}
+
+.button {
+  grid-area: button;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  height: 38px;
+  background: linear-gradient(90deg, #fb2715 0%, #ea3a63 52.6%, #a32d5b 100%);
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 36px;
+  text-align: center;
+  text-shadow: none;
+  width: 180px;
+  color: #fff;
+}
