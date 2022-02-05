@@ -1,11 +1,13 @@
 // bg colours
-$bg: #F5F8FC;
-$bg-overlay: rgba(0, 0, 0, 0.1);
-$bg-btn: linear-gradient(90deg, #FB2715 0%, #EA3A63 52.6%, #A32D5B 100%);
+$bg: #f5f8fc;
+$bg-overlay: rgba(0, 0, 0, 0.404);
+// $bg-btn: linear-gradient(90deg, #FB2715 0%, #EA3A63 52.6%, #A32D5B 100%);
+$bg-btn: black;
 
 // colours
-$white: #FFF;
+$white: #fff;
 $black: #000;
 
 // fonts
-$font: 'Titillium Web', sans-serif;
+$font: "Titillium Web", sans-serif;
+$fontLink: "Saira Condensed", sans-serif;

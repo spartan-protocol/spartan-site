@@ -2,98 +2,28 @@
 
 .header {
   grid-area: header;
-  padding-top: 1px;
-  margin-bottom: 20px;
   color: #000;
   height: 100vh;
   background-size: cover;
-  background-image: url("/art/athena-xs.jpg");
-  text-shadow: #fff 0 0 2px;
-  box-shadow: rgba(255, 255, 255, 0.125) 0 0 0 2000px inset;
-}
-
-@media (min-width: 481px) {
-  .header {
-    background-image: url("/art/athena-sm.jpg");
-  }
-}
-
-@media (min-width: 769px) {
-  .header {
-    background-image: url("/art/athena-md.jpg");
-  }
-}
-
-@media (min-width: 1024px) {
-  .header {
-    background-image: url("/art/athena-lg.jpg");
-  }
-}
-
-@media (min-width: 1200px) {
-  .header {
-    background-image: url("/art/athena-xl.jpg");
-  }
 }
 
 .wrapper {
-  margin: 20px 0 20px 20px;
+  padding: 0 20px;
   height: 100%;
   display: grid;
   gap: 10px;
   grid-template-areas:
-    "spartan"
-    "protocol"
-    "subtitle"
-    "dapp"
-    "socials";
-  align-content: center;
+    "top"
+    "bottom";
+  align-content: stretch;
 }
 
-.headerSpartan {
-  grid-area: spartan;
-  width: 190px;
-  font-size: 40px;
-  line-height: 48px;
-  letter-spacing: 0.1em;
-}
-
-.headerProtocol {
-  grid-area: protocol;
-  font-weight: bold;
-  width: 190px;
-  font-size: 40px;
-  line-height: 48px;
-}
-
-.headerSubtitle {
-  grid-area: subtitle;
-  width: 267px;
-  max-width: 267px;
-  font-size: 26px;
-  line-height: 40px;
-}
-
-// .headerBinance {
-//   grid-area: binance;
-//   overflow-x: hidden;
-// }
-
-.headerBtn {
-  grid-area: dapp;
-  max-width: 135px;
-}
-
-.headerBtn1 {
-  background: linear-gradient(90deg, #fb2715 0%, #ea3a63 52.6%, #a32d5b 100%);
-  border-radius: 4px;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 40px;
-  text-align: center;
-  letter-spacing: 0.5px;
-  text-shadow: none;
-  color: #fff;
+.top {
+  grid-area: top;
+  margin-top: 60px;
+  display: grid;
+  gap: 10px;
+  grid-template-areas: "socials";
 }
 
 .headerSocials {
@@ -105,9 +35,59 @@
   margin: 0 5px 0 0;
 }
 
-.button {
-  color: white;
+.bottom {
+  grid-area: bottom;
+  display: grid;
+  gap: 5px;
+  grid-template-areas:
+    "title1     title1"
+    "title2     title2"
+    "tagline    tagline"
+    "dappBtn    cexBtn";
+  align-content: end;
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.title1 {
+  grid-area: title1;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 1px;
+}
+
+.title2 {
+  grid-area: title2;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.tagline {
+  grid-area: tagline;
+  font-variant-caps: all-small-caps;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.dappBtn {
+  grid-area: dappBtn;
+}
+
+.headerBtn1 {
   background: $bg-btn;
-  padding: 5px 10px;
-  border-radius: 5px;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-shadow: none;
+  color: #fff;
+}
+
+.cexBtn {
+  grid-area: cexBtn;
 }

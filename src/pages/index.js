@@ -1,26 +1,60 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-import "@fontsource/titillium-web"; // Defaults to weight 400 with all styles included.
+import "@fontsource/titillium-web/200.css";
+import "@fontsource/titillium-web/300.css";
+import "@fontsource/titillium-web/400.css";
+import "@fontsource/titillium-web/600.css";
+import "@fontsource/titillium-web/700.css";
+import "@fontsource/saira-condensed/400.css";
 import "../sass/global.scss";
 
 import Navbar from "../components/navbar";
 import Hero from "../components/hero";
 import Footer from "../components/footer";
 import Header from "../components/header";
+import { BreakpointProvider } from "../providers/breakpoint";
 
 const IndexPage = () => {
   const heroData = useStaticQuery(
     graphql`
       query {
-        allContentfulHeroSection(sort: { fields: order, order: ASC }) {
+        allContentfulHeaderHero {
           edges {
             node {
-              order
+              cexButtonLabel
+              cexButtonLink
+              ctaButton
+              ctaButtonLink
+              discordUrl
+              gitHubUrl
+              heroBackground {
+                file {
+                  url
+                  fileName
+                }
+              }
+              heroBgNarrow {
+                file {
+                  url
+                  fileName
+                }
+              }
+              tagline
+              telegramUrl
+              title
+              twitterUrl
+            }
+          }
+        }
+        allContentfulHeroSection {
+          edges {
+            node {
               buttonLabel1
               buttonLabel2
               buttonLink1
               buttonLink2
+              order
               subtitle
               title
               description {
@@ -37,15 +71,15 @@ const IndexPage = () => {
                 description
               }
               richFeature {
+                buttonLabel
+                buttonLink
+                description
                 logo {
                   file {
                     url
                     fileName
                   }
                 }
-                description
-                buttonLabel
-                buttonLink
               }
             }
           }
@@ -54,11 +88,19 @@ const IndexPage = () => {
     `
   );
 
+  const mediaQueries = {
+    xs: "(max-width: 480px)", // use max here for default/smallest
+    sm: "(min-width: 481px)", // use min for rest
+    md: "(min-width: 769px)", // use min for rest
+    lg: "(min-width: 1024px)", // use min for rest
+    xl: "(min-width: 1200px)", // use min for rest
+  };
+
   return (
-    <>
+    <BreakpointProvider queries={mediaQueries}>
       <Navbar />
       <div className='wrapper'>
-        <Header />
+        <Header data={heroData.allContentfulHeaderHero.edges[0].node} />
         <Hero
           heroData={heroData.allContentfulHeroSection.edges[0].node}
           id='swap'
@@ -79,9 +121,9 @@ const IndexPage = () => {
           heroData={heroData.allContentfulHeroSection.edges[4].node}
           id='dao'
         />
-        <Footer id="footer" />
+        <Footer id='footer' />
       </div>
-    </>
+    </BreakpointProvider>
   );
 };
 

@@ -1,6 +1,7 @@
 @import "../../sass/variables.scss";
 
 .navbar {
+  font-family: $fontLink;
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -10,19 +11,19 @@
   bottom: auto;
   background-color: $bg-overlay;
   backdrop-filter: blur(5px);
-  height: 60px;
+  height: 50px;
   color: #000;
   h1 {
     margin: 0;
   }
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.61);
 }
 
 .firstSection {
   display: flex;
   margin-left: 20px;
   align-items: center;
-  height: 60px;
+  height: 50px;
 }
 
 .brand {
@@ -34,7 +35,7 @@
   display: none;
   font-weight: 600;
   font-size: 28px;
-  line-height: 60px;
+  line-height: 50px;
   margin-left: 10px;
 }
 
@@ -45,14 +46,14 @@
 }
 
 .links {
-  height: 60px;
+  height: 50px;
   display: none;
   ul {
-    height: 60px;
+    height: 50px;
     margin: 0;
     li {
       margin: 0 10px;
-      line-height: 60px;
+      line-height: 50px;
       display: inline-block;
       a {
         color: #000;
@@ -70,7 +71,7 @@
 .btnSection {
   display: flex;
   align-items: center;
-  height: 60px;
+  height: 50px;
 }
 
 .mobileLinks {

@@ -3,6 +3,7 @@ import * as React from "react";
 import * as styles from "./styles.module.scss";
 
 import MenuIcon from "./assets/menu.svg";
+import SpartaIcon from "../../assets/icons/spartav2.svg";
 
 const Navbar = () => {
   return (
@@ -10,11 +11,7 @@ const Navbar = () => {
       <div className={styles.firstSection}>
         <a href='/'>
           <div className={styles.brand}>
-            <img
-              src='./icons/icon-90x90.png'
-              alt='Spartan Protocol V2 token icon'
-              height='40px'
-            />
+            <SpartaIcon height='30px' />
           </div>
         </a>
         {/* <div className={styles.title}>Spartan Protocol</div> */}
@@ -48,7 +45,7 @@ const Navbar = () => {
         <div>
           <a href='https://dapp.spartanprotocol.org'>
             <div className={styles.dappBtn}>
-              <div>Open DApp</div>
+              <div>DApp</div>
             </div>
           </a>
         </div>
