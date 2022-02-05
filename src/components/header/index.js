@@ -38,8 +38,24 @@ const Header = ({ data }) => {
       }}
     >
       <div className={styles.wrapper}>
-        <div className={styles.top}>
-          <div className={styles.headerSocials}>
+        {/* <div className={styles.top}>
+          
+        </div> */}
+        <div className={styles.bottom}>
+          <div className={styles.title1}>SPARTAN</div>
+          <div className={styles.title2}>PROTOCOL</div>
+          <div className={styles.tagline}>{data.tagline}</div>
+          <div className={styles.dappBtn}>
+            <a href={data.ctaButtonLink}>
+              <div className={styles.btn1}>{data.ctaButton}</div>
+            </a>
+          </div>
+          <div className={styles.cexBtn}>
+            <a href={data.cexButtonLink}>
+              <div className={styles.btn2}>{data.cexButtonLabel}</div>
+            </a>
+          </div>
+          <div className={styles.socials}>
             <a href={data.twitterUrl}>
               <div className={styles.headerSocialItem}>
                 <TwitterIcon fill='black' height='25px' />
@@ -59,21 +75,6 @@ const Header = ({ data }) => {
               <div className={styles.headerSocialItem}>
                 <DiscordIcon fill='black' height='25px' />
               </div>
-            </a>
-          </div>
-        </div>
-        <div className={styles.bottom}>
-          <div className={styles.title1}>SPARTAN</div>
-          <div className={styles.title2}>PROTOCOL</div>
-          <div className={styles.tagline}>{data.tagline}</div>
-          <div className={styles.dappBtn}>
-            <a href={data.ctaButtonLink}>
-              <div className={styles.headerBtn1}>{data.ctaButton}</div>
-            </a>
-          </div>
-          <div className={styles.cexBtn}>
-            <a href={data.cexButtonLink}>
-              <div className={styles.headerBtn1}>{data.cexButtonLabel}</div>
             </a>
           </div>
         </div>

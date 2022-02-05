@@ -13,9 +13,9 @@
   display: grid;
   gap: 10px;
   grid-template-areas:
-    "top"
+    // "top"
     "bottom";
-  align-content: stretch;
+  align-content: end;
 }
 
 .top {
@@ -26,7 +26,7 @@
   grid-template-areas: "socials";
 }
 
-.headerSocials {
+.socials {
   grid-area: socials;
 }
 
@@ -43,7 +43,9 @@
     "title1     title1"
     "title2     title2"
     "tagline    tagline"
-    "dappBtn    cexBtn";
+    "dappBtn    dappBtn"
+    "cexBtn     cexBtn"
+    "socials    socials";
   align-content: end;
   width: 180px;
   margin-bottom: 20px;
@@ -76,16 +78,29 @@
   grid-area: dappBtn;
 }
 
-.headerBtn1 {
+.btn1 {
   background: $bg-btn;
   border-radius: 4px;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 40px;
+  font-family: $fontLink;
+  // font-weight: 400;
+  // font-size: 20px;
+  // line-height: 40px;
+  // letter-spacing: 0.5px;
   text-align: center;
-  letter-spacing: 0.5px;
-  text-shadow: none;
   color: #fff;
+}
+
+.btn2 {
+  background: $bg-btn;
+  border-radius: 4px;
+  font-family: $fontLink;
+  // font-weight: 400;
+  // font-size: 20px;
+  // line-height: 40px;
+  // letter-spacing: 0.5px;
+  text-align: center;
+  background-color: #fff;
+  color: #000;
 }
 
 .cexBtn {
