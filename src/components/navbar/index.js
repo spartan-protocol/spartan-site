@@ -40,7 +40,7 @@ const Navbar = () => {
       </div>
       <div className={styles.btnSection}>
         <div className={styles.mobileLinks}>
-          <MenuIcon height='40px' fill='white' />
+          <MenuIcon height='40px' fill='black' />
         </div>
         <div>
           <a href='https://dapp.spartanprotocol.org'>

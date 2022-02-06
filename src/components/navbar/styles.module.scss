@@ -13,7 +13,7 @@
   background-color: $bg-overlay;
   backdrop-filter: blur(5px);
   height: 50px;
-  color: #FFF;
+  color: #000;
   h1 {
     margin: 0;
   }
@@ -57,7 +57,7 @@
       line-height: 50px;
       display: inline-block;
       a {
-        color: #FFF;
+        color: #000;
       }
     }
   }

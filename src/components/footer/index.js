@@ -2,7 +2,7 @@ import * as React from "react";
 
 import * as styles from "./styles.module.scss";
 
-import SpartaIcon from "./assets/spartav2.svg";
+import SpartaIcon from "../../assets/icons/spartav2.svg";
 
 const Footer = () => {
   return (
