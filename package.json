@@ -15,8 +15,9 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@fontsource/montserrat": "^4.5.4",
+    "@fontsource/nunito": "^4.5.3",
     "@fontsource/saira-condensed": "^4.5.1",
-    "@fontsource/titillium-web": "^4.5.0",
     "gatsby": "^4.4.0",
     "gatsby-plugin-image": "^2.6.0",
     "gatsby-plugin-manifest": "^4.4.0",

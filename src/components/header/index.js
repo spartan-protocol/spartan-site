@@ -13,19 +13,19 @@ const Header = ({ data }) => {
 
   const getbgImgUrl = () => {
     if (breakpoint.xl) {
-      return data.heroBackground.file.url + "?w=1600&f=bottom_left"; // if 'xl' width
+      return data.heroBackground.file.url + "?w=1600"; // if 'xl' width
     }
     if (breakpoint.lg) {
-      return data.heroBackground.file.url + "?w=1200&f=bottom_left"; // if 'lg' width
+      return data.heroBackground.file.url + "?w=1200"; // if 'lg' width
     }
     if (breakpoint.md) {
-      return data.heroBackground.file.url + "?w=1024&f=bottom_left"; // if 'md' width
+      return data.heroBackground.file.url + "?w=1024"; // if 'md' width
     }
     if (breakpoint.sm) {
-      return data.heroBackground.file.url + "?w=770&f=bottom_left"; // if 'sm' width
+      return data.heroBackground.file.url + "?w=770"; // if 'sm' width
     }
     if (breakpoint.xs) {
-      return data.heroBgNarrow.file.url + "?w=480&f=bottom_left"; // if 'xs' width
+      return data.heroBgNarrow.file.url + "?w=480"; // if 'xs' width
     }
     return "";
   };
@@ -58,22 +58,26 @@ const Header = ({ data }) => {
           <div className={styles.socials}>
             <a href={data.twitterUrl}>
               <div className={styles.headerSocialItem}>
-                <TwitterIcon fill='black' height='25px' />
+                <TwitterIcon
+                  fill='black'
+                  height='30px'
+                  style={{ marginRight: "6px" }}
+                />
               </div>
             </a>
             <a href={data.telegramUrl}>
               <div className={styles.headerSocialItem}>
-                <TelegramIcon fill='black' height='25px' />
+                <TelegramIcon fill='black' height='30px' style={{ marginRight: "8px" }} />
               </div>
             </a>
             <a href={data.gitHubUrl}>
               <div className={styles.headerSocialItem}>
-                <GithubIcon fill='black' height='25px' />
+                <GithubIcon fill='black' height='30px' style={{ marginRight: "9px" }} />
               </div>
             </a>
             <a href={data.discordUrl}>
               <div className={styles.headerSocialItem}>
-                <DiscordIcon fill='black' height='25px' />
+                <DiscordIcon fill='black' height='30px' />
               </div>
             </a>
           </div>

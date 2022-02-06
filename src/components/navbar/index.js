@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className={styles.firstSection}>
         <a href='/'>
           <div className={styles.brand}>
-            <SpartaIcon height='30px' />
+            <SpartaIcon height='36px' />
           </div>
         </a>
         {/* <div className={styles.title}>Spartan Protocol</div> */}
@@ -45,7 +45,7 @@ const Navbar = () => {
         <div>
           <a href='https://dapp.spartanprotocol.org'>
             <div className={styles.dappBtn}>
-              <div>DApp</div>
+              <div>Open DApp</div>
             </div>
           </a>
         </div>

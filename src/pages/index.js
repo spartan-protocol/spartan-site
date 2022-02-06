@@ -1,12 +1,17 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-import "@fontsource/titillium-web/200.css";
-import "@fontsource/titillium-web/300.css";
-import "@fontsource/titillium-web/400.css";
-import "@fontsource/titillium-web/600.css";
-import "@fontsource/titillium-web/700.css";
 import "@fontsource/saira-condensed/400.css";
+import "@fontsource/saira-condensed/500.css";
+import "@fontsource/saira-condensed/600.css";
+import "@fontsource/saira-condensed/700.css";
+import "@fontsource/saira-condensed/800.css";
+import "@fontsource/montserrat/400.css";
+import "@fontsource/montserrat/600.css";
+import "@fontsource/montserrat/700.css";
+import "@fontsource/nunito/400.css";
+import "@fontsource/nunito/600.css";
+import "@fontsource/nunito/900.css";
 import "../sass/global.scss";
 
 import Navbar from "../components/navbar";

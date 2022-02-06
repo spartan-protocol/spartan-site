@@ -5,10 +5,11 @@
   color: #000;
   height: 100vh;
   background-size: cover;
+  background-position: center;
 }
 
 .wrapper {
-  padding: 0 20px;
+  padding: 0 10px;
   height: 100%;
   display: grid;
   gap: 10px;
@@ -28,11 +29,12 @@
 
 .socials {
   grid-area: socials;
+  // width: 145px;
+  // text-align: center;
 }
 
 .headerSocialItem {
   display: inline-block;
-  margin: 0 5px 0 0;
 }
 
 .bottom {
@@ -47,31 +49,35 @@
     "cexBtn     cexBtn"
     "socials    socials";
   align-content: end;
-  width: 180px;
-  margin-bottom: 20px;
+  width: 190px;
+  margin-bottom: 5px;
 }
 
 .title1 {
   grid-area: title1;
-  font-size: 40px;
+  font-size: 42px;
   font-weight: 700;
   line-height: 36px;
   letter-spacing: 1px;
+  font-family: $fontHeaderTitle;
 }
 
 .title2 {
   grid-area: title2;
-  font-size: 36px;
+  font-size: 39px;
   font-weight: 600;
   line-height: 32px;
+  font-family: $fontHeaderTitle;
 }
 
 .tagline {
   grid-area: tagline;
   font-variant-caps: all-small-caps;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 20px;
+  font-family: $fontHeaderSubtitle;
+  text-align: justify;
 }
 
 .dappBtn {
@@ -80,29 +86,37 @@
 
 .btn1 {
   background: $bg-btn;
-  border-radius: 4px;
+  border-radius: 5px;
   font-family: $fontLink;
-  // font-weight: 400;
-  // font-size: 20px;
-  // line-height: 40px;
-  // letter-spacing: 0.5px;
+  font-weight: 500;
   text-align: center;
   color: #fff;
-}
-
-.btn2 {
-  background: $bg-btn;
-  border-radius: 4px;
-  font-family: $fontLink;
-  // font-weight: 400;
-  // font-size: 20px;
-  // line-height: 40px;
-  // letter-spacing: 0.5px;
-  text-align: center;
-  background-color: #fff;
-  color: #000;
+  width: 145px;
+  padding: 5px 0;
 }
 
 .cexBtn {
   grid-area: cexBtn;
 }
+
+.btn2 {
+  background: $bg-btn;
+  border-radius: 5px;
+  font-family: $fontLink;
+  font-weight: 500;
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+  width: 145px;
+  padding: 5px 0;
+}
+
+// @media only screen and (min-width: 640px) {
+//   .btn1 {
+//     padding: 5px 0;
+//   }
+
+//   .btn2 {
+//     padding: 5px 0;
+//   }
+// }
