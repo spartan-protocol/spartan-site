@@ -60,24 +60,24 @@ const Header = ({ data }) => {
               <div className={styles.headerSocialItem}>
                 <TwitterIcon
                   fill='black'
-                  height='30px'
-                  style={{ marginRight: "6px" }}
+                  height='33px'
+                  style={{ marginRight: "10px" }}
                 />
               </div>
             </a>
             <a href={data.telegramUrl}>
               <div className={styles.headerSocialItem}>
-                <TelegramIcon fill='black' height='30px' style={{ marginRight: "8px" }} />
+                <TelegramIcon fill='black' height='33px' style={{ marginRight: "12px" }} />
               </div>
             </a>
             <a href={data.gitHubUrl}>
               <div className={styles.headerSocialItem}>
-                <GithubIcon fill='black' height='30px' style={{ marginRight: "9px" }} />
+                <GithubIcon fill='black' height='33px' style={{ marginRight: "13px" }} />
               </div>
             </a>
             <a href={data.discordUrl}>
               <div className={styles.headerSocialItem}>
-                <DiscordIcon fill='black' height='30px' />
+                <DiscordIcon fill='black' height='33px' />
               </div>
             </a>
           </div>

@@ -9,7 +9,7 @@
 }
 
 .wrapper {
-  padding: 0 10px;
+  padding: 0 15px;
   height: 100%;
   display: grid;
   gap: 10px;
@@ -40,7 +40,7 @@
 .bottom {
   grid-area: bottom;
   display: grid;
-  gap: 5px;
+  gap: 2px;
   grid-template-areas:
     "title1     title1"
     "title2     title2"
@@ -49,35 +49,34 @@
     "cexBtn     cexBtn"
     "socials    socials";
   align-content: end;
-  width: 190px;
+  width: 164px;
   margin-bottom: 5px;
 }
 
 .title1 {
   grid-area: title1;
-  font-size: 42px;
+  font-size: 51px;
   font-weight: 700;
-  line-height: 36px;
-  letter-spacing: 1px;
+  line-height: 42px;
   font-family: $fontHeaderTitle;
 }
 
 .title2 {
   grid-area: title2;
-  font-size: 39px;
-  font-weight: 600;
-  line-height: 32px;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 36px;
   font-family: $fontHeaderTitle;
 }
 
 .tagline {
   grid-area: tagline;
   font-variant-caps: all-small-caps;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
   line-height: 20px;
   font-family: $fontHeaderSubtitle;
-  text-align: justify;
+  padding: 7px 0;
 }
 
 .dappBtn {
@@ -89,10 +88,11 @@
   border-radius: 5px;
   font-family: $fontLink;
   font-weight: 500;
+  font-size: 19px;
   text-align: center;
   color: #fff;
-  width: 145px;
   padding: 5px 0;
+  margin-bottom: 5px;
 }
 
 .cexBtn {
@@ -104,11 +104,12 @@
   border-radius: 5px;
   font-family: $fontLink;
   font-weight: 500;
+  font-size: 19px;
   text-align: center;
   background-color: #fff;
   color: #000;
-  width: 145px;
   padding: 5px 0;
+  margin-bottom: 5px;
 }
 
 // @media only screen and (min-width: 640px) {

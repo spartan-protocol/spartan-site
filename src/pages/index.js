@@ -3,15 +3,11 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import "@fontsource/saira-condensed/400.css";
 import "@fontsource/saira-condensed/500.css";
-import "@fontsource/saira-condensed/600.css";
-import "@fontsource/saira-condensed/700.css";
+import "@fontsource/saira-condensed/600.css"; // 
+import "@fontsource/saira-condensed/700.css"; // 
 import "@fontsource/saira-condensed/800.css";
-import "@fontsource/montserrat/400.css";
-import "@fontsource/montserrat/600.css";
-import "@fontsource/montserrat/700.css";
-import "@fontsource/nunito/400.css";
-import "@fontsource/nunito/600.css";
-import "@fontsource/nunito/900.css";
+import "@fontsource/nunito/400.css"; // Used general/body
+import "@fontsource/nunito/700.css"; // Used hero title
 import "../sass/global.scss";
 
 import Navbar from "../components/navbar";
