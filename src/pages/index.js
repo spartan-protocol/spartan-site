@@ -1,6 +1,8 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
+import "@fontsource/saira-condensed/100.css"; // navbar title
+import "@fontsource/saira-condensed/200.css"; // 
 import "@fontsource/saira-condensed/300.css";
 import "@fontsource/saira-condensed/400.css";
 import "@fontsource/saira-condensed/500.css";
@@ -30,6 +32,7 @@ const IndexPage = () => {
               ctaButtonLink
               discordUrl
               gitHubUrl
+              bscscanUrl
               heroBackground {
                 file {
                   url

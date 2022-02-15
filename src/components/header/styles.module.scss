@@ -55,18 +55,20 @@
 
 .title1 {
   grid-area: title1;
-  font-size: 51px;
-  font-weight: 700;
-  line-height: 42px;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 36px;
   font-family: $fontHeaderTitle;
+  letter-spacing: 6px;
 }
 
 .title2 {
   grid-area: title2;
-  font-size: 45px;
-  font-weight: 700;
-  line-height: 36px;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 32px;
   font-family: $fontHeaderTitle;
+  letter-spacing: 3px;
 }
 
 .tagline {

@@ -6,6 +6,7 @@ import DiscordIcon from "./assets/discord.svg";
 import GithubIcon from "./assets/github.svg";
 import TelegramIcon from "./assets/telegram.svg";
 import TwitterIcon from "./assets/twitter.svg";
+import BscscanIcon from "./assets/bscscan.svg";
 import { useBreakpoint } from "../../providers/breakpoint";
 
 const Header = ({ data }) => {
@@ -60,24 +61,29 @@ const Header = ({ data }) => {
               <div className={styles.headerSocialItem}>
                 <TwitterIcon
                   fill='black'
-                  height='33px'
-                  style={{ marginRight: "10px" }}
+                  height='27px'
+                  style={{ marginRight: "7px" }}
                 />
               </div>
             </a>
             <a href={data.telegramUrl}>
               <div className={styles.headerSocialItem}>
-                <TelegramIcon fill='black' height='33px' style={{ marginRight: "12px" }} />
+                <TelegramIcon fill='black' height='27px' style={{ marginRight: "9px" }} />
               </div>
             </a>
             <a href={data.gitHubUrl}>
               <div className={styles.headerSocialItem}>
-                <GithubIcon fill='black' height='33px' style={{ marginRight: "13px" }} />
+                <GithubIcon fill='black' height='27px' style={{ marginRight: "10px" }} />
               </div>
             </a>
             <a href={data.discordUrl}>
               <div className={styles.headerSocialItem}>
-                <DiscordIcon fill='black' height='33px' />
+                <DiscordIcon fill='black' height='27px' style={{ marginRight: "13px" }} />
+              </div>
+            </a>
+            <a href={data.bscscanUrl}>
+              <div className={styles.headerSocialItem}>
+                <BscscanIcon fill='black' height='27px' width='22px' />
               </div>
             </a>
           </div>
