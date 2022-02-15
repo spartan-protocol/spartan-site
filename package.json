@@ -17,6 +17,7 @@
   "dependencies": {
     "@fontsource/montserrat": "^4.5.4",
     "@fontsource/nunito": "^4.5.3",
+    "@fontsource/saira": "^4.5.3",
     "@fontsource/saira-condensed": "^4.5.1",
     "gatsby": "^4.4.0",
     "gatsby-plugin-image": "^2.6.0",

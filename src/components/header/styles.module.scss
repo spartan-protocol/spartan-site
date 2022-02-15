@@ -49,25 +49,25 @@
     "cexBtn     cexBtn"
     "socials    socials";
   align-content: end;
-  width: 164px;
+  width: 170px;
   margin-bottom: 5px;
 }
 
 .title1 {
   grid-area: title1;
-  font-size: 40px;
+  font-size: 29px;
   font-weight: 500;
   line-height: 36px;
-  font-family: $fontHeaderTitle;
+  font-family: $fontSaira;
   letter-spacing: 6px;
 }
 
 .title2 {
   grid-area: title2;
-  font-size: 40px;
+  font-size: 29px;
   font-weight: 500;
   line-height: 32px;
-  font-family: $fontHeaderTitle;
+  font-family: $fontSaira;
   letter-spacing: 3px;
 }
 
@@ -75,9 +75,9 @@
   grid-area: tagline;
   font-variant-caps: all-small-caps;
   font-size: 17px;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 20px;
-  font-family: $fontHeaderSubtitle;
+  font-family: $fontNunito;
   padding: 7px 0;
 }
 
@@ -88,8 +88,8 @@
 .btn1 {
   background: $bg-btn;
   border-radius: 5px;
-  font-family: $fontLink;
-  font-weight: 500;
+  font-family: $fontSairaCondensed;
+  font-weight: 400;
   font-size: 19px;
   text-align: center;
   color: #fff;
@@ -104,7 +104,7 @@
 .btn2 {
   background: $bg-btn;
   border-radius: 5px;
-  font-family: $fontLink;
+  font-family: $fontSairaCondensed;
   font-weight: 500;
   font-size: 19px;
   text-align: center;

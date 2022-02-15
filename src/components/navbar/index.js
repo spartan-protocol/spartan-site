@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className={styles.firstSection}>
         <a href='/'>
           <div className={styles.brand}>
-            <SpartaIcon height='36px' />
+            <SpartaIcon height='30px' />
           </div>
         </a>
         <div className={styles.title}>SPARTAN PROTOCOL</div>

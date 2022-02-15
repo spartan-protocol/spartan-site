@@ -10,7 +10,7 @@
     "buttons"
     "featimg";
   color: #fff;
-  font-family: $fontHeadings;
+  font-family: $fontNunito;
   box-shadow: rgba(0, 0, 0, 0.397) 0 0 0 2000px inset;
   min-height: 100vh;
   background-size: cover;
@@ -37,7 +37,7 @@
   font-weight: 300;
   font-size: 22px;
   line-height: 28px;
-  font-family: $fontBody;
+  font-family: $fontSairaCondensed;
   width: 310px;
   max-width: 85vw;
   letter-spacing: 0.5px;
@@ -57,7 +57,7 @@
 .cta {
   background: #fb2615;
   border-radius: 5px;
-  font-family: $fontLink;
+  font-family: $fontSairaCondensed;
   font-weight: 500;
   font-size: 19px;
   text-align: center;
@@ -70,7 +70,7 @@
 
 .cta-info {
   padding: 5px 0;
-  font-family: $fontLink;
+  font-family: $fontSairaCondensed;
   background: $white;
   border-radius: 5px;
   font-weight: 500;

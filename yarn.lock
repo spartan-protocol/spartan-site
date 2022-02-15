@@ -1114,6 +1114,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/saira-condensed/-/saira-condensed-4.5.1.tgz#29af31d02382e965a9b9f09c12beda940585cc35"
   integrity sha512-VpQWwNUbjddgwtPta9dDHyuO7V8zss/ETEDn5+jg2xqLihYIHqezJ95Co0/3LSz/hPISCWt0f2boREKbAw0Xrg==
 
+"@fontsource/saira@^4.5.3":
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/@fontsource/saira/-/saira-4.5.3.tgz#3478a1db735f533c066d2439cdf3896a844bd8e4"
+  integrity sha512-bWp9uMVIsE0DKp5cpdJ//VJlpzf7+F2EdpeYCR7yMInpOAdxMXx0tDzXq+U59Hh2rpcDQcUUmuGNtTS0GgcPDA==
+
 "@gatsbyjs/reach-router@^1.3.6":
   version "1.3.6"
   resolved "https://registry.yarnpkg.com/@gatsbyjs/reach-router/-/reach-router-1.3.6.tgz#4e8225836959be247890b66f21a3198a0589e34d"

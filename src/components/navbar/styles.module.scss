@@ -1,7 +1,7 @@
 @import "../../sass/variables.scss";
 
 .navbar {
-  font-family: $fontLink;
+  font-family: $fontSairaCondensed;
   font-weight: 500;
   display: flex;
   justify-content: space-between;
@@ -22,9 +22,15 @@
 
 .firstSection {
   display: flex;
-  margin-left: 20px;
+  margin-left: 10px;
   align-items: center;
   height: 50px;
+}
+
+@media (min-width: 410px) {
+  .firstSection {
+    margin-left: 20px;
+  }
 }
 
 .brand {
@@ -35,9 +41,9 @@
 .title {
   display: none;
   font-weight: 100;
-  font-size: 20px;
-  transform: scaleY(0.66);
-  letter-spacing: 1px;
+  font-size: 18px;
+  transform: scaleY(0.7);
+  letter-spacing: 3px;
   line-height: 50px;
   margin-left: 10px;
 }
@@ -80,7 +86,7 @@
 .mobileLinks {
   display: block;
   margin-right: 10px;
-  margin-top: 9px;
+  margin-top: 7px;
 }
 
 @media (min-width: 700px) {
@@ -92,19 +98,20 @@
 .dappBtn {
   color: white;
   font-weight: 100;
-  font-size: 16px;
-  transform: scaleY(0.66);
-  // background: $bg-btn;
-  padding: 5px;
+  font-size: 14px;
+  transform: scaleY(0.7);
+  letter-spacing: 2px;
+  padding: 3px 5px;
   border-radius: 3px;
   border-color: #fff;
   border-style: solid;
   border-width: 0.5px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 410px) {
   .dappBtn {
-    display: block;
+    padding: 3px 10px;
+    margin-right: 20px;
   }
 }
