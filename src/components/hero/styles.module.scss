@@ -11,7 +11,7 @@
     "featimg";
   color: #fff;
   font-family: $fontNunito;
-  box-shadow: rgba(0, 0, 0, 0.397) 0 0 0 2000px inset;
+  box-shadow: rgba(0, 0, 0, 0.658) 0 0 0 2000px inset;
   min-height: 100vh;
   background-size: cover;
   align-content: center;
@@ -21,23 +21,23 @@
   margin: 80px 20px 0 20px;
   grid-area: title;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 28px;
 }
 
 .subtitle {
   margin: 0 20px;
   grid-area: subtitle;
   font-weight: 400;
-  font-size: 26px;
+  font-size: 22px;
 }
 
 .desc {
   margin: 5px 20px 0 20px;
   grid-area: desc;
-  font-weight: 300;
-  font-size: 22px;
-  line-height: 28px;
-  font-family: $fontSairaCondensed;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: $fontSaira;
   width: 310px;
   max-width: 85vw;
   letter-spacing: 0.5px;
