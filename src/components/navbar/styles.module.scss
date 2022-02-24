@@ -41,7 +41,7 @@
 .title {
   display: none;
   font-weight: 100;
-  font-size: 18px;
+  font-size: 16px;
   transform: scaleY(0.7);
   letter-spacing: 3px;
   line-height: 50px;
@@ -98,10 +98,10 @@
 .dappBtn {
   color: white;
   font-weight: 100;
-  font-size: 14px;
+  font-size: 13px;
   transform: scaleY(0.7);
   letter-spacing: 2px;
-  padding: 3px 5px;
+  padding: 1px 10px;
   border-radius: 3px;
   border-color: #fff;
   border-style: solid;
@@ -111,7 +111,6 @@
 
 @media (min-width: 410px) {
   .dappBtn {
-    padding: 3px 10px;
     margin-right: 20px;
   }
 }

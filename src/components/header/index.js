@@ -61,29 +61,29 @@ const Header = ({ data }) => {
               <div className={styles.headerSocialItem}>
                 <TwitterIcon
                   fill='black'
-                  height='27px'
-                  style={{ marginRight: "7px" }}
+                  height='28px'
+                  style={{ marginRight: "8px" }}
                 />
               </div>
             </a>
             <a href={data.telegramUrl}>
               <div className={styles.headerSocialItem}>
-                <TelegramIcon fill='black' height='27px' style={{ marginRight: "9px" }} />
+                <TelegramIcon fill='black' height='31px' style={{ marginRight: "10px" }} />
               </div>
             </a>
             <a href={data.gitHubUrl}>
               <div className={styles.headerSocialItem}>
-                <GithubIcon fill='black' height='27px' style={{ marginRight: "10px" }} />
+                <GithubIcon fill='black' height='31px' style={{ marginRight: "11px" }} />
               </div>
             </a>
             <a href={data.discordUrl}>
               <div className={styles.headerSocialItem}>
-                <DiscordIcon fill='black' height='27px' style={{ marginRight: "13px" }} />
+                <DiscordIcon fill='black' height='31px' style={{ marginRight: "14px" }} />
               </div>
             </a>
             <a href={data.bscscanUrl}>
               <div className={styles.headerSocialItem}>
-                <BscscanIcon fill='black' height='27px' width='22px' />
+                <BscscanIcon fill='black' height='31px' width='25px' />
               </div>
             </a>
           </div>
