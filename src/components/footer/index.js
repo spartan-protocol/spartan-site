@@ -1,33 +1,83 @@
 import * as React from "react";
+import { useState, useEffect } from "react";
 
 import * as styles from "./styles.module.scss";
 
 import SpartaIcon from "../../assets/icons/spartav2.svg";
+import DotIcon from "../../assets/icons/dot.svg";
 
 const Footer = () => {
+  const formatter = new Intl.NumberFormat("en-US", {
+    maximumFractionDigits: 0,
+  });
+
+  const [circSupply, setCircSupply] = useState("92,561,042");
+  const [burnSupply, setBurnSupply] = useState("57,480,300");
+  useEffect(() => {
+    fetch("https://api.spartanprotocol.org/api/v1/supply")
+      .then((res) => {
+        res.json();
+      })
+      .then((result) => {
+        result?.circulatingSupply &&
+          setCircSupply(formatter.format(result.circulatingSupply));
+        result?.burned && setBurnSupply(formatter.format(result.burned));
+      });
+  }, [formatter]);
+
   return (
     <div className={styles.footer}>
       <div className={styles.wrapper}>
+        <div className={styles.maxTitle}>Maximum Supply</div>
+        <div className={styles.maxNumb}>300,000,000</div>
+        {/* GET BALANCE OF DEAD ADDRESS */}
+        <div className={styles.burnTitle}>Burned Supply</div>
+        <div className={styles.burnNumb}>{burnSupply}</div>
+        {/* CALL SPARTA API, USE A FALLBACK? */}
+        <div className={styles.circTitle}>Circulating Supply</div>
+        <div className={styles.circNumb}>{circSupply}</div>
         <div className={styles.title1}>
-          The <span className={styles.title1Strong}>SPARTA</span> Token
+          <SpartaIcon
+            height='30px'
+            width='30px'
+            style={{ marginRight: "10px", verticalAlign: "top" }}
+          />
+          The SPARTA Token
         </div>
         <div className={styles.title2}>Fair Distribution</div>
         <div className={styles.title3}>Proof of Burn</div>
         <div className={styles.title4}>Bond+Mint</div>
-        <div className={styles.logo}>
-          <SpartaIcon height='230px' width='230px' />
-        </div>
         <div className={styles.no1}>
-          <span className={styles.noWeak}>No</span> ICO
+          <DotIcon
+            width='8'
+            fill='white'
+            style={{ marginRight: "7px", marginBottom: "2px" }}
+          />
+          No ICO
         </div>
         <div className={styles.no2}>
-          <span className={styles.noWeak}>No</span> Airdrop
+          <DotIcon
+            width='8'
+            fill='white'
+            style={{ marginRight: "7px", marginBottom: "2px" }}
+          />
+          No Airdrop
         </div>
         <div className={styles.no3}>
-          <span className={styles.noWeak}>No</span> Private Sale
+          <DotIcon
+            width='8'
+            fill='white'
+            style={{ marginRight: "7px", marginBottom: "2px" }}
+          />
+          No Private Sale
         </div>
         <div className={styles.no4}>
-          <span className={styles.noWeak}>No</span> Team Allocation
+          <DotIcon
+            width='8'
+            fill='white'
+            style={{ marginRight: "7px", marginBottom: "2px" }}
+          />
+          No Team Allocation
         </div>
       </div>
     </div>

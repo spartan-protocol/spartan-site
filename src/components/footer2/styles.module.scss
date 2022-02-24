@@ -1,0 +1,111 @@
+@import "../../sass/variables.scss";
+
+.footer {
+  grid-area: footer;
+  background-color: #000000;
+  min-height: 400px;
+  color: $white;
+}
+
+.wrapper {
+  margin-top: 40px;
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "title1 title1"
+    "title2 logo"
+    "title3 logo"
+    "title4 logo"
+    "no1    logo"
+    "no2    logo"
+    "no3    logo"
+    "no4    no4";
+  color: #fff;
+}
+
+.title1 {
+  margin: 0 20px;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 36px;
+  grid-area: title1;
+}
+
+.title1Strong {
+  font-weight: bold;
+}
+
+.title2 {
+  margin: 0 20px;
+  grid-area: title2;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.title3 {
+  margin: 0 20px;
+  grid-area: title3;
+  font-family: Roboto;
+  font-size: 28px;
+  line-height: 32px;
+  color: #ced4da;
+}
+
+.title4 {
+  margin: 0 20px;
+  grid-area: title4;
+  font-family: Roboto;
+  font-size: 28px;
+  line-height: 32px;
+  color: #ced4da;
+}
+
+.logo {
+  grid-area: logo;
+  overflow-x: hidden;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.noWeak {
+  color: #6c757d;
+}
+
+.no1 {
+  margin: 0 20px;
+  grid-area: no1;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.no2 {
+  margin: 0 20px;
+  grid-area: no2;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.no3 {
+  margin: 0 20px;
+  grid-area: no3;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.no4 {
+  margin: 0 20px;
+  grid-area: no4;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 32px;
+}
