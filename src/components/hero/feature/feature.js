@@ -19,7 +19,7 @@ const Feature = ({ featData = false, richData = false }) => {
         </div>
       ) : (
         <div className='h-100'>
-          {richData.map((item) => (
+          {richData.map((item, index) => (
             <div
               key={item.buttonLabel}
               className={
@@ -32,13 +32,14 @@ const Feature = ({ featData = false, richData = false }) => {
                 <img
                   src={item.logo.file.url}
                   alt={item.logo.file.fileName}
-                  width='200px'
+                  width='180px'
                 />
               </div>
               <div className={styles.desc}>{item.description}</div>
               <a href={item.buttonLink}>
                 <div className={styles.button}>{item.buttonLabel}</div>
               </a>
+              {index + 1 < richData.length && <br />}
             </div>
           ))}
         </div>
