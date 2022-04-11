@@ -56,3 +56,20 @@
   padding: 3px 0;
   color: #fff;
 }
+
+@media (min-width: 481px) {
+  .title {
+    font-size: 34px;
+  }
+
+  .desc {
+    font-size: 21px;
+    line-height: 26px;
+    line-height: 28px;
+    letter-spacing: 1px;
+  }
+
+  .button {
+    font-size: 20px;
+  }
+}

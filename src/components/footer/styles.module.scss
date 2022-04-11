@@ -1,10 +1,12 @@
 @import "../../sass/variables.scss";
 
 .footer {
+  display: grid;
   grid-area: footer;
   background-color: #21212c;
   min-height: 400px;
   color: $white;
+  align-content: center;
 }
 
 .wrapper {
@@ -12,20 +14,35 @@
   display: grid;
   gap: 5px;
   grid-template-areas:
+    "first"
+    "second";
+  color: #fff;
+  max-width: 280px;
+  justify-items: center;
+}
+
+.first {
+  grid-area: first;
+  display: grid;
+  grid-template-areas:
     "maxTitle   maxTitle"
     "maxNumb    maxNumb"
     "burnTitle  burnTitle"
     "burnNumb   burnNumb"
     "circTitle  circTitle"
-    "circNumb   circNumb"
+    "circNumb   circNumb";
+}
+
+.second {
+  grid-area: second;
+  display: grid;
+  grid-template-areas:
     "title1     title1"
     "title2     title2"
     "title3     no1"
     "title4     no2"
     "no3        no3"
     "no4        no4";
-  color: #fff;
-  max-width: 280px;
 }
 
 .maxTitle {
@@ -153,4 +170,17 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
+}
+
+@media (min-width: 580px) {
+  .wrapper {
+    grid-template-areas:
+      "first   second";
+    max-width: 560px;
+    gap: 20px;
+  }
+
+  .title1 {
+    margin-top: 10px;
+  }
 }

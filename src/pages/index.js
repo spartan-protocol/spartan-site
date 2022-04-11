@@ -1,23 +1,23 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-import "@fontsource/saira/100.css"; // 
-import "@fontsource/saira/200.css"; // 
+import "@fontsource/saira/100.css"; //
+import "@fontsource/saira/200.css"; //
 import "@fontsource/saira/300.css";
 import "@fontsource/saira/400.css";
 import "@fontsource/saira/500.css";
-import "@fontsource/saira/600.css"; // 
-import "@fontsource/saira/700.css"; // 
+import "@fontsource/saira/600.css"; //
+import "@fontsource/saira/700.css"; //
 import "@fontsource/saira/800.css";
 import "@fontsource/saira/900.css";
 
-import "@fontsource/saira-condensed/100.css"; // 
-import "@fontsource/saira-condensed/200.css"; // 
+import "@fontsource/saira-condensed/100.css"; //
+import "@fontsource/saira-condensed/200.css"; //
 import "@fontsource/saira-condensed/300.css";
 import "@fontsource/saira-condensed/400.css";
 import "@fontsource/saira-condensed/500.css";
-import "@fontsource/saira-condensed/600.css"; // 
-import "@fontsource/saira-condensed/700.css"; // 
+import "@fontsource/saira-condensed/600.css"; //
+import "@fontsource/saira-condensed/700.css"; //
 import "@fontsource/saira-condensed/800.css";
 
 import "@fontsource/nunito/400.css"; // Used general/body
@@ -64,7 +64,7 @@ const IndexPage = () => {
             }
           }
         }
-        allContentfulHeroSection(sort: {fields: order, order: ASC}) {
+        allContentfulHeroSection(sort: { fields: order, order: ASC }) {
           edges {
             node {
               buttonLabel1
@@ -116,6 +116,7 @@ const IndexPage = () => {
   return (
     <BreakpointProvider queries={mediaQueries}>
       <Navbar />
+      {/* <Jumper /> */}
       <div className='wrapper'>
         <Header data={heroData.allContentfulHeaderHero.edges[0].node} />
         <Hero
@@ -130,10 +131,10 @@ const IndexPage = () => {
           heroData={heroData.allContentfulHeroSection.edges[2].node}
           id='stake'
         />
-        <Hero
+        {/* <Hero
           heroData={heroData.allContentfulHeroSection.edges[3].node}
           id='synths'
-        />
+        /> */}
         <Hero
           heroData={heroData.allContentfulHeroSection.edges[4].node}
           id='dao'

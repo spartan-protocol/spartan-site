@@ -2,7 +2,7 @@
 
 .navbar {
   font-family: $fontSairaCondensed;
-  font-weight: 500;
+  font-weight: 400;
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -27,15 +27,10 @@
   height: 50px;
 }
 
-@media (min-width: 410px) {
-  .firstSection {
-    margin-left: 20px;
-  }
-}
-
 .brand {
   display: inline-block;
-  margin-top: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .title {
@@ -46,12 +41,9 @@
   letter-spacing: 3px;
   line-height: 50px;
   margin-left: 10px;
-}
-
-@media (min-width: 370px) {
-  .title {
-    display: inline-block;
-  }
+  color: #fff;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .links {
@@ -71,12 +63,6 @@
   }
 }
 
-@media (min-width: 700px) {
-  .links {
-    display: block;
-  }
-}
-
 .btnSection {
   display: flex;
   align-items: center;
@@ -87,12 +73,6 @@
   display: block;
   margin-right: 10px;
   margin-top: 7px;
-}
-
-@media (min-width: 700px) {
-  .mobileLinks {
-    display: none;
-  }
 }
 
 .dappBtn {
@@ -109,8 +89,41 @@
   margin-right: 10px;
 }
 
+@media (min-width: 370px) {
+  .title {
+    display: inline-block;
+  }
+}
+
 @media (min-width: 410px) {
+  .firstSection {
+    margin-left: 20px;
+  }
+
   .dappBtn {
     margin-right: 20px;
+  }
+}
+
+@media (min-width: 481px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .dappBtn {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 700px) {
+  .mobileLinks {
+    display: none;
+  }
+}
+
+@media (min-width: 740px) {
+  .links {
+    display: block;
+    font-size: 20px;
   }
 }

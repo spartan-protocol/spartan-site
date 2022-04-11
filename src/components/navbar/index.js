@@ -4,17 +4,39 @@ import * as styles from "./styles.module.scss";
 
 import MenuIcon from "./assets/menu.svg";
 import SpartaIcon from "../../assets/icons/spartav2.svg";
+import MobileMenu from "../mobileMenu";
 
 const Navbar = () => {
+  const [navOpen, setNavOpen] = React.useState(false);
+
+  const toggleNav = () => {
+    if (navOpen) {
+      closeNav();
+    } else {
+      openNav();
+    }
+  };
+
+  const openNav = () => {
+    document.getElementById("myNav").style.width = "100vw";
+    setNavOpen(true);
+  };
+
+  const closeNav = () => {
+    console.log('hurrroooowoowww')
+    document.getElementById("myNav").style.width = "0%";
+    setNavOpen(false);
+  };
+
   return (
     <div className={styles.navbar}>
       <div className={styles.firstSection}>
-        <a href='/'>
+        <a href='/' style={{ display: "contents" }}>
           <div className={styles.brand}>
-            <SpartaIcon height='30px' />
+            <SpartaIcon width='30px' height='30px' />
           </div>
+          <div className={styles.title}>SPARTAN PROTOCOL</div>
         </a>
-        <div className={styles.title}>SPARTAN PROTOCOL</div>
       </div>
       <div className={styles.links}>
         <ul>
@@ -27,9 +49,9 @@ const Navbar = () => {
           <li>
             <a href='/#stake'>Stake</a>
           </li>
-          <li>
+          {/* <li>
             <a href='/#synths'>Synths</a>
-          </li>
+          </li> */}
           <li>
             <a href='/#dao'>DAO</a>
           </li>
@@ -40,7 +62,8 @@ const Navbar = () => {
       </div>
       <div className={styles.btnSection}>
         <div className={styles.mobileLinks}>
-          <MenuIcon height='20px' fill='white' />
+          <MenuIcon height='20px' fill='white' onClick={() => toggleNav()} />
+          <MobileMenu closeNav={closeNav} />
         </div>
         <div>
           <a href='https://dapp.spartanprotocol.org'>

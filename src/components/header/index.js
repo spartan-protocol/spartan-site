@@ -23,12 +23,31 @@ const Header = ({ data }) => {
       return data.heroBackground.file.url + "?w=1024"; // if 'md' width
     }
     if (breakpoint.sm) {
-      return data.heroBackground.file.url + "?w=770"; // if 'sm' width
+      return data.heroBgNarrow.file.url + "?w=770"; // if 'sm' width
     }
     if (breakpoint.xs) {
       return data.heroBgNarrow.file.url + "?w=480"; // if 'xs' width
     }
     return "";
+  };
+
+  const getSocialSize = (offset = 0) => {
+    if (breakpoint.xl) {
+      return 31 + offset + "px"; // if 'xl' width
+    }
+    if (breakpoint.lg) {
+      return 31 + offset + "px"; // if 'lg' width
+    }
+    if (breakpoint.md) {
+      return 31 + offset + "px"; // if 'md' width
+    }
+    if (breakpoint.sm) {
+      return 41 + offset + "px"; // if 'sm' width
+    }
+    if (breakpoint.xs) {
+      return 31 + offset + "px"; // if 'xs' width
+    }
+    return 31 + offset + "px";
   };
 
   return (
@@ -61,29 +80,45 @@ const Header = ({ data }) => {
               <div className={styles.headerSocialItem}>
                 <TwitterIcon
                   fill='black'
-                  height='28px'
+                  height={getSocialSize(-3)}
                   style={{ marginRight: "8px" }}
                 />
               </div>
             </a>
             <a href={data.telegramUrl}>
               <div className={styles.headerSocialItem}>
-                <TelegramIcon fill='black' height='31px' style={{ marginRight: "10px" }} />
+                <TelegramIcon
+                  fill='black'
+                  height={getSocialSize()}
+                  style={{ marginRight: "10px" }}
+                />
               </div>
             </a>
             <a href={data.gitHubUrl}>
               <div className={styles.headerSocialItem}>
-                <GithubIcon fill='black' height='31px' style={{ marginRight: "11px" }} />
+                <GithubIcon
+                  fill='black'
+                  height={getSocialSize()}
+                  style={{ marginRight: "11px" }}
+                />
               </div>
             </a>
             <a href={data.discordUrl}>
               <div className={styles.headerSocialItem}>
-                <DiscordIcon fill='black' height='31px' style={{ marginRight: "14px" }} />
+                <DiscordIcon
+                  fill='black'
+                  height={getSocialSize()}
+                  style={{ marginRight: "14px" }}
+                />
               </div>
             </a>
             <a href={data.bscscanUrl}>
               <div className={styles.headerSocialItem}>
-                <BscscanIcon fill='black' height='31px' width='25px' />
+                <BscscanIcon
+                  fill='black'
+                  height={getSocialSize()}
+                  width={getSocialSize(-6)}
+                />
               </div>
             </a>
           </div>
