@@ -5,13 +5,14 @@ import * as styles from "./styles.module.scss";
 const MobileMenu = ({ closeNav }) => {
   return (
     <div id='myNav' className={styles.overlay}>
-      <a
-        href='javascript:void(0)'
+      <div
+        role='button'
+        aria-hidden='true'
         className={styles.closebtn}
         onClick={() => closeNav()}
       >
         &times;
-      </a>
+      </div>
 
       <div className={styles.content}>
         <a href='/#swap' onClick={() => closeNav()}>

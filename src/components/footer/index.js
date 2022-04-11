@@ -7,13 +7,12 @@ import SpartaIcon from "../../assets/icons/spartav2.svg";
 import DotIcon from "../../assets/icons/dot.svg";
 
 const Footer = () => {
-  const formatter = new Intl.NumberFormat("en-US", {
-    maximumFractionDigits: 0,
-  });
-
   const [circSupply, setCircSupply] = useState("92,561,042");
   const [burnSupply, setBurnSupply] = useState("57,480,300");
   useEffect(() => {
+    const formatter = new Intl.NumberFormat("en-US", {
+      maximumFractionDigits: 0,
+    });
     fetch("https://api.spartanprotocol.org/api/v1/supply")
       .then((res) => {
         res.json();
@@ -23,7 +22,7 @@ const Footer = () => {
           setCircSupply(formatter.format(result.circulatingSupply));
         result?.burned && setBurnSupply(formatter.format(result.burned));
       });
-  }, [formatter]);
+  }, []);
 
   return (
     <div className={styles.footer} id='footer'>
