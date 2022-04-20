@@ -19,7 +19,7 @@ class Footer extends HTMLElement {
                     <div class="tooltipbtm zoom">
                         <a href="https://docs.spartanprotocol.org/" class='link-no-format'>
                             <img class="footer-icon" src="./assets/Icons/SVG/gitbook-icon.svg" />
-                            <span class="tooltiptext">Gitbook</span>
+                            <span class="tooltiptext">Docs</span>
                         </a>
                     </div>
                     <div class="tooltipbtm zoom">

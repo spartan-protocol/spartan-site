@@ -133,12 +133,6 @@ li {
   line-height: 1.5;
 }
 
-@media (min-width: 768px) {
-  p {
-    line-height: 1.8;
-  }
-}
-
 p1 {
   color: rgba(255, 255, 255, 1);
   font-family: "Roboto";
@@ -150,53 +144,35 @@ p1 {
 h1 {
   color: rgba(255, 255, 255, 1);
   font-family: "Kreon";
-  font-size: 38px;
+  font-size: 2.25rem;
   font-weight: 600;
-}
-
-@media (min-width: 1200px) {
-  h1 {
-    font-size: 48pt;
-  }
 }
 
 h2 {
   color: rgba(255, 255, 255, 1);
   font-family: "Kreon";
-  font-size: 34px;
+  font-size: 1.75rem;
   font-weight: 600;
-}
-
-@media (min-width: 1200px) {
-  h2 {
-    font-size: 44pt;
-  }
 }
 
 h3 {
   color: rgba(255, 255, 255, 1);
   font-family: "Kreon";
-  font-size: 30px;
+  font-size: 1.5rem;
   font-weight: 400;
-}
-
-@media (min-width: 1200px) {
-  h3 {
-    font-size: 2.25vmax;
-  }
 }
 
 h4 {
   color: rgba(255, 255, 255, 1);
   font-family: "Kreon";
-  font-size: 26px;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 
 h5 {
   color: rgba(255, 255, 255, 1);
   font-family: "Kreon";
-  font-size: 22px;
+  font-size: 1.00rem;
   font-weight: 600;
 }
 
@@ -457,7 +433,7 @@ h5 {
 }
 
 .btn-lg {
-  max-width: 200px;
+  max-width: 290px;
 }
 
 .button-icon {
