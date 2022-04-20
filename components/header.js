@@ -15,17 +15,14 @@ class Header extends HTMLElement {
                         <label for="burger-check" class="burger mx-2 d-inline-block d-lg-none"></label>
                     </input>
                     <div class='header-right'>
-                        <a href="./pools.html" class='link-no-format'>
-                            <div class="my-auto d-none d-lg-flex menu-item zoomsm">Pools</div>
+                        <a href="#features" class='link-no-format'>
+                            <div class="my-auto d-none d-lg-flex menu-item zoomsm">Features</div>
                         </a>
-                        <a href="./dao.html" class='link-no-format'>
-                            <div class="my-auto d-none d-lg-flex menu-item zoomsm">DAO</div>
+                        <a href="#token" class='link-no-format'>
+                            <div class="my-auto d-none d-lg-flex menu-item zoomsm">Token</div>
                         </a>
-                        <a href="./synths.html" class='link-no-format'>
-                            <div class="my-auto d-none d-lg-flex menu-item zoomsm">Synths</div>
-                        </a>
-                        <a href="./lending.html" class='link-no-format'>
-                            <div class="my-auto d-none d-lg-flex menu-item zoomsm">Lending</div>
+                        <a href="#community" class='link-no-format'>
+                            <div class="my-auto d-none d-lg-flex menu-item zoomsm me-2">Community</div>
                         </a>
                         <a href="https://www.immunefi.com/bounty/spartanprotocol" class='link-no-format'>
                         <div class="d-flex d-lg-none btn-sm bg-dark mx-1 mt-auto mb-auto zoomsm">
@@ -42,7 +39,7 @@ class Header extends HTMLElement {
                         <a href="https://dapp.spartanprotocol.org/" class='link-no-format'>
                             <div class="btn-sm bg-dark mx-1 mt-auto mb-auto zoomsm">
                                 <img class="button-icon me-1"
-                                    src="./assets/Icons/SVG/spartav2.svg" /><span>DAppV2</span>
+                                    src="./assets/Icons/SVG/spartav2.svg" /><span>DApp</span>
                             </div>
                         </a>
                     </div>
@@ -51,20 +48,14 @@ class Header extends HTMLElement {
                             <a href="./index.html" class='link-no-format'>
                                 <div class="my-auto nav-menu-item">Home</div>
                             </a>
-                            <a href="./pools.html" class='link-no-format'>
-                                <div class="my-auto nav-menu-item">Pools</div>
+                            <a href="#features" class='link-no-format'>
+                                <div class="my-auto nav-menu-item">Features</div>
                             </a>
-                            <a href="./dao.html" class='link-no-format'>
-                                <div class="my-auto nav-menu-item">DAO</div>
+                            <a href="#token" class='link-no-format'>
+                                <div class="my-auto nav-menu-item">Token</div>
                             </a>
-                            <a href="./synths.html" class='link-no-format'>
-                                <div class="my-auto nav-menu-item">Synths</div>
-                            </a>
-                            <a href="./lending.html" class='link-no-format'>
-                                <div class="my-auto nav-menu-item">Lending</div>
-                            </a>
-                            <a href="./faq.html" class='link-no-format'>
-                                <div class="my-auto nav-menu-item">FAQ</div>
+                            <a href="#community" class='link-no-format'>
+                                <div class="my-auto nav-menu-item">Community</div>
                             </a>
                         </div>
                     </nav>
