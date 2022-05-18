@@ -4,6 +4,10 @@ Repository for the spartanprotocol.org website.
 
 ![image](https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg)
 
+2.  **Add enviro file**
+
+    Ensure the contentful keys are in `.env.development` file (when running dev locally)
+
 
 2.  **Start developing.**
 
