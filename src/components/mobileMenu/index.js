@@ -15,6 +15,9 @@ const MobileMenu = ({ closeNav }) => {
       </div>
 
       <div className={styles.content}>
+        <a href='/#home' onClick={() => closeNav()}>
+          Home
+        </a>
         <a href='/#swap' onClick={() => closeNav()}>
           Swap
         </a>

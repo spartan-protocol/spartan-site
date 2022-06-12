@@ -1,9 +1,10 @@
 import * as React from "react";
 
-const Hero = ({ heroData, id }) => {
-  const data = heroData;
+import SocialIcons from "./SocialIcons";
+
+const LandingPage = ({ data }) => {
   return (
-    <div id={id} className="h-screen bg-black justify-center">
+    <div id="home" className="h-screen bg-black justify-center">
       <div className="flex flex-col flex-1 h-full items-center justify-center">
         <div className="flex flex-col flex-1 justify-evenly">
           <div className="font-saira text-white text-center px-8">
@@ -19,6 +20,7 @@ const Hero = ({ heroData, id }) => {
                 {data.cexButtonLabel}
               </a>
             </div>
+            <SocialIcons data={data} />
           </div>
         </div>
       </div>
@@ -26,4 +28,4 @@ const Hero = ({ heroData, id }) => {
   );
 };
 
-export default Hero;
+export default LandingPage;

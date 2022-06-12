@@ -1,9 +1,8 @@
 import * as React from "react";
 
-const Hero = ({ heroData, id }) => {
-  const data = heroData;
+const Dao = ({ data }) => {
   return (
-    <div id={id} className="h-screen bg-black justify-center">
+    <div id="dao" className="h-screen bg-black justify-center">
       <div className="flex flex-col flex-1 h-full items-center justify-center">
         <div className="flex flex-col flex-1 justify-evenly">
           <div className="font-saira text-white text-center px-8">
@@ -12,11 +11,11 @@ const Hero = ({ heroData, id }) => {
           </div>
           <div>
             <div className="flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg">
-              <a className="bg-white p-1.5 text-black rounded mb-2 w-full" href={data.ctaButtonLink}>
-                {data.ctaButtonLabel}
+              <a className="bg-white p-1.5 text-black rounded mb-2 w-full" href={data.buttonLink1}>
+                {data.buttonLabel1}
               </a>
-              <a className="border border-white p-1.5 text-white w-full rounded" href={data.cexButtonLink}>
-                {data.cexButtonLabel}
+              <a className="border border-white p-1.5 text-white w-full rounded" href={data.buttonLink2}>
+                {data.buttonLabel2}
               </a>
             </div>
           </div>
@@ -26,4 +25,4 @@ const Hero = ({ heroData, id }) => {
   );
 };
 
-export default Hero;
+export default Dao;

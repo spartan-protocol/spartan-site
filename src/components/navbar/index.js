@@ -1,7 +1,5 @@
 import * as React from "react";
 
-import * as styles from "./styles.module.scss";
-
 import MenuIcon from "./assets/menu.svg";
 import SpartaIcon from "../../assets/icons/spartav2.svg";
 import MobileMenu from "../mobileMenu";
@@ -23,52 +21,33 @@ const Navbar = () => {
   };
 
   const closeNav = () => {
-    console.log('hurrroooowoowww')
     document.getElementById("myNav").style.width = "0%";
     setNavOpen(false);
   };
 
   return (
-    <div className={styles.navbar}>
-      <div className={styles.firstSection}>
-        <a href='/' style={{ display: "contents" }}>
-          <div className={styles.brand}>
-            <SpartaIcon width='30px' height='30px' />
-          </div>
-          <div className={styles.title}>SPARTAN PROTOCOL</div>
+    <div className="flex bg-black w-full p-2 px-4 justify-between fixed">
+      <div className="flex align-center w-36">
+        <a href="/#home">
+          <SpartaIcon width="30px" height="30px" />
         </a>
       </div>
-      <div className={styles.links}>
-        <ul>
-          <li>
-            <a href='/#swap'>Swap</a>
-          </li>
-          <li>
-            <a href='/#pool'>Pool</a>
-          </li>
-          <li>
-            <a href='/#stake'>Stake</a>
-          </li>
-          {/* <li>
-            <a href='/#synths'>Synths</a>
-          </li> */}
-          <li>
-            <a href='/#dao'>DAO</a>
-          </li>
-          <li>
-            <a href='/#footer'>Token</a>
-          </li>
-        </ul>
+      <div className="hidden sm:flex text-white items-center space-x-4 text-lg text-center">
+        <a href="/#swap">Swap</a>
+        <a href="/#pool">Pool</a>
+        <a href="/#stake">Stake</a>
+        <a href="/#dao">DAO</a>
+        <a href="/#footer">Token</a>
       </div>
-      <div className={styles.btnSection}>
-        <div className={styles.mobileLinks}>
-          <MenuIcon height='20px' fill='white' onClick={() => toggleNav()} />
+      <div className="flex items-center justify-end w-36 pr-2">
+        <div className="mr-4 cursor-pointer">
+          <MenuIcon height="20px" fill="white" onClick={() => toggleNav()} />
           <MobileMenu closeNav={closeNav} />
         </div>
         <div>
-          <a href='https://dapp.spartanprotocol.org'>
-            <div className={styles.dappBtn}>
-              <div>OPEN DAPP</div>
+          <a href="https://dapp.spartanprotocol.org">
+            <div className="text-white border text-xs p-1 font-sairaCondensed scale-x-125">
+              <div className="px-1.5">OPEN DAPP</div>
             </div>
           </a>
         </div>

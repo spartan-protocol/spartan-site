@@ -26,9 +26,12 @@ import "@fontsource/nunito/800.css"; // Used hero title
 import "../sass/global.scss";
 
 import Navbar from "../components/navbar";
-import Hero from "../components/hero";
+import Dao from "../components/dao";
+import Swap from "../components/swap";
+import Pool from "../components/pool";
+import Stake from "../components/stake";
 import Footer from "../components/footer";
-import Header from "../components/header";
+import LandingPage from "../components/landingPage";
 import { BreakpointProvider } from "../providers/breakpoint";
 
 const IndexPage = () => {
@@ -105,6 +108,8 @@ const IndexPage = () => {
     `
   );
 
+  const [swapData, poolData, stakeData,, daoData] = heroData.allContentfulHeroSection.edges;
+
   const mediaQueries = {
     xs: "(max-width: 480px)", // use max here for default/smallest
     sm: "(min-width: 481px)", // use min for rest
@@ -113,33 +118,29 @@ const IndexPage = () => {
     xl: "(min-width: 1200px)", // use min for rest
   };
 
+  //temp data
+  const headerData = () => {
+    return {
+      title: "Disrupting DeFi with Quantum liquidity.",
+      subtitle: "Deep incentivized liquidity for the entire BNBChain ecosystem. Claimable every second.",
+      ctaButtonLabel: "Open DApp",
+      ctaButtonLink: "https://dapp.spartanprotocol.org",
+      cexButtonLabel: "Trade on Binance",
+      cexButtonLink: "https://www.binance.com/en/trade/SPARTA_BNB",
+    };
+  };
+
   return (
     <BreakpointProvider queries={mediaQueries}>
       <Navbar />
       {/* <Jumper /> */}
-      <div className='wrapper'>
-        <Header data={heroData.allContentfulHeaderHero.edges[0].node} />
-        <Hero
-          heroData={heroData.allContentfulHeroSection.edges[0].node}
-          id='swap'
-        />
-        <Hero
-          heroData={heroData.allContentfulHeroSection.edges[1].node}
-          id='pool'
-        />
-        <Hero
-          heroData={heroData.allContentfulHeroSection.edges[2].node}
-          id='stake'
-        />
-        {/* <Hero
-          heroData={heroData.allContentfulHeroSection.edges[3].node}
-          id='synths'
-        /> */}
-        <Hero
-          heroData={heroData.allContentfulHeroSection.edges[4].node}
-          id='dao'
-        />
-        <Footer id='footer' />
+      <div className="wrapper">
+        <LandingPage data={headerData()} />
+        <Swap data={swapData.node} />
+        <Pool data={poolData.node} />
+        <Stake data={stakeData.node} />
+        <Dao data={daoData.node} />
+        <Footer id="footer" />
       </div>
     </BreakpointProvider>
   );
