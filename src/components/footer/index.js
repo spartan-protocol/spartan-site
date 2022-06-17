@@ -21,7 +21,7 @@ const Footer = () => {
         result?.circulatingSupply &&
           setCircSupply(formatter.format(result.circulatingSupply));
         result?.burned && setBurnSupply(formatter.format(result.burned));
-      });
+      }).catch((error) => console.error(error.message))
   }, []);
 
   return (

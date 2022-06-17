@@ -32,21 +32,31 @@ const SocialIcons = ({ data }) => {
 
   return (
     <div className="flex justify-center mt-4">
-      <a href={data.twitterUrl}>
-        <TwitterIcon fill="white" height={getSocialSize(-3)} className="mx-1" />
-      </a>
-      <a href={data.telegramUrl}>
-        <TelegramIcon fill="white" height={getSocialSize()} className="mx-1" />
-      </a>
-      <a href={data.gitHubUrl}>
-        <GithubIcon fill="white" height={getSocialSize()} className="mx-1" />
-      </a>
-      <a href={data.discordUrl}>
-        <DiscordIcon fill="white" height={getSocialSize()} className="mx-1" />
-      </a>
-      <a href={data.bscscanUrl}>
-        <BscscanIcon fill="white" height={getSocialSize()} width={getSocialSize(-6)} className="mx-1 ml-2" />
-      </a>
+      <div className="opacity-0 animate-fadeInBottom animation-delay-300">
+        <a href={data.twitterUrl}>
+          <TwitterIcon fill="white" height={getSocialSize(-3)} className="mx-1" />
+        </a>
+      </div>
+      <div className="opacity-0 animate-fadeInBottom animation-delay-400">
+        <a href={data.telegramUrl} className={""}>
+          <TelegramIcon fill="white" height={getSocialSize()} className="mx-1" />
+        </a>
+      </div>
+      <div className="opacity-0 animate-fadeInBottom animation-delay-500">
+        <a href={data.gitHubUrl}>
+          <GithubIcon fill="white" height={getSocialSize()} className="mx-1" />
+        </a>
+      </div>
+      <div className="opacity-0 animate-fadeInBottom animation-delay-600">
+        <a href={data.discordUrl}>
+          <DiscordIcon fill="white" height={getSocialSize()} className="mx-1" />
+        </a>
+      </div>
+      <div className="opacity-0 animate-fadeInBottom animation-delay-700">
+        <a href={data.bscscanUrl}>
+          <BscscanIcon fill="white" height={getSocialSize()} width={getSocialSize(-6)} className="mx-1 ml-2" />
+        </a>
+      </div>
     </div>
   );
 };

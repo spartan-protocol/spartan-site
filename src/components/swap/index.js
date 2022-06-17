@@ -6,7 +6,7 @@ const Swap = ({ data }) => {
       <div className="flex flex-col flex-1 h-full items-center justify-center">
         <div className="flex flex-col flex-1 justify-evenly">
           <div className="font-saira text-white text-center px-8">
-            <h1 className="w-96 sm:w-128 text-3xl sm:text-5xl mb-2">{data.title}</h1>
+            <h1 className="text-3xl sm:text-5xl mb-2">{data.title}</h1>
             <div className="w-64 text-xs sm:w-96 sm:text-sm mx-auto font-extralight text-gray-400">{data.subtitle}</div>
           </div>
           <div>
