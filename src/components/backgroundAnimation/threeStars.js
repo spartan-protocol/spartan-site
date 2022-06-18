@@ -9,7 +9,7 @@ const ThreeStars = () => {
 
   const { speed, direction } = useScrollData();
 
-  const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 6 }));
+  const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 3 }));
   const [lastScrollDirection, setLastScrollDirection] = useState("");
 
   useFrame((state, delta) => {
