@@ -6,7 +6,7 @@ import ThreeStars from "./threeStars";
 
 const ThreeCanvas = ({ className }) => {
   return (
-    <div className="fixed h-screen w-screen animation-[fadeIn_1s_ease_forwards]">
+    <div className="fixed h-screen w-screen opacity-0 animate-fadeIn">
       <Canvas
         gl={{ antialias: false, alpha: false }}
         camera={{
