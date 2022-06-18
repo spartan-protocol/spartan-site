@@ -12,7 +12,7 @@ module.exports = {
       keyframes: {
         fadeIn: {
           "0%": { opacity: 0 },
-          "10%": { transform: 1 },
+          "100%": { opacity: 1 },
         },
         fadeInLeft: {
           "0%": { transform: "translateX(-40px)", opacity: 0 },
@@ -24,7 +24,7 @@ module.exports = {
         },
       },
       animation: {
-        fadeIn: "fadeIn 0.5s ease-in forwards",
+        fadeIn: "fadeIn 0.75s ease forwards",
         fadeInLeft: "fadeInLeft 0.75s ease forwards",
         fadeInBottom: "fadeInBottom 0.75s ease forwards",
       },
