@@ -32,6 +32,7 @@ import Pool from "../components/pool";
 import Stake from "../components/stake";
 import Footer from "../components/footer";
 import LandingPage from "../components/landingPage";
+import BackgroundAnimation from "../components/backgroundAnimation"
 import { BreakpointProvider } from "../providers/breakpoint";
 
 const IndexPage = () => {
@@ -133,6 +134,7 @@ const IndexPage = () => {
   return (
     <BreakpointProvider queries={mediaQueries}>
       <Navbar />
+      <BackgroundAnimation />
       {/* <Jumper /> */}
       <div className="wrapper">
         <LandingPage data={headerData()} />

@@ -26,7 +26,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex bg-black w-full p-2 px-4 justify-between fixed">
+    <div className="flex bg-black w-full p-2 px-4 justify-between fixed z-20">
       <div className="flex align-center w-36">
         <a href="/#home">
           <SpartaIcon width="30px" height="30px" />
