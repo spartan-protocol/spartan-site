@@ -51,7 +51,7 @@ const ThreeStars = () => {
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
       <Points ref={ref} positions={sphere} stride={3} frustumCulled={false}>
-        <PointMaterial transparent={true} color="#ff0000" size={0.02} sizeAttenuation={true} depthWrite={false} />
+        <PointMaterial transparent={true} color="#ff0000" size={0.015} sizeAttenuation={true} depthWrite={false} />
       </Points>
     </group>
   );
