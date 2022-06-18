@@ -16,12 +16,12 @@ const Navbar = () => {
   };
 
   const openNav = () => {
-    document.getElementById("myNav").style.width = "100vw";
+    document.getElementById("myNav").style.display = "flex";
     setNavOpen(true);
   };
 
   const closeNav = () => {
-    document.getElementById("myNav").style.width = "0%";
+    document.getElementById("myNav").style.display = "none";
     setNavOpen(false);
   };
 
@@ -40,8 +40,8 @@ const Navbar = () => {
         <a href="/#footer">Token</a>
       </div>
       <div className="flex items-center justify-end w-36 pr-2">
-        <div className="mr-4 cursor-pointer">
-          <MenuIcon height="20px" fill="white" onClick={() => toggleNav()} />
+        <div className="mr-4">
+          <MenuIcon className="cursor-pointer transition hover:opacity-60" height="20px" fill="white" onClick={() => toggleNav()} />
           <MobileMenu closeNav={closeNav} />
         </div>
         <div>
