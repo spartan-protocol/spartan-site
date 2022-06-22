@@ -33,14 +33,15 @@ const Navbar = () => {
         </a>
       </div>
       <div className="hidden sm:flex text-white items-center space-x-4 text-lg text-center">
-        <a href="#swap">Swap</a>
-        <a href="#pool">Pool</a>
-        <a href="#stake">Stake</a>
-        <a href="#dao">DAO</a>
-        <a href="#footer">Token</a>
+        <a className="hover:opacity-60 transition" href="#home">Home</a>
+        <a className="hover:opacity-60 transition" href="#swap">Swap</a>
+        <a className="hover:opacity-60 transition" href="#pool">Pool</a>
+        <a className="hover:opacity-60 transition" href="#stake">Stake</a>
+        <a className="hover:opacity-60 transition" href="#dao">DAO</a>
+        <a className="hover:opacity-60 transition" href="#footer">Token</a>
       </div>
       <div className="flex items-center justify-end w-36 pr-2">
-        <div className="mr-4">
+        <div className="mr-4 md:hidden block">
           <MenuIcon className="cursor-pointer transition hover:opacity-60" height="20px" fill="white" onClick={() => toggleNav()} />
           <MobileMenu closeNav={closeNav} />
         </div>

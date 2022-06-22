@@ -16,7 +16,7 @@ const LandingPage = ({ data }) => {
               <a className="bg-white p-1.5 text-black rounded mb-2 w-full animate-fadeInLeft" href={data.ctaButtonLink}>
                 {data.ctaButton}
               </a>
-              <a className={`border border-white p-1.5 text-white w-full rounded opacity-0 animate-fadeInLeft animation-delay-300`} href={data.cexButtonLink}>
+              <a className="border border-white p-1.5 text-white w-full rounded opacity-0 animate-fadeInLeft animation-delay-300 bg-black" href={data.cexButtonLink}>
                 {data.cexButtonLabel}
               </a>
             </div>

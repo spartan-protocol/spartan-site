@@ -14,7 +14,7 @@ const Swap = ({ data }) => {
               <a className="bg-white p-1.5 text-black rounded mb-2 w-full" href={data.buttonLink1}>
                 {data.buttonLabel1}
               </a>
-              <a className="border border-white p-1.5 text-white w-full rounded" href={data.buttonLink2}>
+              <a className="border border-white p-1.5 text-white w-full rounded bg-black" href={data.buttonLink2}>
                 {data.buttonLabel2}
               </a>
             </div>
