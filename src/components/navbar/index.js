@@ -28,16 +28,16 @@ const Navbar = () => {
   return (
     <div className="flex bg-black w-full p-2 px-4 justify-between fixed z-20">
       <div className="flex align-center w-36">
-        <a href="/#home">
+        <a href="#home">
           <SpartaIcon width="30px" height="30px" />
         </a>
       </div>
       <div className="hidden sm:flex text-white items-center space-x-4 text-lg text-center">
-        <a href="/#swap">Swap</a>
-        <a href="/#pool">Pool</a>
-        <a href="/#stake">Stake</a>
-        <a href="/#dao">DAO</a>
-        <a href="/#footer">Token</a>
+        <a href="#swap">Swap</a>
+        <a href="#pool">Pool</a>
+        <a href="#stake">Stake</a>
+        <a href="#dao">DAO</a>
+        <a href="#footer">Token</a>
       </div>
       <div className="flex items-center justify-end w-36 pr-2">
         <div className="mr-4">
