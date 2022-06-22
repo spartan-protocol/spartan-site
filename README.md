@@ -1,4 +1,4 @@
-# Spartan Protocol
+# Spartan Protocol Site
 
 Repository for the spartanprotocol.org website.
 
