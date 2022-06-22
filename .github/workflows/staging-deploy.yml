@@ -13,15 +13,16 @@ jobs:
         run: yarn install
       - name: 📦 Build Project
         run: yarn build
+        env:
+          CONTENTFUL_ID: ${{ secrets.CONTENTFUL_ID }}
+          CONTENTFUL_DELIVERY_API: ${{ secrets.CONTENTFUL_DELIVERY_API }}
       - name: 🧹 Run Lint
         run: yarn lint
       - name: 🚀 Deploy to Netlify
         uses: netlify/actions/cli@master
         env:
-          CONTENTFUL_ID: ${{ secrets.CONTENTFUL_ID }}
-          CONTENTFUL_DELIVERY_API: ${{ secrets.CONTENTFUL_DELIVERY_API }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         with:
           args: deploy --dir=build --prod
-          secrets: '["CONTENTFUL_ID", "CONTENTFUL_DELIVERY_API", "NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
+          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
