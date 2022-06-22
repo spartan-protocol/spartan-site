@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import SocialIcons from "./SocialIcons";
+import SocialIcons from "./socialIcons";
 
 const LandingPage = ({ data }) => {
   return (
