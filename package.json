@@ -12,7 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "test-build": "gatsby build --prefix-paths"
   },
   "dependencies": {
     "@fontsource/montserrat": "^4.5.11",

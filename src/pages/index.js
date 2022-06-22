@@ -30,7 +30,7 @@ import Dao from "../components/dao";
 import Swap from "../components/swap";
 import Pool from "../components/pool";
 import Stake from "../components/stake";
-import Footer from "../components/footer";
+import Token from "../components/token";
 import LandingPage from "../components/landingPage";
 import BackgroundAnimation from "../components/backgroundAnimation"
 import { BreakpointProvider } from "../providers/breakpoint";
@@ -109,7 +109,8 @@ const IndexPage = () => {
     `
   );
 
-  const [swapData, poolData, stakeData,, daoData] = heroData.allContentfulHeroSection.edges;
+  const [landingPageData] = heroData.allContentfulHeaderHero.edges
+  const [swapData, poolData, stakeData, synthsData, daoData] = heroData.allContentfulHeroSection.edges;
 
   const mediaQueries = {
     xs: "(max-width: 480px)", // use max here for default/smallest
@@ -119,17 +120,6 @@ const IndexPage = () => {
     xl: "(min-width: 1200px)", // use min for rest
   };
 
-  //temp data
-  const headerData = () => {
-    return {
-      title: "Disrupting DeFi with Quantum liquidity.",
-      subtitle: "Deep incentivized liquidity for the entire BNBChain ecosystem. Claimable every second.",
-      ctaButtonLabel: "Open DApp",
-      ctaButtonLink: "https://dapp.spartanprotocol.org",
-      cexButtonLabel: "Trade on Binance",
-      cexButtonLink: "https://www.binance.com/en/trade/SPARTA_BNB",
-    };
-  };
 
   return (
     <BreakpointProvider queries={mediaQueries}>
@@ -137,12 +127,12 @@ const IndexPage = () => {
       <BackgroundAnimation />
       {/* <Jumper /> */}
       <div className="wrapper">
-        <LandingPage data={headerData()} />
+        <LandingPage data={landingPageData.node} />
         <Swap data={swapData.node} />
         <Pool data={poolData.node} />
         <Stake data={stakeData.node} />
         <Dao data={daoData.node} />
-        <Footer id="footer" />
+        <Token id="token" />
       </div>
     </BreakpointProvider>
   );

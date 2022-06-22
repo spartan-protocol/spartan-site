@@ -7,6 +7,7 @@ module.exports = {
     siteUrl: "https://spartanprotcol.org",
     title: "Spartan Protocol",
   },
+  // pathPrefix: `/spartan-site`,
   plugins: [
     {
       resolve: `gatsby-plugin-sass`,
