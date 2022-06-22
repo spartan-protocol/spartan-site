@@ -16,8 +16,6 @@ jobs:
         env:
           CONTENTFUL_ID: ${{ secrets.CONTENTFUL_ID }}
           CONTENTFUL_DELIVERY_API: ${{ secrets.CONTENTFUL_DELIVERY_API }}
-      - name: 🧹 Run Lint
-        run: yarn lint
       - name: 🚀 Deploy to Netlify
         uses: netlify/actions/cli@master
         env:
