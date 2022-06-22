@@ -13,7 +13,7 @@ const ThreeStars = () => {
   let STAR_SIZE = 0.015;
   // increase star size on mobile devices
   if (window && window.innerWidth < 600) {
-    STAR_SIZE = 0.022;
+    STAR_SIZE = 0.018;
   }
 
   const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 3 }));
@@ -58,7 +58,7 @@ const ThreeStars = () => {
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
       <Points ref={ref} positions={sphere} stride={3} frustumCulled={false}>
-        <PointMaterial transparent={true} color="#ff0000" size={STAR_SIZE} sizeAttenuation={true} depthWrite={false} />
+        <PointMaterial transparent={true} color="#fb2715" size={STAR_SIZE} sizeAttenuation={true} depthWrite={false} />
       </Points>
     </group>
   );
