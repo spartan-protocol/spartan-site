@@ -1,9 +1,19 @@
 import * as React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
-const Footer = ({ updatedAt }) => {
+const Footer = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      currentBuildDate {
+        currentDate
+      }
+    }
+  `);
+
+  const buildDate = data.currentBuildDate.currentDate;
   return (
     <div className="text-white relative z-10 flex justify-center">
-      <div className="mb-2">Last updated at {updatedAt.toLocaleDateString()}</div>
+      <div className="mb-2">Last updated at {buildDate}</div>
     </div>
   );
 };

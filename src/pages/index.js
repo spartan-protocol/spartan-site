@@ -35,8 +35,6 @@ import LandingPage from "../components/landingPage";
 import BackgroundAnimation from "../components/backgroundAnimation";
 import { BreakpointProvider } from "../providers/breakpoint";
 
-const LAST_UPDATED_AT = new Date();
-
 const IndexPage = () => {
   const heroData = useStaticQuery(
     graphql`
@@ -132,7 +130,7 @@ const IndexPage = () => {
         <Pool data={poolData.node} />
         <Stake data={stakeData.node} />
         <Dao data={daoData.node} />
-        <Token data={{ updatedAt: LAST_UPDATED_AT }} />
+        <Token />
       </div>
     </BreakpointProvider>
   );

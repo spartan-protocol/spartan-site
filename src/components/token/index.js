@@ -14,7 +14,7 @@ const BulletPoint = ({ text }) => {
   );
 };
 
-const Token = ({ data }) => {
+const Token = () => {
   const [circSupply, setCircSupply] = useState("92,561,042");
   const [burnSupply, setBurnSupply] = useState("57,480,300");
   useEffect(() => {
@@ -65,7 +65,7 @@ const Token = ({ data }) => {
           </div>
         </div>
       </div>
-      <Footer updatedAt={data.updatedAt} />
+      <Footer />
     </div>
   );
 };
