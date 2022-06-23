@@ -125,7 +125,6 @@ const IndexPage = () => {
     <BreakpointProvider queries={mediaQueries}>
       <Navbar />
       <BackgroundAnimation />
-      {/* <Jumper /> */}
       <div className="wrapper">
         <LandingPage data={landingPageData.node} />
         <Swap data={swapData.node} />

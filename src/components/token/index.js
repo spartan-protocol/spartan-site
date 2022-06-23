@@ -60,7 +60,7 @@ const Token = () => {
           </div>
           <div className="text-center">
             {bulletPointsData.map((item) => (
-              <BulletPoint text={item} />
+              <BulletPoint text={item} key={item} />
             ))}
           </div>
         </div>

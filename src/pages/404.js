@@ -30,7 +30,7 @@ const NotFoundPage = () => {
     <main style={pageStyles}>
       <title>Not found</title>
       <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
+      <div style={paragraphStyles}>
         Sorry{" "}
         <span role="img" aria-label="Pensive emoji">
           😔
@@ -46,7 +46,7 @@ const NotFoundPage = () => {
         ) : null}
         <br />
         <Link to="/">Go home</Link>.
-      </p>
+      </div>
     </main>
   )
 }
