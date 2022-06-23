@@ -1,13 +1,11 @@
 import * as React from "react";
 
-const Footer = () => {
-    // TODO: get real updated at
-    const lastUpdated = "2022"
-    return (
-        <div className="text-white relative z-10 flex justify-center">
-            <div className="mb-2">Last updated at {lastUpdated}</div>
-        </div>
-    )
-}
+const Footer = ({ updatedAt }) => {
+  return (
+    <div className="text-white relative z-10 flex justify-center">
+      <div className="mb-2">Last updated at {updatedAt.toLocaleDateString()}</div>
+    </div>
+  );
+};
 
-export default Footer
+export default Footer;

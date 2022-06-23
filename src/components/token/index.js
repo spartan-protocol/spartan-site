@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 
-import Footer from "../footer"
+import Footer from "../footer";
 import SpartaIcon from "../../assets/icons/spartav2.svg";
 import DotIcon from "../../assets/icons/dot.svg";
 
@@ -14,7 +14,7 @@ const BulletPoint = ({ text }) => {
   );
 };
 
-const Token = () => {
+const Token = ({ data }) => {
   const [circSupply, setCircSupply] = useState("92,561,042");
   const [burnSupply, setBurnSupply] = useState("57,480,300");
   useEffect(() => {
@@ -35,7 +35,7 @@ const Token = () => {
   const bulletPointsData = ["Fair Distribution", "Proof of Burn", "Bond+Mint", "No ICO", "No Airdrop", "No Private Sale", "No Team Allocation"];
 
   return (
-    <div className="h-screen bg-black justify-center flex flex-col" id="footer">
+    <div id="token" className="h-screen bg-black justify-center flex flex-col">
       <div className="flex flex-col flex-1 items-center justify-center">
         <div className="flex flex-col text-white text-center space-y-4 relative z-10 mb-4">
           <div>
@@ -65,7 +65,7 @@ const Token = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer updatedAt={data.updatedAt} />
     </div>
   );
 };

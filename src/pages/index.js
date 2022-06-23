@@ -32,8 +32,10 @@ import Pool from "../components/pool";
 import Stake from "../components/stake";
 import Token from "../components/token";
 import LandingPage from "../components/landingPage";
-import BackgroundAnimation from "../components/backgroundAnimation"
+import BackgroundAnimation from "../components/backgroundAnimation";
 import { BreakpointProvider } from "../providers/breakpoint";
+
+const LAST_UPDATED_AT = new Date();
 
 const IndexPage = () => {
   const heroData = useStaticQuery(
@@ -109,7 +111,7 @@ const IndexPage = () => {
     `
   );
 
-  const [landingPageData] = heroData.allContentfulHeaderHero.edges
+  const [landingPageData] = heroData.allContentfulHeaderHero.edges;
   const [swapData, poolData, stakeData, synthsData, daoData] = heroData.allContentfulHeroSection.edges;
 
   const mediaQueries = {
@@ -119,7 +121,6 @@ const IndexPage = () => {
     lg: "(min-width: 1024px)", // use min for rest
     xl: "(min-width: 1200px)", // use min for rest
   };
-
 
   return (
     <BreakpointProvider queries={mediaQueries}>
@@ -131,7 +132,7 @@ const IndexPage = () => {
         <Pool data={poolData.node} />
         <Stake data={stakeData.node} />
         <Dao data={daoData.node} />
-        <Token id="token" />
+        <Token data={{ updatedAt: LAST_UPDATED_AT }} />
       </div>
     </BreakpointProvider>
   );
