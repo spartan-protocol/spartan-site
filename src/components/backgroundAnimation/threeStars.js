@@ -11,10 +11,6 @@ const ThreeStars = () => {
 
   // set star size
   let STAR_SIZE = 0.015;
-  // increase star size on mobile devices
-  if (window && window.innerWidth < 600) {
-    STAR_SIZE = 0.018;
-  }
 
   const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 3 }));
   const [lastScrollDirection, setLastScrollDirection] = useState("");
