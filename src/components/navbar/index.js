@@ -38,6 +38,7 @@ const Navbar = () => {
         <a className="hover:opacity-60 transition" href="#pool">Pool</a>
         <a className="hover:opacity-60 transition" href="#stake">Stake</a>
         <a className="hover:opacity-60 transition" href="#dao">DAO</a>
+        <a className="hover:opacity-60 transition" href="#team">Team</a>
         <a className="hover:opacity-60 transition" href="#token">Token</a>
       </div>
       <div className="flex items-center justify-end w-36 pr-2">

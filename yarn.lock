@@ -6231,6 +6231,11 @@ fd@~0.0.2:
   resolved "https://registry.yarnpkg.com/fd/-/fd-0.0.3.tgz#b3240de86dbf5a345baae7382a07d4713566ff0c"
   integrity sha512-iAHrIslQb3U68OcMSP0kkNWabp7sSN6d2TBSb2JO3gcLJVDd4owr/hKM4SFJovFOUeeXeItjYgouEDTMWiVAnA==
 
+fetch-multiple@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/fetch-multiple/-/fetch-multiple-1.2.3.tgz#48cf045c1582396da02034be7dfa836bb5dae7b2"
+  integrity sha512-gl/zEIqIc06CnFA3UvWKPK4apvb+aFjXDpHuBuWT3jz07stuFxARMp9i+6KQoutXMJO6Ys5sI1XGa29iMwxsKg==
+
 fflate@^0.6.9:
   version "0.6.10"
   resolved "https://registry.yarnpkg.com/fflate/-/fflate-0.6.10.tgz#5f40f9659205936a2d18abf88b2e7781662b6d43"
@@ -6839,6 +6844,13 @@ gatsby-source-filesystem@^4.16.0:
     progress "^2.0.3"
     valid-url "^1.0.9"
     xstate "^4.26.1"
+
+gatsby-source-rest-api@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/gatsby-source-rest-api/-/gatsby-source-rest-api-0.2.3.tgz#1bbe2274a7ec686a5f07d0e5eabc84f537967287"
+  integrity sha512-cE3fvgOfJQxW+GvHm/GzwFbmMOdQLjiS52l+vvYn1UHeBvpM6COT+vCamNCfFJYrmTddoDUhUJ3xHjZ9O4Ackw==
+  dependencies:
+    fetch-multiple "^1.2.3"
 
 gatsby-telemetry@^3.16.0:
   version "3.16.0"

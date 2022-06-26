@@ -31,6 +31,7 @@ import Swap from "../components/swap";
 import Pool from "../components/pool";
 import Stake from "../components/stake";
 import Token from "../components/token";
+import Contributors from "../components/contributors";
 import LandingPage from "../components/landingPage";
 import BackgroundAnimation from "../components/backgroundAnimation";
 import { BreakpointProvider } from "../providers/breakpoint";
@@ -105,12 +106,25 @@ const IndexPage = () => {
             }
           }
         }
+        allRestApiReposSpartanProtocolSpartanProtocolDAppV2Contributors {
+          edges {
+            node {
+              login
+              avatar_url
+              html_url
+              type
+            }
+          }
+        }
       }
     `
   );
 
+
+
   const [landingPageData] = heroData.allContentfulHeaderHero.edges;
   const [swapData, poolData, stakeData, synthsData, daoData] = heroData.allContentfulHeroSection.edges;
+  const contributorsData = heroData.allRestApiReposSpartanProtocolSpartanProtocolDAppV2Contributors.edges;
 
   const mediaQueries = {
     xs: "(max-width: 480px)", // use max here for default/smallest
@@ -130,6 +144,7 @@ const IndexPage = () => {
         <Pool data={poolData.node} />
         <Stake data={stakeData.node} />
         <Dao data={daoData.node} />
+        <Contributors data={contributorsData} />
         <Token />
       </div>
     </BreakpointProvider>
