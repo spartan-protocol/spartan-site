@@ -59,7 +59,7 @@ module.exports = {
       resolve: 'gatsby-source-rest-api',
       options: {
         endpoints: [
-          process.env.GITHUB_CONTRIBUTORS_API_URL,
+          process.env.GITHUB_CONTRIBUTORS_API_URL || "https://api.github.com/repos/spartan-protocol/SpartanProtocol-DAppV2/contributors",
         ],
       },
     },
