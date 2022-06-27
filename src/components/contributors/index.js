@@ -55,7 +55,7 @@ const Contributors = ({ data }) => {
             <h1 className="text-2xl sm:text-4xl mb-2">{tempData.title}</h1>
             <div className="w-11/12 sm:w-6/12 text-xs sm:text-sm mx-auto font-extralight text-gray-400 bg-black rounded">{tempData.subtitle}</div>
           </div>
-          <div className="flex flex-col justify-center max-h-6/12 overflow-y-auto sm:w-8/12 w-11/12 mx-auto font-saira text-white text-center px-8">
+          <div className="flex flex-col justify-center max-h-5/12 sm:max-h-6/12 overflow-y-auto sm:w-8/12 w-11/12 mx-auto font-saira text-white text-center px-8">
             <div className="flex flex-wrap justify-center max-h-full">{contributorsHtml()}</div>
           </div>
         </div>
