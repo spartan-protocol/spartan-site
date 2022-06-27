@@ -28,6 +28,9 @@ module.exports = {
         fadeInLeft: "fadeInLeft 0.75s ease forwards",
         fadeInBottom: "fadeInBottom 0.75s ease forwards",
       },
+      maxHeight: {
+        '6/12': '50%',
+      }
     },
   },
   plugins: [

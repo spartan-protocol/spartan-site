@@ -106,6 +106,20 @@ const IndexPage = () => {
             }
           }
         }
+        allContentfulContributors {
+          edges {
+            node {
+              name
+              link
+              avatar {
+                file {
+                  url
+                  fileName
+                }
+              }
+            }
+          }
+        }
         allRestApiReposSpartanProtocolSpartanProtocolDAppV2Contributors {
           edges {
             node {
@@ -120,11 +134,10 @@ const IndexPage = () => {
     `
   );
 
-
-
   const [landingPageData] = heroData.allContentfulHeaderHero.edges;
   const [swapData, poolData, stakeData, synthsData, daoData] = heroData.allContentfulHeroSection.edges;
-  const contributorsData = heroData.allRestApiReposSpartanProtocolSpartanProtocolDAppV2Contributors.edges;
+  const githubContributors = heroData.allRestApiReposSpartanProtocolSpartanProtocolDAppV2Contributors.edges;
+  const contentfulContributors = heroData.allContentfulContributors.edges;
 
   const mediaQueries = {
     xs: "(max-width: 480px)", // use max here for default/smallest
@@ -144,7 +157,7 @@ const IndexPage = () => {
         <Pool data={poolData.node} />
         <Stake data={stakeData.node} />
         <Dao data={daoData.node} />
-        <Contributors data={contributorsData} />
+        <Contributors data={{ githubContributors, contentfulContributors }} />
         <Token />
       </div>
     </BreakpointProvider>
