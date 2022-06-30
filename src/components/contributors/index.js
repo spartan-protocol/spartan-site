@@ -95,8 +95,8 @@ const Contributors = ({ data }) => {
         <div className="flex flex-col flex-1 justify-evenly relative z-10">
           <div className="font-saira text-white text-center px-8">
             <h1 className="text-2xl sm:text-4xl mb-2">{teamData.title}</h1>
-            <div className="w-11/12 sm:w-6/12 text-xs sm:text-sm mx-auto font-extralight text-gray-400 bg-black rounded">
-              {teamData.description.description}
+            <div className="w-11/12 sm:w-6/12 text-xs sm:text-sm mx-auto font-extralight text-gray-400">
+              <span className="bg-black rounded">{teamData.description.description}</span>
             </div>
           </div>
           <div className="flex flex-col justify-center max-h-5/12 sm:max-h-6/12 overflow-y-auto sm:w-8/12 w-11/12 mx-auto font-saira text-white text-center px-8">
