@@ -117,6 +117,8 @@ const IndexPage = () => {
                   fileName
                 }
               }
+              overwrite
+              order
             }
           }
         }
@@ -127,6 +129,29 @@ const IndexPage = () => {
               avatar_url
               html_url
               type
+              contributions
+            }
+          }
+        }
+        allRestApiReposSpartanProtocolSpartanDocsContributors {
+          edges {
+            node {
+              login
+              avatar_url
+              html_url
+              type
+              contributions
+            }
+          }
+        }
+        allRestApiReposSpartanProtocolSpartanSiteContributors {
+          edges {
+            node {
+              login
+              avatar_url
+              html_url
+              type
+              contributions
             }
           }
         }
@@ -135,9 +160,14 @@ const IndexPage = () => {
   );
 
   const [landingPageData] = heroData.allContentfulHeaderHero.edges;
-  const [swapData, poolData, stakeData, synthsData, daoData] = heroData.allContentfulHeroSection.edges;
-  const githubContributors = heroData.allRestApiReposSpartanProtocolSpartanProtocolDAppV2Contributors.edges;
+  const [swapData, poolData, stakeData, synthsData, daoData, teamData] = heroData.allContentfulHeroSection.edges;
   const contentfulContributors = heroData.allContentfulContributors.edges;
+
+  const dappContributors = heroData.allRestApiReposSpartanProtocolSpartanProtocolDAppV2Contributors.edges;
+  const spartanDocsContributors = heroData.allRestApiReposSpartanProtocolSpartanDocsContributors.edges;
+  const spartanSiteContributors = heroData.allRestApiReposSpartanProtocolSpartanSiteContributors.edges;
+
+  const githubContributors = { dappContributors, spartanDocsContributors, spartanSiteContributors };
 
   const mediaQueries = {
     xs: "(max-width: 480px)", // use max here for default/smallest
@@ -157,7 +187,7 @@ const IndexPage = () => {
         <Pool data={poolData.node} />
         <Stake data={stakeData.node} />
         <Dao data={daoData.node} />
-        <Contributors data={{ githubContributors, contentfulContributors }} />
+        <Contributors data={{ teamData: teamData.node, githubContributors, contentfulContributors }} />
         <Token />
       </div>
     </BreakpointProvider>
