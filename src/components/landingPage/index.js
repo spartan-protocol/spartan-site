@@ -10,7 +10,7 @@ const LandingPage = ({ data }) => {
           <div className="font-saira text-white text-center px-10 max-w-sm sm:max-w-xl">
             <h1 className="text-3xl sm:text-5xl mb-2 opacity-0 animate-fadeIn">{data.title}</h1>
             <div className="w-64 text-xs sm:w-96 sm:text-sm mx-auto font-extralight text-gray-400 animate-fadeIn animation-delay-300 opacity-0">
-              <span className="bg-black rounded">{data.tagline}</span>
+              <span className="bg-black bg-opacity-50 rounded">{data.tagline}</span>
             </div>
           </div>
           <div>

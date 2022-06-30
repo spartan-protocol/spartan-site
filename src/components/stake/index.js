@@ -8,7 +8,7 @@ const Stake = ({ data }) => {
           <div className="font-saira text-white text-center px-8">
             <h1 className="text-3xl sm:text-5xl mb-2">{data.title}</h1>
             <div className="w-64 text-xs sm:w-96 sm:text-sm mx-auto font-extralight text-gray-400">
-              <span className="bg-black rounded">{data.subtitle}</span>
+              <span className="bg-black bg-opacity-50 rounded">{data.subtitle}</span>
             </div>
           </div>
           <div>
