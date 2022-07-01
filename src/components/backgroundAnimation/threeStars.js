@@ -1,4 +1,4 @@
-import React, { useRef, useState, useCallback, useEffect } from "react";
+import React, { useRef, useState, useCallback } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.cjs";
@@ -9,16 +9,8 @@ const ThreeStars = () => {
 
   const { speed, direction } = useScrollData();
 
-  const onBeforeCompile = useCallback((shader, two, three) => {
-    if (!logged) {
-      console.log(shader, two);
-    }
-  }, []);
-
-  let logged = false
-
-  useEffect(() => {
-    logged = true;
+  const onBeforeCompile = useCallback((webgl) => {
+    webgl.extensions.get("OES_standard_derivatives");
   }, []);
 
   // set star size
