@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useCallback, useEffect } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.cjs";
@@ -8,6 +8,18 @@ const ThreeStars = () => {
   const ref = useRef(null);
 
   const { speed, direction } = useScrollData();
+
+  const onBeforeCompile = useCallback((shader, two, three) => {
+    if (!logged) {
+      console.log(shader, two);
+    }
+  }, []);
+
+  let logged = false
+
+  useEffect(() => {
+    logged = true;
+  }, []);
 
   // set star size
   let STAR_SIZE = 0.015;
@@ -53,7 +65,7 @@ const ThreeStars = () => {
 
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
-      <Points ref={ref} positions={sphere} stride={3} frustumCulled={false}>
+      <Points ref={ref} positions={sphere} stride={3} frustumCulled={false} onBeforeRender={onBeforeCompile}>
         <PointMaterial transparent={true} color="#fb2715" size={STAR_SIZE} sizeAttenuation={true} depthWrite={false} />
       </Points>
     </group>
