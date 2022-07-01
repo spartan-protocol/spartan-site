@@ -32,7 +32,7 @@ const Navbar = () => {
           <SpartaIcon width="30px" height="30px" />
         </a>
       </div>
-      <div className="hidden sm:flex text-white items-center space-x-4 text-lg text-center">
+      <div className="hidden sm:flex text-white items-center space-x-6 text-lg text-center">
         <a className="hover:opacity-60 transition" href="#home">Home</a>
         <a className="hover:opacity-60 transition" href="#swap">Swap</a>
         <a className="hover:opacity-60 transition" href="#pool">Pool</a>
