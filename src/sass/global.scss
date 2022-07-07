@@ -17,3 +17,11 @@ body {
 a {
   text-decoration: none;
 }
+
+// support for older browsers
+.text-white {
+  color: #fff;
+}
+.bg-white {
+  background-color: #fff;
+}

@@ -7,7 +7,7 @@ import DotIcon from "../../assets/icons/dot.svg";
 
 const BulletPoint = ({ text }) => {
   return (
-    <div className="flex justify-center text-lg">
+    <div className="flex justify-center text-lg max-h-8">
       <DotIcon className="mr-2" width="8" fill="white" />
       {text}
     </div>
