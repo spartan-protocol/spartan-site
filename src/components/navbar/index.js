@@ -42,7 +42,7 @@ const Navbar = () => {
         <a className="hover:opacity-60 transition" href="#token">Token</a>
       </div>
       <div className="flex items-center justify-end w-36 pr-2">
-        <div className="mr-4 md:hidden block">
+        <div className="mr-4 sm:hidden block">
           <MenuIcon className="cursor-pointer transition hover:opacity-60" height="20px" fill="white" onClick={() => toggleNav()} />
           <MobileMenu closeNav={closeNav} />
         </div>
