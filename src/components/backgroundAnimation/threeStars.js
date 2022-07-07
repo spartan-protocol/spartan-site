@@ -15,13 +15,12 @@ const ThreeStars = () => {
   const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 3 }));
   const [lastScrollDirection, setLastScrollDirection] = useState("");
 
-  
-/**
- * Edit point material before compile, to change squares to circles
- * @param {shader} shader
- * @param {WebGl} renderer
- */  
- const onBeforeCompile = (shader, renderer) => {
+  /**
+   * Edit point material before compile, to change squares to circles
+   * @param {shader} shader
+   * @param {WebGl} renderer
+   */
+  const onBeforeCompile = (shader, renderer) => {
     // Check WebGL version and enable GL_OES_standard_derivatives extension if we are on WebGL1
     const { isWebGL2 } = renderer.capabilities;
     shader.fragmentShader = shader.fragmentShader.replace(
