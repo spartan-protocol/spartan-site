@@ -6,7 +6,7 @@ import { ResizeObserver } from "@juggle/resize-observer";
 
 import ThreeStars from "./threeStars";
 
-const ThreeCanvas = ({ className }) => {
+const ThreeCanvas = () => {
   return (
     <div className="fixed h-screen w-screen opacity-0 animate-fadeIn">
       <Canvas
