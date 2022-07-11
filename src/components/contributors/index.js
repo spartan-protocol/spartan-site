@@ -107,8 +107,8 @@ const Contributors = ({ data }) => {
               <span className="bg-black bg-opacity-50 rounded">{teamData.description.description}</span>
             </div>
           </div>
-          <div className="flex flex-col justify-center max-h-5/12 sm:max-h-6/12 overflow-y-auto sm:w-8/12 w-11/12 mx-auto font-saira text-white text-center px-8">
-            <div ref={teamRef} className={`flex flex-wrap justify-center max-h-full opacity-0 ${teamVisible && "animate-fadeIn animation-delay-600"}`}>{contributorsHtml()}</div>
+          <div ref={teamRef} className="flex flex-col justify-center max-h-5/12 sm:max-h-6/12 overflow-y-auto sm:w-8/12 w-11/12 mx-auto font-saira text-white text-center px-8">
+            <div className={`flex flex-wrap justify-center max-h-full opacity-0 ${teamVisible && "animate-fadeIn animation-delay-600"}`}>{contributorsHtml()}</div>
           </div>
         </div>
       </div>
