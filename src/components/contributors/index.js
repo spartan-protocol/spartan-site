@@ -1,6 +1,10 @@
 import React from "react";
+import { useInView } from "react-intersection-observer";
 
 const Contributors = ({ data }) => {
+  const { ref: textRef, inView: textVisible } = useInView({ threshold: 0.3 });
+  const { ref: teamRef, inView: teamVisible } = useInView({ threshold: 0.3 });
+
   // There are two sources of data. We are pulling contributors from Spartan Protocol github,
   // and also we are adding manually contributors on contentful
   const { githubContributors, contentfulContributors, teamData } = data;
@@ -93,14 +97,18 @@ const Contributors = ({ data }) => {
     <div id="team" className="h-screen bg-black justify-center">
       <div className="flex flex-col flex-1 h-full items-center justify-center">
         <div className="flex flex-col flex-1 justify-evenly relative z-10">
-          <div className="font-saira text-white text-center px-8">
-            <h1 className="text-2xl sm:text-4xl mb-2">{teamData.title}</h1>
-            <div className="w-11/12 sm:w-6/12 text-xs sm:text-sm mx-auto font-extralight text-gray-400">
+          <div ref={textRef} className="font-saira text-white text-center px-8">
+            <h1 className={`text-2xl sm:text-4xl mb-2 opacity-0 ${textVisible && "animate-fadeIn"}`}>{teamData.title}</h1>
+            <div
+              className={`w-11/12 sm:w-6/12 text-xs sm:text-sm mx-auto font-extralight text-gray-400 opacity-0 ${
+                textVisible && "animate-fadeIn animation-delay-300"
+              }`}
+            >
               <span className="bg-black bg-opacity-50 rounded">{teamData.description.description}</span>
             </div>
           </div>
           <div className="flex flex-col justify-center max-h-5/12 sm:max-h-6/12 overflow-y-auto sm:w-8/12 w-11/12 mx-auto font-saira text-white text-center px-8">
-            <div className="flex flex-wrap justify-center max-h-full">{contributorsHtml()}</div>
+            <div ref={teamRef} className={`flex flex-wrap justify-center max-h-full opacity-0 ${teamVisible && "animate-fadeIn animation-delay-600"}`}>{contributorsHtml()}</div>
           </div>
         </div>
       </div>

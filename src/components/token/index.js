@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 import Footer from "../footer";
 import SpartaIcon from "../../assets/icons/spartav2.svg";
@@ -34,7 +35,12 @@ const Token = () => {
 
   const bulletPointsData = ["Fair Distribution", "Proof of Burn", "Bond+Mint", "No ICO", "No Airdrop", "No Private Sale", "No Team Allocation"];
 
+  const { ref: textRef, inView: textVisible } = useInView({ threshold: 0.3 });
+  const { ref: button1Ref, inView: button1Visible } = useInView({ threshold: 0.3 });
+  const { ref: button2Ref, inView: button2Visible } = useInView({ threshold: 0.3 });
+
   return (
+
     <div id="token" className="h-screen bg-black justify-center flex flex-col">
       <div className="flex flex-col flex-1 items-center justify-center">
         <div className="flex flex-col text-white text-center space-y-4 relative z-10 mb-4">
