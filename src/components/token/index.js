@@ -35,9 +35,9 @@ const Token = () => {
 
   const bulletPointsData = ["Fair Distribution", "Proof of Burn", "Bond+Mint", "No ICO", "No Airdrop", "No Private Sale", "No Team Allocation"];
 
-  const { ref: textRef, inView: textVisible } = useInView({ threshold: 0.3 });
-  const { ref: button1Ref, inView: button1Visible } = useInView({ threshold: 0.3 });
-  const { ref: button2Ref, inView: button2Visible } = useInView({ threshold: 0.3 });
+  const { ref: textRef, inView: textVisible } = useInView({ threshold: 0.3, triggerOnce: true });
+  const { ref: button1Ref, inView: button1Visible } = useInView({ threshold: 0.3, triggerOnce: true });
+  const { ref: button2Ref, inView: button2Visible } = useInView({ threshold: 0.3, triggerOnce: true });
 
   return (
 

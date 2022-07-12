@@ -2,9 +2,9 @@ import * as React from "react";
 import { useInView } from "react-intersection-observer";
 
 const Dao = ({ data }) => {
-  const { ref: textRef, inView: textVisible } = useInView({ threshold: 0.3 });
-  const { ref: button1Ref, inView: button1Visible } = useInView({ threshold: 0.3 });
-  const { ref: button2Ref, inView: button2Visible } = useInView({ threshold: 0.3 });
+  const { ref: textRef, inView: textVisible } = useInView({ threshold: 0.3, triggerOnce: true });
+  const { ref: button1Ref, inView: button1Visible } = useInView({ threshold: 0.3, triggerOnce: true });
+  const { ref: button2Ref, inView: button2Visible } = useInView({ threshold: 0.3, triggerOnce: true });
 
   return (
     <div id="dao" className={`h-screen bg-black justify-center`}>

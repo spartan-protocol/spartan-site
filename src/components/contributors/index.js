@@ -2,8 +2,8 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 
 const Contributors = ({ data }) => {
-  const { ref: textRef, inView: textVisible } = useInView({ threshold: 0.3 });
-  const { ref: teamRef, inView: teamVisible } = useInView({ threshold: 0.3 });
+  const { ref: textRef, inView: textVisible } = useInView({ threshold: 0.3, triggerOnce: true });
+  const { ref: teamRef, inView: teamVisible } = useInView({ threshold: 0.3, triggerOnce: true });
 
   // There are two sources of data. We are pulling contributors from Spartan Protocol github,
   // and also we are adding manually contributors on contentful
@@ -76,17 +76,17 @@ const Contributors = ({ data }) => {
   const contributorsHtml = () => {
     const contributorsData = [...contentfulContributorsData, ...githubContributorsData];
 
-    return contributorsData.map((item) => {
+    return contributorsData.map((item, index) => {
       const { name, avatar, link } = item.node;
       return (
-        <div className="flex flex-col justify-center items-center w-2/6 sm:w-3/12 px-2 my-4" key={name}>
+        <div className={`flex flex-col justify-center items-center w-2/6 sm:w-3/12 px-2 my-4`} key={name}>
           <a className="hover:opacity-60 transition" href={link} target="_blank" rel="noreferrer">
-            <div>
+            <div className={`opacity-0 ${teamVisible && "animate-fadeInLeft animation-delay-400"}`}>
               <img alt="Avatar" className="sm:w-12 w-8 rounded mb-1" src={avatar.file.url} />
             </div>
           </a>
           <a className="hover:opacity-60 transition" href={link} target="_blank" rel="noreferrer">
-            <div className="sm:text-sm text-xs">{name}</div>
+            <div className={`sm:text-sm text-xs opacity-0 ${teamVisible && "animate-fadeInLeft animation-delay-500"}`}>{name}</div>
           </a>
         </div>
       );
@@ -107,8 +107,8 @@ const Contributors = ({ data }) => {
               <span className="bg-black bg-opacity-50 rounded">{teamData.description.description}</span>
             </div>
           </div>
-          <div ref={teamRef} className="flex flex-col justify-center max-h-5/12 sm:max-h-6/12 overflow-y-auto sm:w-8/12 w-11/12 mx-auto font-saira text-white text-center px-8">
-            <div className={`flex flex-wrap justify-center max-h-full opacity-0 ${teamVisible && "animate-fadeIn animation-delay-600"}`}>{contributorsHtml()}</div>
+          <div ref={teamRef} className="flex flex-col justify-center max-h-35 sm:max-h-6/12 overflow-y-auto sm:w-8/12 w-11/12 mx-auto font-saira text-white text-center px-8">
+            <div className={`flex flex-wrap justify-center max-h-full`}>{contributorsHtml()}</div>
           </div>
         </div>
       </div>
