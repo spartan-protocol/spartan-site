@@ -3,7 +3,7 @@ import * as React from "react";
 const MobileMenu = ({ closeNav }) => {
   return (
     <div id="myNav" className="flex flex-col hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 z-30">
-      <div className="flex-1 flex flex-col items-center justify-center text-4xl text-gray-200">
+      <div className="flex-1 flex flex-col items-center justify-center text-3xl text-gray-200">
         <div className="absolute w-full h-full cursor-default" role="button" aria-hidden="true" onClick={() => closeNav()}></div>
         <div className="relative z-10 flex flex-col space-y-8 text-center p-8 select-none">
           <a className="transition hover:opacity-60" href="#home" onClick={() => closeNav()}>

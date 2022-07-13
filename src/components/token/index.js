@@ -6,9 +6,12 @@ import Footer from "../footer";
 import SpartaIcon from "../../assets/icons/spartav2.svg";
 import DotIcon from "../../assets/icons/dot.svg";
 
-const BulletPoint = ({ text }) => {
+const BulletPoint = ({ text, index, bulletPointsVisible }) => {
+  const animationDelay = (delay) => (
+    { animationDelay: `${index + delay}00ms`, webkitAnimationDelay: `${index + delay}00ms` }
+  )
   return (
-    <div className="flex justify-center text-lg max-h-8">
+    <div className={`flex justify-center text-lg max-h-8 opacity-0 ${bulletPointsVisible && `animate-fadeIn`}`} style={animationDelay(3)}>
       <DotIcon className="mr-2" width="8" fill="white" />
       {text}
     </div>
@@ -36,11 +39,10 @@ const Token = () => {
   const bulletPointsData = ["Fair Distribution", "Proof of Burn", "Bond+Mint", "No ICO", "No Airdrop", "No Private Sale", "No Team Allocation"];
 
   const { ref: textRef, inView: textVisible } = useInView({ threshold: 0.3, triggerOnce: true });
-  const { ref: button1Ref, inView: button1Visible } = useInView({ threshold: 0.3, triggerOnce: true });
+  const { ref: bulletPointsRef, inView: bulletPointsVisible } = useInView({ threshold: 0.3, triggerOnce: true });
   const { ref: button2Ref, inView: button2Visible } = useInView({ threshold: 0.3, triggerOnce: true });
 
   return (
-
     <div id="token" className="h-screen bg-black justify-center flex flex-col">
       <div className="flex flex-col flex-1 items-center justify-center">
         <div className="flex flex-col text-white text-center space-y-4 relative z-10 mb-4">
@@ -64,9 +66,9 @@ const Token = () => {
             <SpartaIcon height="30px" width="30px" style={{ marginRight: "10px", verticalAlign: "top" }} />
             <div className="text-xl">The SPARTA Token</div>
           </div>
-          <div className="text-center">
-            {bulletPointsData.map((item) => (
-              <BulletPoint text={item} key={item} />
+          <div ref={bulletPointsRef} className="text-center">
+            {bulletPointsData.map((item, index) => (
+              <BulletPoint text={item} key={item} index={index} bulletPointsVisible={bulletPointsVisible} />
             ))}
           </div>
         </div>
