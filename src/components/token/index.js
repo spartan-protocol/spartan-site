@@ -8,7 +8,7 @@ import DotIcon from "../../assets/icons/dot.svg";
 
 const BulletPoint = ({ text, index, bulletPointsVisible }) => {
   const animationDelay = (delay) => (
-    { animationDelay: `${index + delay}00ms`, webkitAnimationDelay: `${index + delay}00ms` }
+    { animationDelay: `${index + delay}00ms`, WebkitAnimationDelay: `${index + delay}00ms` }
   )
   return (
     <div className={`flex justify-center text-lg max-h-8 opacity-0 ${bulletPointsVisible && `animate-fadeIn`}`} style={animationDelay(3)}>

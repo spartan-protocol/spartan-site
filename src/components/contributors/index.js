@@ -79,7 +79,7 @@ const Contributors = ({ data }) => {
     return contributorsData.map((item, index) => {
       const { name, avatar, link } = item.node;
       const animationDelay = (delay) => (
-        { animationDelay: `${index + delay}00ms`, webkitAnimationDelay: `${index + delay}00ms` }
+        { animationDelay: `${index + delay}00ms`, WebkitAnimationDelay: `${index + delay}00ms` }
       )
       return (
         <div className={`flex flex-col justify-center items-center w-2/6 sm:w-3/12 px-2 my-4`} key={name}>
