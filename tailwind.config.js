@@ -22,11 +22,16 @@ module.exports = {
           "0%": { transform: "translateY(40px)", opacity: 0 },
           "100%": { transform: "translateY(0px)", opacity: 1 },
         },
+        disappearLeft: {
+            "0%": { transform: "translateX(0px)", opacity: 1 },
+            "100%": { transform: "translateX(-40px)", opacity: 0 },
+        }
       },
       animation: {
         fadeIn: "fadeIn 0.75s ease forwards",
         fadeInLeft: "fadeInLeft 0.75s ease forwards",
         fadeInBottom: "fadeInBottom 0.75s ease forwards",
+        disappearLeft: "disappearLeft 0.75s ease forwards",
       },
       maxHeight: {
         '6/12': '50%',
