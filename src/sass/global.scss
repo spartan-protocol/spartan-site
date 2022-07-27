@@ -18,6 +18,11 @@ a {
   text-decoration: none;
 }
 
+// fullscreen canvas on safari mobile
+canvas {
+  height: 100vh !important;
+}
+
 // support for older browsers
 .text-white {
   color: rgba(255, 255, 255, var(--tw-text-opacity));

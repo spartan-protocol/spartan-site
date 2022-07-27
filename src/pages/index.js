@@ -35,6 +35,7 @@ import Contributors from "../components/contributors";
 import LandingPage from "../components/landingPage";
 import BackgroundAnimation from "../components/backgroundAnimation";
 import { BreakpointProvider } from "../providers/breakpoint";
+import { defaultFallbackInView } from 'react-intersection-observer';
 
 const IndexPage = () => {
   const heroData = useStaticQuery(
@@ -176,6 +177,11 @@ const IndexPage = () => {
     lg: "(min-width: 1024px)", // use min for rest
     xl: "(min-width: 1200px)", // use min for rest
   };
+
+  // support intersection observer for older browsers
+  if (!window.IntersectionObserver) {
+    defaultFallbackInView(true);
+  }
 
   return (
     <BreakpointProvider queries={mediaQueries}>

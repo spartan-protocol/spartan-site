@@ -15,14 +15,11 @@ const LandingPage = ({ data }) => {
           </div>
           <div>
             <div className="flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg">
-              <a className="bg-white p-1.5 text-black rounded mb-2 w-full animate-fadeInLeft" href={data.ctaButtonLink}>
-                {data.ctaButton}
+              <a className="mb-2 w-full animate-fadeInLeft" href={data.ctaButtonLink}>
+                <div className="bg-white w-full h-full p-1.5 text-black rounded hover:opacity-70 transition">{data.ctaButton}</div>
               </a>
-              <a
-                className="border border-white p-1.5 text-white w-full rounded opacity-0 animate-fadeInLeft animation-delay-300 bg-black"
-                href={data.cexButtonLink}
-              >
-                {data.cexButtonLabel}
+              <a className="w-full opacity-0 animate-fadeInLeft animation-delay-300" href={data.cexButtonLink}>
+                <div className="border bg-black border-white p-1.5 text-white w-full h-full rounded hover:opacity-70 transition">{data.cexButtonLabel}</div>
               </a>
             </div>
             <SocialIcons data={data} />

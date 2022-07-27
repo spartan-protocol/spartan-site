@@ -22,21 +22,11 @@ const Swap = ({ data }) => {
           </div>
           <div>
             <div className="flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg">
-              <a
-                ref={button1Ref}
-                className={`bg-white p-1.5 text-black rounded mb-2 w-full opacity-0 ${button1Visible && "animate-fadeInLeft"}`}
-                href={data.buttonLink1}
-              >
-                {data.buttonLabel1}
+              <a ref={button1Ref} className={`w-full mb-2 opacity-0 ${button1Visible && "animate-fadeInLeft"}`} href={data.buttonLink1}>
+                <div className="bg-white p-1.5 text-black rounded w-full h-full hover:opacity-70 transition">{data.buttonLabel1}</div>
               </a>
-              <a
-                ref={button2Ref}
-                className={`border border-white p-1.5 text-white w-full rounded bg-black opacity-0 ${
-                  button2Visible && "animate-fadeInLeft animation-delay-300"
-                }`}
-                href={data.buttonLink2}
-              >
-                {data.buttonLabel2}
+              <a ref={button2Ref} className={`w-full opacity-0 ${button2Visible && "animate-fadeInLeft animation-delay-300"}`} href={data.buttonLink2}>
+                <div className="rounded bg-black border border-white p-1.5 text-white w-full h-full hover:opacity-70 transition">{data.buttonLabel2}</div>
               </a>
             </div>
           </div>
