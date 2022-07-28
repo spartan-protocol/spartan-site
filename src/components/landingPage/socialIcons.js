@@ -32,7 +32,7 @@ const SocialIcons = ({ data }) => {
 
   return (
     <div className="flex justify-center mt-4">
-      <div className="opacity-0 animate-fadeInBottom animation-delay-300">
+      <div className="opacity-0 animate-fadeInBottom" style={{ animationDelay: "300ms", WebkitAnimationDelay: "300ms" }}>
         <a href={data.twitterUrl}>
           <TwitterIcon fill="white" height={getSocialSize(-3)} className="mx-1" />
         </a>

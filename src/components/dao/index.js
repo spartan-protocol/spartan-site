@@ -11,8 +11,11 @@ const Dao = ({ data }) => {
       <div className="flex flex-col flex-1 h-full items-center justify-center">
         <div className="flex flex-col flex-1 justify-evenly relative z-10">
           <div ref={textRef} className="font-saira text-white text-center px-8">
-            <h1 className={`text-3xl sm:text-5xl mb-2 opacity-0 ${textVisible && 'animate-fadeIn'}`}>{data.title}</h1>
-            <div className={`w-64 text-xs sm:w-96 sm:text-sm mx-auto font-extralight text-gray-400 opacity-0 ${textVisible && 'animate-fadeIn animation-delay-300'}`}>
+            <h1 className={`text-3xl sm:text-5xl mb-2 opacity-0 ${textVisible && "animate-fadeIn"}`}>{data.title}</h1>
+            <div
+              className={`w-64 text-xs sm:w-96 sm:text-sm mx-auto font-extralight text-gray-400 opacity-0 ${textVisible && "animate-fadeIn"}`}
+              style={{ animationDelay: "300ms", WebkitAnimationDelay: "300ms" }}
+            >
               <span className="bg-black bg-opacity-50 rounded">{data.subtitle}</span>
             </div>
           </div>
@@ -21,7 +24,12 @@ const Dao = ({ data }) => {
               <a ref={button1Ref} className={`w-full mb-2 opacity-0 ${button1Visible && "animate-fadeInLeft"}`} href={data.buttonLink1}>
                 <div className="bg-white p-1.5 text-black rounded w-full h-full hover:opacity-70 transition">{data.buttonLabel1}</div>
               </a>
-              <a ref={button2Ref} className={`w-full opacity-0 ${button2Visible && "animate-fadeInLeft animation-delay-300"}`} href={data.buttonLink2}>
+              <a
+                ref={button2Ref}
+                className={`w-full opacity-0 ${button2Visible && "animate-fadeInLeft"}`}
+                style={{ animationDelay: "300ms", WebkitAnimationDelay: "300ms" }}
+                href={data.buttonLink2}
+              >
                 <div className="rounded bg-black border border-white p-1.5 text-white w-full h-full hover:opacity-70 transition">{data.buttonLabel2}</div>
               </a>
             </div>

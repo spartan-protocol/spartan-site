@@ -78,9 +78,7 @@ const Contributors = ({ data }) => {
 
     return contributorsData.map((item, index) => {
       const { name, avatar, link } = item.node;
-      const animationDelay = (delay) => (
-        { animationDelay: `${index + delay}00ms`, WebkitAnimationDelay: `${index + delay}00ms` }
-      )
+      const animationDelay = (delay) => ({ animationDelay: `${index + delay}00ms`, WebkitAnimationDelay: `${index + delay}00ms` });
       return (
         <div className={`flex flex-col justify-center items-center w-2/6 sm:w-3/12 px-2 my-4`} key={name}>
           <a className="hover:opacity-60 transition" href={link} target="_blank" rel="noreferrer">
@@ -89,7 +87,9 @@ const Contributors = ({ data }) => {
             </div>
           </a>
           <a className="hover:opacity-60 transition" href={link} target="_blank" rel="noreferrer">
-            <div className={`sm:text-sm text-xs opacity-0 ${teamVisible && "animate-fadeInLeft"}`} style={animationDelay(4)}>{name}</div>
+            <div className={`sm:text-sm text-xs opacity-0 ${teamVisible && "animate-fadeInLeft"}`} style={animationDelay(4)}>
+              {name}
+            </div>
           </a>
         </div>
       );
@@ -103,9 +103,8 @@ const Contributors = ({ data }) => {
           <div ref={textRef} className="font-saira text-white text-center px-8">
             <h1 className={`text-2xl sm:text-4xl mb-2 opacity-0 ${textVisible && "animate-fadeIn"}`}>{teamData.title}</h1>
             <div
-              className={`w-11/12 sm:w-6/12 text-xs sm:text-sm mx-auto font-extralight text-gray-400 opacity-0 ${
-                textVisible && "animate-fadeIn animation-delay-300"
-              }`}
+              className={`w-11/12 sm:w-6/12 text-xs sm:text-sm mx-auto font-extralight text-gray-400 opacity-0 ${textVisible && "animate-fadeIn"}`}
+              style={{ animationDelay: "300ms", WebkitAnimationDelay: "300ms" }}
             >
               <span className="bg-black bg-opacity-50 rounded">{teamData.description.description}</span>
             </div>
