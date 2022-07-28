@@ -179,7 +179,7 @@ const IndexPage = () => {
   };
 
   // support intersection observer for older browsers
-  if (!window.IntersectionObserver) {
+  if (typeof window !== "undefined" && !window.IntersectionObserver) {
     defaultFallbackInView(true);
   }
 
