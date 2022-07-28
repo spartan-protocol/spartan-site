@@ -43,7 +43,7 @@ const Navbar = () => {
 
   return (
     (isFontLoaded || fontLoadedTimeout) && (
-      <div className="flex bg-black w-full p-2 px-4 justify-between fixed z-20 animate-fadeIn">
+      <div className="flex bg-black w-full p-2 px-4 justify-between fixed z-20 animate-[fadeIn_0.3s_ease_forwards]">
         <div className="flex align-center w-36">
           <a href="#home">
             <SpartaIcon width="30px" height="30px" />
