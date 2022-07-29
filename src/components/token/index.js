@@ -6,12 +6,11 @@ import Footer from "../footer";
 import SpartaIcon from "../../assets/icons/spartav2.svg";
 import DotIcon from "../../assets/icons/dot.svg";
 
+const animationDelay = (delay, index = 1) => ({ animationDelay: `${index + delay}00ms`, WebkitAnimationDelay: `${index + delay}00ms` });
+
 const BulletPoint = ({ text, index, bulletPointsVisible }) => {
-  const animationDelay = (delay) => (
-    { animationDelay: `${index + delay}00ms`, WebkitAnimationDelay: `${index + delay}00ms` }
-  )
   return (
-    <div className={`flex justify-center text-lg max-h-8 opacity-0 ${bulletPointsVisible && `animate-fadeIn`}`} style={animationDelay(3)}>
+    <div className={`flex justify-center text-lg max-h-8 opacity-0 ${bulletPointsVisible && `animate-fadeIn`}`} style={animationDelay(11, index)}>
       <DotIcon className="mr-2" width="8" fill="white" />
       {text}
     </div>
@@ -40,29 +39,40 @@ const Token = () => {
 
   const { ref: textRef, inView: textVisible } = useInView({ threshold: 0.3, triggerOnce: true });
   const { ref: bulletPointsRef, inView: bulletPointsVisible } = useInView({ threshold: 0.3, triggerOnce: true });
-  const { ref: button2Ref, inView: button2Visible } = useInView({ threshold: 0.3, triggerOnce: true });
 
   return (
     <div id="token" className="h-screen bg-black justify-center flex flex-col">
       <div className="flex flex-col flex-1 items-center justify-center">
-        <div className="flex flex-col text-white text-center space-y-4 relative z-10 mb-4">
+        <div ref={textRef} className="flex flex-col text-white text-center space-y-4 relative z-10 mb-4">
           <div>
-            <div className="text-2xl">Maximum Supply</div>
-            <div className="text-3xl font-bold">300,000,000</div>
+            <div className={`text-2xl opacity-0 ${textVisible && `animate-fadeIn`}`} style={animationDelay(3)}>
+              Maximum Supply
+            </div>
+            <div className={`text-3xl font-bold opacity-0 ${textVisible && `animate-fadeIn`}`} style={animationDelay(4)}>
+              300,000,000
+            </div>
           </div>
           <div>
             {/* GET BALANCE OF DEAD ADDRESS */}
-            <div className="text-2xl">Burned Supply</div>
-            <div className="text-3xl font-bold">{burnSupply}</div>
+            <div className={`text-2xl opacity-0 ${textVisible && `animate-fadeIn`}`} style={animationDelay(5)}>
+              Burned Supply
+            </div>
+            <div className={`text-3xl font-bold opacity-0 ${textVisible && `animate-fadeIn`}`} style={animationDelay(6)}>
+              {burnSupply}
+            </div>
           </div>
           <div>
             {/* CALL SPARTA API, USE A FALLBACK? */}
-            <div className="text-2xl">Circulating Supply</div>
-            <div className="text-3xl font-bold">{circSupply}</div>
+            <div className={`text-2xl opacity-0 ${textVisible && `animate-fadeIn`}`} style={animationDelay(7)}>
+              Circulating Supply
+            </div>
+            <div className={`text-3xl font-bold opacity-0 ${textVisible && `animate-fadeIn`}`} style={animationDelay(8)}>
+              {circSupply}
+            </div>
           </div>
         </div>
         <div className="flex flex-col text-white relative z-10">
-          <div className="flex items-center my-4">
+          <div className={`flex items-center my-4  opacity-0 ${textVisible && `animate-fadeIn`}`} style={animationDelay(9)}>
             <SpartaIcon height="30px" width="30px" style={{ marginRight: "10px", verticalAlign: "top" }} />
             <div className="text-xl">The SPARTA Token</div>
           </div>

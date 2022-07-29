@@ -65,16 +65,33 @@ const Contributors = ({ data }) => {
       };
     });
 
-  // Sort contributors based on order field. If there's no value, move the item to the end
+  // Sort contributors based on order field. If there's no value, save contributor as 'smaller' contributor
+  const contentfulSmallerContributors = [];
   const contentfulContributorsData = contentfulContributors
     .map((item) => {
-      if (item.node.order === null) item.node.order = 99;
+      if (item.node.order === null) {
+        contentfulSmallerContributors.push(item);
+        return null;
+      }
       return item;
     })
+    .filter(item => item !== null)
     .sort((a, b) => a.node.order - b.node.order);
 
+  const contributorsData = [...contentfulContributorsData, ...githubContributorsData];
+
+
+  // push smaller contributors to the middle of the team array
+  if (contentfulSmallerContributors.length) {
+    //get the middle of the array
+    const arrayMiddle = Math.floor(contributorsData.length / 2);
+    contentfulSmallerContributors.forEach(item => {
+      contributorsData.splice(arrayMiddle, 0, item);
+    });
+  }
+
   const contributorsHtml = () => {
-    const contributorsData = [...contentfulContributorsData, ...githubContributorsData];
+    
 
     return contributorsData.map((item, index) => {
       const { name, avatar, link } = item.node;
