@@ -95,7 +95,7 @@ const Contributors = ({ data }) => {
 
     return contributorsData.map((item, index) => {
       const { name, avatar, link } = item.node;
-      const animationDelay = (delay) => ({ animationDelay: `${index + delay}00ms`, WebkitAnimationDelay: `${index + delay}00ms` });
+      const animationDelay = (delay) => ({ animationDelay: `${(index + delay) * 50}ms`, WebkitAnimationDelay: `${(index + delay) * 50}ms` });
       return (
         <div className={`flex flex-col justify-center items-center w-2/6 sm:w-3/12 px-2 my-4`} key={name}>
           <a className="hover:opacity-60 transition" href={link} target="_blank" rel="noreferrer">

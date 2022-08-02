@@ -6,7 +6,7 @@ import Footer from "../footer";
 import SpartaIcon from "../../assets/icons/spartav2.svg";
 import DotIcon from "../../assets/icons/dot.svg";
 
-const animationDelay = (delay, index = 1) => ({ animationDelay: `${index + delay}00ms`, WebkitAnimationDelay: `${index + delay}00ms` });
+const animationDelay = (delay, index = 1) => ({ animationDelay: `${(index + delay)* 50}ms`, WebkitAnimationDelay: `${(index + delay)* 50}ms` });
 
 const BulletPoint = ({ text, index, bulletPointsVisible }) => {
   return (
