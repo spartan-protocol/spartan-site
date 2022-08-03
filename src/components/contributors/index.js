@@ -91,11 +91,9 @@ const Contributors = ({ data }) => {
   }
 
   const contributorsHtml = () => {
-    
-
     return contributorsData.map((item, index) => {
       const { name, avatar, link } = item.node;
-      const animationDelay = (delay) => ({ animationDelay: `${(index + delay) * 50}ms`, WebkitAnimationDelay: `${(index + delay) * 50}ms` });
+      const animationDelay = (delay) => ({ animationDelay: `${(index + delay) * 75}ms`, WebkitAnimationDelay: `${(index + delay) * 75}ms` });
       return (
         <div className={`flex flex-col justify-center items-center w-2/6 sm:w-3/12 px-2 my-4`} key={name}>
           <a className="hover:opacity-60 transition" href={link} target="_blank" rel="noreferrer">
@@ -114,14 +112,14 @@ const Contributors = ({ data }) => {
   };
 
   return (
-    <div id="team" className="h-screen bg-black justify-center">
+    <div id="team" className="h-screen bg-black justify-center snap-start">
       <div className="flex flex-col flex-1 h-full items-center justify-center">
         <div className="flex flex-col flex-1 justify-center sm:justify-evenly relative z-10">
           <div ref={textRef} className="font-saira text-white text-center px-8">
             <h1 className={`text-2xl sm:text-4xl mb-2 opacity-0 ${textVisible && "animate-fadeIn"}`}>{teamData.title}</h1>
             <div
               className={`w-11/12 sm:w-6/12 text-xs sm:text-sm mx-auto font-extralight text-gray-400 opacity-0 ${textVisible && "animate-fadeIn"}`}
-              style={{ animationDelay: "300ms", WebkitAnimationDelay: "300ms" }}
+              style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}
             >
               <span className="bg-black bg-opacity-50 rounded">{teamData.description.description}</span>
             </div>

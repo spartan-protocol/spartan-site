@@ -6,7 +6,7 @@ import Footer from "../footer";
 import SpartaIcon from "../../assets/icons/spartav2.svg";
 import DotIcon from "../../assets/icons/dot.svg";
 
-const animationDelay = (delay, index = 1) => ({ animationDelay: `${(index + delay)* 50}ms`, WebkitAnimationDelay: `${(index + delay)* 50}ms` });
+const animationDelay = (delay, index = 1) => ({ animationDelay: `${(index + delay)* 75}ms`, WebkitAnimationDelay: `${(index + delay)* 75}ms` });
 
 const BulletPoint = ({ text, index, bulletPointsVisible }) => {
   return (
@@ -41,7 +41,7 @@ const Token = () => {
   const { ref: bulletPointsRef, inView: bulletPointsVisible } = useInView({ threshold: 0.3, triggerOnce: true });
 
   return (
-    <div id="token" className="h-screen bg-black justify-center flex flex-col">
+    <div id="token" className="h-screen bg-black justify-center flex flex-col snap-start">
       <div className="flex flex-col flex-1 items-center justify-center">
         <div ref={textRef} className="flex flex-col text-white text-center space-y-4 relative z-10 mb-4">
           <div>

@@ -28,10 +28,10 @@ module.exports = {
         }
       },
       animation: {
-        fadeIn: "fadeIn 0.3s ease forwards",
-        fadeInLeft: "fadeInLeft 0.3s ease forwards",
-        fadeInBottom: "fadeInBottom 0.3s ease forwards",
-        disappearLeft: "disappearLeft 0.3s ease forwards",
+        fadeIn: "fadeIn 0.45s ease forwards",
+        fadeInLeft: "fadeInLeft 0.45s ease forwards",
+        fadeInBottom: "fadeInBottom 0.45s ease forwards",
+        disappearLeft: "disappearLeft 0.45s ease forwards",
       },
       maxHeight: {
         '6/12': '50%',
