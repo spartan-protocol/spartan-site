@@ -9,9 +9,9 @@
     <meta name="title" content="Spartan Protocol | Permissionless DeFi & stablecoins on BNB Chain (BSC)">
     <meta name="description"
         content="Liquidity-sensitive AMM algorithm on BNB Chain providing permissionless DeFi services. Community-built & run" />
-        <link rel="icon" href="img/favicon.ico" sizes="any" />
-        <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="icon" href="img/favicon.ico" sizes="any" />
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
     <meta name="author" content="Spartan Protocol Community" />
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -35,7 +35,7 @@
     <script src="components/header.js" type="text/javascript" defer></script>
     <script src="components/footer.js" type="text/javascript" defer></script>
     <script src="components/scrollUpButton.js" type="text/javascript" defer></script>
-    
+
 </head>
 
 <body>
@@ -44,10 +44,10 @@
     <button onclick="topFunction()" id="scrollUpButton" title="Go to top">
         <div class="tooltipbtm zoom">
             <img class="footer-icon" src="./assets/Icons/SVG/escalator-up.svg" />
-                <span class="tooltiptext">Go To Top</span>
+            <span class="tooltiptext">Go To Top</span>
         </div>
     </button>
-    
+
     <header-component></header-component>
 
     <!-- BODY SECTION -->
@@ -58,22 +58,36 @@
                 <div class="text-overlay offset-lg-1 bg-overlay p-2 p-md-4 hero-max-width">
                     <h1 class="mb-4">Permissionless DeFi & stablecoins on BNB Chain</h1>
                     <p class="mb-4">
-                        Spartan Protocol pairs a unique liquidity-sensitive AMM algorithm with the low gas fees & fast settlement on BNB Chain to provide a range of open, permissionless DeFi services to users & projects.
-                        Swap between tokens without any accounts or permission.
-                        Provide liquidity to earn revenue. Stake LPs for extra yield.
-                        Propose or vote for changes in the 100% on-chain DAO.
-                        Built by the community, for the community.
+                        Spartan Protocol is a community project that pairs a unique liquidity-sensitive AMM algorithm
+                        with the low gas fees & fast settlement on BNB Smart Chain to provide a range of open DeFi
+                        services
                     </p>
                     <div class="mt-3 my-1 p-0 text-center text-md-start">
                         <a href="https://dapp.spartanprotocol.org/" class='link-no-format'>
-                            <div class="btn-lg bg-red text-center w-100 w-sm-50 d-inline-block m-1 zoomsm"><span>Open DApp</span><img class="button-icon ms-2"
+                            <div class="btn-lg bg-red text-center w-100 w-sm-50 d-inline-block m-1 zoomsm"><span>Open
+                                    DApp</span><img class="button-icon ms-2"
                                     src="./assets/Icons/SVG/Icon_SpartanProtocol.svg" /></div>
                         </a>
-                        <a href="https://www.binance.com/en/trade/SPARTA_BNB" class='link-no-format'>
-                            <div class="btn-lg bg-yellow text-center w-100 w-sm-50 d-inline-block m-1 zoomsm"><span>Trade on Binance</span><img class="button-icon ms-2"
-                                    src="./assets/Icons/SVG/Icon_Binance.svg" /></div>
-                        </a>
+
+                        <div class="dropdown btn-lg bg-yellow text-center w-100 w-sm-50 d-inline-block m-1 zoomsm">
+                            <span>Trade SPARTA</span><img class="button-icon ms-2" src="./assets/Icons/SVG/swap.svg" />
+                            <div class="dropdown-content">
+                                <a
+                                    href="https://dapp.spartanprotocol.org/swap?asset2=0x3910db0600eA925F63C36DdB1351aB6E2c6eb102"><img
+                                        class="button-icon me-2" src="./assets/Icons/SVG/spartav2.svg" />Spartan
+                                    Protocol DEX</a>
+                                <a href="https://www.mexc.com/exchange/SPARTA_USDT?inviteCode=1SsHx"><img
+                                        class="button-icon me-2" src="./assets/Icons/SVG/mexc-logo.svg" />MEXC
+                                    Exchange</a>
+                                <a href="https://www.bitrue.com/trade/sparta_usdt?cn=600000&inviteCode=EHVEEAV"><img
+                                        class="button-icon me-2" src="./assets/Icons/SVG/bitrue-logo.svg" />Bitrue
+                                    Exchange</a>
+                                <a href="https://bitkan.com/referral/SPARTAN"><img class="button-icon me-2"
+                                        src="./assets/Icons/SVG/bitkan-logo.svg" />BitKan Exchange</a>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="mt-4 text-center text-md-start">
                         <div class="tooltipbtm zoom">
                             <a href="https://docs.spartanprotocol.org/" class='link-no-format'>
@@ -82,8 +96,7 @@
                             </a>
                         </div>
                         <div class="tooltipbtm zoom">
-                            <a href="https://twitter.com/SpartanProtocol"
-                                class='link-no-format'>
+                            <a href="https://twitter.com/SpartanProtocol" class='link-no-format'>
                                 <img class="footer-icon" src="./assets/Icons/SVG/ic_twitter.svg" />
                                 <span class="tooltiptext">Twitter</span>
                             </a>
@@ -110,18 +123,17 @@
                 <!-- <div class="col-12 col-md-3 feature-img"></div> -->
                 <div class="text-overlay feature-block my-3 d-flex">
                     <div class="my-auto py-4">
-                        <h2 class="my-4">Swap BNB Chain Assets</h2>
+                        <h2 class="my-4">Swap tokens</h2>
                         <p class="mb-4">
-                            <strong>Fast & Private - </strong>Swap Binance Smart Chain assets. No accounts, no forms, no permission.
-                            Transparent and almost instant.
-                            <br /><br />
-                            <strong>Liquidity Sensitive Fees - </strong>Fees scale with pool depth and trend towards 0% to solve many common AMM problems.
-                            High time preference traders pay exponentially higher fees to deter sandwich attacks and pool manipulation.
+                            <strong>Fast & Private - </strong>No accounts, no forms, no permission. Transparent and
+                            almost instant.
                         </p>
                         <div class="mt-4 my-1 p-0 text-center text-md-start">
                             <a href="https://dapp.spartanprotocol.org/swap">
-                                <div class="btn-lg bg-red text-center w-100 w-sm-50 d-inline-block m-1 zoomsm"><span>Swap</span><img class="button-icon ms-2"
-                                        src="./assets/Icons/SVG/Icon_SpartanProtocol.svg" /></div>
+                                <div class="btn-lg bg-red text-center w-100 w-sm-50 d-inline-block m-1 zoomsm">
+                                    <span>Swap</span><img class="button-icon ms-2"
+                                        src="./assets/Icons/SVG/Icon_SpartanProtocol.svg" />
+                                </div>
                             </a>
                             <a href="https://docs.spartanprotocol.org/#/swap" class="no-dec">
                                 <div class="btn-lg bg-yellow text-center w-100 w-sm-50 d-inline-block m-1 zoomsm">
@@ -138,11 +150,7 @@
                     <div class="my-auto py-4">
                         <h2 class="mb-4">Provide Liquidity</h2>
                         <p class="mb-4">
-                            <strong>No Middleman - </strong>Put your spare tokens to work in liquidity pools.
-                            Earn 100% of the pool revenue (No-one takes a cut!)
-                            <br /><br />
-                            <strong>Claim Every Second - </strong>Want more than the pool revenue alone?
-                            Stake your ‘Curated’ LP tokens for additional yield.
+                            <strong>No Middleman - </strong>Put your spare tokens to work in liquidity pools. Earn 100% of the pool revenue (No-one takes a cut!)
                         </p>
                         <div class="mt-4 my-1 p-0 text-center text-md-start">
                             <a href="https://dapp.spartanprotocol.org/liquidity">
@@ -166,8 +174,7 @@
                     <div class="my-auto py-4">
                         <h2 class="mb-4">DAO Governance</h2>
                         <p class="mb-4">
-                            <strong>Shape the Future - </strong>Propose and vote to change important mainnet protocol variables.
-                            Automated functions triggered by 100% on-chain DAO governance.
+                            <strong>Shape the Future - </strong>Help maintain the protocol variables. Automated functions triggered by a 100% on-chain DAO.
                         </p>
                         <div class="mt-4 my-1 p-0 text-center text-md-start">
                             <a href="https://dapp.spartanprotocol.org/dao">
@@ -193,38 +200,29 @@
                 <div class="bg-gradient text-overlay p-3 min-height-block d-flex">
                     <div class="my-auto">
                         <div class="row supply-title">
-                            <h2 class="mb-4">Dynamic & Sustainable Incentives</h2>
+                            <h2 class="mb-4">The SPARTA Token</h2>
                         </div>
                         <div class="row my-4">
-                            <div class="col-12 col-md-6 my-2 supply-reward">
-                                <h4 class="">Reduced Supply</h4>
-                                <p>57M+ SPARTA already permanently burned (19%+ of Max Supply)</p>
-                            </div>
                             <div class="col-12 col-md-6 my-2 supply-initial">
-                                <h4 class="">Initial Supply</h4>
-                                <p>Initial distribution only via Proof-of-Burn & the Bond program
+                                <h4 class="">Fair Distribution</h4>
+                                <p>57M+ SPARTA permanently burned. 100% community allocation
                                 </p>
                             </div>
                             <div class="col-12 col-md-6 my-2 supply-apy">
                                 <h4 class="">Incentive Emissions</h4>
                                 <p>Dynamic and sustainable liquidity incentives for good peers in the ecosystem</p>
                             </div>
-                            <div class="col-12 col-md-6 my-2 supply-max">
-                                <h4 class="">Maximum Supply</h4>
-                                <p>Fixed maximum total SPARTA token supply of 300 million</p>
-                            </div>
                             <div class="mt-4 my-1 p-0 supply-btn-block text-center text-sm-start">
                                 <a href="https://bscscan.com/token/0x3910db0600ea925f63c36ddb1351ab6e2c6eb102#balances">
                                     <div class="btn-lg bg-red text-center w-100 w-sm-50 d-inline-block m-1 zoomsm">
                                         <span>BSCScan</span><img class="button-icon ms-2"
-                                            src="./assets/Icons/SVG/Icon_SpartanProtocol.svg" />
+                                            src="./assets/Icons/SVG/bscscan-logo.svg" />
                                     </div>
                                 </a>
-                                <a href="https://coinmarketcap.com/currencies/spartan-protocol/"
-                                    class="no-dec">
+                                <a href="https://www.coingecko.com/en/coins/spartan-protocol" class="no-dec">
                                     <div class="btn-lg bg-yellow text-center w-100 w-sm-50 d-inline-block m-1 zoomsm">
-                                        <span>CoinMarketCap</span><img class="button-icon ms-2"
-                                            src="./assets/Icons/SVG/cmc.svg" />
+                                        <span>CoinGecko</span><img class="button-icon ms-2"
+                                            src="./assets/Icons/SVG/coingecko-icon.svg" />
                                     </div>
                                 </a>
                             </div>
@@ -239,16 +237,12 @@
                 <div class="text-overlay offset-lg-1 p-2 p-md-4">
                     <h2 class="mb-4">By the community<br />For the community</h2>
                     <p class="mb-4">
-                        The project is galvanized by the communities of former Binance Chain projects.
-                        Individual token holders destroy their previous assets to acquire SPARTA.
-                        Limited Binance Chain projects selected to participate.<br /><br />
-                        It begins decentralised from Day 0 with no official team and no treasury.
-                        The protocol is community built and run and does not need ongoing maintenance.
+                        100% open source project that is built, maintained and governed by the community.
                     </p>
                     <div class="mt-2 my-1 p-0 text-center text-md-start">
                         <a href="https://t.me/SpartanProtocolOrg">
                             <div class="btn-lg bg-red text-center w-100 w-sm-50 d-inline-block m-1 zoomsm">
-                                <span>Telegram Community</span><img class="button-icon ms-2"
+                                <span>Join Telegram</span><img class="button-icon ms-2"
                                     src="./assets/Icons/SVG/Icon_SpartanProtocol.svg" />
                             </div>
                         </a>
@@ -304,7 +298,7 @@
     </div>
     </div>
     <!-- FOOTER SECTION -->
-    <footer-component></footer-component>    
+    <footer-component></footer-component>
 
 </body>
 

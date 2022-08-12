@@ -36,27 +36,15 @@ class Footer extends HTMLElement {
                         </a>
                     </div>
                     <div class="tooltipbtm zoom">
-                        <a href="https://spartanprotocol.medium.com/" class='link-no-format'>
+                        <a href="https://blog.spartanprotocol.org/" class='link-no-format'>
                             <img class="footer-icon" src="./assets/Icons/SVG/ic_medium.svg" />
-                            <span class="tooltiptext">Medium</span>
+                            <span class="tooltiptext">Blog</span>
                         </a>
                     </div>
                     <div class="tooltipbtm zoom">
                         <a href="https://t.me/SpartanProtocolOrg" class='link-no-format'>
                             <img class="footer-icon" src="./assets/Icons/SVG/ic_telegram.svg" />
                             <span class="tooltiptext">Telegram</span>
-                        </a>
-                    </div>
-                    <div class="tooltipbtm zoom">
-                        <a href="https://www.reddit.com/r/SpartanProtocol/" class='link-no-format'>
-                            <img class="footer-icon" src="./assets/Icons/SVG/ic_reddit.svg" />
-                            <span class="tooltiptext">Reddit</span>
-                        </a>
-                    </div>
-                    <div class="tooltipbtm zoom">
-                        <a href="https://discord.gg/wQggvntnGk" class='link-no-format'>
-                            <img class="footer-icon" src="./assets/Icons/SVG/ic_discord.svg" />
-                            <span class="tooltiptext">Discord</span>
                         </a>
                     </div>
                 </div>

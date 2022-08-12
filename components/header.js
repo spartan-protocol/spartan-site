@@ -32,7 +32,7 @@ class Header extends HTMLElement {
                     </a>
                         <a href="https://www.immunefi.com/bounty/spartanprotocol" class='link-no-format'>
                             <div class="d-none d-lg-flex btn-sm bg-dark mx-1 mt-auto mb-auto zoomsm">
-                                <img class="button-icon"
+                                <img class="button-icon-immunefi"
                                 src="./assets/Icons/SVG/immunefi-wht.svg" />
                             </div>
                         </a>
