@@ -121,7 +121,7 @@ p {
   color: #dedede;
   font-family: "Roboto";
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.5;
 }
 
@@ -144,35 +144,35 @@ p1 {
 h1 {
   color: rgba(255, 255, 255, 1);
   font-family: "Kreon";
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
 h2 {
   color: rgba(255, 255, 255, 1);
   font-family: "Kreon";
-  font-size: 1.75rem;
+  font-size: 1.3rem;
   font-weight: 600;
 }
 
 h3 {
   color: rgba(255, 255, 255, 1);
   font-family: "Kreon";
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 
 h4 {
   color: rgba(255, 255, 255, 1);
   font-family: "Kreon";
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
 h5 {
   color: rgba(255, 255, 255, 1);
   font-family: "Kreon";
-  font-size: 1.00rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -432,12 +432,22 @@ h5 {
   color: white;
 }
 
+.btn-sm:hover {
+    color: #e6e6e6;
+}
+
 .btn-lg {
-  max-width: 290px;
+  max-width: 210px;
 }
 
 .button-icon {
   height: 25px;
+  width: 25px;
+}
+
+.button-icon-immunefi {
+  height: 25px;
+  width: 80px;
 }
 
 @media (min-width: 576px) {
@@ -615,7 +625,6 @@ h5 {
 }
 
 .tooltipbtm {
-  position: relative;
   display: inline-block;
   border-bottom: 0px dotted black;
 }
@@ -693,4 +702,40 @@ h5 {
 
 #scrollUpButton:hover {
   background-color: transparent;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  border: 1px solid black;
+  left: 0px;
+  top: 40px;
+  border-radius: 7px;
+}
+
+.dropdown-content a {
+  display: block;
+  color: #000000;
+  background-color: #dc9a00fa;
+  padding: 5px;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  text-align: start;
+  padding-left: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: #af7b00;
 }

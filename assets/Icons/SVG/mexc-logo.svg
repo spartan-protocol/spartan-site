@@ -1,0 +1,14 @@
+<svg width="162.46" height="107.53" version="1.1" viewBox="0 0 162.46 107.53" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <style>.cls-1{fill:#00b897;}.cls-2{fill:#76fcb2;}.cls-3{fill:url(#linear-gradient);}.cls-4{fill:none;}</style>
+  <linearGradient id="linear-gradient" x1="75.3" x2="150.17" y1="399.96" y2="372.3" gradientTransform="matrix(1 0 0 -1 -26.734 455.77)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#53e57a" stop-opacity="0" offset="0"/>
+   <stop stop-color="#00a977" offset="1"/>
+  </linearGradient>
+ </defs>
+ <title>mexc_logo-freelogovectors.net</title>
+ <path class="cls-1" d="m150.17 71.772-30.81-53.43c-6.75-11.14-23.22-11.26-29.73 0.47l-32.36 55.6c-6 10.19 1.42 23 13.51 23h64.8c12.22-0.01 21.34-13.16 14.59-25.64z" fill="#00b897"/>
+ <path class="cls-2" d="m105.73 75.962-1.89-3.32c-1.78-3.08-5.69-9.71-5.69-9.71l-26.06-45.26a17.07 17.07 0 0 0-29.5 1.78l-30.32 52.48a17 17 0 0 0 14.8 25.48h108.28c-16.7 0.11-22.08-8.53-29.62-21.45z" fill="#76fcb2"/>
+ <path class="cls-3" d="m105.75 75.952-1.9-3.32c-1.78-3.08-5.68-9.71-5.68-9.71l-16.83-29.62-24.17 41.23c-6 10.19 1.42 23 13.51 23h64.69c-16.83-0.14-22.04-8.67-29.62-21.58z" fill="url(#linear-gradient)"/>
+ <rect class="cls-4" x="-12.954" y="-9.4982" width="772.45" height="126.53" fill="none"/>
+</svg>
