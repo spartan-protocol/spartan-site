@@ -162,6 +162,7 @@ const IndexPage = () => {
               id
               label
               url
+              order
             }
           }
         }

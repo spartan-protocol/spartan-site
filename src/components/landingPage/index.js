@@ -20,7 +20,7 @@ const LandingPage = ({ data }) => {
           onClick={() => setShowTradeButtons(false)}
         >
           <div className="h-10"></div>
-          {tradeSpartaLinks.map((el, i) => (
+          {tradeSpartaLinks.sort((a, b) => a.node.order - b.node.order).map((el, i) => (
             <a
               href={el.node.url}
               target="_blank"
