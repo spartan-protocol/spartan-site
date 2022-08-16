@@ -156,17 +156,28 @@ const IndexPage = () => {
             }
           }
         }
+        allContentfulTradeSpartaLinks {
+          edges {
+            node {
+              id
+              label
+              url
+            }
+          }
+        }
       }
     `
   );
 
   const [landingPageData] = heroData.allContentfulHeaderHero.edges;
-  const [swapData, poolData, stakeData, synthsData, daoData, teamData] = heroData.allContentfulHeroSection.edges;
+  const [swapData, poolData, stakeData, synthsData, teamData] = heroData.allContentfulHeroSection.edges;
   const contentfulContributors = heroData.allContentfulContributors.edges;
 
   const dappContributors = heroData.allRestApiReposSpartanProtocolSpartanProtocolDAppV2Contributors.edges;
   const spartanDocsContributors = heroData.allRestApiReposSpartanProtocolSpartanDocsContributors.edges;
   const spartanSiteContributors = heroData.allRestApiReposSpartanProtocolSpartanSiteContributors.edges;
+
+  const tradeSpartaLinks = heroData.allContentfulTradeSpartaLinks.edges;
 
   const githubContributors = { dappContributors, spartanDocsContributors, spartanSiteContributors };
 
@@ -183,16 +194,16 @@ const IndexPage = () => {
     defaultFallbackInView(true);
   }
 
+
   return (
     <BreakpointProvider queries={mediaQueries}>
       <Navbar />
       <BackgroundAnimation />
       <div className="wrapper">
-        <LandingPage data={landingPageData.node} />
+        <LandingPage data={{...landingPageData.node, tradeSpartaLinks}} />
         <Swap data={swapData.node} />
         <Pool data={poolData.node} />
         <Stake data={stakeData.node} />
-        <Dao data={daoData.node} />
         <Contributors data={{ teamData: teamData.node, githubContributors, contentfulContributors }} />
         <Token />
       </div>

@@ -12,7 +12,7 @@ const ThreeCanvas = () => {
       <Canvas
         gl={{ antialias: false, alpha: false }}
         camera={{
-          position: [0, 0, 1],
+          position: [0, 0, -1],
         }}
         resize={{ polyfill: ResizeObserver }}
       >

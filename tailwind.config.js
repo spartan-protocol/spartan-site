@@ -2,6 +2,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      colors: {
+        "spartan-red": "#fb2715"
+      },
       spacing: {
         128: "32rem",
       },

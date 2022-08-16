@@ -75,9 +75,6 @@ const Navbar = () => {
         <a className="hover:opacity-60 transition" href="#stake">
           Stake
         </a>
-        <a className="hover:opacity-60 transition" href="#dao">
-          DAO
-        </a>
         <a className="hover:opacity-60 transition" href="#team">
           Team
         </a>

@@ -69,7 +69,7 @@ const ThreeStars = () => {
       }
     }
 
-    ref.current.rotation.x -= velocity;
+    ref.current.rotation.x += velocity;
   });
 
   return (
