@@ -1,42 +1,75 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import SocialIcons from "./socialIcons";
 
 const LandingPage = ({ data }) => {
   const [showTradeButtons, setShowTradeButtons] = useState(false);
+  const [blockTradeButtons, setBlockTradeButtons] = useState(false);
+  const [tradeButtonsUp, setTradeButtonsUp] = useState(false);
 
+  const tradingButtonsRef = useRef();
   const tradeButtons = () => {
     if (!showTradeButtons) return null;
     try {
       const { tradeSpartaLinks } = data;
       const lastIndex = tradeSpartaLinks.length - 1;
       const borderClass = (i) => `${i > 0 && "border-t-0"} ${i === 0 && "rounded-t"} ${i === lastIndex && "rounded-b"}`;
-
       return (
         <div
+          ref={tradingButtonsRef}
           className="flex animate-fadeIn flex-col absolute w-full z-10"
           onMouseOut={() => setShowTradeButtons(false)}
           onBlur={() => setShowTradeButtons(false)}
           onClick={() => setShowTradeButtons(false)}
         >
-          <div className="h-10"></div>
-          {tradeSpartaLinks.sort((a, b) => a.node.order - b.node.order).map((el, i) => (
-            <a
-              href={el.node.url}
-              target="_blank"
-              rel="noreferrer"
-              className={`border ${borderClass(i)} p-1.5 scale-x-105 bg-black text-white cursor-pointer hover:bg-spartan-red transition`}
-              key={el.node.id}
-            >
-              {el.node.label}
-            </a>
-          ))}
+          {!tradeButtonsUp && <div className="h-10 cursor-pointer"></div>}
+          {tradeSpartaLinks
+            .sort((a, b) => (!tradeButtonsUp ? a.node.order - b.node.order : b.node.order - a.node.order))
+            .map((el, i) => (
+              <a
+                href={el.node.url}
+                target="_blank"
+                rel="noreferrer"
+                className={`border ${borderClass(i)} p-1.5 scale-x-105 bg-black text-white cursor-pointer select-none hover:bg-spartan-red transition`}
+                key={el.node.id}
+              >
+                {el.node.label}
+              </a>
+            ))}
+          {tradeButtonsUp && <div className="h-10 cursor-pointer"></div>}
         </div>
       );
     } catch (err) {
       console.log(err);
     }
   };
+
+  // disable opening trade links on hover, when someone will click on the button
+  const tradeButtonOnClick = () => {
+    setBlockTradeButtons(true);
+    setShowTradeButtons(!showTradeButtons);
+  };
+
+  const isInViewport = (el) => {
+    if (!el || !el.current) return;
+    const rect = el.current.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  };
+
+  useEffect(() => {
+    if (tradingButtonsRef.current) tradingButtonsRef.current.style="";
+    const inViewport = isInViewport(tradingButtonsRef);
+    if (!inViewport) {
+      setTradeButtonsUp(true);
+      if (tradingButtonsRef.current) tradingButtonsRef.current.style="margin-top: -162px;";
+    }
+    else setTradeButtonsUp(false);
+  }, [showTradeButtons]);
 
   return (
     <div id="home" className="h-screen bg-black justify-center snap-start">
@@ -53,21 +86,22 @@ const LandingPage = ({ data }) => {
           </div>
           <div>
             <div className="flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg">
-              <a className="mb-2 w-full animate-fadeInLeft" href={data.ctaButtonLink}>
+              <a className="mb-2 relative z-10 w-full animate-fadeInLeft" href={data.ctaButtonLink}>
                 <div className="bg-white w-full h-full p-1.5 text-black rounded hover:opacity-70 transition">{data.ctaButton}</div>
               </a>
               <div
                 className="w-full relative z-10 opacity-0 animate-fadeInLeft flex flex-col"
                 onFocus={() => setShowTradeButtons(true)}
-                onMouseOver={() => setShowTradeButtons(true)}
-                onClick={() => setShowTradeButtons(true)}
+                onMouseOver={() => !blockTradeButtons && setShowTradeButtons(true)}
+                onMouseOut={() => setBlockTradeButtons(false)}
+                onClick={() => tradeButtonOnClick()}
                 style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}
               >
                 <div>
                   <div
                     className={`${
                       showTradeButtons ? "bg-spartan-red" : "bg-black"
-                    } cursor-pointer border border-white p-1.5 text-white w-full h-full rounded hover:opacity-70 transition`}
+                    } select-none cursor-pointer border border-white p-1.5 text-white w-full h-full rounded transition`}
                   >
                     {data.cexButtonLabel}
                   </div>
@@ -79,6 +113,7 @@ const LandingPage = ({ data }) => {
           </div>
         </div>
       </div>
+      {showTradeButtons && <div className="fixed w-full h-full top-0 left-0" onClick={() => setShowTradeButtons(false)}></div>}
     </div>
   );
 };
