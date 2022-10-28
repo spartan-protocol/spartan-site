@@ -1,6 +1,9 @@
 import * as React from "react";
 import { useInView } from "react-intersection-observer";
 
+import titleHelper from "../../helpers/titleHelper"
+import LiquidityIcon from "../../assets/icons/liquidity.svg"
+
 const Pool = ({ data }) => {
   const { ref: textRef, inView: textVisible } = useInView({ threshold: 0.3, triggerOnce: true });
   const { ref: button1Ref, inView: button1Visible } = useInView({ threshold: 0.3, triggerOnce: true });
@@ -9,15 +12,18 @@ const Pool = ({ data }) => {
   return (
     <div id="pool" className="h-screen bg-black justify-center snap-start">
       <div className="flex flex-col flex-1 h-full items-center justify-center">
-        <div className="flex flex-col flex-1 justify-evenly relative z-10">
-          <div ref={textRef} className="font-saira text-white text-center px-8">
-            <h1 className={`text-3xl sm:text-5xl mb-2 opacity-0 ${textVisible && "animate-fadeIn"}`}>{data.title}</h1>
+        <div className="flex flex-1 flex-col md:flex-row justify-center items-center relative z-10 space-y-8 md:space-y-0 space-x-0 md:space-x-12">
+          <div ref={textRef} className="font-saira text-white px-2 md:px-8 text-center md:text-left">
+          {titleHelper(data.title, textVisible)}
             <div
-              className={`w-64 text-xs sm:w-96 sm:text-sm mx-auto font-extralight text-gray-400 opacity-0 ${textVisible && "animate-fadeIn"}`}
+              className={`text-xs sm:text-sm ml-1 font-extralight text-gray-400 opacity-0 ${textVisible && "animate-fadeIn"}`}
               style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}
             >
               <span className="bg-black bg-opacity-50 rounded">{data.subtitle}</span>
             </div>
+          </div>
+          <div className="animate-fadeIn flex justify-center items-center pr-1 text-spartan-red">
+            <LiquidityIcon width="150px" height="150px" />
           </div>
           <div>
             <div className="flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg">

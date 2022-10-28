@@ -6,7 +6,8 @@
    version="1.1"
    id="svg4">
   <ellipse
-     style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-opacity:0.03517588"
+     fill="currentColor"
+     style="fill-opacity:1;stroke:#ffffff;stroke-opacity:0.03517588"
      id="path816"
      cx="7.9661016"
      cy="8"

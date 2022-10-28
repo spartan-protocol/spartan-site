@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
-import SocialIcons from "./socialIcons";
+import SpartaIcon from "../../assets/icons/spartav2.svg";
 
 const LandingPage = ({ data }) => {
   const [showTradeButtons, setShowTradeButtons] = useState(false);
@@ -62,29 +62,33 @@ const LandingPage = ({ data }) => {
   };
 
   useEffect(() => {
-    if (tradingButtonsRef.current) tradingButtonsRef.current.style="";
+    if (tradingButtonsRef.current) tradingButtonsRef.current.style = "";
     const inViewport = isInViewport(tradingButtonsRef);
     if (!inViewport) {
       setTradeButtonsUp(true);
-      if (tradingButtonsRef.current) tradingButtonsRef.current.style="margin-top: -162px;";
-    }
-    else setTradeButtonsUp(false);
+      if (tradingButtonsRef.current) tradingButtonsRef.current.style = "margin-top: -162px;";
+    } else setTradeButtonsUp(false);
   }, [showTradeButtons]);
 
   return (
     <div id="home" className="h-screen bg-black justify-center snap-start">
-      <div className="flex flex-col flex-1 h-full items-center justify-center">
-        <div className="flex flex-col flex-1 justify-evenly">
-          <div className="font-saira text-white text-center px-10 max-w-sm sm:max-w-xl">
-            <h1 className="text-3xl sm:text-5xl mb-2 opacity-0 animate-fadeIn">{data.title}</h1>
-            <div
-              className="w-64 text-xs sm:w-96 sm:text-sm mx-auto font-extralight text-gray-400 animate-fadeIn opacity-0"
-              style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}
-            >
-              <span className="bg-black bg-opacity-50 rounded">{data.tagline}</span>
+      <div className="flex flex-1 h-full items-center justify-center">
+        <div className="flex flex-col md:flex-row flex-1 justify-center items-center space-y-8 md:space-y-0 space-x-0 md:space-x-12">
+          <div className="flex justify-center items-center max-w-sm sm:max-w-xl">
+            <div className="font-saira text-white text-center md:text-left">
+              <h1 className="text-3xl sm:text-5xl mb-2 opacity-0 animate-fadeIn">{data.title}</h1>
+              <div
+                className="w-64 text-xs sm:w-96 sm:text-sm mx-auto font-extralight text-gray-400 animate-fadeIn opacity-0"
+                style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}
+              >
+                <span className="bg-black bg-opacity-50 rounded">{data.tagline}</span>
+              </div>
             </div>
           </div>
-          <div>
+          <div className="animate-fadeIn flex justify-center items-center pr-1 text-transparent">
+            <SpartaIcon width="150px" height="150px" />
+          </div>
+          <div className="flex justify-center items-center">
             <div className="flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg">
               <a className="mb-2 relative z-10 w-full animate-fadeInLeft" href={data.ctaButtonLink}>
                 <div className="bg-white w-full h-full p-1.5 text-black rounded hover:opacity-70 transition">{data.ctaButton}</div>
@@ -109,7 +113,6 @@ const LandingPage = ({ data }) => {
                 {tradeButtons()}
               </div>
             </div>
-            <SocialIcons data={data} />
           </div>
         </div>
       </div>

@@ -73,7 +73,7 @@ const Token = () => {
         </div>
         <div className="flex flex-col text-white relative z-10">
           <div className={`flex items-center my-4  opacity-0 ${textVisible && `animate-fadeIn`}`} style={animationDelay(9)}>
-            <SpartaIcon height="30px" width="30px" style={{ marginRight: "10px", verticalAlign: "top" }} />
+            <SpartaIcon className="text-transparent" height="30px" width="30px" style={{ marginRight: "10px", verticalAlign: "top" }} />
             <div className="text-xl">The SPARTA Token</div>
           </div>
           <div ref={bulletPointsRef} className="text-center">
