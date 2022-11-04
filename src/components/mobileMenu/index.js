@@ -18,8 +18,8 @@ const MobileMenu = ({ closeNav }) => {
           <a className="transition hover:opacity-60" href="#stake" onClick={() => closeNav()}>
             Stake
           </a>
-          <a className="transition hover:opacity-60" href="#team" onClick={() => closeNav()}>
-            Team
+          <a className="transition hover:opacity-60" href="#contributors" onClick={() => closeNav()}>
+            Contributors
           </a>
           <a className="transition hover:opacity-60" href="#token" onClick={() => closeNav()}>
             Token

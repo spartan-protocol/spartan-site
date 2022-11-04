@@ -73,10 +73,10 @@ const LandingPage = ({ data }) => {
   return (
     <div id="home" className="h-screen bg-black justify-center snap-start">
       <div className="flex flex-1 h-full items-center justify-center">
-        <div className="flex flex-col md:flex-row flex-1 justify-center items-center space-y-8 md:space-y-0 space-x-0 md:space-x-12">
-          <div className="flex justify-center items-center max-w-sm sm:max-w-xl">
-            <div className="font-saira text-white text-center md:text-left">
-              <h1 className="text-3xl sm:text-5xl mb-2 opacity-0 animate-fadeIn">{data.title}</h1>
+        <div className="flex flex-col flex-1 justify-center items-center space-y-8">
+          <div className="flex justify-center items-center">
+            <div className="font-saira text-white text-center">
+              <h1 className="text-3xl sm:text-5xl px-6 mb-2 opacity-0 animate-fadeIn tracking-[.2em] sm:tracking-[.25em]">{data.title.toUpperCase()}</h1>
               <div
                 className="w-64 text-xs sm:w-96 sm:text-sm mx-auto font-extralight text-gray-400 animate-fadeIn opacity-0"
                 style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}
@@ -84,9 +84,6 @@ const LandingPage = ({ data }) => {
                 <span className="bg-black bg-opacity-50 rounded">{data.tagline}</span>
               </div>
             </div>
-          </div>
-          <div className="animate-fadeIn flex justify-center items-center pr-1 text-transparent">
-            <SpartaIcon width="150px" height="150px" />
           </div>
           <div className="flex justify-center items-center">
             <div className="flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg">

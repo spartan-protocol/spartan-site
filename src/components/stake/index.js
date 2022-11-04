@@ -22,7 +22,7 @@ const Stake = ({ data }) => {
               <span className="bg-black bg-opacity-50 rounded">{data.subtitle}</span>
             </div>
           </div>
-          <div className="animate-fadeIn flex justify-center items-center pr-1 text-spartan-red">
+          <div className="animate-fadeIn flex justify-center items-center pr-1 text-white">
             <StakeIcon width="180px" height="180px" />
           </div>
           <div>

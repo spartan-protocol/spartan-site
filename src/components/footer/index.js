@@ -12,7 +12,7 @@ const Footer = () => {
 
   const buildDate = data.currentBuildDate.currentDate;
   return (
-    <div className="text-white relative z-10 flex justify-center">
+    <div className="text-white relative z-10 flex justify-center pb-10">
       <div className="mb-2">Last updated at {buildDate}</div>
     </div>
   );

@@ -22,7 +22,7 @@ const Pool = ({ data }) => {
               <span className="bg-black bg-opacity-50 rounded">{data.subtitle}</span>
             </div>
           </div>
-          <div className="animate-fadeIn flex justify-center items-center pr-1 text-spartan-red">
+          <div className="animate-fadeIn flex justify-center items-center pr-1 text-white">
             <LiquidityIcon width="150px" height="150px" />
           </div>
           <div>

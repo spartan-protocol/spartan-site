@@ -33,6 +33,7 @@ import Stake from "../components/stake";
 import Token from "../components/token";
 import Contributors from "../components/contributors";
 import LandingPage from "../components/landingPage";
+import SocialIcons from "../components/footer/socialIcons";
 import BackgroundAnimation from "../components/backgroundAnimation";
 import { BreakpointProvider } from "../providers/breakpoint";
 import { defaultFallbackInView } from 'react-intersection-observer';
@@ -171,7 +172,7 @@ const IndexPage = () => {
   );
 
   const [landingPageData] = heroData.allContentfulHeaderHero.edges;
-  const [swapData, poolData, stakeData, synthsData, teamData] = heroData.allContentfulHeroSection.edges;
+  const [swapData, poolData, stakeData, synthsData, contributorsTextData] = heroData.allContentfulHeroSection.edges;
   const contentfulContributors = heroData.allContentfulContributors.edges;
 
   const dappContributors = heroData.allRestApiReposSpartanProtocolSpartanProtocolDAppV2Contributors.edges;
@@ -201,11 +202,12 @@ const IndexPage = () => {
       <Navbar />
       <BackgroundAnimation />
       <div className="wrapper">
+        <SocialIcons data={landingPageData.node}/>
         <LandingPage data={{...landingPageData.node, tradeSpartaLinks}} />
         <Swap data={swapData.node} />
         <Pool data={poolData.node} />
         <Stake data={stakeData.node} />
-        <Contributors data={{ teamData: teamData.node, githubContributors, contentfulContributors }} />
+        <Contributors data={{ contributorsTextData: contributorsTextData.node, githubContributors, contentfulContributors }} />
         <Token />
       </div>
     </BreakpointProvider>
