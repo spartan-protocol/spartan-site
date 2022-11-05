@@ -45,6 +45,9 @@ module.exports = {
       scale: {
         '80': '0.8',
         '120': '1.2',
+      },
+      dropShadow: {
+        'white': '0 0 4px rgba(255,255,255,0.9)'
       }
     },
   },

@@ -26,10 +26,10 @@ import "@fontsource/nunito/800.css"; // Used hero title
 import "../sass/global.scss";
 
 import Navbar from "../components/navbar";
-import Dao from "../components/dao";
 import Swap from "../components/swap";
 import Pool from "../components/pool";
 import Stake from "../components/stake";
+import Tokenomics from "../components/tokenomics";
 import Token from "../components/token";
 import Contributors from "../components/contributors";
 import LandingPage from "../components/landingPage";
@@ -208,6 +208,7 @@ const IndexPage = () => {
         <Pool data={poolData.node} />
         <Stake data={stakeData.node} />
         <Contributors data={{ contributorsTextData: contributorsTextData.node, githubContributors, contentfulContributors }} />
+        <Tokenomics />
         <Token />
       </div>
     </BreakpointProvider>

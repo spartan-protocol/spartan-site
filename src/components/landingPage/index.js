@@ -73,7 +73,7 @@ const LandingPage = ({ data }) => {
   return (
     <div id="home" className="h-screen bg-black justify-center snap-start">
       <div className="flex flex-1 h-full items-center justify-center">
-        <div className="flex flex-col flex-1 justify-center items-center space-y-8">
+        <div className="flex flex-col flex-1 justify-center items-center space-y-20">
           <div className="flex justify-center items-center">
             <div className="font-saira text-white text-center">
               <h1 className="text-3xl sm:text-5xl px-6 mb-2 opacity-0 animate-fadeIn tracking-[.2em] sm:tracking-[.25em]">{data.title.toUpperCase()}</h1>
