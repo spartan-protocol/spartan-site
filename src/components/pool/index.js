@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useInView } from "react-intersection-observer";
 
-import titleHelper from "../../helpers/titleHelper"
+import RefactorTitle from "../../helpers/RefactorTitle"
 import LiquidityIcon from "../../assets/icons/liquidity.svg"
 
 const Pool = ({ data }) => {
@@ -14,7 +14,7 @@ const Pool = ({ data }) => {
       <div className="flex flex-col flex-1 h-full items-center justify-center">
         <div className="flex flex-1 flex-col md:flex-row justify-center items-center relative z-10 space-y-8 md:space-y-0 space-x-0 md:space-x-12">
           <div ref={textRef} className="font-saira text-white px-2 md:px-8 text-center md:text-left">
-          {titleHelper(data.title, textVisible)}
+          {RefactorTitle(data.title, textVisible)}
             <div
               className={`text-xs sm:text-sm ml-1 font-extralight text-gray-400 opacity-0 ${textVisible && "animate-fadeIn"}`}
               style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}
@@ -22,8 +22,8 @@ const Pool = ({ data }) => {
               <span className="bg-black bg-opacity-50 rounded">{data.subtitle}</span>
             </div>
           </div>
-          <div className="animate-fadeIn flex justify-center items-center pr-1 text-white">
-            <LiquidityIcon width="150px" height="150px" />
+          <div className="flex justify-center items-center pr-1 text-white">
+            <LiquidityIcon className={`opacity-0 ${textVisible && "animate-fadeInLeft"}`}  style={{ animationDelay: "100ms", WebkitAnimationDelay: "100ms" }} width="150px" height="150px" />
           </div>
           <div>
             <div className="flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg">

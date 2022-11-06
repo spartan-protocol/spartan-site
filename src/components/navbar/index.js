@@ -78,9 +78,6 @@ const Navbar = () => {
         <a className="hover:opacity-60 transition" href="#contributors">
           Contributors
         </a>
-        <a className="hover:opacity-60 transition" href="#tokenomics">
-          Tokenomics
-        </a>
         <a className="hover:opacity-60 transition" href="#token">
           Token
         </a>

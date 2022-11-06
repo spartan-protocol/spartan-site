@@ -6,7 +6,7 @@ import * as React from "react";
  * @param {bool} textVisible
  * @returns {React.Component} h1 or multiple h1 tags
  */
-const titleHelper = (title, textVisible) => {
+const RefactorTitle = (title, textVisible) => {
   /* I */
   return title.split(".").length === 1 ? (
     <h1 className={`text-3xl sm:text-5xl mb-2 opacity-0 ${textVisible && "animate-fadeIn"}`}>{title}</h1>
@@ -19,4 +19,4 @@ const titleHelper = (title, textVisible) => {
   );
 };
 
-export default titleHelper;
+export default RefactorTitle;

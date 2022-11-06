@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useInView } from "react-intersection-observer";
 
-import titleHelper from "../../helpers/titleHelper";
+import RefactorTitle from "../../helpers/RefactorTitle";
 import SwapIcon from "../../assets/icons/spartanSwap.svg";
 
 const Swap = ({ data }) => {
@@ -13,7 +13,7 @@ const Swap = ({ data }) => {
       <div className="flex flex-col flex-1 h-full items-center justify-center">
         <div className="flex flex-col md:flex-row flex-1 items-center justify-center relative z-10 space-y-8 md:space-y-0 space-x-0 md:space-x-12">
           <div ref={textRef} className="font-saira text-white text-center md:text-left">
-            {titleHelper(data.title, textVisible)}
+            {RefactorTitle(data.title, textVisible)}
             <div
               className={`text-xs sm:text-sm mx-auto font-extralight text-gray-400 opacity-0 ${textVisible && "animate-fadeIn"}`}
               style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}
@@ -21,8 +21,8 @@ const Swap = ({ data }) => {
               <span className="bg-black bg-opacity-50 rounded">{data.subtitle}</span>
             </div>
           </div>
-          <div className="animate-fadeIn flex justify-center items-center pr-1 text-white">
-            <SwapIcon width="180px" height="180px" />
+          <div className="flex justify-center items-center pr-1 text-white">
+            <SwapIcon className={`opacity-0 ${textVisible && "animate-fadeInLeft"}`}  style={{ animationDelay: "100ms", WebkitAnimationDelay: "100ms" }} width="180px" height="180px" />
           </div>
           <div>
             <div className="flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg">
