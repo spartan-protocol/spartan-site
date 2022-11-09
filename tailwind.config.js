@@ -21,6 +21,10 @@ module.exports = {
           "0%": { transform: "translateX(-40px)", opacity: 0 },
           "100%": { transform: "translateX(0px)", opacity: 1 },
         },
+        fadeInRight: {
+          "0%": { transform: "translateX(40px)", opacity: 0 },
+          "100%": { transform: "translateX(0px)", opacity: 1 },
+        },
         fadeInBottom: {
           "0%": { transform: "translateY(40px)", opacity: 0 },
           "100%": { transform: "translateY(0px)", opacity: 1 },
@@ -33,6 +37,7 @@ module.exports = {
       animation: {
         fadeIn: "fadeIn 0.45s ease forwards",
         fadeInLeft: "fadeInLeft 0.45s ease forwards",
+        fadeInRight: "fadeInRight 0.45s ease forwards",
         fadeInBottom: "fadeInBottom 0.45s ease forwards",
         disappearLeft: "disappearLeft 0.45s ease forwards",
       },
