@@ -14,7 +14,6 @@ const BulletPoint = ({ text, index, bulletPointsVisible }) => {
       className={`flex justify-center sm:justify-start text-lg sm:text-xl max-h-8 sm:max-h-max opacity-0 ${bulletPointsVisible && `animate-fadeInRight`}`}
       style={animationDelay(4 + (index * 2))}
     >
-      <DotIcon className="mr-2 block sm:hidden" width="8" fill="white" />
       {text}
     </div>
   );
@@ -27,7 +26,7 @@ const BulletPoints = ({ data, bulletPointsVisible }) => {
       return (
         <div>
           <BulletPoint text={item} key={item} index={index} bulletPointsVisible={bulletPointsVisible} />
-          <div className={`text-4xl font-bold opacity-0 drop-shadow-white text-left ${bulletPointsVisible && `animate-fadeInRight`}`} style={animationDelay(5 + (index *2))}>{bulletPointsDescription[index]}</div>
+          <div className={`text-4xl font-bold opacity-0 drop-shadow-white text-center sm:text-left ${bulletPointsVisible && `animate-fadeInRight`}`} style={animationDelay(5 + (index *2))}>{bulletPointsDescription[index]}</div>
         </div>
       );
     } else {
