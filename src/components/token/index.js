@@ -3,7 +3,6 @@ import { useInView } from "react-intersection-observer";
 
 import Footer from "../footer";
 import SpartaIcon from "../../assets/icons/spartav2_white.svg";
-import DotIcon from "../../assets/icons/dot.svg";
 import GetSupply from "../../helpers/GetSupply";
 
 const animationDelay = (delay) => ({ animationDelay: `${delay * 75}ms`, WebkitAnimationDelay: `${delay * 75}ms` });

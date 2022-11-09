@@ -15,7 +15,7 @@ const LandingPage = ({ data }) => {
       return (
         <div
           ref={tradingButtonsRef}
-          className="flex animate-fadeIn flex-col absolute w-full z-10"
+          className="flex animate-fadeIn flex-col absolute w-full z-30"
           onMouseOut={() => setShowTradeButtons(false)}
           onBlur={() => setShowTradeButtons(false)}
           onClick={() => setShowTradeButtons(false)}
@@ -28,7 +28,7 @@ const LandingPage = ({ data }) => {
                 href={el.node.url}
                 target="_blank"
                 rel="noreferrer"
-                className={`border ${borderClass(i)} p-1.5 scale-x-105 bg-black text-white cursor-pointer select-none hover:bg-spartan-red transition`}
+                className={`border ${borderClass(i)} p-1.5 scale-x-105 bg-black text-white cursor-pointer select-none hover:bg-spartan-red z-30 transition`}
                 key={el.node.id}
               >
                 {el.node.label}
@@ -89,7 +89,7 @@ const LandingPage = ({ data }) => {
                 <div className="bg-white w-full h-full p-1.5 text-black rounded hover:opacity-70 transition">{data.ctaButton}</div>
               </a>
               <div
-                className="w-full relative z-10 opacity-0 animate-fadeInLeft flex flex-col"
+                className="w-full relative z-30 opacity-0 animate-fadeInLeft flex flex-col"
                 onFocus={() => setShowTradeButtons(true)}
                 onMouseOver={() => !blockTradeButtons && setShowTradeButtons(true)}
                 onMouseOut={() => setBlockTradeButtons(false)}
