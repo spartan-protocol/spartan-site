@@ -1,7 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 
-import SpartaIcon from "../../assets/icons/spartav2.svg";
-
 const LandingPage = ({ data }) => {
   const [showTradeButtons, setShowTradeButtons] = useState(false);
   const [blockTradeButtons, setBlockTradeButtons] = useState(false);

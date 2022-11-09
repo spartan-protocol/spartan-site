@@ -167,6 +167,13 @@ const IndexPage = () => {
             }
           }
         }
+        contentfulTokenSection {
+          id
+          title
+          bulletPoints
+          bulletPointsDescription
+          button
+        }
       }
     `
   );
@@ -182,6 +189,8 @@ const IndexPage = () => {
   const tradeSpartaLinks = heroData.allContentfulTradeSpartaLinks.edges;
 
   const githubContributors = { dappContributors, spartanDocsContributors, spartanSiteContributors };
+
+  const tokenSection = heroData.contentfulTokenSection;
 
   const mediaQueries = {
     xs: "(max-width: 480px)", // use max here for default/smallest
@@ -209,7 +218,7 @@ const IndexPage = () => {
         <Stake data={stakeData.node} />
         <Contributors data={{ contributorsTextData: contributorsTextData.node, githubContributors, contentfulContributors }} />
         <Tokenomics />
-        <Token />
+        <Token data={tokenSection}/>
       </div>
     </BreakpointProvider>
   );

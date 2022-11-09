@@ -10,19 +10,42 @@ const animationDelay = (delay, index = 1) => ({ animationDelay: `${(index + dela
 
 const BulletPoint = ({ text, index, bulletPointsVisible }) => {
   return (
-    <div className={`flex justify-center sm:justify-start text-lg sm:text-xl max-h-8 sm:max-h-max opacity-0 ${bulletPointsVisible && `animate-fadeIn`}`} style={animationDelay(4, index)}>
+    <div
+      className={`flex justify-center sm:justify-start text-lg sm:text-xl max-h-8 sm:max-h-max opacity-0 ${bulletPointsVisible && `animate-fadeIn`}`}
+      style={animationDelay(5, index)}
+    >
       <DotIcon className="mr-2 block sm:hidden" width="8" fill="white" />
       {text}
     </div>
   );
 };
 
+const BulletPoints = ({ data, bulletPointsVisible }) => {
+  const { bulletPoints, bulletPointsDescription } = data;
+  return bulletPoints.map((item, index) => {
+    if (bulletPointsDescription[index]) {
+      return (
+        <div>
+          <BulletPoint text={item} key={item} index={index} bulletPointsVisible />
+          <div className={`text-4xl font-bold opacity-0 drop-shadow-white text-left ${bulletPointsVisible && `animate-fadeIn`}`} style={animationDelay(6, index)}>{bulletPointsDescription[index]}</div>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <BulletPoint text={item} key={item} index={index} bulletPointsVisible={bulletPointsVisible} />
+        </div>
+      );
+    }
+  });
+};
+
 const TokenSupply = ({ textVisible }) => {
   const { circSupply, burnSupply } = GetSupply();
   return (
-    <div className="text-right hidden sm:block">
+    <div className="text-right hidden sm:block ml-0 sm:ml-16">
       <div>
-        <div className={`text-xl opacity-0 ${textVisible && `animate-fadeIn`}`} style={animationDelay(3)}>
+        <div className={`text-xl opacity-0 ${textVisible && `animate-fadeIn`}`} style={animationDelay(5)}>
           Maximum Supply
         </div>
         <div className={`text-4xl font-bold opacity-0 drop-shadow-white ${textVisible && `animate-fadeIn`}`} style={animationDelay(4)}>
@@ -31,7 +54,7 @@ const TokenSupply = ({ textVisible }) => {
       </div>
       <div>
         {/* GET BALANCE OF DEAD ADDRESS */}
-        <div className={`text-xl opacity-0 ${textVisible && `animate-fadeIn`}`} style={animationDelay(5)}>
+        <div className={`text-xl opacity-0 ${textVisible && `animate-fadeIn`}`} style={animationDelay(6)}>
           Burned Supply
         </div>
         <div className={`text-4xl font-bold opacity-0 drop-shadow-white ${textVisible && `animate-fadeIn`}`} style={animationDelay(6)}>
@@ -51,8 +74,7 @@ const TokenSupply = ({ textVisible }) => {
   );
 };
 
-const Token = () => {
-  const bulletPointsData = ["Fair launch", "Fair distribution", "100% community allocation"];
+const Token = ({ data }) => {
   const { ref: bulletPointsRef, inView: bulletPointsVisible } = useInView({ threshold: 0.3, triggerOnce: true });
 
   return (
@@ -68,17 +90,15 @@ const Token = () => {
           <div className="flex flex-col sm:flex-row space-x-0 sm:space-x-16">
             <TokenSupply textVisible />
             <div>
-              <div ref={bulletPointsRef} className="text-center space-y-0 sm:space-y-10">
-                {bulletPointsData.map((item, index) => (
-                  <BulletPoint text={item} key={item} index={index} bulletPointsVisible={bulletPointsVisible} />
-                ))}
+              <div ref={bulletPointsRef} className="text-center space-y-0">
+                <BulletPoints data={data} bulletPointsVisible />
               </div>
             </div>
           </div>
           <div className="mx-auto w-48">
             <a className="w-full mb-2 opacity-0 animate-fadeInLeft" href="#">
               <div className="p-1.5 px-4 rounded-md text-center hover:opacity-70 font-semibold drop-shadow-white transition border border-white tracking-[.2em]">
-                BUY SPARTA
+                {data.button}
               </div>
             </a>
           </div>
