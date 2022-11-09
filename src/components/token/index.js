@@ -11,7 +11,7 @@ const animationDelay = (delay) => ({ animationDelay: `${delay * 75}ms`, WebkitAn
 const BulletPoint = ({ text, index, bulletPointsVisible }) => {
   return (
     <div
-      className={`flex justify-center sm:justify-start text-lg sm:text-xl max-h-8 sm:max-h-max opacity-0 ${bulletPointsVisible && `animate-fadeInRight`}`}
+      className={`flex justify-center sm:justify-start text-lg sm:text-xl max-h-8 sm:max-h-max opacity-0 ${bulletPointsVisible && `animate-fadeIn md:animate-fadeInRight`}`}
       style={animationDelay(4 + (index * 2))}
     >
       {text}
@@ -26,7 +26,7 @@ const BulletPoints = ({ data, bulletPointsVisible }) => {
       return (
         <div>
           <BulletPoint text={item} key={item} index={index} bulletPointsVisible={bulletPointsVisible} />
-          <div className={`text-4xl font-bold opacity-0 drop-shadow-white text-center sm:text-left ${bulletPointsVisible && `animate-fadeInRight`}`} style={animationDelay(5 + (index *2))}>{bulletPointsDescription[index]}</div>
+          <div className={`text-4xl font-bold opacity-0 drop-shadow-white text-center sm:text-left ${bulletPointsVisible && `animate-fadeIn md:animate-fadeInRight`}`} style={animationDelay(5 + (index *2))}>{bulletPointsDescription[index]}</div>
         </div>
       );
     } else {
@@ -96,7 +96,7 @@ const Token = ({ data }) => {
           </div>
           <div className="mx-auto w-48">
             <a className="w-full mb-2" href="#">
-              <div className={`p-1.5 px-4 rounded-md text-center hover:opacity-70 font-semibold drop-shadow-white transition border border-white tracking-[.2em] opacity-0 ${bulletPointsVisible && "animate-fadeInBottom"}`} style={animationDelay(9)}>
+              <div className={`p-1.5 px-4 rounded-md text-center hover:opacity-70 font-semibold drop-shadow-white transition border border-white tracking-[.2em] opacity-0 ${bulletPointsVisible && "animate-fadeIn md:animate-fadeInBottom"}`} style={animationDelay(9)}>
                 {data.button}
               </div>
             </a>
