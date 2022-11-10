@@ -56,7 +56,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex bg-black w-full p-2 px-4 justify-between fixed z-20">
+    <div className="flex bg-black w-full p-2 px-4 justify-between fixed z-30">
       <div className="flex align-center w-36">
         <a href="#home">
           <SpartaIcon width="30px" height="30px" />
@@ -84,7 +84,7 @@ const Navbar = () => {
       </div>
       <div className="flex items-center justify-end w-36 sm:pr-2">
         <div className="mr-1 sm:hidden block">
-          <div className="p-2" onClick={() => toggleNav()}>
+          <div className="p-2 mr-2" onClick={() => toggleNav()}>
             <MenuIcon className="cursor-pointer transition hover:opacity-60" height="20px" fill="white" />
           </div>
           <MobileMenu closeNav={closeNav} />
