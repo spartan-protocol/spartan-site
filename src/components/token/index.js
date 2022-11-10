@@ -25,7 +25,7 @@ const BulletPoints = ({ data, bulletPointsVisible }) => {
       return (
         <div>
           <BulletPoint text={item} key={item} index={index} bulletPointsVisible={bulletPointsVisible} />
-          <div className={`text-4xl font-bold opacity-0 drop-shadow-white text-center sm:text-left ${bulletPointsVisible && `animate-fadeIn md:animate-fadeInRight`}`} style={animationDelay(5 + (index *2))}>{bulletPointsDescription[index]}</div>
+          <div className={`text-3xl md:text-4xl font-bold opacity-0 drop-shadow-white text-center sm:text-left ${bulletPointsVisible && `animate-fadeIn md:animate-fadeInRight`}`} style={animationDelay(5 + (index *2))}>{bulletPointsDescription[index]}</div>
         </div>
       );
     } else {
@@ -46,7 +46,7 @@ const TokenSupply = ({ bulletPointsVisible }) => {
         <div className={`text-xl opacity-0 ${bulletPointsVisible && `animate-fadeInLeft`}`} style={animationDelay(4)}>
           Maximum Supply
         </div>
-        <div className={`text-4xl font-bold opacity-0 drop-shadow-white ${bulletPointsVisible && `animate-fadeInLeft`}`} style={animationDelay(5)}>
+        <div className={`text-2xl md:text-4xl font-bold opacity-0 drop-shadow-white ${bulletPointsVisible && `animate-fadeInLeft`}`} style={animationDelay(5)}>
           300,000,000
         </div>
       </div>
@@ -55,7 +55,7 @@ const TokenSupply = ({ bulletPointsVisible }) => {
         <div className={`text-xl opacity-0 ${bulletPointsVisible && `animate-fadeInLeft`}`} style={animationDelay(6)}>
           Burned Supply
         </div>
-        <div className={`text-4xl font-bold opacity-0 drop-shadow-white ${bulletPointsVisible && `animate-fadeInLeft`}`} style={animationDelay(7)}>
+        <div className={`text-2xl md:text-4xl font-bold opacity-0 drop-shadow-white ${bulletPointsVisible && `animate-fadeInLeft`}`} style={animationDelay(7)}>
           {burnSupply}
         </div>
       </div>
@@ -64,7 +64,7 @@ const TokenSupply = ({ bulletPointsVisible }) => {
         <div className={`text-xl opacity-0 ${bulletPointsVisible && `animate-fadeInLeft`}`} style={animationDelay(8)}>
           Circulating Supply
         </div>
-        <div className={`text-4xl font-bold opacity-0 drop-shadow-white ${bulletPointsVisible && `animate-fadeInLeft`}`} style={animationDelay(9)}>
+        <div className={`text-2xl md:text-4xl font-bold opacity-0 drop-shadow-white ${bulletPointsVisible && `animate-fadeInLeft`}`} style={animationDelay(9)}>
           {circSupply}
         </div>
       </div>
@@ -76,16 +76,16 @@ const Token = ({ data }) => {
   const { ref: bulletPointsRef, inView: bulletPointsVisible } = useInView({ threshold: 0.3, triggerOnce: true });
 
   return (
-    <div id="token" className="h-screen bg-black justify-center flex flex-col snap-start">
+    <div id="token" className="h-screen bg-black justify-center flex flex-col snap-start pt-16">
       <div className="flex flex-col flex-1 items-center justify-center">
-        <div className="flex flex-col text-white relative z-10 space-y-8">
+        <div className="flex flex-col text-white relative z-10 space-y-6 md:space-y-8">
           <div className={`flex justify-center`} >
             <h1 className={`text-3xl sm:text-5xl mb-2 opacity-0 ${bulletPointsVisible && "animate-fadeIn"}`} style={animationDelay(2)}>The SPARTA Token</h1>
           </div>
           <div className={`flex justify-center opacity-0 ${bulletPointsVisible && "animate-fadeIn"}`} style={animationDelay(3)}>
-            <SpartaIcon className="text-transparent" width="100px" height="100px" />
+            <SpartaIcon className="text-transparent w-20 h-20 md:w-24 md:h-24" />
           </div>
-          <div className="flex flex-col sm:flex-row space-x-0 sm:space-x-16">
+          <div className="flex flex-col sm:flex-row space-x-0 sm:space-x-16 pb-2 md:my-0">
             <TokenSupply bulletPointsVisible={bulletPointsVisible} />
             <div>
               <div ref={bulletPointsRef} className="text-center space-y-0">
