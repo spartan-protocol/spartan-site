@@ -11,7 +11,7 @@ const Token = () => {
   const { ref: textRef, inView: textVisible } = useInView({ threshold: 0.3, triggerOnce: true });
 
   return (
-    <div id="tokenomics" className="h-screen block sm:hidden bg-black justify-center flex flex-col snap-start">
+    <div id="tokenomics" className="h-screen font-saira block sm:hidden bg-black justify-center flex flex-col snap-start">
       <div className="flex flex-col flex-1 items-center justify-center">
         <div ref={textRef} className="flex flex-col text-white text-center relative z-10 mb-4">
           <div className="flex flex-col space-y-4">

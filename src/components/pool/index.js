@@ -23,7 +23,7 @@ const Pool = ({ data }) => {
             </div>
           </div>
           <div className="flex justify-center items-center pr-1 text-white">
-            <LiquidityIcon className={`opacity-0 ${textVisible && "animate-fadeInLeft"}`}  style={{ animationDelay: "100ms", WebkitAnimationDelay: "100ms" }} width="150px" height="150px" />
+            <LiquidityIcon className={`w-24 h-24 sm:w-36 sm:h-36 opacity-0 ${textVisible && "animate-fadeInLeft"}`}  style={{ animationDelay: "100ms", WebkitAnimationDelay: "100ms" }} />
           </div>
           <div>
             <div className="flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg">

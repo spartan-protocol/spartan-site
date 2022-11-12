@@ -23,7 +23,7 @@ const Stake = ({ data }) => {
             </div>
           </div>
           <div className="flex justify-center items-center pr-1 text-white">
-            <StakeIcon className={`opacity-0 ${textVisible && "animate-fadeInLeft"}`}  style={{ animationDelay: "100ms", WebkitAnimationDelay: "100ms" }} width="180px" height="180px" />
+            <StakeIcon className={`w-28 h-28 sm:w-44 sm:h-44 opacity-0 ${textVisible && "animate-fadeInLeft"}`}  style={{ animationDelay: "100ms", WebkitAnimationDelay: "100ms" }} />
           </div>
           <div>
             <div className="flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg">

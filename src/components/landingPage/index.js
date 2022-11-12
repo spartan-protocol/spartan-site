@@ -74,7 +74,7 @@ const LandingPage = ({ data }) => {
         <div className="flex flex-col flex-1 justify-center items-center space-y-20">
           <div className="flex justify-center items-center">
             <div className="font-saira text-white text-center">
-              <h1 className="text-3xl sm:text-5xl px-6 mb-2 opacity-0 animate-fadeIn tracking-[.2em] sm:tracking-[.25em]">{data.title.toUpperCase()}</h1>
+              <h1 className="text-4xl sm:text-5xl px-6 mb-2 opacity-0 animate-fadeIn tracking-[.2em] sm:tracking-[.25em]">{data.title.toUpperCase()}</h1>
               <div
                 className="w-64 text-xs sm:w-96 sm:text-sm mx-auto font-extralight text-gray-400 animate-fadeIn opacity-0"
                 style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}

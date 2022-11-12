@@ -41,7 +41,7 @@ const BulletPoints = ({ data, bulletPointsVisible }) => {
 const TokenSupply = ({ bulletPointsVisible }) => {
   const { circSupply, burnSupply } = GetSupply();
   return (
-    <div className="text-right hidden sm:block ml-0 sm:ml-16">
+    <div className="text-right hidden sm:block ml-0 sm:ml-16 font-saira">
       <div>
         <div className={`text-xl opacity-0 ${bulletPointsVisible && `animate-fadeInLeft`}`} style={animationDelay(4)}>
           Maximum Supply

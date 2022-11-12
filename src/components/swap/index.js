@@ -22,7 +22,7 @@ const Swap = ({ data }) => {
             </div>
           </div>
           <div className="flex justify-center items-center pr-1 text-white">
-            <SwapIcon className={`opacity-0 ${textVisible && "animate-fadeInLeft"}`}  style={{ animationDelay: "100ms", WebkitAnimationDelay: "100ms" }} width="180px" height="180px" />
+            <SwapIcon className={`w-28 h-28 sm:w-40 sm:h-40 opacity-0 ${textVisible && "animate-fadeInLeft"}`}  style={{ animationDelay: "100ms", WebkitAnimationDelay: "100ms" }} />
           </div>
           <div>
             <div className="flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg">
