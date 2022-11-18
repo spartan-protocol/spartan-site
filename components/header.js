@@ -6,10 +6,12 @@ class Header extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
             <div class="header pe-3 mx-auto">
-                <a href="./index.html" class='link-no-format'>
-                    <img class='header-logo' height="75px" src='./assets/Icons/SVG/spartav2.svg' />
-                    <div class='d-none d-md-block header-title'>Spartan Protocol</div>
-                </a>
+                <div class="header-logo">
+                    <a href="./index.html" class='link-no-format'>
+                        <img class="d-block d-sm-none" height="43px" src='./assets/Icons/SVG/spartav2.svg' />
+                        <img class="d-none d-sm-block" height="43px" src='./assets/Icons/SVG/sparta-text-long-light.svg' />
+                    </a>
+                </div>
                 <div class="header-menu">
                     <input class="burger-check" id="burger-check" type="checkbox">
                         <label for="burger-check" class="burger mx-2 d-inline-block d-lg-none"></label>
