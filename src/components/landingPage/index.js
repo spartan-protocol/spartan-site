@@ -15,7 +15,7 @@ const LandingPage = ({ data }) => {
       return (
         <div
           ref={tradingButtonsRef}
-          className="flex animate-fadeIn flex-col absolute w-full z-20"
+          className="flex animate-fadeIn flex-col absolute w-full z-20 button"
           onMouseOut={() => setShowTradeButtons(false)}
           onBlur={() => setShowTradeButtons(false)}
           onClick={() => setShowTradeButtons(false)}
@@ -86,10 +86,10 @@ const LandingPage = ({ data }) => {
           <div className="flex justify-center items-center">
             <div className="flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg">
               <a className="mb-2 relative z-10 w-full animate-fadeInLeft" href={data.ctaButtonLink}>
-                <div className="bg-white w-full h-full p-1.5 text-black rounded hover:opacity-70 transition">{data.ctaButton}</div>
+                <div className="bg-white w-full h-full p-1.5 text-black rounded hover:opacity-70 transition button">{data.ctaButton}</div>
               </a>
               <div
-                className="w-full relative z-20 opacity-0 animate-fadeInLeft flex flex-col"
+                className="w-full relative z-20 opacity-0 animate-fadeInLeft button flex flex-col"
                 onFocus={() => setShowTradeButtons(true)}
                 onMouseOver={() => !blockTradeButtons && setShowTradeButtons(true)}
                 onMouseOut={() => setBlockTradeButtons(false)}
@@ -100,7 +100,7 @@ const LandingPage = ({ data }) => {
                   <div
                     className={`${
                       showTradeButtons ? "bg-spartan-red" : "bg-black"
-                    } select-none cursor-pointer border border-white p-1.5 text-white w-full h-full rounded transition`}
+                    } select-none cursor-pointer border border-white p-1.5 text-white w-full h-full rounded transition button`}
                   >
                     {data.cexButtonLabel}
                   </div>

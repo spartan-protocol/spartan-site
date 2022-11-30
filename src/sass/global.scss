@@ -43,9 +43,9 @@ canvas {
   color: rgba(229, 231, 235, var(--tw-text-opacity));
 }
 
-@media (max-height: 400px) {
+@media (max-height: 420px) {
   h1 {
-    font-size: 2rem !important;
+    font-size: 1.75rem !important;
   }
 
   svg {
@@ -54,12 +54,24 @@ canvas {
 
   #pool {
     svg {
-      max-width: 6rem;
+      max-width: 5.5rem;
+    }
+  }
+  #pool, #swap, #stake {
+    > div > div {
+      flex-direction: row !important;
+      > div {
+        text-align: left !important;
+      }
+      svg {
+        margin-left:16px;
+        margin-right:16px;
+      }
     }
   }
 
   .button {
-    filter: scale(0.8)
+    transform: scale(0.8);
   }
 
   #contributors {
