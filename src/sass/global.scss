@@ -52,6 +52,12 @@ canvas {
     max-width: 7rem;
   }
 
+  #home {
+    .button-container {
+      margin-top: 30px
+    }
+  }
+
   #pool {
     svg {
       max-width: 5.5rem;

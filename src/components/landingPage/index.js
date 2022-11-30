@@ -83,7 +83,7 @@ const LandingPage = ({ data }) => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center button-container">
             <div className="flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg">
               <a className="mb-2 relative z-10 w-full animate-fadeInLeft" href={data.ctaButtonLink}>
                 <div className="bg-white w-full h-full p-1.5 text-black rounded hover:opacity-70 transition button">{data.ctaButton}</div>
