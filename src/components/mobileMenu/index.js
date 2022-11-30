@@ -21,6 +21,9 @@ const MobileMenu = ({ closeNav }) => {
           <a className="transition hover:opacity-60" href="#contributors" onClick={() => closeNav()}>
             Contributors
           </a>
+          <a className="transition hover:opacity-60" href="#video" onClick={() => closeNav()}>
+            Video
+          </a>
           <a className="transition hover:opacity-60" href="#token" onClick={() => closeNav()}>
             Tokenomics
           </a>

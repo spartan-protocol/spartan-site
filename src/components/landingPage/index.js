@@ -64,7 +64,7 @@ const LandingPage = ({ data }) => {
     const inViewport = isInViewport(tradingButtonsRef);
     if (!inViewport) {
       setTradeButtonsUp(true);
-      if (tradingButtonsRef.current) tradingButtonsRef.current.style = "margin-top: -162px;";
+      if (tradingButtonsRef.current) tradingButtonsRef.current.style = "margin-top: -122px;";
     } else setTradeButtonsUp(false);
   }, [showTradeButtons]);
 

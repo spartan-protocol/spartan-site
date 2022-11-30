@@ -33,6 +33,7 @@ import Tokenomics from "../components/tokenomics";
 import Token from "../components/token";
 import Contributors from "../components/contributors";
 import LandingPage from "../components/landingPage";
+import Video from "../components/video";
 import SocialIcons from "../components/footer/socialIcons";
 import BackgroundAnimation from "../components/backgroundAnimation";
 import { BreakpointProvider } from "../providers/breakpoint";
@@ -217,6 +218,7 @@ const IndexPage = () => {
         <Pool data={poolData.node} />
         <Stake data={stakeData.node} />
         <Contributors data={{ contributorsTextData: contributorsTextData.node, githubContributors, contentfulContributors }} />
+        <Video />
         <Tokenomics />
         <Token data={tokenSection}/>
       </div>
