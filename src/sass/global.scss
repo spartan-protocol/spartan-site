@@ -8,6 +8,12 @@ html {
   background: #000;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
+  scrollbar-color: #fb2715 transparent;
+  scrollbar-width: thin;
+}
+
+html::-webkit-scrollbar {
+  color: #fb2715 transparent;
 }
 
 body {
@@ -24,6 +30,10 @@ a {
 // fullscreen canvas on safari mobile
 canvas {
   height: 100vh !important;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
 }
 
 // support for older browsers

@@ -126,7 +126,7 @@ const Contributors = ({ data }) => {
           </div>
           <div
             ref={teamRef}
-            className="flex flex-col justify-center sm:mt-0 mt-8 max-h-35 sm:max-h-6/12 overflow-y-auto sm:w-8/12 w-11/12 mx-auto font-saira text-white text-center px-8 list"
+            className="flex flex-col justify-center sm:mt-0 mt-8 max-h-35 sm:max-h-6/12 overflow-y-auto sm:w-8/12 w-11/12 mx-auto font-saira text-white text-center px-8 list scrollbar-thin"
           >
             <div className={`flex flex-wrap justify-center max-h-full`}>{contributorsHtml()}</div>
           </div>
