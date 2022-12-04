@@ -12,8 +12,15 @@ html {
   scrollbar-width: thin;
 }
 
-html::-webkit-scrollbar {
-  color: #fb2715 transparent;
+::-webkit-scrollbar {
+  width: 6px;
+  height: 4px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fb2715;
+  border-radius: 8px;
 }
 
 body {
