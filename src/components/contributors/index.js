@@ -2,12 +2,12 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 
 const Contributors = ({ data }) => {
-  const { ref: textRef, inView: textVisible } = useInView({ threshold: 0.3, triggerOnce: true });
+  // const { ref: textRef, inView: textVisible } = useInView({ threshold: 0.3, triggerOnce: true });
   const { ref: teamRef, inView: teamVisible } = useInView({ threshold: 0.3, triggerOnce: true });
 
   // There are two sources of data. We are pulling contributors from Spartan Protocol github,
   // and also we are adding manually contributors on contentful
-  const { githubContributors, contentfulContributors, contributorsTextData } = data;
+  const { githubContributors, contentfulContributors } = data;
 
   // we are pulling github data from couple of repos - we need to merge the data to one array
   let ghData = [];
@@ -115,15 +115,15 @@ const Contributors = ({ data }) => {
     <div id="contributors" className="h-screen bg-black justify-center snap-start">
       <div className="flex flex-col flex-1 h-full items-center justify-center">
         <div className="flex flex-col flex-1 justify-center sm:justify-evenly relative z-10 justify">
-          <div ref={textRef} className="font-saira text-white text-center px-8">
+          {/* <div ref={textRef} className="font-saira text-white text-center px-8">
             <h1 className={`text-2xl sm:text-4xl mb-2 opacity-0 ${textVisible && "animate-fadeIn"}`}>{contributorsTextData.title}</h1>
             <div
               className={`w-11/12 sm:w-6/12 text-xs sm:text-sm mx-auto font-extralight text-gray-400 subtitle opacity-0 ${textVisible && "animate-fadeIn"}`}
               style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}
             >
-              <span className="bg-black bg-opacity-50 rounded">{contributorsTextData.description.description}</span>
+              <span className="bg-black bg-opacity-50 rounded">{contributorsTextData.description}</span>
             </div>
-          </div>
+          </div> */}
           <div
             ref={teamRef}
             className="flex flex-col justify-center sm:mt-0 mt-8 max-h-35 sm:max-h-6/12 overflow-y-auto sm:w-8/12 w-11/12 mx-auto font-saira text-white text-center px-8 list scrollbar-thin"

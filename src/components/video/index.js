@@ -13,16 +13,16 @@ const Video = () => {
         <div className="flex flex-col items-center">
           <div
             ref={videoRef}
-            className={`rounded border border-2 border-white opacity-0 ${videoVisible && "animate-fadeInLeft"}`}
+            className={`rounded border-2 border-white opacity-0 ${videoVisible && "animate-fadeInLeft"}`}
             style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}
           >
             <iframe
               id="player"
-              allowfullscreen="1"
+              allowFullScreen="1"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               title="Spartan Protocol in a nutshell."
               src="https://www.youtube.com/embed/wnNPJaCmTGw?enablejsapi=1&amp;origin=https%3A%2F%2Fspartanprotocol.org&amp;widgetid=1"
-              frameborder="0"
+              frameBorder="0"
               className="w-[80vw] h-[24vh] md:w-[530px] md:h-[300px] xl:w-[640px] xl:h-[360px]"
             ></iframe>
           </div>
@@ -36,7 +36,7 @@ const Video = () => {
               className={`w-32 md:w-44 h-12 mb-1 opacity-0 ${partnersVisible && "animate-fadeIn"}`}
               style={{ animationDelay: "500ms", WebkitAnimationDelay: "500ms" }}
             >
-              <StaticImage src="../../assets/brands/certik.png" />
+              <StaticImage src="../../assets/brands/certik.png" alt="certikLogo" />
             </div>
             <div className={`opacity-0 ${partnersVisible && "animate-fadeIn"}`} style={{ animationDelay: "600ms", WebkitAnimationDelay: "600ms" }}>
               Smart Contract Audit
@@ -55,7 +55,7 @@ const Video = () => {
               className={`w-32 md:w-44 h-12 mb-1 opacity-0 ${partnersVisible && "animate-fadeIn"}`}
               style={{ animationDelay: "500ms", WebkitAnimationDelay: "500ms" }}
             >
-              <StaticImage src="../../assets/brands/arena.png" />
+              <StaticImage src="../../assets/brands/arena.png" alt="c4renaLogo" />
             </div>
             <div className={`opacity-0 ${partnersVisible && "animate-fadeIn"}`} style={{ animationDelay: "600ms", WebkitAnimationDelay: "600ms" }}>
               $98k Audit Contest
@@ -74,7 +74,7 @@ const Video = () => {
               className={`w-32 md:w-44 h-12 mb-1 opacity-0 ${partnersVisible && "animate-fadeIn"}`}
               style={{ animationDelay: "500ms", WebkitAnimationDelay: "500ms" }}
             >
-              <StaticImage src="../../assets/brands/immunefi.png" />
+              <StaticImage src="../../assets/brands/immunefi.png" alt="immunefiLogo" />
             </div>
             <div className={`opacity-0 ${partnersVisible && "animate-fadeIn"}`} style={{ animationDelay: "600ms", WebkitAnimationDelay: "600ms" }}>
               Rewards up to $100k

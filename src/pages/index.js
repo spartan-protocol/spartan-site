@@ -37,7 +37,7 @@ import Video from "../components/video";
 import SocialIcons from "../components/footer/socialIcons";
 import BackgroundAnimation from "../components/backgroundAnimation";
 import { BreakpointProvider } from "../providers/breakpoint";
-import { defaultFallbackInView } from 'react-intersection-observer';
+import { defaultFallbackInView } from "react-intersection-observer";
 
 const IndexPage = () => {
   const heroData = useStaticQuery(
@@ -180,7 +180,7 @@ const IndexPage = () => {
   );
 
   const [landingPageData] = heroData.allContentfulHeaderHero.edges;
-  const [swapData, poolData, stakeData, synthsData, contributorsTextData] = heroData.allContentfulHeroSection.edges;
+  const [swapData, poolData, stakeData] = heroData.allContentfulHeroSection.edges;
   const contentfulContributors = heroData.allContentfulContributors.edges;
 
   const dappContributors = heroData.allRestApiReposSpartanProtocolSpartanProtocolDAppV2Contributors.edges;
@@ -206,21 +206,21 @@ const IndexPage = () => {
     defaultFallbackInView(true);
   }
 
-
   return (
     <BreakpointProvider queries={mediaQueries}>
       <Navbar />
       <BackgroundAnimation />
       <div className="wrapper">
-        <SocialIcons data={landingPageData.node}/>
-        <LandingPage data={{...landingPageData.node, tradeSpartaLinks}} />
+        <SocialIcons data={landingPageData.node} />
+        <LandingPage data={{ ...landingPageData.node, tradeSpartaLinks }} />
         <Swap data={swapData.node} />
         <Pool data={poolData.node} />
         <Stake data={stakeData.node} />
-        <Contributors data={{ contributorsTextData: contributorsTextData.node, githubContributors, contentfulContributors }} />
+        <Contributors data={{ githubContributors, contentfulContributors }} />
         <Video />
+        {/* <Tokenomics /> is for mobile devices only */}
         <Tokenomics />
-        <Token data={tokenSection}/>
+        <Token data={tokenSection} />
       </div>
     </BreakpointProvider>
   );
