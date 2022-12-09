@@ -1,3 +1,4 @@
+import { StaticImage } from "gatsby-plugin-image";
 import React, { useState, useRef, useEffect } from "react";
 
 const LandingPage = ({ data }) => {
@@ -71,7 +72,7 @@ const LandingPage = ({ data }) => {
   return (
     <div id="home" className="h-screen bg-black justify-center snap-start">
       <div className="flex flex-1 h-full items-center justify-center">
-        <div className="flex flex-col flex-1 justify-center items-center space-y-20">
+        <div className="flex flex-col flex-1 justify-center items-center">
           <div className="flex justify-center items-center">
             <div className="font-saira text-white text-center">
               <h1 className="text-4xl sm:text-5xl px-6 mb-2 opacity-0 animate-fadeIn tracking-[.2em] sm:tracking-[.25em]">{data.title.toUpperCase()}</h1>
@@ -83,8 +84,11 @@ const LandingPage = ({ data }) => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center items-center button-container">
+          <div className="flex justify-center items-center">
             <div className="flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg">
+              <div className="w-full sm:w-96 mb-4">
+                <StaticImage src="../../assets/images/combined.png" alt="mobileView" />
+              </div>
               <a className="mb-2 relative z-10 w-full animate-fadeInLeft" href={data.ctaButtonLink}>
                 <div className="bg-white w-full h-full p-1.5 text-black rounded hover:opacity-70 transition button">{data.ctaButton}</div>
               </a>
