@@ -180,7 +180,7 @@ const IndexPage = () => {
   );
 
   const [landingPageData] = heroData.allContentfulHeaderHero.edges;
-  const [swapData, poolData, stakeData] = heroData.allContentfulHeroSection.edges;
+  const [swapData, poolData, stakeData, ,contributorsTextData] = heroData.allContentfulHeroSection.edges;
   const contentfulContributors = heroData.allContentfulContributors.edges;
 
   const dappContributors = heroData.allRestApiReposSpartanProtocolSpartanProtocolDAppV2Contributors.edges;
@@ -216,7 +216,7 @@ const IndexPage = () => {
         <Swap data={swapData.node} />
         <Pool data={poolData.node} />
         <Stake data={stakeData.node} />
-        <Contributors data={{ githubContributors, contentfulContributors }} />
+        <Contributors data={{contributorsTextData: contributorsTextData.node, githubContributors, contentfulContributors }} />
         <Video />
         {/* <Tokenomics /> is for mobile devices only */}
         <Tokenomics />
