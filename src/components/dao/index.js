@@ -11,9 +11,9 @@ const Dao = ({ data }) => {
       <div className="flex flex-col flex-1 h-full items-center justify-center">
         <div className="flex flex-col flex-1 justify-evenly relative z-10">
           <div ref={textRef} className="font-saira text-white text-center px-8">
-            <h1 className={`text-3xl sm:text-5xl mb-2 opacity-0 ${textVisible && "animate-fadeIn"}`}>{data.title}</h1>
+            <h1 className={`text-4xl sm:text-6xl mb-2 opacity-0 ${textVisible && "animate-fadeIn"}`}>{data.title}</h1>
             <div
-              className={`w-64 text-xs sm:w-96 sm:text-sm mx-auto font-extralight text-gray-400 opacity-0 ${textVisible && "animate-fadeIn"}`}
+              className={`w-64 text-xs sm:w-96 sm:text-sm mx-auto text-white opacity-0 ${textVisible && "animate-fadeIn"}`}
               style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}
             >
               <span className="bg-black bg-opacity-50 rounded">{data.subtitle}</span>

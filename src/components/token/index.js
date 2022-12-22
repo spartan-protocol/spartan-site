@@ -50,7 +50,7 @@ const BulletPoints = ({ data, bulletPointsVisible }) => {
 const TokenSupply = ({ bulletPointsVisible }) => {
   const { circSupply, burnSupply } = GetSupply();
   return (
-    <div className="text-right flex-1 hidden sm:block mr-2 font-saira">
+    <div className="text-right flex-1 hidden sm:block mr-2 font-saira font-medium">
       <div>
         <div className={`text-xl tracking-wider opacity-0 ${bulletPointsVisible && `animate-fadeInLeft`}`} style={animationDelay(4)}>
           Maximum Supply
@@ -61,22 +61,22 @@ const TokenSupply = ({ bulletPointsVisible }) => {
       </div>
       <div>
         {/* CALL SPARTA API, USE A FALLBACK? */}
-        <div className={`text-xl opacity-0 ${bulletPointsVisible && `animate-fadeInLeft`}`} style={animationDelay(8)}>
+        <div className={`text-xl opacity-0 ${bulletPointsVisible && `animate-fadeInLeft`}`} style={animationDelay(6)}>
           Circulating Supply
         </div>
         <div
           className={`text-2xl tracking-wider md:text-4xl font-bold opacity-0 drop-shadow-white ${bulletPointsVisible && `animate-fadeInLeft`}`}
-          style={animationDelay(9)}
+          style={animationDelay(7)}
         >
           {circSupply}
         </div>
       </div>
       <div>
         {/* GET BALANCE OF DEAD ADDRESS */}
-        <div className={`text-xl opacity-0 ${bulletPointsVisible && `animate-fadeInLeft`}`} style={animationDelay(6)}>
+        <div className={`text-xl opacity-0 ${bulletPointsVisible && `animate-fadeInLeft`}`} style={animationDelay(8)}>
           Burned Supply
         </div>
-        <div className={`text-2xl md:text-4xl font-bold opacity-0 drop-shadow-white ${bulletPointsVisible && `animate-fadeInLeft`}`} style={animationDelay(7)}>
+        <div className={`text-2xl md:text-4xl font-bold opacity-0 drop-shadow-white ${bulletPointsVisible && `animate-fadeInLeft`}`} style={animationDelay(9)}>
           {burnSupply}
         </div>
       </div>
@@ -88,11 +88,11 @@ const Token = ({ data }) => {
   const { ref: bulletPointsRef, inView: bulletPointsVisible } = useInView({ threshold: 0.3, triggerOnce: true });
 
   return (
-    <div id="token" className="h-screen bg-black justify-center flex flex-col snap-start pt-16">
+    <div id="token" className="h-screen bg-black justify-center flex sm:w-10/12 sm:mx-auto flex-col snap-start pt-16 font-saira font-medium">
       <div className="flex flex-col flex-1 items-center justify-center token-container">
         <div className="flex flex-col text-white relative z-10 space-y-6 md:space-y-8 w-full">
           <div className={`flex justify-center`}>
-            <h1 className={`text-3xl sm:text-5xl mb-2 opacity-0 ${bulletPointsVisible && "animate-fadeIn"}`} style={animationDelay(2)}>
+            <h1 className={`text-4xl sm:text-6xl mb-2 opacity-0 ${bulletPointsVisible && "animate-fadeIn"}`} style={animationDelay(2)}>
               The SPARTA Token
             </h1>
           </div>

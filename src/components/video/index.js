@@ -8,7 +8,7 @@ const Video = () => {
   const { ref: textRef, inView: textVisible } = useInView({ threshold: 0.3, triggerOnce: true });
   const { ref: partnersRef, inView: partnersVisible } = useInView({ threshold: 0.3, triggerOnce: true });
   return (
-    <div id="video" className="h-screen bg-black justify-center snap-start">
+    <div id="video" className="h-screen bg-black justify-center snap-start font-saira">
       <div className="flex flex-col flex-1 h-full items-center justify-center md:space-y-16 xl:space-y-24 text-white relative z-10 ">
         <div className="flex flex-col items-center">
           <div

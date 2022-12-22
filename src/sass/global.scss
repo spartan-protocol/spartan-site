@@ -60,9 +60,10 @@ canvas {
   color: rgba(229, 231, 235, var(--tw-text-opacity));
 }
 
+// LANDSCAPE MODE
 @media (max-height: 420px) {
   h1 {
-    font-size: 1.75rem !important;
+    font-size: 1.25rem !important;
   }
 
   svg {
@@ -85,6 +86,11 @@ canvas {
       flex-direction: row !important;
       > div {
         text-align: left !important;
+        width: 32%;
+        margin-top: 0 !important;
+        > div {
+          margin-left: 0 !important;
+        }
       }
       svg {
         margin-left:16px;
@@ -109,6 +115,18 @@ canvas {
 
     .subtitle {
       width: 100% !important
+    }
+    h1 {
+      font-size: 1.75rem !important;
+    }
+  }
+
+  #home {
+    .image-container {
+      width: 200px
+    }
+    .content {
+      flex-direction: row;
     }
   }
 
@@ -138,7 +156,8 @@ canvas {
 
     .bullet-points {
       max-height: 30%;
-      overflow: auto;
+      overflow-y: scroll;
+      overflow-x: hidden;
       margin-top: 6px;
     }
 

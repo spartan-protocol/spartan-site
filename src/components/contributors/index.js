@@ -115,9 +115,9 @@ const Contributors = ({ data }) => {
       <div className="flex flex-col flex-1 h-full items-center justify-center">
         <div className="flex flex-col flex-1 justify-center sm:justify-evenly relative z-10 justify">
           <div ref={textRef} className="font-saira text-white text-center px-8">
-            <h1 className={`text-2xl sm:text-4xl mb-2 opacity-0 ${textVisible && "animate-fadeIn"}`}>{contributorsTextData.title}</h1>
+            <h1 className={`text-4xl sm:text-4xl mb-2 opacity-0 font-medium ${textVisible && "animate-fadeIn"}`}>{contributorsTextData.title}</h1>
             <div
-              className={`w-11/12 sm:w-6/12 text-xs sm:text-sm mx-auto font-extralight text-gray-400 subtitle opacity-0 ${textVisible && "animate-fadeIn"}`}
+              className={`w-11/12 sm:w-6/12 text-sm sm:text-md mx-auto text-white subtitle opacity-0 ${textVisible && "animate-fadeIn"}`}
               style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}
             >
               <span className="bg-black bg-opacity-50 rounded">{typeof contributorsTextData.description == "object" ? contributorsTextData.description.description : contributorsTextData.description}</span>

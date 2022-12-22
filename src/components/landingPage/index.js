@@ -72,12 +72,12 @@ const LandingPage = ({ data }) => {
   return (
     <div id="home" className="h-screen bg-black justify-center snap-start">
       <div className="flex flex-1 h-full items-center justify-center">
-        <div className="flex flex-col flex-1 justify-center items-center">
+        <div className="flex flex-col flex-1 justify-center items-center content">
           <div className="flex justify-center items-center">
             <div className="font-saira text-white text-center">
-              <h1 className="text-4xl sm:text-5xl px-6 mb-2 opacity-0 animate-fadeIn tracking-[.2em] sm:tracking-[.25em]">{data.title.toUpperCase()}</h1>
+              <h1 className="text-4xl sm:text-6xl px-6 mb-2 opacity-0 animate-fadeIn tracking-[.2em] sm:tracking-[.25em] font-medium">{data.title.toUpperCase()}</h1>
               <div
-                className="w-64 text-xs sm:w-96 sm:text-sm mx-auto font-extralight text-gray-400 animate-fadeIn opacity-0"
+                className="w-64 text-xs sm:w-96 sm:text-sm mx-auto text-white animate-fadeIn opacity-0"
                 style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}
               >
                 <span className="bg-black bg-opacity-50 rounded">{data.tagline}</span>
@@ -86,31 +86,34 @@ const LandingPage = ({ data }) => {
           </div>
           <div className="flex justify-center items-center">
             <div className="flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg">
-              <div className="w-full sm:w-96 mb-4">
+              <div className="w-full sm:w-96 mb-4 image-container">
                 <StaticImage src="../../assets/images/combined.png" alt="mobileView" />
               </div>
-              <a className="mb-2 relative z-10 w-full animate-fadeInLeft" href={data.ctaButtonLink}>
-                <div className="bg-white w-full h-full p-1.5 text-black rounded hover:opacity-70 transition button">{data.ctaButton}</div>
-              </a>
-              <div
-                className="w-full relative z-20 opacity-0 animate-fadeInLeft button flex flex-col"
-                onFocus={() => setShowTradeButtons(true)}
-                onMouseOver={() => !blockTradeButtons && setShowTradeButtons(true)}
-                onMouseOut={() => setBlockTradeButtons(false)}
-                onClick={() => tradeButtonOnClick()}
-                style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}
-              >
-                <div>
-                  <div
-                    className={`${
-                      showTradeButtons ? "bg-spartan-red" : "bg-black"
-                    } select-none cursor-pointer border border-white p-1.5 text-white w-full h-full rounded transition button`}
-                  >
-                    {data.cexButtonLabel}
+              <div className="w-full flex flex-col">
+                <a className="mb-2 relative z-10 w-full animate-fadeInLeft" href={data.ctaButtonLink}>
+                  <div className="bg-white w-full h-full p-1.5 text-black rounded hover:opacity-70 transition button">{data.ctaButton}</div>
+                </a>
+                <div
+                  className="w-full relative z-20 opacity-0 animate-fadeInLeft button flex flex-col"
+                  onFocus={() => setShowTradeButtons(true)}
+                  onMouseOver={() => !blockTradeButtons && setShowTradeButtons(true)}
+                  onMouseOut={() => setBlockTradeButtons(false)}
+                  onClick={() => tradeButtonOnClick()}
+                  style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}
+                >
+                  <div>
+                    <div
+                      className={`${
+                        showTradeButtons ? "bg-spartan-red" : "bg-black"
+                      } select-none cursor-pointer border border-white p-1.5 text-white w-full h-full rounded transition button`}
+                    >
+                      {data.cexButtonLabel}
+                    </div>
                   </div>
+                  {tradeButtons()}
                 </div>
-                {tradeButtons()}
               </div>
+              
             </div>
           </div>
         </div>

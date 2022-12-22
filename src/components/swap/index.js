@@ -12,10 +12,10 @@ const Swap = ({ data }) => {
     <div id="swap" className="h-screen bg-black justify-center snap-start">
       <div className="flex flex-col flex-1 h-full items-center justify-center">
         <div className="flex flex-col md:flex-row flex-1 items-center justify-center relative z-10 space-y-8 md:space-y-0 space-x-0 md:space-x-12">
-          <div ref={textRef} className="font-saira text-white text-center md:text-left">
+          <div ref={textRef} className="font-saira text-white text-center md:text-left font-medium">
             {RefactorTitle(data.title, textVisible)}
             <div
-              className={`text-xs sm:text-sm mx-auto font-extralight text-gray-400 opacity-0 ${textVisible && "animate-fadeIn"}`}
+              className={`text-sm sm:text-md mx-auto text-white opacity-0 ${textVisible && "animate-fadeIn"}`}
               style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}
             >
               <span className="bg-black bg-opacity-50 rounded">{data.subtitle}</span>

@@ -216,8 +216,8 @@ const IndexPage = () => {
         <Swap data={swapData.node} />
         <Pool data={poolData.node} />
         <Stake data={stakeData.node} />
-        <Contributors data={{contributorsTextData: contributorsTextData.node, githubContributors, contentfulContributors }} />
         <Video />
+        <Contributors data={{contributorsTextData: contributorsTextData.node, githubContributors, contentfulContributors }} />
         {/* <Tokenomics /> is for mobile devices only */}
         <Tokenomics />
         <Token data={tokenSection} />
