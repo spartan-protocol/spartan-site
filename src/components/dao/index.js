@@ -7,7 +7,7 @@ const Dao = ({ data }) => {
   const { ref: button2Ref, inView: button2Visible } = useInView({ threshold: 0.3, triggerOnce: true });
 
   return (
-    <div id="dao" className="h-screen bg-black justify-center snap-start">
+    <div id="dao" className="h-screen max-h-screen overflow-y-autobg-black justify-center snap-start">
       <div className="flex flex-col flex-1 h-full items-center justify-center">
         <div className="flex flex-col flex-1 justify-evenly relative z-10">
           <div ref={textRef} className="font-saira text-white text-center px-8">

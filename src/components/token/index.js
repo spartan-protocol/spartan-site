@@ -88,7 +88,7 @@ const Token = ({ data }) => {
   const { ref: bulletPointsRef, inView: bulletPointsVisible } = useInView({ threshold: 0.3, triggerOnce: true });
 
   return (
-    <div id="token" className="h-screen bg-black justify-center flex sm:w-10/12 sm:mx-auto flex-col snap-start pt-16 font-saira font-medium">
+    <div id="token" className="h-screen max-h-screen overflow-y-autobg-black justify-center flex sm:w-10/12 sm:mx-auto flex-col snap-start pt-16 font-saira font-medium">
       <div className="flex flex-col flex-1 items-center justify-center token-container">
         <div className="flex flex-col text-white relative z-10 space-y-6 md:space-y-8 w-full">
           <div className={`flex justify-center`}>

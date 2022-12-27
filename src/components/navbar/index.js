@@ -63,7 +63,7 @@ const Navbar = () => {
         </a>
       </div>
       <div className="hidden sm:flex text-white items-center space-x-4 md:space-x-6 text-lg text-center">
-        <a className="hover:opacity-60 transition" href="#home">
+        <a className="hover:opacity-60 transition hidden-landscape" href="#home">
           Home
         </a>
         <a className="hover:opacity-60 transition" href="#swap">

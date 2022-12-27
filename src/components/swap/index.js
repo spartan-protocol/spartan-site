@@ -9,7 +9,7 @@ const Swap = ({ data }) => {
   const { ref: button1Ref, inView: button1Visible } = useInView({ threshold: 0.3, triggerOnce: true });
   const { ref: button2Ref, inView: button2Visible } = useInView({ threshold: 0.3, triggerOnce: true });
   return (
-    <div id="swap" className="h-screen bg-black justify-center snap-start">
+    <div id="swap" className="h-screen max-h-screen overflow-y-autobg-black justify-center snap-start">
       <div className="flex flex-col flex-1 h-full items-center justify-center">
         <div className="flex flex-col md:flex-row flex-1 items-center justify-center relative z-10 space-y-8 md:space-y-0 space-x-0 md:space-x-12">
           <div ref={textRef} className="font-saira text-white text-center md:text-left font-medium">

@@ -10,7 +10,7 @@ const Pool = ({ data }) => {
   const { ref: button2Ref, inView: button2Visible } = useInView({ threshold: 0.3, triggerOnce: true });
 
   return (
-    <div id="pool" className="h-screen bg-black justify-center snap-start">
+    <div id="pool" className="h-screen max-h-screen overflow-y-autobg-black justify-center snap-start">
       <div className="flex flex-col flex-1 h-full items-center justify-center">
         <div className="flex flex-1 flex-col md:flex-row justify-center items-center relative z-10 space-y-8 md:space-y-0 space-x-0 md:space-x-12">
           <div ref={textRef} className="font-saira text-white px-2 md:px-8 text-center md:text-left font-medium">
@@ -23,7 +23,7 @@ const Pool = ({ data }) => {
             </div>
           </div>
           <div className="flex justify-center items-center pr-1 text-white">
-            <LiquidityIcon className={`w-24 h-24 sm:w-36 sm:h-36 opacity-0 ${textVisible && "animate-fadeInLeft"}`}  style={{ animationDelay: "100ms", WebkitAnimationDelay: "100ms" }} />
+            <LiquidityIcon className={`w-24 h-24 sm:w-36 sm:h-36 opacity-0 landscape-margin ${textVisible && "animate-fadeInLeft"}`}  style={{ animationDelay: "100ms", WebkitAnimationDelay: "100ms" }} />
           </div>
           <div>
             <div className="flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg">

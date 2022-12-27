@@ -60,6 +60,11 @@ canvas {
   color: rgba(229, 231, 235, var(--tw-text-opacity));
 }
 
+.partners {
+  overflow-y: auto;
+  max-height: 200px;
+}
+
 // LANDSCAPE MODE
 @media (max-height: 420px) {
   h1 {
@@ -81,22 +86,29 @@ canvas {
       max-width: 5.5rem;
     }
   }
-  #pool, #swap, #stake {
-    > div > div {
+
+  #pool,
+  #swap,
+  #stake {
+    >div>div {
       flex-direction: row !important;
-      > div {
+
+      >div {
         text-align: left !important;
         width: 32%;
         margin-top: 0 !important;
-        > div {
+
+        >div {
           margin-left: 0 !important;
         }
       }
+
       svg {
-        margin-left:16px;
-        margin-right:16px;
+        margin-left: 16px;
+        margin-right: 16px;
       }
     }
+
     .button {
       max-width: 90% !important;
     }
@@ -119,15 +131,20 @@ canvas {
     .subtitle {
       width: 100% !important
     }
+
     h1 {
       font-size: 1.75rem !important;
+    }
+    img {
+      width: 2.2rem !important;
     }
   }
 
   #home {
     .image-container {
-      width: 200px
+      width: 200px;
     }
+
     .content {
       flex-direction: row;
     }
@@ -139,7 +156,9 @@ canvas {
     }
 
     .partners {
-      margin-top: 2px !important
+      margin-top: 2px !important;
+      overflow-y: auto;
+      max-height: 200px;
     }
 
     a>div {
@@ -166,7 +185,7 @@ canvas {
 
     .button {
       margin-bottom: -6px;
-      margin-top:10px;
+      margin-top: 10px;
       transform: scale(0.6)
     }
 
@@ -175,10 +194,36 @@ canvas {
     }
 
     .token-container {
-      > div {
+      >div {
         justify-content: center;
       }
+
       max-height: 75%;
     }
   }
+
+  .hidden-landscape {
+    display: none;
+  }
+
+  .landscape-margin {
+    margin: -25px !important;
+  }
+  .landing-text-container  {
+    width: 30%;
+    > div > div {
+      width: auto !important;
+    }
+  }
+  .landing-image-container {
+    flex-direction: row;
+    width:100%;
+    .image-container {
+      width: 300px !important;
+    }
+    .button-container {
+      width: 60%;
+    }
+  }
+
 }
