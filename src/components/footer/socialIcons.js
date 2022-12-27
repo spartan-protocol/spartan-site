@@ -8,7 +8,7 @@ import TelegramIcon from "../../assets/logos/telegram_logo.svg";
 import TwitterIcon from "../../assets/logos/twitter_logo.svg";
 import BscscanIcon from "../../assets/logos/bscscan_logo.svg";
 
-const SocialIcons = ({ data }) => {
+const SocialIcons = () => {
   const breakpoint = useBreakpoint();
 
   const getSocialSize = (offset = 0) => {
@@ -33,27 +33,27 @@ const SocialIcons = ({ data }) => {
   return (
     <div className="flex justify-center mt-4 fixed w-full bottom-0 py-2 mb-1 sm:mb-0 z-20 space-x-7">
       <div className="opacity-0 animate-fadeInBottom" style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}>
-        <a className="hover:opacity-60 transition" href={data.twitterUrl}>
+        <a className="hover:opacity-60 transition" href="https://twitter.com/spartanprotocol">
           <TwitterIcon fill="white" height={getSocialSize(-3)} className="shadow-md w-7 h-7 mx-1" />
         </a>
       </div>
       <div className="opacity-0 animate-fadeInBottom" style={{ animationDelay: "400ms", WebkitAnimationDelay: "400ms" }}>
-        <a className="hover:opacity-60 transition" href={data.telegramUrl}>
+        <a className="hover:opacity-60 transition" href="https://t.me/SpartanProtocolOrg">
           <TelegramIcon fill="white" height={getSocialSize()} className="shadow-md w-7 h-7 mx-1" />
         </a>
       </div>
       <div className="opacity-0 animate-fadeInBottom" style={{ animationDelay: "500ms", WebkitAnimationDelay: "500ms" }}>
-        <a className="hover:opacity-60 transition" href={data.gitHubUrl}>
+        <a className="hover:opacity-60 transition" href="https://github.com/spartan-protocol">
           <GithubIcon fill="white" height={getSocialSize()} className="shadow-md w-7 h-7 mx-1" />
         </a>
       </div>
       <div className="opacity-0 animate-fadeInBottom" style={{ animationDelay: "600ms", WebkitAnimationDelay: "600ms" }}>
-        <a className="hover:opacity-60 transition" href={data.discordUrl}>
+        <a className="hover:opacity-60 transition" href="https://discord.gg/wQggvntnGk">
           <DiscordIcon fill="white" height={getSocialSize()} className="shadow-md w-7 h-7 mx-1" />
         </a>
       </div>
       <div className="opacity-0 animate-fadeInBottom" style={{ animationDelay: "700ms", WebkitAnimationDelay: "700ms" }}>
-        <a className="hover:opacity-60 transition" href={data.bscscanUrl}>
+        <a className="hover:opacity-60 transition" href="https://bscscan.com/address/0x3910db0600eA925F63C36DdB1351aB6E2c6eb102">
           <BscscanIcon fill="white" height={getSocialSize()} width={getSocialSize(-6)} className="shadow-md w-7 h-7 mx-1 ml-2" />
         </a>
       </div>

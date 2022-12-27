@@ -20,8 +20,9 @@ const BulletPoint = ({ text, index, bulletPointsVisible }) => {
   );
 };
 
-const BulletPoints = ({ data, bulletPointsVisible }) => {
-  const { bulletPoints, bulletPointsDescription } = data;
+const BulletPoints = ({ bulletPointsVisible }) => {
+  const bulletPoints = ["100% Community Allocation", "Fair Distribution", "Fair Launch"];
+  const bulletPointsDescription = ["No Team Tokens", "PoB & Bond", "No ICO"];
   return bulletPoints.map((item, index) => {
     if (bulletPointsDescription[index]) {
       return (
@@ -84,11 +85,14 @@ const TokenSupply = ({ bulletPointsVisible }) => {
   );
 };
 
-const Token = ({ data }) => {
+const Token = () => {
   const { ref: bulletPointsRef, inView: bulletPointsVisible } = useInView({ threshold: 0.3, triggerOnce: true });
 
   return (
-    <div id="token" className="h-screen max-h-screen overflow-y-autobg-black justify-center flex sm:w-10/12 sm:mx-auto flex-col snap-start pt-16 font-saira font-medium">
+    <div
+      id="token"
+      className="h-screen max-h-screen overflow-y-autobg-black justify-center flex sm:w-10/12 sm:mx-auto flex-col snap-start pt-16 font-saira font-medium"
+    >
       <div className="flex flex-col flex-1 items-center justify-center token-container">
         <div className="flex flex-col text-white relative z-10 space-y-6 md:space-y-8 w-full">
           <div className={`flex justify-center`}>
@@ -103,7 +107,7 @@ const Token = ({ data }) => {
             <TokenSupply bulletPointsVisible={bulletPointsVisible} />
             <div className="sm:ml-2 flex-1">
               <div ref={bulletPointsRef} className="text-center space-y-0">
-                <BulletPoints data={data} bulletPointsVisible={bulletPointsVisible} />
+                <BulletPoints bulletPointsVisible={bulletPointsVisible} />
               </div>
             </div>
           </div>
@@ -118,7 +122,7 @@ const Token = ({ data }) => {
                 }`}
                 style={animationDelay(9)}
               >
-                {data.button}
+                Buy SPARTA
               </div>
             </a>
           </div>

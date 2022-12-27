@@ -43,88 +43,6 @@ const IndexPage = () => {
   const heroData = useStaticQuery(
     graphql`
       query {
-        allContentfulHeaderHero {
-          edges {
-            node {
-              cexButtonLabel
-              cexButtonLink
-              ctaButton
-              ctaButtonLink
-              discordUrl
-              gitHubUrl
-              bscscanUrl
-              heroBackground {
-                file {
-                  url
-                  fileName
-                }
-              }
-              heroBgNarrow {
-                file {
-                  url
-                  fileName
-                }
-              }
-              tagline
-              telegramUrl
-              title
-              twitterUrl
-            }
-          }
-        }
-        allContentfulHeroSection(sort: { fields: order, order: ASC }) {
-          edges {
-            node {
-              buttonLabel1
-              buttonLabel2
-              buttonLink1
-              buttonLink2
-              order
-              subtitle
-              title
-              description {
-                description
-              }
-              featureImage {
-                file {
-                  url
-                  fileName
-                }
-              }
-              feature {
-                title
-                description
-              }
-              richFeature {
-                buttonLabel
-                buttonLink
-                description
-                logo {
-                  file {
-                    url
-                    fileName
-                  }
-                }
-              }
-            }
-          }
-        }
-        allContentfulContributors {
-          edges {
-            node {
-              name
-              link
-              avatar {
-                file {
-                  url
-                  fileName
-                }
-              }
-              overwrite
-              order
-            }
-          }
-        }
         allRestApiReposSpartanProtocolSpartanProtocolDAppV2Contributors {
           edges {
             node {
@@ -158,40 +76,15 @@ const IndexPage = () => {
             }
           }
         }
-        allContentfulTradeSpartaLinks {
-          edges {
-            node {
-              id
-              label
-              url
-              order
-            }
-          }
-        }
-        contentfulTokenSection {
-          id
-          title
-          bulletPoints
-          bulletPointsDescription
-          button
-        }
       }
     `
   );
-
-  const [landingPageData] = heroData.allContentfulHeaderHero.edges;
-  const [swapData, poolData, stakeData, ,contributorsTextData] = heroData.allContentfulHeroSection.edges;
-  const contentfulContributors = heroData.allContentfulContributors.edges;
 
   const dappContributors = heroData.allRestApiReposSpartanProtocolSpartanProtocolDAppV2Contributors.edges;
   const spartanDocsContributors = heroData.allRestApiReposSpartanProtocolSpartanDocsContributors.edges;
   const spartanSiteContributors = heroData.allRestApiReposSpartanProtocolSpartanSiteContributors.edges;
 
-  const tradeSpartaLinks = heroData.allContentfulTradeSpartaLinks.edges;
-
   const githubContributors = { dappContributors, spartanDocsContributors, spartanSiteContributors };
-
-  const tokenSection = heroData.contentfulTokenSection;
 
   const mediaQueries = {
     xs: "(max-width: 480px)", // use max here for default/smallest
@@ -211,16 +104,16 @@ const IndexPage = () => {
       <Navbar />
       <BackgroundAnimation />
       <div className="wrapper">
-        <SocialIcons data={landingPageData.node} />
-        <LandingPage data={{ ...landingPageData.node, tradeSpartaLinks }} />
-        <Swap data={swapData.node} />
-        <Pool data={poolData.node} />
-        <Stake data={stakeData.node} />
+        <SocialIcons />
+        <LandingPage />
+        <Swap />
+        <Pool />
+        <Stake />
         <Video />
-        <Contributors data={{contributorsTextData: contributorsTextData.node, githubContributors, contentfulContributors }} />
+        <Contributors data={{ githubContributors }} />
         {/* <Tokenomics /> is for mobile devices only */}
         <Tokenomics />
-        <Token data={tokenSection} />
+        <Token />
       </div>
     </BreakpointProvider>
   );

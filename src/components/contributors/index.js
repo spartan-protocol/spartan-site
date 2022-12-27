@@ -1,4 +1,5 @@
 import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
 import { useInView } from "react-intersection-observer";
 
 const Contributors = ({ data }) => {
@@ -7,7 +8,43 @@ const Contributors = ({ data }) => {
 
   // There are two sources of data. We are pulling contributors from Spartan Protocol github,
   // and also we are adding manually contributors on contentful
-  const { githubContributors, contentfulContributors, contributorsTextData } = data;
+  const { githubContributors } = data;
+
+  const contentfulContributors = [
+    {
+      name: "Ronni",
+      link: "https://twitter.com/ronnirais",
+      avatar: {
+        static: <StaticImage className="sm:w-12 w-8" src="../../assets/images/ronni_avatar.jpg" alt="ronni" />
+      },
+      order: 2,
+    },
+    {
+      name: "Thespis",
+      link: "https://twitter.com/ReidyPhillip",
+      avatar: {
+        static: <StaticImage className="sm:w-12 w-8" src="../../assets/images/thespis_avatar.jpg" alt="thespis" />
+      },
+      order: 0,
+    },
+    {
+      name: "Samus",
+      link: "https://github.com/SamusElderg",
+      avatar: {
+        static: <StaticImage className="sm:w-12 w-8" src="../../assets/images/samus_avatar.png" alt="samus" />
+      },
+      overwrite: "SamusElderg",
+      order: 1,
+    },
+    {
+      name: "AJ",
+      link: "https://twitter.com/CryptoSpartan83",
+      avatar: {
+        static: <StaticImage className="sm:w-12 w-8" src="../../assets/images/aj_avatar.jpg" alt="aj" />
+      },
+    },
+  ];
+
   // we are pulling github data from couple of repos - we need to merge the data to one array
   let ghData = [];
   let ghLogins = [];
@@ -45,7 +82,7 @@ const Contributors = ({ data }) => {
 
   // If the overwrite key is set for the entry in contentful, that means that we should hide matched
   // github entry because we will be replacing it.
-  const overwrite = contentfulContributors.map((item) => item.node.overwrite);
+  const overwrite = contentfulContributors.map((item) => item.overwrite);
 
   const githubContributorsData = ghData
     .filter((item) => item.node.type === "User" && !overwrite.includes(item.node.login))
@@ -68,23 +105,23 @@ const Contributors = ({ data }) => {
   const contentfulSmallerContributors = [];
   const contentfulContributorsData = contentfulContributors
     .map((item) => {
-      if (item.node.order === null) {
+      item = { node: { ...item } };
+      if (item.order === null) {
         contentfulSmallerContributors.push(item);
         return null;
       }
       return item;
     })
-    .filter(item => item !== null)
+    .filter((item) => item !== null)
     .sort((a, b) => a.node.order - b.node.order);
 
   const contributorsData = [...contentfulContributorsData, ...githubContributorsData];
-
 
   // push smaller contributors to the middle of the team array
   if (contentfulSmallerContributors.length) {
     //get the middle of the array
     const arrayMiddle = Math.floor(contributorsData.length / 2);
-    contentfulSmallerContributors.forEach(item => {
+    contentfulSmallerContributors.forEach((item) => {
       contributorsData.splice(arrayMiddle, 0, item);
     });
   }
@@ -97,7 +134,8 @@ const Contributors = ({ data }) => {
         <div className={`flex flex-col justify-center items-center w-2/6 sm:w-3/12 px-2 my-4`} key={name}>
           <a className="hover:opacity-60 transition" href={link} target="_blank" rel="noreferrer">
             <div className={`opacity-0 ${teamVisible && "animate-fadeInLeft"}`} style={animationDelay(3)}>
-              <img alt="Avatar" className="sm:w-12 w-8 rounded mb-1" src={avatar.file.url} />
+              {avatar?.static ? avatar?.static :  <img alt="Avatar" className="sm:w-12 w-8 rounded mb-1" src={avatar.file.url} />}
+             
             </div>
           </a>
           <a className="hover:opacity-60 transition" href={link} target="_blank" rel="noreferrer">
@@ -115,12 +153,12 @@ const Contributors = ({ data }) => {
       <div className="flex flex-col flex-1 h-full items-center justify-center">
         <div className="flex flex-col flex-1 justify-center sm:justify-evenly relative z-10 justify">
           <div ref={textRef} className="font-saira text-white text-center px-8">
-            <h1 className={`text-4xl sm:text-4xl mb-2 opacity-0 font-medium ${textVisible && "animate-fadeIn"}`}>{contributorsTextData.title}</h1>
+            <h1 className={`text-4xl sm:text-4xl mb-2 opacity-0 font-medium ${textVisible && "animate-fadeIn"}`}>By the community. For the community.</h1>
             <div
               className={`w-11/12 sm:w-6/12 text-sm sm:text-md mx-auto text-white subtitle opacity-0 ${textVisible && "animate-fadeIn"}`}
               style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}
             >
-              <span className="bg-black bg-opacity-50 rounded">{typeof contributorsTextData.description == "object" ? contributorsTextData.description.description : contributorsTextData.description}</span>
+              <span className="bg-black bg-opacity-50 rounded">100% open source project that is built, maintained and governed by the community.</span>
             </div>
           </div>
           <div
