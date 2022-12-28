@@ -79,7 +79,7 @@ const LandingPage = () => {
   }, [showTradeButtons]);
 
   return (
-    <div id="home" className="h-screen max-h-screen overflow-y-autobg-black justify-center snap-start">
+    <div id="home" className="h-screen max-h-screen overflow-y-auto bg-black justify-center snap-start">
       <div className="flex flex-1 h-full items-center justify-center">
         <div className="flex flex-col flex-1 justify-center items-center content">
           <div className="flex justify-center items-center landing-text-container">
