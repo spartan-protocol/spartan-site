@@ -34,7 +34,7 @@ const Video = () => {
           <div className="flex flex-col w-44 md:w-64 items-center mt-6">
             <div
               className={`w-32 md:w-44 h-12 mb-1 opacity-0 ${partnersVisible && "animate-fadeIn"}`}
-              style={{ animationDelay: "500ms", WebkitAnimationDelay: "500ms" }}
+              style={{ height: "34px", animationDelay: "500ms", WebkitAnimationDelay: "500ms" }}
             >
               <StaticImage src="../../assets/brands/certik.png" alt="certikLogo" />
             </div>
@@ -53,7 +53,7 @@ const Video = () => {
           <div className="flex flex-col w-44 md:w-64 items-center">
             <div
               className={`w-32 md:w-44 h-12 mb-1 opacity-0 ${partnersVisible && "animate-fadeIn"}`}
-              style={{ animationDelay: "500ms", WebkitAnimationDelay: "500ms" }}
+              style={{ height: "34px", animationDelay: "500ms", WebkitAnimationDelay: "500ms" }}
             >
               <StaticImage src="../../assets/brands/arena.png" alt="c4renaLogo" />
             </div>
@@ -72,7 +72,7 @@ const Video = () => {
           <div className="flex flex-col w-44 md:w-64 items-center">
             <div
               className={`w-32 md:w-44 h-12 mb-1 opacity-0 ${partnersVisible && "animate-fadeIn"}`}
-              style={{ animationDelay: "500ms", WebkitAnimationDelay: "500ms" }}
+              style={{ height: "34px", animationDelay: "500ms", WebkitAnimationDelay: "500ms" }}
             >
               <StaticImage src="../../assets/brands/immunefi.png" alt="immunefiLogo" />
             </div>

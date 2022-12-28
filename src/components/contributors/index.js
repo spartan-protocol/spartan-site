@@ -15,7 +15,7 @@ const Contributors = ({ data }) => {
       name: "Ronni",
       link: "https://twitter.com/ronnirais",
       avatar: {
-        static: <StaticImage className="sm:w-12 w-8" src="../../assets/images/ronni_avatar.jpg" alt="ronni" />
+        static: <StaticImage style={{margin: "auto"}} className="sm:w-12 w-8" src="../../assets/images/ronni_avatar.jpg" alt="ronni" />
       },
       order: 2,
     },
@@ -23,7 +23,7 @@ const Contributors = ({ data }) => {
       name: "Thespis",
       link: "https://twitter.com/ReidyPhillip",
       avatar: {
-        static: <StaticImage className="sm:w-12 w-8" src="../../assets/images/thespis_avatar.jpg" alt="thespis" />
+        static: <StaticImage style={{margin: "auto"}} className="sm:w-12 w-8" src="../../assets/images/thespis_avatar.jpg" alt="thespis" />
       },
       order: 0,
     },
@@ -31,7 +31,7 @@ const Contributors = ({ data }) => {
       name: "Samus",
       link: "https://github.com/SamusElderg",
       avatar: {
-        static: <StaticImage className="sm:w-12 w-8" src="../../assets/images/samus_avatar.png" alt="samus" />
+        static: <StaticImage style={{margin: "auto"}} className="sm:w-12 w-8" src="../../assets/images/samus_avatar.png" alt="samus" />
       },
       overwrite: "SamusElderg",
       order: 1,
@@ -40,7 +40,7 @@ const Contributors = ({ data }) => {
       name: "AJ",
       link: "https://twitter.com/CryptoSpartan83",
       avatar: {
-        static: <StaticImage className="sm:w-12 w-8" src="../../assets/images/aj_avatar.jpg" alt="aj" />
+        static: <StaticImage style={{margin: "auto"}} className="sm:w-12 w-8" src="../../assets/images/aj_avatar.jpg" alt="aj" />
       },
     },
   ];
@@ -139,7 +139,7 @@ const Contributors = ({ data }) => {
             </div>
           </a>
           <a className="hover:opacity-60 transition" href={link} target="_blank" rel="noreferrer">
-            <div className={`sm:text-sm text-xs opacity-0 ${teamVisible && "animate-fadeInLeft"}`} style={animationDelay(4)}>
+            <div className={`sm:text-sm whitespace-pre text-xs opacity-0 ${teamVisible && "animate-fadeInLeft"}`} style={animationDelay(4)}>
               {name}
             </div>
           </a>
@@ -163,7 +163,7 @@ const Contributors = ({ data }) => {
           </div>
           <div
             ref={teamRef}
-            className="flex flex-col justify-center sm:mt-0 mt-8 max-h-35 sm:max-h-6/12 overflow-y-auto sm:w-8/12 w-11/12 mx-auto font-saira text-white text-center px-8 list scrollbar-thin"
+            className="flex flex-col justify-center sm:mt-0 mt-8 max-h-30 sm:max-h-6/12 overflow-y-auto sm:w-8/12 w-full mx-auto font-saira text-white text-center px-8 list scrollbar-thin"
           >
             <div className={`flex flex-wrap justify-center max-h-full`}>{contributorsHtml()}</div>
           </div>

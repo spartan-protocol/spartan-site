@@ -65,6 +65,22 @@ canvas {
   max-height: 330px;
 }
 
+// Fix for some old/weird devices
+@media (max-width: 352px) {
+  h1, .text-4xl {
+    font-size: 1.6rem !important;
+  }
+  .partners {
+    max-height: 250px;
+  }
+  #contributors {
+    .px-8 {
+      padding-left: 1rem !important;
+      padding-right: 1rem;
+    }
+  }
+}
+
 // LANDSCAPE MODE
 @media (max-height: 420px) {
   h1 {
@@ -167,7 +183,6 @@ canvas {
 
     .w-32 {
       width: 8rem !important;
-      height: auto !important
     }
   }
 
