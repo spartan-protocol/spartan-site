@@ -17,7 +17,7 @@ const Contributors = ({ data }) => {
       avatar: {
         static: <StaticImage style={{margin: "auto"}} className="sm:w-12 w-8" src="../../assets/images/ronni_avatar.jpg" alt="ronni" />
       },
-      order: 2,
+      order: 3,
     },
     {
       name: "Thespis",
@@ -25,7 +25,7 @@ const Contributors = ({ data }) => {
       avatar: {
         static: <StaticImage style={{margin: "auto"}} className="sm:w-12 w-8" src="../../assets/images/thespis_avatar.jpg" alt="thespis" />
       },
-      order: 0,
+      order: 1,
     },
     {
       name: "Samus",
@@ -34,7 +34,7 @@ const Contributors = ({ data }) => {
         static: <StaticImage style={{margin: "auto"}} className="sm:w-12 w-8" src="../../assets/images/samus_avatar.png" alt="samus" />
       },
       overwrite: "SamusElderg",
-      order: 1,
+      order: 2,
     },
     {
       name: "AJ",
@@ -106,7 +106,7 @@ const Contributors = ({ data }) => {
   const contentfulContributorsData = contentfulContributors
     .map((item) => {
       item = { node: { ...item } };
-      if (item.order === null) {
+      if (!item.node.order || item.node.order === null) {
         contentfulSmallerContributors.push(item);
         return null;
       }
