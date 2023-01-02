@@ -12,9 +12,9 @@ const Pool = () => {
     <div id="pool" className="h-screen max-h-screen overflow-y-auto bg-black justify-center snap-start">
       <div className="flex flex-col flex-1 h-full items-center justify-center">
         <div className="flex flex-1 flex-col md:flex-row justify-center items-center relative z-10 space-y-8 md:space-y-0 space-x-0 md:space-x-12">
-          <div ref={textRef} className="font-saira text-white px-2 md:px-8 text-center md:text-left font-medium">
-            <h1 className={`text-4xl sm:text-5xl mb-2 opacity-0 ${textVisible && "animate-fadeIn"}`}>Provide Liquidity.</h1>
-            <h1 className={`text-4xl sm:text-5xl mb-2 opacity-0 ${textVisible && "animate-fadeIn"}`}>No middle-man.</h1>
+          <div ref={textRef} className="font-saira text-white px-2 md:px-8 text-center md:text-left">
+            <h1 className={`text-4xl sm:text-5xl mb-2 opacity-0 font-medium ${textVisible && "animate-fadeIn"}`}>Provide Liquidity.</h1>
+            <h1 className={`text-4xl sm:text-5xl mb-2 opacity-0 font-medium ${textVisible && "animate-fadeIn"}`}>No middle-man.</h1>
             <div
               className={`text-sm sm:text-md ml-1 text-white opacity-0 ${textVisible && "animate-fadeIn"}`}
               style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}

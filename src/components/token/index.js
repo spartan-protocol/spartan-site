@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import Footer from "../footer";
 import SpartaIcon from "../../assets/icons/spartav2_white.svg";
 import GetSupply from "../../helpers/GetSupply";
+import TradeButtons from "../tradeButtons";
 
 const animationDelay = (delay) => ({ animationDelay: `${delay * 75}ms`, WebkitAnimationDelay: `${delay * 75}ms` });
 
@@ -91,10 +92,10 @@ const Token = () => {
   return (
     <div
       id="token"
-      className="h-screen max-h-screen overflow-y-auto bg-black justify-center flex sm:w-10/12 sm:mx-auto flex-col snap-start pt-16 font-saira font-medium"
+      className="h-screen max-h-screen overflow-y-auto overflow-x-hidden bg-black justify-center flex sm:w-10/12 sm:mx-auto flex-col snap-start pt-16 font-saira font-medium"
     >
       <div className="flex flex-col flex-1 items-center justify-center token-container">
-        <div className="flex flex-col text-white relative z-10 space-y-6 md:space-y-8 w-full">
+        <div className="flex flex-col text-white relative z-20 space-y-6 md:space-y-8 w-full">
           <div className={`flex justify-center`}>
             <h1 className={`text-4xl sm:text-6xl mb-2 opacity-0 ${bulletPointsVisible && "animate-fadeIn"}`} style={animationDelay(2)}>
               The SPARTA Token
@@ -111,21 +112,10 @@ const Token = () => {
               </div>
             </div>
           </div>
-          <div className="mx-auto w-48 button">
-            <a
-              className="w-full mb-2"
-              href="https://dapp.spartanprotocol.org/swap?asset1=0x0000000000000000000000000000000000000000&asset2=0x3910db0600eA925F63C36DdB1351aB6E2c6eb102"
-            >
-              <div
-                className={`p-1.5 px-4 rounded-md text-center hover:opacity-70 font-semibold drop-shadow-white transition border border-white tracking-[.2em] opacity-0 ${
-                  bulletPointsVisible && "animate-fadeIn md:animate-fadeInBottom"
-                }`}
-                style={animationDelay(9)}
-              >
-                Buy SPARTA
-              </div>
-            </a>
+          <div className={`flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg landing-image-container z-20 relative opacity-0 ${bulletPointsVisible && "animate-fadeInBottom"}`} style={animationDelay(9)} >
+            <TradeButtons />
           </div>
+
         </div>
       </div>
       <Footer />

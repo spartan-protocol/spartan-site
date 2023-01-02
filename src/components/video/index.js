@@ -41,7 +41,7 @@ const Video = () => {
             <div className={`opacity-0 ${partnersVisible && "animate-fadeIn"}`} style={{ animationDelay: "600ms", WebkitAnimationDelay: "600ms" }}>
               Smart Contract Audit
             </div>
-            <a href="https://github.com/spartan-protocol/resources/blob/master/certik-audit.pdf" className="cursor-pointer hover:opacity-60 transition">
+            <a href="https://github.com/spartan-protocol/resources/blob/master/certik-audit.pdf" className="cursor-pointer font-sairaCondensed hover:opacity-60 transition">
               <div
                 className={`p-1 px-5 border mt-5 opacity-0 ${partnersVisible && "animate-fadeIn"}`}
                 style={{ animationDelay: "700ms", WebkitAnimationDelay: "700ms" }}
@@ -60,7 +60,7 @@ const Video = () => {
             <div className={`opacity-0 ${partnersVisible && "animate-fadeIn"}`} style={{ animationDelay: "600ms", WebkitAnimationDelay: "600ms" }}>
               $98k Audit Contest
             </div>
-            <a href="https://code423n4.com/reports/2021-07-spartan/" className="cursor-pointer hover:opacity-60 transition">
+            <a href="https://code423n4.com/reports/2021-07-spartan/" className="cursor-pointer font-sairaCondensed hover:opacity-60 transition">
               <div
                 className={`p-1 px-5 border mt-5 opacity-0 ${partnersVisible && "animate-fadeIn"}`}
                 style={{ animationDelay: "700ms", WebkitAnimationDelay: "700ms" }}
@@ -79,7 +79,7 @@ const Video = () => {
             <div className={`opacity-0 ${partnersVisible && "animate-fadeIn"}`} style={{ animationDelay: "600ms", WebkitAnimationDelay: "600ms" }}>
               Rewards up to $100k
             </div>
-            <a href="https://immunefi.com/bounty/spartanprotocol/" className="cursor-pointer hover:opacity-60 transition">
+            <a href="https://immunefi.com/bounty/spartanprotocol/" className="cursor-pointer font-sairaCondensed hover:opacity-60 transition">
               <div
                 className={`p-1 px-5 border mt-5 opacity-0 ${partnersVisible && "animate-fadeIn"}`}
                 style={{ animationDelay: "700ms", WebkitAnimationDelay: "700ms" }}
