@@ -15,7 +15,7 @@ const Contributors = ({ data }) => {
       name: "Ronni",
       link: "https://twitter.com/ronnirais",
       avatar: {
-        static: <StaticImage style={{margin: "auto"}} className="sm:w-12 w-8" src="../../assets/images/ronni_avatar.jpg" alt="ronni" />
+        static: <StaticImage style={{margin: "auto"}} className="sm:w-12 w-8 rounded mb-1" src="../../assets/images/ronni_avatar.jpg" alt="ronni" />
       },
       order: 3,
     },
@@ -23,7 +23,7 @@ const Contributors = ({ data }) => {
       name: "Thespis",
       link: "https://twitter.com/ReidyPhillip",
       avatar: {
-        static: <StaticImage style={{margin: "auto"}} className="sm:w-12 w-8" src="../../assets/images/thespis_avatar.jpg" alt="thespis" />
+        static: <StaticImage style={{margin: "auto"}} className="sm:w-12 w-8 rounded mb-1" src="../../assets/images/thespis_avatar.jpg" alt="thespis" />
       },
       order: 1,
     },
@@ -31,7 +31,7 @@ const Contributors = ({ data }) => {
       name: "AJ",
       link: "https://twitter.com/CryptoSpartan83",
       avatar: {
-        static: <StaticImage style={{margin: "auto"}} className="sm:w-12 w-8" src="../../assets/images/aj_avatar.jpg" alt="aj" />
+        static: <StaticImage style={{margin: "auto"}} className="sm:w-12 w-8 rounded mb-1" src="../../assets/images/aj_avatar.jpg" alt="aj" />
       },
     },
   ];
@@ -140,7 +140,7 @@ const Contributors = ({ data }) => {
   };
 
   return (
-    <div id="contributors" className="h-screen max-h-screen overflow-y-auto bg-black justify-center snap-start">
+    <div id="contributors" className="h-screen max-h-screen xl:max-w-6xl xl:mx-auto overflow-y-auto bg-black justify-center snap-start">
       <div className="flex flex-col flex-1 h-full items-center justify-center">
         <div className="flex flex-col flex-1 justify-center relative z-10">
           <div ref={textRef} className="font-saira text-white text-center px-8">
