@@ -28,15 +28,6 @@ const Contributors = ({ data }) => {
       order: 1,
     },
     {
-      name: "Samus",
-      link: "https://github.com/SamusElderg",
-      avatar: {
-        static: <StaticImage style={{margin: "auto"}} className="sm:w-12 w-8" src="../../assets/images/samus_avatar.png" alt="samus" />
-      },
-      overwrite: "SamusElderg",
-      order: 2,
-    },
-    {
       name: "AJ",
       link: "https://twitter.com/CryptoSpartan83",
       avatar: {
@@ -131,15 +122,15 @@ const Contributors = ({ data }) => {
       const { name, avatar, link } = item.node;
       const animationDelay = (delay) => ({ animationDelay: `${(index + delay) * 75}ms`, WebkitAnimationDelay: `${(index + delay) * 75}ms` });
       return (
-        <div className={`flex flex-col justify-center items-center w-2/6 sm:w-3/12 px-2 my-4`} key={name}>
+        <div className={`flex flex-col justify-center items-center w-20 px-2 my-4`} key={name}>
           <a className="hover:opacity-60 transition" href={link} target="_blank" rel="noreferrer">
             <div className={`opacity-0 ${teamVisible && "animate-fadeInLeft"}`} style={animationDelay(3)}>
               {avatar?.static ? avatar?.static :  <img alt="Avatar" className="sm:w-12 w-8 rounded mb-1" src={avatar.file.url} />}
              
             </div>
           </a>
-          <a className="hover:opacity-60 transition" href={link} target="_blank" rel="noreferrer">
-            <div className={`sm:text-sm whitespace-pre text-xs opacity-0 ${teamVisible && "animate-fadeInLeft"}`} style={animationDelay(4)}>
+          <a className="hover:opacity-60 transition block w-full" href={link} target="_blank" rel="noreferrer">
+            <div className={`sm:text-sm text-xs opacity-0 truncate ${teamVisible && "animate-fadeInLeft"}`} style={animationDelay(4)}>
               {name}
             </div>
           </a>
@@ -151,7 +142,7 @@ const Contributors = ({ data }) => {
   return (
     <div id="contributors" className="h-screen max-h-screen overflow-y-auto bg-black justify-center snap-start">
       <div className="flex flex-col flex-1 h-full items-center justify-center">
-        <div className="flex flex-col flex-1 justify-center sm:justify-evenly relative z-10 justify">
+        <div className="flex flex-col flex-1 justify-center relative z-10">
           <div ref={textRef} className="font-saira text-white text-center px-8">
             <h1 className={`text-4xl sm:text-4xl mb-2 opacity-0 font-medium ${textVisible && "animate-fadeIn"}`}>By the community. For the community.</h1>
             <div
@@ -163,7 +154,7 @@ const Contributors = ({ data }) => {
           </div>
           <div
             ref={teamRef}
-            className="flex flex-col justify-center sm:mt-0 mt-8 max-h-30 sm:max-h-6/12 overflow-y-auto sm:w-8/12 w-full mx-auto font-saira text-white text-center px-8 list scrollbar-thin"
+            className="flex flex-col justify-center mt-6 max-h-30 sm:max-h-6/12 overflow-y-auto sm:w-8/12 w-full mx-auto font-saira text-white text-center px-8 list scrollbar-thin"
           >
             <div className={`flex flex-wrap justify-center max-h-full`}>{contributorsHtml()}</div>
           </div>
