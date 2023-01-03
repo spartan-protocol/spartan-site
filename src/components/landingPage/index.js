@@ -21,7 +21,7 @@ const LandingPage = () => {
           <div className="flex justify-center items-center">
             <div className="flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg landing-image-container">
               <div className="w-full sm:w-96 my-6 md:my-12 xl:my-14 image-container">
-                <StaticImage src="../../assets/images/combined.png" alt="mobileView" />
+                <StaticImage className="lg:w-48 md:w-32 w-28" src="../../assets/images/sp_iphone_mockup.png" alt="mobileView" />
               </div>
               <div className="w-full flex flex-col button-container">
                 <a className="mb-2 relative z-10 w-full animate-fadeInLeft" href="https://dapp.spartanprotocol.org/">
