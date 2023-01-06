@@ -4,7 +4,7 @@ import TradeButtons from "../tradeButtons";
 
 const LandingPage = () => {
   return (
-    <div id="home" className="h-screen max-h-screen overflow-y-auto bg-black justify-center snap-start">
+    <div id="home" className="h-screen overflow-y-auto bg-black justify-center snap-start">
       <div className="flex flex-1 h-full items-center justify-center">
         <div className="flex flex-col flex-1 justify-center items-center content">
           <div className="flex justify-center items-center landing-text-container">
@@ -20,8 +20,8 @@ const LandingPage = () => {
           </div>
           <div className="flex justify-center items-center">
             <div className="flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg landing-image-container">
-              <div className="w-full sm:w-96 my-6 md:my-12 xl:my-14 image-container">
-                <StaticImage className="lg:w-48 md:w-32 w-28" src="../../assets/images/sp_iphone_mockup.png" alt="mobileView" />
+              <div className="w-full sm:w-96 my-6 md:my-10 2xl:my-14 image-container">
+                <StaticImage className="2xl:w-48 lg:w-36 md:w-32 w-28" src="../../assets/images/sp_iphone_mockup.png" alt="mobileView" />
               </div>
               <div className="w-full flex flex-col button-container">
                 <a className="mb-2 relative z-10 w-full animate-fadeInLeft" href="https://dapp.spartanprotocol.org/">
