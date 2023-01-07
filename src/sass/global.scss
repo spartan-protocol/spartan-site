@@ -65,6 +65,17 @@ canvas {
   max-height: 330px;
 }
 
+// fix for ios mobile devices
+@media (max-width: 600px) {
+  .h-screen {
+    height: -webkit-fill-available;
+  }
+  
+  .min-h-screen {
+    min-height: -webkit-fill-available;
+  }
+}
+
 // Fix for some old/weird devices
 @media (max-width: 352px) {
   h1, .text-4xl {
@@ -219,6 +230,10 @@ canvas {
 
   .hidden-landscape {
     display: none;
+  }
+
+  .landscape-image {
+    width: 8rem;
   }
 
   .landscape-margin {

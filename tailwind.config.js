@@ -11,6 +11,7 @@ module.exports = {
       fontFamily: {
         saira: ["Saira", "sans-serif"],
         sairaCondensed: ["Saira Condensed", "sans-serif"],
+        blinker: ["Blinker", "sans-serif"],
       },
       keyframes: {
         fadeIn: {

@@ -23,6 +23,8 @@ import "@fontsource/saira-condensed/800.css";
 import "@fontsource/nunito/400.css"; // Used general/body
 import "@fontsource/nunito/700.css"; // Used hero title
 import "@fontsource/nunito/800.css"; // Used hero title
+
+import "@fontsource/blinker/400.css";
 import "../sass/global.scss";
 
 import Navbar from "../components/navbar";

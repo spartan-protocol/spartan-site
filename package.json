@@ -16,6 +16,7 @@
     "test-build": "gatsby build --prefix-paths"
   },
   "dependencies": {
+    "@fontsource/blinker": "^4.5.9",
     "@fontsource/montserrat": "^4.5.13",
     "@fontsource/nunito": "^4.5.11",
     "@fontsource/saira": "^4.5.11",

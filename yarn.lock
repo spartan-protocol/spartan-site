@@ -1544,6 +1544,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/blinker@^4.5.9":
+  version "4.5.9"
+  resolved "https://registry.yarnpkg.com/@fontsource/blinker/-/blinker-4.5.9.tgz#8f53a8b370a2033a4eed988d8de95fafcab0266a"
+  integrity sha512-I+sqAYO+P0XpJv5eGq4XUEfRsT+nlWJI8sB9THhE3WDfvj08jl/lwmmD4m1R+ah+4pfslzHrUob57P+KK5s0pA==
+
 "@fontsource/montserrat@^4.5.13":
   version "4.5.13"
   resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-4.5.13.tgz#58f12419c05e131b09ab17e9181aa24fb9c84b3a"
