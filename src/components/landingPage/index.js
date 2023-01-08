@@ -4,7 +4,7 @@ import TradeButtons from "../tradeButtons";
 
 const LandingPage = () => {
   return (
-    <div id="home" className="h-screen my-auto overflow-y-auto bg-black justify-center snap-start">
+    <div id="home" className="h-screen bg-black justify-center snap-start">
       <div className="flex flex-1 h-full items-center justify-center">
         <div className="flex flex-col flex-1 justify-center items-center content">
           <div className="flex justify-center items-center landing-text-container">
