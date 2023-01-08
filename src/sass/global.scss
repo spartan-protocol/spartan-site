@@ -81,6 +81,12 @@ canvas {
   }
 }
 
+@media (max-width: 600px) {
+  .h-screen {
+    height: calc(var(--vh, 1vh) * 100);
+  }  
+}
+
 // LANDSCAPE MODE
 @media (max-height: 420px) {
   h1 {

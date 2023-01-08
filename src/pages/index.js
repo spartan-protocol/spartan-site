@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {useEffect} from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 import "@fontsource/saira/100.css"; //
@@ -42,6 +42,28 @@ import { BreakpointProvider } from "../providers/breakpoint";
 import { defaultFallbackInView } from "react-intersection-observer";
 
 const IndexPage = () => {
+
+  useEffect(() => {
+    var customViewportCorrectionVariable = 'vh';
+
+    function setViewportProperty(doc) {
+      var prevClientHeight;
+      var customVar = '--' + ( customViewportCorrectionVariable || 'vh' );
+      function handleResize() {
+        var clientHeight = doc.clientHeight;
+        if (clientHeight === prevClientHeight) return;
+        requestAnimationFrame(function updateViewportHeight(){
+          doc.style.setProperty(customVar, (clientHeight * 0.01) + 'px');
+          prevClientHeight = clientHeight;
+        });
+      }
+      handleResize();
+      return handleResize;
+    }
+    window.addEventListener('resize', setViewportProperty(document.documentElement));
+    setViewportProperty(document.documentElement)
+  }, []);
+
   const heroData = useStaticQuery(
     graphql`
       query {
