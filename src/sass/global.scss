@@ -80,11 +80,14 @@ canvas {
     }
   }
 }
-
+.custom-h-screen {
+  height: 100vh
+}
 @media (max-width: 600px) {
-  .h-screen {
-    height: calc(var(--vh, 1vh) * 100);
-  }  
+  .custom-h-screen {
+    height: calc(var(--custom-vh, 1vh) * 100);
+  }
+   
 }
 
 // LANDSCAPE MODE
@@ -119,7 +122,10 @@ canvas {
         text-align: left !important;
         width: 32%;
         margin-top: 0 !important;
-
+        margin-left: 0 !important;
+        &.md\:px-8 {
+          padding: 0;
+        }
         >div {
           margin-left: 0 !important;
         }

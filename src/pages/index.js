@@ -44,13 +44,13 @@ import { defaultFallbackInView } from "react-intersection-observer";
 const IndexPage = () => {
 
   useEffect(() => {
-    var customViewportCorrectionVariable = 'vh';
+    const customViewportCorrectionVariable = 'custom-vh';
 
     function setViewportProperty(doc) {
-      var prevClientHeight;
-      var customVar = '--' + ( customViewportCorrectionVariable || 'vh' );
+      let prevClientHeight;
+      const customVar = '--' + ( customViewportCorrectionVariable );
       function handleResize() {
-        var clientHeight = doc.clientHeight;
+        const clientHeight = doc.clientHeight;
         if (clientHeight === prevClientHeight) return;
         requestAnimationFrame(function updateViewportHeight(){
           doc.style.setProperty(customVar, (clientHeight * 0.01) + 'px');
