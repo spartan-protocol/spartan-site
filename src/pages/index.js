@@ -44,7 +44,7 @@ import { defaultFallbackInView } from "react-intersection-observer";
 const IndexPage = () => {
 
   useEffect(() => {
-    const customViewportCorrectionVariable = 'custom-vh';
+    const customViewportCorrectionVariable = 'customvh';
 
     function setViewportProperty(doc) {
       let prevClientHeight;

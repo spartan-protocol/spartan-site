@@ -85,9 +85,11 @@ canvas {
 }
 @media (max-width: 600px) {
   .custom-h-screen {
-    height: calc(var(--custom-vh, 1vh) * 100);
+    height: calc(var(--customvh, 1vh) * 100);
   }
-   
+   .animated-bg {
+    height:120vh
+   }
 }
 
 // LANDSCAPE MODE
@@ -122,8 +124,7 @@ canvas {
         text-align: left !important;
         width: 32%;
         margin-top: 0 !important;
-        margin-left: 0 !important;
-        padding: 0;
+
         >div {
           margin-left: 0 !important;
         }
