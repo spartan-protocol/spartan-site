@@ -48,7 +48,7 @@ const IndexPage = () => {
 
     function setViewportProperty(doc) {
       let prevClientHeight;
-      const customVar = '--' + ( customViewportCorrectionVariable );
+      const customVar = '--' + customViewportCorrectionVariable;
       function handleResize() {
         const clientHeight = doc.clientHeight;
         if (clientHeight === prevClientHeight) return;
