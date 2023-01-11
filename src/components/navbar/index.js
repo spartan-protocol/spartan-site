@@ -17,15 +17,15 @@ const Navbar = () => {
   };
 
   const openNav = () => {
-    document.getElementById("myNav").classList.replace("animate-[disappearLeft_0.4s_ease_none]", "animate-[fadeInLeft_0.4s_ease_none]");
-    document.getElementById("myNav").style.display = "flex";
+    document.getElementById("mobileNav").classList.replace("animate-[disappearLeft_0.4s_ease_none]", "animate-[fadeInLeft_0.4s_ease_none]");
+    document.getElementById("mobileNav").style.display = "flex";
     setNavOpen(true);
   };
 
   const closeNav = () => {
-    document.getElementById("myNav").classList.replace("animate-[fadeInLeft_0.4s_ease_none]", "animate-[disappearLeft_0.4s_ease_none]");
+    document.getElementById("mobileNav").classList.replace("animate-[fadeInLeft_0.4s_ease_none]", "animate-[disappearLeft_0.4s_ease_none]");
     setTimeout(() => {
-      document.getElementById("myNav").style.display = "none";
+      document.getElementById("mobileNav").style.display = "none";
     }, 400);
     setNavOpen(false);
   };

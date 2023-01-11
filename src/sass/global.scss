@@ -80,17 +80,6 @@ canvas {
     }
   }
 }
-.custom-h-screen {
-  height: 100vh
-}
-@media (max-width: 600px) {
-  .custom-h-screen {
-    height: calc(var(--customvh, 1vh) * 100);
-  }
-   .animated-bg {
-    height:120vh
-   }
-}
 
 // LANDSCAPE MODE
 @media (max-height: 420px) {

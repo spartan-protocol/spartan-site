@@ -44,24 +44,27 @@ import { defaultFallbackInView } from "react-intersection-observer";
 const IndexPage = () => {
 
   useEffect(() => {
-    const customViewportCorrectionVariable = 'customvh';
-
-    function setViewportProperty(doc) {
+    // fix for landing page height on some mobile browsers (ios)
+    function setLandingPageHeight(doc) {
       let prevClientHeight;
-      const customVar = '--' + customViewportCorrectionVariable;
       function handleResize() {
         const clientHeight = doc.clientHeight;
         if (clientHeight === prevClientHeight) return;
         requestAnimationFrame(function updateViewportHeight(){
-          doc.style.setProperty(customVar, (clientHeight * 0.01) + 'px');
+          document.querySelector("#home").style.height = clientHeight - (clientHeight * 0.01) + 'px'
           prevClientHeight = clientHeight;
         });
       }
       handleResize();
       return handleResize;
     }
-    window.addEventListener('resize', setViewportProperty(document.documentElement));
-    setViewportProperty(document.documentElement)
+    const { clientWidth } = document.documentElement;
+    const { userAgent } = navigator;
+    const iOs = (userAgent && userAgent.match(/iPhone|iPad|iPod/i));
+    if (clientWidth < 600 && iOs) {
+      window.addEventListener('resize', setLandingPageHeight(document.documentElement));
+      setLandingPageHeight(document.documentElement)
+    }
   }, []);
 
   const heroData = useStaticQuery(
