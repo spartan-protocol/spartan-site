@@ -9655,13 +9655,6 @@ postcss-value-parser@^4.0.0, postcss-value-parser@^4.0.2, postcss-value-parser@^
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz#723c09920836ba6d3e5af019f92bc0971c02e514"
   integrity sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==
 
-postcss-viewport-height-correction@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/postcss-viewport-height-correction/-/postcss-viewport-height-correction-1.1.1.tgz#1364d89bb5cd3c88009ca237c24efdc4aef9023e"
-  integrity sha512-kphLY4Au76uD2t4lZZ6mAExx6uMiWsxbFiBckfSJJZAbBZZGPNbLSztaDRSI4JUdKpK4JBbscfyKJf03Y2ae0g==
-  dependencies:
-    postcss "^7.0.18"
-
 postcss@7.0.36:
   version "7.0.36"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.36.tgz#056f8cffa939662a8f5905950c07d5285644dfcb"
@@ -9671,7 +9664,7 @@ postcss@7.0.36:
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-postcss@^7.0.18, postcss@^7.0.27:
+postcss@^7.0.27:
   version "7.0.39"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.39.tgz#9624375d965630e2e1f2c02a935c82a59cb48309"
   integrity sha512-yioayjNbHn6z1/Bywyb2Y4s3yvDAeXGOyxqD+LnVOinq6Mdmd++SW2wUNVzavyyHxd6+DxzWGIuosg6P1Rj8uA==
