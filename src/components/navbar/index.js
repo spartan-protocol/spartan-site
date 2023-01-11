@@ -15,9 +15,13 @@ const Navbar = () => {
       openNav();
     }
   };
-
-  const html = document.querySelector("html");
-  const { userAgent } = navigator;
+  let html, userAgent;
+  if (typeof document !== 'undefined') {
+    html = document.querySelector("html");
+  }
+  if (typeof navigator !== 'undefined') {
+    userAgent = navigator.userAgent;
+  }
   const iOs = (userAgent && userAgent.match(/iPhone|iPad|iPod/i));
 
   const openNav = () => {
