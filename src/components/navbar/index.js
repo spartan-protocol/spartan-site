@@ -16,13 +16,33 @@ const Navbar = () => {
     }
   };
 
+  const html = document.querySelector("html");
+  const { userAgent } = navigator;
+  const iOs = (userAgent && userAgent.match(/iPhone|iPad|iPod/i));
+
   const openNav = () => {
     document.getElementById("mobileNav").classList.replace("animate-[disappearLeft_0.4s_ease_none]", "animate-[fadeInLeft_0.4s_ease_none]");
     document.getElementById("mobileNav").style.display = "flex";
+
+    // fix for scrolling issues on safari based browsers
+    // we need to disable smooth scrolling in order to make it work
+    if (iOs) {
+      html.style.scrollBehavior = "auto";
+      html.style.scrollSnapType = "none"
+    }
     setNavOpen(true);
   };
 
   const closeNav = () => {
+    // fix for scrolling issues on safari based browsers
+    // enable it a while after the nav is hidden
+    if(iOs) {
+      setTimeout(() => {
+        html.style.scrollBehavior = "smooth";
+        html.style.scrollSnapType = "y mandatory"
+      }, 200);
+    }
+   
     document.getElementById("mobileNav").classList.replace("animate-[fadeInLeft_0.4s_ease_none]", "animate-[disappearLeft_0.4s_ease_none]");
     setTimeout(() => {
       document.getElementById("mobileNav").style.display = "none";
