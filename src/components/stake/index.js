@@ -31,7 +31,7 @@ const Stake = () => {
           <div>
             <div className="flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg">
               <a ref={button1Ref} className={`w-full mb-2 opacity-0 ${button1Visible && "animate-fadeInLeft"}`} href="https://dapp.spartanprotocol.org/vaults">
-                <div className="bg-white p-1.5 text-black rounded w-full h-full hover:opacity-70 transition button">Stake DaoVault</div>
+                <div className="bg-white p-1.5 text-black rounded w-full h-full hover:opacity-70 transition button smPhoneButtons">Stake DaoVault</div>
               </a>
               <a
                 ref={button2Ref}
@@ -39,7 +39,7 @@ const Stake = () => {
                 style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}
                 href="https://docs.spartanprotocol.org/#/staking"
               >
-                <div className="rounded bg-black border border-white p-1.5 text-white w-full h-full hover:opacity-70 transition button">Read More</div>
+                <div className="rounded bg-black border border-white p-1.5 text-white w-full h-full hover:opacity-70 transition button smPhoneButtons">Read More</div>
               </a>
             </div>
           </div>

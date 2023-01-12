@@ -95,14 +95,17 @@ const Token = () => {
       className="h-screen min-h-screen overflow-y-auto overflow-x-hidden bg-black justify-center flex sm:w-10/12 sm:mx-auto flex-col snap-start pt-16 font-saira font-medium"
     >
       <div className="flex flex-col flex-1 items-center justify-center token-container">
-        <div className="flex flex-col text-white relative z-20 space-y-6 md:space-y-8 w-full">
+        <div className="flex flex-col text-white relative z-20 w-full">
           <div className={`flex justify-center`}>
             <h1 className={`text-4xl sm:text-6xl mb-2 opacity-0 ${bulletPointsVisible && "animate-fadeIn"}`} style={animationDelay(2)}>
               The SPARTA Token
             </h1>
           </div>
-          <div className={`logo flex justify-center opacity-0 ${bulletPointsVisible && "animate-fadeIn"}`} style={animationDelay(3)}>
-            <SpartaIcon className="text-transparent w-20 h-20 md:w-24 md:h-24" />
+          <div
+            className={`logo flex justify-center my-6 md:my-8 smPhoneDistroMargin opacity-0 ${bulletPointsVisible && "animate-fadeIn"}`}
+            style={animationDelay(3)}
+          >
+            <SpartaIcon className="text-transparent w-20 h-20 md:w-24 md:h-24 smPhoneImage2" />
           </div>
           <div className="flex flex-col justify-center sm:flex-row pb-2 md:my-0 bullet-points">
             <TokenSupply bulletPointsVisible={bulletPointsVisible} />
@@ -112,10 +115,14 @@ const Token = () => {
               </div>
             </div>
           </div>
-          <div className={`flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg landing-image-container z-20 relative opacity-0 ${bulletPointsVisible && "animate-fadeInBottom"}`} style={animationDelay(9)} >
+          <div
+            className={`flex flex-col items-center mt-6 md:mt-8 smPhoneDistroMargin2 w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg landing-image-container z-20 relative opacity-0 ${
+              bulletPointsVisible && "animate-fadeInBottom"
+            }`}
+            style={animationDelay(9)}
+          >
             <TradeButtons />
           </div>
-
         </div>
       </div>
       <Footer />

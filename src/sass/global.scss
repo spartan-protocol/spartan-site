@@ -67,7 +67,8 @@ canvas {
 
 // Fix for some old/weird devices
 @media (max-width: 352px) {
-  h1, .text-4xl {
+  h1,
+  .text-4xl {
     font-size: 1.6rem !important;
   }
   .partners {
@@ -81,8 +82,55 @@ canvas {
   }
 }
 
+// Weird super-landscape area
+@media (min-width: 768px) and (min-height: 480px) and (max-height: 638px) {
+  #token {
+    .logo {
+      display: none;
+    }
+  }
+}
+
+@media (min-height: 480px) and (max-height: 600px) {
+  .smPhoneImage {
+    width: 6rem;
+  }
+  .smPhoneImage2 {
+    width: 4rem;
+    height: 4rem;
+  }
+  .smPhoneButtons {
+    padding: 0.25rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+  .smPhoneImageContainer {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .smPhoneSecurityItem {
+    width: 10rem;
+  }
+  .smPhoneText {
+    font-size: 0.75rem;
+    line-height: 0.8rem;
+  }
+  .smPhoneDistroMargin {
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .smPhoneDistroMargin2 {
+    margin-top: 0.5rem;
+  }
+  #video {
+    iframe {
+      height: 90px;
+    }
+  }
+}
+
 // LANDSCAPE MODE
-@media (max-height: 420px) {
+@media (min-width: 340px) and (max-height: 479px) {
   h1 {
     font-size: 1.25rem !important;
   }
@@ -93,7 +141,7 @@ canvas {
 
   #home {
     .button-container {
-      margin-top: 30px
+      margin-top: 30px;
     }
   }
 
@@ -106,15 +154,15 @@ canvas {
   #pool,
   #swap,
   #stake {
-    >div>div {
+    > div > div {
       flex-direction: row !important;
 
-      >div {
+      > div {
         text-align: left !important;
         width: 32%;
         margin-top: 0 !important;
 
-        >div {
+        > div {
           margin-left: 0 !important;
         }
       }
@@ -141,11 +189,11 @@ canvas {
 
     .list {
       margin-top: 4px;
-      max-height: 25% !important
+      max-height: 25% !important;
     }
 
     .subtitle {
-      width: 100% !important
+      width: 100% !important;
     }
 
     h1 {
@@ -168,7 +216,7 @@ canvas {
 
   #video {
     iframe {
-      height: 120px !important
+      height: 120px !important;
     }
 
     .partners {
@@ -177,8 +225,8 @@ canvas {
       max-height: 200px;
     }
 
-    a>div {
-      margin-top: 2px !important
+    a > div {
+      margin-top: 2px !important;
     }
 
     .w-32 {
@@ -201,7 +249,7 @@ canvas {
     .button {
       margin-bottom: -6px;
       margin-top: 10px;
-      transform: scale(0.6)
+      transform: scale(0.6);
     }
 
     .logo {
@@ -209,7 +257,7 @@ canvas {
     }
 
     .token-container {
-      >div {
+      > div {
         justify-content: center;
       }
 
@@ -228,7 +276,7 @@ canvas {
   .landscape-margin {
     margin: -25px !important;
   }
-  .landing-text-container  {
+  .landing-text-container {
     width: 30%;
     > div > div {
       width: auto !important;
@@ -236,7 +284,7 @@ canvas {
   }
   .landing-image-container {
     flex-direction: row;
-    width:100%;
+    width: 100%;
     .image-container {
       width: 250px !important;
     }
@@ -244,5 +292,4 @@ canvas {
       width: 60%;
     }
   }
-
 }

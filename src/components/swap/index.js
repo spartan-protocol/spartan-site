@@ -10,7 +10,7 @@ const Swap = () => {
   return (
     <div id="swap" className="h-screen max-h-screen overflow-y-auto bg-black justify-center snap-start">
       <div className="flex flex-col flex-1 h-full items-center justify-center">
-        <div className="flex flex-col md:flex-row flex-1 items-center justify-center relative z-10 space-y-8 md:space-y-0 space-x-0 md:space-x-12">
+        <div className="flex flex-col md:flex-row flex-1 items-center justify-center relative z-10 space-y-8 md:space-y-0 space-x-0 md:space-x-12 smPhoneContainer">
           <div ref={textRef} className="font-saira text-white text-center md:text-left">
             <h1 className={`text-4xl sm:text-5xl mb-2 opacity-0 font-medium" ${textVisible && "animate-fadeIn"}`}>Swap tokens.</h1>
             <h1 className={`text-4xl sm:text-5xl mb-2 opacity-0 font-medium" ${textVisible && "animate-fadeIn"}`}>Fast and private.</h1>
@@ -27,7 +27,7 @@ const Swap = () => {
           <div>
             <div className="flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg">
               <a ref={button1Ref} className={`w-full mb-2 opacity-0 ${button1Visible && "animate-fadeInLeft"}`} href="https://dapp.spartanprotocol.org/swap">
-                <div className="bg-white p-1.5 text-black rounded w-full h-full hover:opacity-70 transition button">Swap</div>
+                <div className="bg-white p-1.5 text-black rounded w-full h-full hover:opacity-70 transition button smPhoneButtons">Swap</div>
               </a>
               <a
                 ref={button2Ref}
@@ -35,7 +35,7 @@ const Swap = () => {
                 style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}
                 href="https://docs.spartanprotocol.org/#/swap"
               >
-                <div className="rounded bg-black border border-white p-1.5 text-white w-full h-full hover:opacity-70 transition button">Read More</div>
+                <div className="rounded bg-black border border-white p-1.5 text-white w-full h-full hover:opacity-70 transition button smPhoneButtons">Read More</div>
               </a>
             </div>
           </div>

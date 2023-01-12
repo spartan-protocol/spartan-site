@@ -20,12 +20,17 @@ const LandingPage = () => {
           </div>
           <div className="flex justify-center items-center">
             <div className="flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg landing-image-container">
-              <div className="w-full sm:w-96 my-6 md:my-10 2xl:my-14 image-container">
-                <StaticImage className="2xl:w-48 lg:w-36 md:w-32 w-36 landscape-image opacity-0 animate-fadeInBottom" src="../../assets/images/sp_iphone_mockup.png" alt="mobileView"  style={{ animationDelay: "300ms", WebkitAnimationDelay: "300ms" }} />
+              <div className="w-full sm:w-96 my-6 md:my-10 2xl:my-14 image-container smPhoneImageContainer">
+                <StaticImage
+                  className="2xl:w-48 w-36 landscape-image opacity-0 animate-fadeInBottom smPhoneImage"
+                  src="../../assets/images/sp_iphone_mockup.png"
+                  alt="mobileView"
+                  style={{ animationDelay: "300ms", WebkitAnimationDelay: "300ms" }}
+                />
               </div>
               <div className="w-full flex flex-col button-container">
                 <a className="mb-2 relative z-10 w-full animate-fadeInLeft" href="https://dapp.spartanprotocol.org/">
-                  <div className="bg-white w-full h-full p-1.5 text-black rounded hover:opacity-70 transition button">Open DApp</div>
+                  <div className="bg-white w-full h-full p-1.5 text-black rounded hover:opacity-70 transition button smPhoneButtons">Open DApp</div>
                 </a>
                 <TradeButtons />
               </div>

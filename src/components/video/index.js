@@ -30,18 +30,21 @@ const Video = () => {
             WATCH: Spartan Protocol in a nutshell.
           </div>
         </div>
-        <div ref={partnersRef} className="flex flex-wrap justify-center md:mt-0 space-y-6 partners">
-          <div className="flex flex-col w-44 md:w-64 items-center mt-6">
+        <div ref={partnersRef} className="flex flex-wrap justify-center mt-2 partners smPhoneText">
+          <div className="flex flex-col w-44 my-3 md:w-64 items-center text-center smPhoneSecurityItem">
             <div
-              className={`w-32 md:w-44 h-12 mb-1 opacity-0 ${partnersVisible && "animate-fadeIn"}`}
-              style={{ height: "34px", animationDelay: "500ms", WebkitAnimationDelay: "500ms" }}
+              className={`mb-2 opacity-0 ${partnersVisible && "animate-fadeIn"}`}
+              style={{ animationDelay: "500ms", WebkitAnimationDelay: "500ms" }}
             >
-              <StaticImage src="../../assets/brands/certik.png" alt="certikLogo" />
+              <StaticImage src="../../assets/brands/certik.png" alt="certikLogo" height={33} />
             </div>
             <div className={`opacity-0 ${partnersVisible && "animate-fadeIn"}`} style={{ animationDelay: "600ms", WebkitAnimationDelay: "600ms" }}>
               Smart Contract Audit
             </div>
-            <a href="https://github.com/spartan-protocol/resources/blob/master/certik-audit.pdf" className="cursor-pointer font-sairaCondensed hover:opacity-60 transition">
+            <a
+              href="https://github.com/spartan-protocol/resources/blob/master/certik-audit.pdf"
+              className="cursor-pointer font-sairaCondensed hover:opacity-60 transition"
+            >
               <div
                 className={`p-1 px-5 border mt-5 opacity-0 ${partnersVisible && "animate-fadeIn"}`}
                 style={{ animationDelay: "700ms", WebkitAnimationDelay: "700ms" }}
@@ -50,12 +53,12 @@ const Video = () => {
               </div>
             </a>
           </div>
-          <div className="flex flex-col w-44 md:w-64 items-center">
+          <div className="flex flex-col w-44 my-3 md:w-64 items-center text-center smPhoneSecurityItem">
             <div
-              className={`w-32 md:w-44 h-12 mb-1 opacity-0 ${partnersVisible && "animate-fadeIn"}`}
-              style={{ height: "34px", animationDelay: "500ms", WebkitAnimationDelay: "500ms" }}
+              className={`mb-2 opacity-0 ${partnersVisible && "animate-fadeIn"}`}
+              style={{ animationDelay: "500ms", WebkitAnimationDelay: "500ms" }}
             >
-              <StaticImage src="../../assets/brands/arena.png" alt="c4renaLogo" />
+              <StaticImage src="../../assets/brands/arena.png" alt="c4renaLogo" height={33} />
             </div>
             <div className={`opacity-0 ${partnersVisible && "animate-fadeIn"}`} style={{ animationDelay: "600ms", WebkitAnimationDelay: "600ms" }}>
               $98k Audit Contest
@@ -69,15 +72,15 @@ const Video = () => {
               </div>
             </a>
           </div>
-          <div className="flex flex-col w-44 md:w-64 items-center">
+          <div className="flex flex-col w-44 my-3 md:w-64 items-center text-center smPhoneSecurityItem">
             <div
-              className={`w-32 md:w-44 h-12 mb-1 opacity-0 ${partnersVisible && "animate-fadeIn"}`}
-              style={{ height: "34px", animationDelay: "500ms", WebkitAnimationDelay: "500ms" }}
+              className={`mb-2 opacity-0 ${partnersVisible && "animate-fadeIn"}`}
+              style={{ animationDelay: "500ms", WebkitAnimationDelay: "500ms" }}
             >
-              <StaticImage src="../../assets/brands/immunefi.png" alt="immunefiLogo" />
+              <StaticImage src="../../assets/brands/immunefi.png" alt="immunefiLogo" height={33} />
             </div>
             <div className={`opacity-0 ${partnersVisible && "animate-fadeIn"}`} style={{ animationDelay: "600ms", WebkitAnimationDelay: "600ms" }}>
-              Rewards up to $100k
+              Rewards up to $10k
             </div>
             <a href="https://immunefi.com/bounty/spartanprotocol/" className="cursor-pointer font-sairaCondensed hover:opacity-60 transition">
               <div

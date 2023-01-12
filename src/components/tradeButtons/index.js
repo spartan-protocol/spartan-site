@@ -71,7 +71,7 @@ const TradeButtons = () => {
   useEffect(() => {
     if (tradingButtonsRef.current) tradingButtonsRef.current.style = "";
     const inViewport = isInViewport(tradingButtonsRef);
-    const margin = 40 * data.length + 2
+    const margin = 40 * data.length + 2;
     if (!inViewport) {
       setTradeButtonsUp(true);
       if (tradingButtonsRef.current) tradingButtonsRef.current.style = `margin-top: -${margin}px;`;
@@ -80,26 +80,26 @@ const TradeButtons = () => {
 
   return (
     <>
-    <div
-      className="w-full relative z-20 opacity-0 animate-fadeInLeft button flex flex-col"
-      onFocus={() => setShowTradeButtons(true)}
-      onMouseOver={() => !blockTradeButtons && setShowTradeButtons(true)}
-      onMouseOut={() => setBlockTradeButtons(false)}
-      onClick={() => tradeButtonOnClick()}
-      style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}
-    >
-      <div>
-        <div
-          className={`${
-            showTradeButtons ? "bg-spartan-red" : "bg-black"
-          } select-none cursor-pointer border border-white p-1.5 text-white w-full h-full rounded transition button`}
-        >
-          Trade SPARTA
+      <div
+        className="w-full relative z-20 opacity-0 animate-fadeInLeft button flex flex-col"
+        onFocus={() => setShowTradeButtons(true)}
+        onMouseOver={() => !blockTradeButtons && setShowTradeButtons(true)}
+        onMouseOut={() => setBlockTradeButtons(false)}
+        onClick={() => tradeButtonOnClick()}
+        style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}
+      >
+        <div>
+          <div
+            className={`${
+              showTradeButtons ? "bg-spartan-red" : "bg-black"
+            } select-none cursor-pointer border border-white p-1.5 text-white w-full h-full rounded transition button smPhoneButtons`}
+          >
+            Trade SPARTA
+          </div>
         </div>
+        {tradeButtons()}
       </div>
-      {tradeButtons()}
-    </div>
-    {showTradeButtons && <div className="fixed w-full h-full top-0 left-0" onClick={() => setShowTradeButtons(false)}></div>}
+      {showTradeButtons && <div className="fixed w-full h-full top-0 left-0" onClick={() => setShowTradeButtons(false)}></div>}
     </>
   );
 };
