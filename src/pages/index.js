@@ -22,6 +22,7 @@ import Token from "../components/token";
 import Contributors from "../components/contributors";
 import LandingPage from "../components/landingPage";
 import Video from "../components/video";
+import Friends from "../components/friends";
 import SocialIcons from "../components/footer/socialIcons";
 import BackgroundAnimation from "../components/backgroundAnimation";
 import { BreakpointProvider } from "../providers/breakpoint";
@@ -127,6 +128,7 @@ const IndexPage = () => {
         {/* <Tokenomics /> is for mobile devices only */}
         <Tokenomics />
         <Token />
+        <Friends />
       </div>
     </BreakpointProvider>
   );
