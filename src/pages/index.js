@@ -1,30 +1,16 @@
 import React, {useEffect} from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-import "@fontsource/saira/100.css"; //
-import "@fontsource/saira/200.css"; //
-import "@fontsource/saira/300.css";
-import "@fontsource/saira/400.css";
-import "@fontsource/saira/500.css";
-import "@fontsource/saira/600.css"; //
-import "@fontsource/saira/700.css"; //
-import "@fontsource/saira/800.css";
-import "@fontsource/saira/900.css";
+import "@fontsource/saira/400.css"; // .font-saira
+import "@fontsource/saira/500.css"; // .font-saira .font-medium
+import "@fontsource/saira/600.css"; // .font-saira .font-semibold
+import "@fontsource/saira/700.css"; // .font-saira .font-bold
 
-import "@fontsource/saira-condensed/100.css"; //
-import "@fontsource/saira-condensed/200.css"; //
-import "@fontsource/saira-condensed/300.css";
-import "@fontsource/saira-condensed/400.css";
-import "@fontsource/saira-condensed/500.css";
-import "@fontsource/saira-condensed/600.css"; //
-import "@fontsource/saira-condensed/700.css"; //
-import "@fontsource/saira-condensed/800.css";
+import "@fontsource/saira-condensed/400.css"; // .font-sairaCondensed
+import "@fontsource/saira-condensed/600.css"; // .font-sairaCondensed .font-semibold
 
-import "@fontsource/nunito/400.css"; // Used general/body
-import "@fontsource/nunito/700.css"; // Used hero title
-import "@fontsource/nunito/800.css"; // Used hero title
+import "@fontsource/blinker/400.css"; // .font-blinker
 
-import "@fontsource/blinker/400.css";
 import "../sass/global.scss";
 
 import Navbar from "../components/navbar";
