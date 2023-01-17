@@ -5,7 +5,7 @@ import SpartaIcon from "../../assets/icons/spartav2.svg";
 import MobileMenu from "../mobileMenu";
 import useFontFaceObserver from "use-font-face-observer";
 
-const Navbar = () => {
+const Navbar = ({ isMetaMask }) => {
   const [navOpen, setNavOpen] = React.useState(false);
 
   const toggleNav = () => {
@@ -16,13 +16,13 @@ const Navbar = () => {
     }
   };
   let html, userAgent;
-  if (typeof document !== 'undefined') {
+  if (typeof document !== "undefined") {
     html = document.querySelector("html");
   }
-  if (typeof navigator !== 'undefined') {
+  if (typeof navigator !== "undefined") {
     userAgent = navigator.userAgent;
   }
-  const iOs = (userAgent && userAgent.match(/iPhone|iPad|iPod/i));
+  const iOs = userAgent && userAgent.match(/iPhone|iPad|iPod/i);
 
   const openNav = () => {
     document.getElementById("mobileNav").classList.replace("animate-[disappearLeft_0.4s_ease_none]", "animate-[fadeInLeft_0.4s_ease_none]");
@@ -32,7 +32,7 @@ const Navbar = () => {
     // we need to disable smooth scrolling in order to make it work
     if (iOs) {
       html.style.scrollBehavior = "auto";
-      html.style.scrollSnapType = "none"
+      html.style.scrollSnapType = "none";
     }
     setNavOpen(true);
   };
@@ -40,13 +40,13 @@ const Navbar = () => {
   const closeNav = () => {
     // fix for scrolling issues on safari based browsers
     // enable it a while after the nav is hidden
-    if(iOs) {
+    if (iOs) {
       setTimeout(() => {
         html.style.scrollBehavior = "smooth";
-        html.style.scrollSnapType = "y mandatory"
+        html.style.scrollSnapType = "y mandatory";
       }, 200);
     }
-   
+
     document.getElementById("mobileNav").classList.replace("animate-[fadeInLeft_0.4s_ease_none]", "animate-[disappearLeft_0.4s_ease_none]");
     setTimeout(() => {
       document.getElementById("mobileNav").style.display = "none";
@@ -69,7 +69,12 @@ const Navbar = () => {
     return (
       (isFontLoaded || fontLoadedTimeout) && (
         <div className="animate-[fadeIn_0.3s_ease_forwards]">
-          <a className="hover:opacity-60 transition" href="https://dapp.spartanprotocol.org">
+          <a
+            className="hover:opacity-60 transition"
+            href="https://dapp.spartanprotocol.org"
+            target={isMetaMask ? undefined : "_blank"}
+            rel={isMetaMask ? undefined : "noreferrer"}
+          >
             <div className={`text-gray-300 border text-xs px-1 font-sairaCondensed ${isFontLoaded && "scale-x-110"}`}>
               <div className="px-1 scale-y-80 font-thin tracking-[.2em] whitespace-nowrap">OPEN DAPP</div>
             </div>
@@ -111,7 +116,7 @@ const Navbar = () => {
       </div>
       <div className="flex items-center justify-end w-36 sm:pr-2">
         <div className="mr-1 sm:hidden block">
-          <div className="p-2 mr-2" onClick={() => toggleNav()}>
+          <div className="p-2 mr-2" onClick={() => toggleNav()} onKeyDown={() => toggleNav()} role="button" tabIndex={0}>
             <MenuIcon className="cursor-pointer transition hover:opacity-60" height="20px" fill="white" />
           </div>
           <MobileMenu closeNav={closeNav} />

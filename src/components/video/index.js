@@ -32,10 +32,7 @@ const Video = () => {
         </div>
         <div ref={partnersRef} className="flex flex-wrap justify-center mt-2 partners smPhoneText">
           <div className="flex flex-col w-44 my-3 md:w-64 items-center text-center smPhoneSecurityItem">
-            <div
-              className={`mb-2 opacity-0 ${partnersVisible && "animate-fadeIn"}`}
-              style={{ animationDelay: "500ms", WebkitAnimationDelay: "500ms" }}
-            >
+            <div className={`mb-2 opacity-0 ${partnersVisible && "animate-fadeIn"}`} style={{ animationDelay: "500ms", WebkitAnimationDelay: "500ms" }}>
               <StaticImage src="../../assets/brands/certik.png" alt="certikLogo" height={33} />
             </div>
             <div className={`opacity-0 ${partnersVisible && "animate-fadeIn"}`} style={{ animationDelay: "600ms", WebkitAnimationDelay: "600ms" }}>
@@ -44,6 +41,8 @@ const Video = () => {
             <a
               href="https://github.com/spartan-protocol/resources/blob/master/certik-audit.pdf"
               className="cursor-pointer font-sairaCondensed hover:opacity-60 transition"
+              target="_blank"
+              rel="noreferrer"
             >
               <div
                 className={`p-1 px-5 border mt-5 opacity-0 ${partnersVisible && "animate-fadeIn"}`}
@@ -54,16 +53,18 @@ const Video = () => {
             </a>
           </div>
           <div className="flex flex-col w-44 my-3 md:w-64 items-center text-center smPhoneSecurityItem">
-            <div
-              className={`mb-2 opacity-0 ${partnersVisible && "animate-fadeIn"}`}
-              style={{ animationDelay: "500ms", WebkitAnimationDelay: "500ms" }}
-            >
+            <div className={`mb-2 opacity-0 ${partnersVisible && "animate-fadeIn"}`} style={{ animationDelay: "500ms", WebkitAnimationDelay: "500ms" }}>
               <StaticImage src="../../assets/brands/arena.png" alt="c4renaLogo" height={33} />
             </div>
             <div className={`opacity-0 ${partnersVisible && "animate-fadeIn"}`} style={{ animationDelay: "600ms", WebkitAnimationDelay: "600ms" }}>
               $98k Audit Contest
             </div>
-            <a href="https://code423n4.com/reports/2021-07-spartan/" className="cursor-pointer font-sairaCondensed hover:opacity-60 transition">
+            <a
+              href="https://code423n4.com/reports/2021-07-spartan/"
+              className="cursor-pointer font-sairaCondensed hover:opacity-60 transition"
+              target="_blank"
+              rel="noreferrer"
+            >
               <div
                 className={`p-1 px-5 border mt-5 opacity-0 ${partnersVisible && "animate-fadeIn"}`}
                 style={{ animationDelay: "700ms", WebkitAnimationDelay: "700ms" }}
@@ -73,16 +74,18 @@ const Video = () => {
             </a>
           </div>
           <div className="flex flex-col w-44 my-3 md:w-64 items-center text-center smPhoneSecurityItem">
-            <div
-              className={`mb-2 opacity-0 ${partnersVisible && "animate-fadeIn"}`}
-              style={{ animationDelay: "500ms", WebkitAnimationDelay: "500ms" }}
-            >
+            <div className={`mb-2 opacity-0 ${partnersVisible && "animate-fadeIn"}`} style={{ animationDelay: "500ms", WebkitAnimationDelay: "500ms" }}>
               <StaticImage src="../../assets/brands/immunefi.png" alt="immunefiLogo" height={33} />
             </div>
             <div className={`opacity-0 ${partnersVisible && "animate-fadeIn"}`} style={{ animationDelay: "600ms", WebkitAnimationDelay: "600ms" }}>
               Rewards up to $10k
             </div>
-            <a href="https://immunefi.com/bounty/spartanprotocol/" className="cursor-pointer font-sairaCondensed hover:opacity-60 transition">
+            <a
+              href="https://immunefi.com/bounty/spartanprotocol/"
+              className="cursor-pointer font-sairaCondensed hover:opacity-60 transition"
+              target="_blank"
+              rel="noreferrer"
+            >
               <div
                 className={`p-1 px-5 border mt-5 opacity-0 ${partnersVisible && "animate-fadeIn"}`}
                 style={{ animationDelay: "700ms", WebkitAnimationDelay: "700ms" }}

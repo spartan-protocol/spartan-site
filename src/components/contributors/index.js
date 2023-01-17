@@ -48,17 +48,19 @@ const Contributors = ({ data }) => {
       ghData = [...githubContributors[repo]];
     } else {
       // add up contributions if we have a duplicate, will need that for sorting later
-      githubContributors[repo].forEach((item) => {
-        if (ghLogins.includes(item.node.login)) {
-          ghData.forEach((el, index) => {
-            if (item.node.login === el.node.login) {
-              ghData[index].node.contributions += item.node.contributions;
+      for (let i = 0; i < githubContributors[repo].length; i++) {
+        if (ghLogins.includes(githubContributors[repo][i].node.login)) {
+          for (let ii = 0; ii < ghData.length; ii++) {
+            if (githubContributors[repo][i].node.login === ghData[ii].node.login) {
+              ghData[ii].node.contributions += githubContributors[repo][i].node.contributions;
             }
-          });
+          }
         }
-      });
+      }
+
       // filter out duplicates from next item
-      const data = githubContributors[repo].filter((item) => !ghLogins.includes(item.node.login));
+      const _ghLogins = ghLogins;
+      const data = githubContributors[repo].filter((item) => !_ghLogins.includes(item.node.login));
       // get only logins (user names) from next array
       const logins = data.map((item) => item.node.login);
       // add new logins to the array

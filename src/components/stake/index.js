@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 
 import StakeIcon from "../../assets/icons/staking.svg";
 
-const Stake = () => {
+const Stake = ({ isMetaMask }) => {
   const { ref: textRef, inView: textVisible } = useInView({ threshold: 0.3, triggerOnce: true });
   const { ref: button1Ref, inView: button1Visible } = useInView({ threshold: 0.3, triggerOnce: true });
   const { ref: button2Ref, inView: button2Visible } = useInView({ threshold: 0.3, triggerOnce: true });
@@ -30,7 +30,13 @@ const Stake = () => {
           </div>
           <div>
             <div className="flex flex-col items-center w-52 mx-auto text-center font-sairaCondensed font-semibold text-lg">
-              <a ref={button1Ref} className={`w-full mb-2 opacity-0 ${button1Visible && "animate-fadeInLeft"}`} href="https://dapp.spartanprotocol.org/vaults">
+              <a
+                ref={button1Ref}
+                className={`w-full mb-2 opacity-0 ${button1Visible && "animate-fadeInLeft"}`}
+                href="https://dapp.spartanprotocol.org/vaults"
+                target={isMetaMask ? undefined : "_blank"}
+                rel={isMetaMask ? undefined : "noreferrer"}
+              >
                 <div className="bg-white p-1.5 text-black rounded w-full h-full hover:opacity-70 transition button smPhoneButtons">Stake DaoVault</div>
               </a>
               <a
@@ -38,8 +44,12 @@ const Stake = () => {
                 className={`w-full opacity-0 ${button2Visible && "animate-fadeInLeft"}`}
                 style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}
                 href="https://docs.spartanprotocol.org/#/staking"
+                target="_blank"
+                rel="noreferrer"
               >
-                <div className="rounded bg-black border border-white p-1.5 text-white w-full h-full hover:opacity-70 transition button smPhoneButtons">Read More</div>
+                <div className="rounded bg-black border border-white p-1.5 text-white w-full h-full hover:opacity-70 transition button smPhoneButtons">
+                  Read More
+                </div>
               </a>
             </div>
           </div>

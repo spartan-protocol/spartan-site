@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect, useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 import "@fontsource/blinker/400.css"; // .font-blinker
@@ -29,6 +29,7 @@ import { BreakpointProvider } from "../providers/breakpoint";
 import { defaultFallbackInView } from "react-intersection-observer";
 
 const IndexPage = () => {
+  const [isMetaMask, setisMetaMask] = useState(false);
 
   useEffect(() => {
     // fix for landing page height on some mobile browsers (ios)
@@ -37,8 +38,8 @@ const IndexPage = () => {
       function handleResize() {
         const clientHeight = doc.clientHeight;
         if (clientHeight === prevClientHeight) return;
-        requestAnimationFrame(function updateViewportHeight(){
-          document.querySelector("#home").style.height = clientHeight - (clientHeight * 0.01) + 'px'
+        requestAnimationFrame(function updateViewportHeight() {
+          document.querySelector("#home").style.height = clientHeight - clientHeight * 0.01 + "px";
           prevClientHeight = clientHeight;
         });
       }
@@ -47,10 +48,13 @@ const IndexPage = () => {
     }
     const { clientWidth } = document.documentElement;
     const { userAgent } = navigator;
-    const iOs = (userAgent && userAgent.match(/iPhone|iPad|iPod/i));
+    const iOs = userAgent && userAgent.match(/iPhone|iPad|iPod/i);
     if (clientWidth < 600 && iOs) {
-      window.addEventListener('resize', setLandingPageHeight(document.documentElement));
-      setLandingPageHeight(document.documentElement)
+      window.addEventListener("resize", setLandingPageHeight(document.documentElement));
+      setLandingPageHeight(document.documentElement);
+    }
+    if (clientWidth < 415 && window?.ethereum?.isMetaMask) {
+      setisMetaMask(true);
     }
   }, []);
 
@@ -115,19 +119,19 @@ const IndexPage = () => {
 
   return (
     <BreakpointProvider queries={mediaQueries}>
-      <Navbar />
+      <Navbar isMetaMask={isMetaMask} />
       <BackgroundAnimation />
       <div className="wrapper">
         <SocialIcons />
-        <LandingPage />
-        <Swap />
-        <Pool />
-        <Stake />
+        <LandingPage isMetaMask={isMetaMask} />
+        <Swap isMetaMask={isMetaMask} />
+        <Pool isMetaMask={isMetaMask} />
+        <Stake isMetaMask={isMetaMask} />
         <Video />
         <Contributors data={{ githubContributors }} />
         {/* <Tokenomics /> is for mobile devices only */}
         <Tokenomics />
-        <Token />
+        <Token isMetaMask={isMetaMask} />
         <Friends />
       </div>
     </BreakpointProvider>

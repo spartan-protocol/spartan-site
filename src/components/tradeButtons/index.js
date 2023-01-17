@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
-const TradeButtons = () => {
+const TradeButtons = ({ isMetaMask }) => {
   const [showTradeButtons, setShowTradeButtons] = useState(false);
   const [blockTradeButtons, setBlockTradeButtons] = useState(false);
   const [tradeButtonsUp, setTradeButtonsUp] = useState(false);
@@ -33,13 +33,16 @@ const TradeButtons = () => {
         onMouseOut={() => setShowTradeButtons(false)}
         onBlur={() => setShowTradeButtons(false)}
         onClick={() => setShowTradeButtons(false)}
+        onKeyDown={() => setShowTradeButtons(false)}
+        role="button"
+        tabIndex={0}
       >
         {!tradeButtonsUp && <div className="h-10 cursor-pointer"></div>}
         {data.map((el, i) => (
           <a
             href={el.url}
-            target="_blank"
-            rel="noreferrer"
+            target={el.label === "Spartan DEX" && isMetaMask ? undefined : "_blank"}
+            rel={el.label === "Spartan DEX" && isMetaMask ? undefined : "noreferrer"}
             className={`border ${borderClass(i)} p-1.5 scale-x-105 bg-black text-white cursor-pointer select-none hover:bg-spartan-red z-30 transition`}
             key={el.label}
           >
@@ -76,7 +79,7 @@ const TradeButtons = () => {
       setTradeButtonsUp(true);
       if (tradingButtonsRef.current) tradingButtonsRef.current.style = `margin-top: -${margin}px;`;
     } else setTradeButtonsUp(false);
-  }, [showTradeButtons]);
+  }, [showTradeButtons, data.length]);
 
   return (
     <>
@@ -86,7 +89,11 @@ const TradeButtons = () => {
         onMouseOver={() => !blockTradeButtons && setShowTradeButtons(true)}
         onMouseOut={() => setBlockTradeButtons(false)}
         onClick={() => tradeButtonOnClick()}
+        onBlur={() => null}
+        onKeyDown={() => tradeButtonOnClick()}
         style={{ animationDelay: "200ms", WebkitAnimationDelay: "200ms" }}
+        role="button"
+        tabIndex={0}
       >
         <div>
           <div
@@ -99,7 +106,16 @@ const TradeButtons = () => {
         </div>
         {tradeButtons()}
       </div>
-      {showTradeButtons && <div className="fixed w-full h-full top-0 left-0" onClick={() => setShowTradeButtons(false)}></div>}
+      {showTradeButtons && (
+        <div
+          className="fixed w-full h-full top-0 left-0"
+          aria-label="close trade buttons"
+          onClick={() => setShowTradeButtons(false)}
+          role="button"
+          tabIndex={0}
+          onKeyDown={() => setShowTradeButtons(false)}
+        ></div>
+      )}
     </>
   );
 };

@@ -2,7 +2,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import TradeButtons from "../tradeButtons";
 
-const LandingPage = () => {
+const LandingPage = ({ isMetaMask }) => {
   return (
     <div id="home" className="h-screen bg-black justify-center snap-start">
       <div className="flex flex-1 h-full items-center justify-center">
@@ -29,10 +29,15 @@ const LandingPage = () => {
                 />
               </div>
               <div className="w-full flex flex-col button-container">
-                <a className="mb-2 relative z-10 w-full animate-fadeInLeft" href="https://dapp.spartanprotocol.org/">
+                <a
+                  className="mb-2 relative z-10 w-full animate-fadeInLeft"
+                  href="https://dapp.spartanprotocol.org/"
+                  target={isMetaMask ? undefined : "_blank"}
+                  rel={isMetaMask ? undefined : "noreferrer"}
+                >
                   <div className="bg-white w-full h-full p-1.5 text-black rounded hover:opacity-70 transition button smPhoneButtons">Open DApp</div>
                 </a>
-                <TradeButtons />
+                <TradeButtons isMetaMask={isMetaMask} />
               </div>
             </div>
           </div>

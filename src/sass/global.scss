@@ -81,10 +81,22 @@ canvas {
   }
 }
 
+// Fixes for short devices (i4/i5 etc)
+@media (max-height: 600px) {
+  .mobile-menu-cont {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  .mobile-menu-item {
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+  }
+}
+
 // FIX FOR 14" WINDOWS LAPTOPS
 @media (min-height: 601px) and (max-height: 650px) {
   .smPhoneImage {
-    width: 6.5rem
+    width: 6.5rem;
   }
   #player {
     height: 200px;

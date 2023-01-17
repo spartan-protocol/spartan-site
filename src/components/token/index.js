@@ -86,7 +86,7 @@ const TokenSupply = ({ bulletPointsVisible }) => {
   );
 };
 
-const Token = () => {
+const Token = ({ isMetaMask }) => {
   const { ref: bulletPointsRef, inView: bulletPointsVisible } = useInView({ threshold: 0.3, triggerOnce: true });
 
   return (
@@ -121,7 +121,7 @@ const Token = () => {
             }`}
             style={animationDelay(9)}
           >
-            <TradeButtons />
+            <TradeButtons isMetaMask={isMetaMask} />
           </div>
         </div>
       </div>
