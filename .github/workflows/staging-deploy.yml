@@ -13,9 +13,6 @@ jobs:
         run: yarn install
       - name: 📦 Build Project
         run: yarn build
-        env:
-          CONTENTFUL_ID: ${{ secrets.CONTENTFUL_ID }}
-          CONTENTFUL_DELIVERY_API: ${{ secrets.CONTENTFUL_DELIVERY_API }}
       - name: 🚀 Deploy to Netlify
         uses: netlify/actions/cli@master
         env:

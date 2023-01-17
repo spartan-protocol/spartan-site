@@ -1,6 +1,8 @@
 import React, {useEffect} from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
+import "@fontsource/blinker/400.css"; // .font-blinker
+
 import "@fontsource/saira/400.css"; // .font-saira
 import "@fontsource/saira/500.css"; // .font-saira .font-medium
 import "@fontsource/saira/600.css"; // .font-saira .font-semibold
@@ -8,8 +10,6 @@ import "@fontsource/saira/700.css"; // .font-saira .font-bold
 
 import "@fontsource/saira-condensed/400.css"; // .font-sairaCondensed
 import "@fontsource/saira-condensed/600.css"; // .font-sairaCondensed .font-semibold
-
-import "@fontsource/blinker/400.css"; // .font-blinker
 
 import "../sass/global.scss";
 

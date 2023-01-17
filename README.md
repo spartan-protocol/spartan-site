@@ -6,7 +6,7 @@ Repository for the spartanprotocol.org website.
 
 2.  **Add enviro file**
 
-    Ensure the contentful keys are in `.env.development` file (when running dev locally)
+    This is no longer important (CMS dep was removed)
 
 
 2.  **Start developing.**
