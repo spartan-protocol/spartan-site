@@ -1,6 +1,6 @@
-import React, { useState, useEffect, Suspense, lazy } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from "react";
 
-const ThreeCanvas = lazy(() => import('./threeCanvas'));
+const ThreeCanvas = lazy(() => import("./threeCanvas"));
 
 const BackgroundAnimation = () => {
   const [isMounted, setIsMounted] = useState(false);
