@@ -139,3 +139,24 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+export const Head = () => (
+  <>
+    <title>Spartan Protocol | Permissionless DeFi & stablecoins on BNB Chain (BSC)</title>
+    <meta name="description" content="Liquidity-sensitive AMM algorithm on BNB SmartChain providing permissionless DeFi services. Community-built & run" />
+    {/* <link rel="icon" href="img/favicon.ico" sizes="any" />
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" /> */}
+    <meta name="author" content="Spartan Protocol Community" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://SpartanProtocol.org" />
+    <meta property="og:title" content="Spartan Protocol | Permissionless DeFi & stablecoins on BNB Chain (BSC)" />
+    {/* <meta property="og:image" content="https://spartanprotocol.org/assets/meta-images/opengraph-image.png" /> */}
+    <meta property="og:description" content="Liquidity-sensitive AMM algorithm on BNB Chain providing permissionless DeFi services. Community-built & run" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Spartan Protocol | Permissionless DeFi & stablecoins on BNB Chain (BSC)" />
+    <meta name="twitter:description" content="Liquidity-sensitive AMM algorithm on BNB Chain providing permissionless DeFi services. Community-built & run" />
+    <meta name="twitter:url" content="https://SpartanProtocol.org" />
+    {/* <meta name="twitter:image" content="https://spartanprotocol.org/assets/twitter-image.png" /> */}
+  </>
+);
