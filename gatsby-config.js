@@ -15,10 +15,11 @@ module.exports = {
         postCssPlugins: [
           require("tailwindcss"),
           require("./tailwind.config.js"), // Optional: Load custom Tailwind CSS configuration
-          require('autoprefixer'),
+          require("autoprefixer"),
         ],
       },
     },
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-sitemap`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-image`,
@@ -33,17 +34,17 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /assets/ // See below to configure properly
-        }
+          include: /assets/, // See below to configure properly
+        },
       },
     },
     {
-      resolve: 'gatsby-source-rest-api',
+      resolve: "gatsby-source-rest-api",
       options: {
         endpoints: [
           "https://api.github.com/repos/spartan-protocol/SpartanProtocol-DAppV2/contributors",
           "https://api.github.com/repos/spartan-protocol/spartan-site/contributors",
-          "https://api.github.com/repos/spartan-protocol/spartan-docs/contributors"
+          "https://api.github.com/repos/spartan-protocol/spartan-docs/contributors",
         ],
       },
     },
