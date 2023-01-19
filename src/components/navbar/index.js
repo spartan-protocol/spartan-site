@@ -84,39 +84,35 @@ const Navbar = ({ isMetaMask, isErrorPage }) => {
     );
   };
 
-  let fullUrl;
-
-  if (typeof window !== "undefined") {
-    fullUrl = `${window.location.origin}/`
-  }
+  const rootPage = "../"
 
   return (
     <div className="flex bg-black w-full p-2 px-4 justify-between fixed z-30">
       <div className="flex align-center w-36">
-        <a href={`${isErrorPage ? fullUrl : ''}#home`}>
+        <a href={`${isErrorPage ? rootPage : ''}#home`}>
           <SpartaIcon width="30px" height="30px" />
         </a>
       </div>
       <div className="hidden font-blinker lg:font-saira sm:flex text-white items-center space-x-4 md:space-x-6 text-lg text-center">
-        <a className="hover:opacity-60 transition hidden-landscape" href={`${isErrorPage ? fullUrl : ''}#home`}>
+        <a className="hover:opacity-60 transition hidden-landscape" href={`${isErrorPage ? rootPage : ''}#home`}>
           Home
         </a>
-        <a className="hover:opacity-60 transition" href={`${isErrorPage ? fullUrl : ''}#swap`}>
+        <a className="hover:opacity-60 transition" href={`${isErrorPage ? rootPage : ''}#swap`}>
           Swap
         </a>
-        <a className="hover:opacity-60 transition" href={`${isErrorPage ? fullUrl : ''}#pool`}>
+        <a className="hover:opacity-60 transition" href={`${isErrorPage ? rootPage : ''}#pool`}>
           Pool
         </a>
-        <a className="hover:opacity-60 transition" href={`${isErrorPage ? fullUrl : ''}#stake`}>
+        <a className="hover:opacity-60 transition" href={`${isErrorPage ? rootPage : ''}#stake`}>
           Stake
         </a>
-        <a className="hover:opacity-60 transition" href={`${isErrorPage ? fullUrl : ''}#video`}>
+        <a className="hover:opacity-60 transition" href={`${isErrorPage ? rootPage : ''}#video`}>
           Video
         </a>
-        <a className="hover:opacity-60 transition" href={`${isErrorPage ? fullUrl : ''}#contrib$utors`}>
+        <a className="hover:opacity-60 transition" href={`${isErrorPage ? rootPage : ''}#contrib$utors`}>
           Contributors
         </a>
-        <a className="hover:opacity-60 transition" href={`${isErrorPage ? fullUrl : ''}#token`}>
+        <a className="hover:opacity-60 transition" href={`${isErrorPage ? rootPage : ''}#token`}>
           Token
         </a>
       </div>
@@ -125,7 +121,7 @@ const Navbar = ({ isMetaMask, isErrorPage }) => {
           <div className="p-2 mr-2" onClick={() => toggleNav()} onKeyDown={() => toggleNav()} role="button" tabIndex={0}>
             <MenuIcon className="cursor-pointer transition hover:opacity-60" height="20px" fill="white" />
           </div>
-          <MobileMenu closeNav={closeNav} isErrorPage={isErrorPage} fullUrl={fullUrl}/>
+          <MobileMenu closeNav={closeNav} isErrorPage={isErrorPage} rootPage={rootPage}/>
         </div>
         {dappButton()}
       </div>

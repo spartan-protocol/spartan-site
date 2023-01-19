@@ -8,6 +8,10 @@ import SocialIcons from "../components/footer/socialIcons";
 import { BreakpointProvider } from "../providers/breakpoint";
 import { defaultFallbackInView } from "react-intersection-observer";
 
+
+import "@fontsource/saira/400.css";
+import "../sass/global.scss";
+
 const NotFoundPage = () => {
 
   const [isMetaMask, setisMetaMask] = useState(false);
