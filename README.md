@@ -6,7 +6,7 @@ Repository for the spartanprotocol.org website.
 
 2.  **Add enviro file**
 
-    This is no longer important (CMS dep was removed)   
+    This is no longer important (CMS dep was removed)
 
 
 2.  **Start developing.**
