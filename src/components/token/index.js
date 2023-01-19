@@ -3,8 +3,8 @@ import { useInView } from "react-intersection-observer";
 
 import Footer from "../footer";
 import SpartaIcon from "../../assets/icons/spartav2_white.svg";
-import GetSupply from "../../helpers/GetSupply";
 import TradeButtons from "../tradeButtons";
+import { formatFromUnits } from "../../helpers/formatting";
 
 const animationDelay = (delay) => ({ animationDelay: `${delay * 75}ms`, WebkitAnimationDelay: `${delay * 75}ms` });
 
@@ -49,8 +49,7 @@ const BulletPoints = ({ bulletPointsVisible }) => {
   });
 };
 
-const TokenSupply = ({ bulletPointsVisible }) => {
-  const { circSupply, burnSupply } = GetSupply();
+const TokenSupply = ({ bulletPointsVisible, circulatingSupply, burnedSupply }) => {
   return (
     <div className="text-right flex-1 hidden sm:block mr-2 font-saira font-medium">
       <div>
@@ -70,7 +69,7 @@ const TokenSupply = ({ bulletPointsVisible }) => {
           className={`text-2xl tracking-wider md:text-4xl font-bold opacity-0 drop-shadow-white ${bulletPointsVisible && `animate-fadeInLeft`}`}
           style={animationDelay(7)}
         >
-          {circSupply}
+          {formatFromUnits(circulatingSupply)}
         </div>
       </div>
       <div>
@@ -79,14 +78,14 @@ const TokenSupply = ({ bulletPointsVisible }) => {
           Burned Supply
         </div>
         <div className={`text-2xl md:text-4xl font-bold opacity-0 drop-shadow-white ${bulletPointsVisible && `animate-fadeInLeft`}`} style={animationDelay(9)}>
-          {burnSupply}
+          {formatFromUnits(burnedSupply)}
         </div>
       </div>
     </div>
   );
 };
 
-const Token = ({ isMetaMask }) => {
+const Token = ({ isMetaMask, circulatingSupply, burnedSupply }) => {
   const { ref: bulletPointsRef, inView: bulletPointsVisible } = useInView({ threshold: 0.3, triggerOnce: true });
 
   return (
@@ -108,7 +107,7 @@ const Token = ({ isMetaMask }) => {
             <SpartaIcon className="text-transparent w-20 h-20 md:w-24 md:h-24 smPhoneImage2" />
           </div>
           <div className="flex flex-col justify-center sm:flex-row pb-2 md:my-0 bullet-points">
-            <TokenSupply bulletPointsVisible={bulletPointsVisible} />
+            <TokenSupply bulletPointsVisible={bulletPointsVisible} circulatingSupply={circulatingSupply} burnedSupply={burnedSupply} />
             <div className="sm:ml-2 flex-1">
               <div ref={bulletPointsRef} className="text-center space-y-0">
                 <BulletPoints bulletPointsVisible={bulletPointsVisible} />

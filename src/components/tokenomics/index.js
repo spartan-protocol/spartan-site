@@ -1,13 +1,10 @@
 import * as React from "react";
 import { useInView } from "react-intersection-observer";
-
-import GetSupply from "../../helpers/GetSupply";
+import { formatFromUnits } from "../../helpers/formatting";
 
 const animationDelay = (delay, index = 1) => ({ animationDelay: `${(index + delay) * 75}ms`, WebkitAnimationDelay: `${(index + delay) * 75}ms` });
 
-const Token = () => {
-  const { circSupply, burnSupply } = GetSupply();
-
+const Token = ({ circulatingSupply, burnedSupply }) => {
   const { ref: textRef, inView: textVisible } = useInView({ threshold: 0.3, triggerOnce: true });
 
   return (
@@ -35,7 +32,7 @@ const Token = () => {
                 Circulating Supply
               </div>
               <div className={`text-4xl font-bold tracking-wider opacity-0 drop-shadow-white ${textVisible && `animate-fadeIn`}`} style={animationDelay(6)}>
-                {circSupply}
+                {formatFromUnits(circulatingSupply, 0)}
               </div>
             </div>
             <div>
@@ -44,7 +41,7 @@ const Token = () => {
                 Burned Supply
               </div>
               <div className={`text-4xl font-bold opacity-0 drop-shadow-white ${textVisible && `animate-fadeIn`}`} style={animationDelay(8)}>
-                {burnSupply}
+                {formatFromUnits(burnedSupply, 0)}
               </div>
             </div>
           </div>

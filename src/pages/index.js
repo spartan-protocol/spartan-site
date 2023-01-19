@@ -28,7 +28,9 @@ import BackgroundAnimation from "../components/backgroundAnimation";
 import { BreakpointProvider } from "../providers/breakpoint";
 import { defaultFallbackInView } from "react-intersection-observer";
 
-const IndexPage = () => {
+const IndexPage = ({ serverData }) => {
+  const { totalSupply, circulatingSupply, burnedSupply } = serverData;
+
   const [isMetaMask, setisMetaMask] = useState(false);
 
   useEffect(() => {
@@ -130,8 +132,8 @@ const IndexPage = () => {
         <Video />
         <Contributors data={{ githubContributors }} />
         {/* <Tokenomics /> is for mobile devices only */}
-        <Tokenomics />
-        <Token isMetaMask={isMetaMask} />
+        <Tokenomics totalSupply={totalSupply} circulatingSupply={circulatingSupply} burnedSupply={burnedSupply} />
+        <Token isMetaMask={isMetaMask} totalSupply={totalSupply} circulatingSupply={circulatingSupply} burnedSupply={burnedSupply} />
         <Friends />
       </div>
     </BreakpointProvider>
@@ -160,3 +162,29 @@ export const Head = () => (
     {/* <meta name="twitter:image" content="https://spartanprotocol.org/assets/twitter-image.png" /> */}
   </>
 );
+
+export async function getServerData() {
+  try {
+    const res = await fetch(`https://api.spartanprotocol.org/api/v1/supply`);
+    if (!res.ok) {
+      console.log("Couldnt retreive supply data, using fallback");
+      throw new Error(`Response failed`);
+    }
+    const data = await res.json();
+    return {
+      props: {
+        totalSupply: data.totalSupply,
+        circulatingSupply: data.circulatingSupply,
+        burnedSupply: data.burned,
+      },
+    };
+  } catch (error) {
+    return {
+      props: {
+        totalSupply: "123056099", // Updated 19/01/2023
+        circulatingSupply: "88258447", // Updated 19/01/2023
+        burnedSupply: "57480308", // Updated 19/01/2023
+      },
+    };
+  }
+}
