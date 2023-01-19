@@ -11,7 +11,7 @@ const Swap = ({ isMetaMask }) => {
     <div id="swap" className="h-screen max-h-screen overflow-y-auto bg-black justify-center snap-start">
       <div className="flex flex-col flex-1 h-full items-center justify-center">
         <div className="flex flex-col md:flex-row flex-1 items-center justify-center relative z-10 space-y-8 md:space-y-0 space-x-0 md:space-x-12 smPhoneContainer">
-          <div ref={textRef} className="font-saira text-white text-center md:text-left">
+          <div ref={textRef} className="font-saira px-2 md:px-8 text-white text-center md:text-left">
             <h1 className={`text-4xl sm:text-5xl mb-2 opacity-0 font-medium" ${textVisible && "animate-fadeIn"}`}>Swap tokens.</h1>
             <h1 className={`text-4xl sm:text-5xl mb-2 opacity-0 font-medium" ${textVisible && "animate-fadeIn"}`}>Fast and private.</h1>
             <div
