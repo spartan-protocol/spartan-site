@@ -84,7 +84,11 @@ const Navbar = ({ isMetaMask, isErrorPage }) => {
     );
   };
 
-  const fullUrl = `${window.location.origin}/`
+  let fullUrl;
+
+  if (typeof window !== "undefined") {
+    fullUrl = `${window.location.origin}/`
+  }
 
   return (
     <div className="flex bg-black w-full p-2 px-4 justify-between fixed z-30">
