@@ -121,7 +121,7 @@ const IndexPage = ({ serverData }) => {
 
   return (
     <BreakpointProvider queries={mediaQueries}>
-      <Navbar isMetaMask={isMetaMask} />
+      <Navbar isMetaMask={isMetaMask} isErrorPage={false} />
       <BackgroundAnimation />
       <div className="wrapper">
         <SocialIcons />

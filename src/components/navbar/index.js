@@ -5,7 +5,7 @@ import SpartaIcon from "../../assets/icons/spartav2.svg";
 import MobileMenu from "../mobileMenu";
 import useFontFaceObserver from "use-font-face-observer";
 
-const Navbar = ({ isMetaMask }) => {
+const Navbar = ({ isMetaMask, isErrorPage }) => {
   const [navOpen, setNavOpen] = React.useState(false);
 
   const toggleNav = () => {
@@ -84,33 +84,35 @@ const Navbar = ({ isMetaMask }) => {
     );
   };
 
+  const fullUrl = `${window.location.origin}/`
+
   return (
     <div className="flex bg-black w-full p-2 px-4 justify-between fixed z-30">
       <div className="flex align-center w-36">
-        <a href="#home">
+        <a href={`${isErrorPage ? fullUrl : ''}#home`}>
           <SpartaIcon width="30px" height="30px" />
         </a>
       </div>
       <div className="hidden font-blinker lg:font-saira sm:flex text-white items-center space-x-4 md:space-x-6 text-lg text-center">
-        <a className="hover:opacity-60 transition hidden-landscape" href="#home">
+        <a className="hover:opacity-60 transition hidden-landscape" href={`${isErrorPage ? fullUrl : ''}#home`}>
           Home
         </a>
-        <a className="hover:opacity-60 transition" href="#swap">
+        <a className="hover:opacity-60 transition" href={`${isErrorPage ? fullUrl : ''}#swap`}>
           Swap
         </a>
-        <a className="hover:opacity-60 transition" href="#pool">
+        <a className="hover:opacity-60 transition" href={`${isErrorPage ? fullUrl : ''}#pool`}>
           Pool
         </a>
-        <a className="hover:opacity-60 transition" href="#stake">
+        <a className="hover:opacity-60 transition" href={`${isErrorPage ? fullUrl : ''}#stake`}>
           Stake
         </a>
-        <a className="hover:opacity-60 transition" href="#video">
+        <a className="hover:opacity-60 transition" href={`${isErrorPage ? fullUrl : ''}#video`}>
           Video
         </a>
-        <a className="hover:opacity-60 transition" href="#contributors">
+        <a className="hover:opacity-60 transition" href={`${isErrorPage ? fullUrl : ''}#contrib$utors`}>
           Contributors
         </a>
-        <a className="hover:opacity-60 transition" href="#token">
+        <a className="hover:opacity-60 transition" href={`${isErrorPage ? fullUrl : ''}#token`}>
           Token
         </a>
       </div>
@@ -119,7 +121,7 @@ const Navbar = ({ isMetaMask }) => {
           <div className="p-2 mr-2" onClick={() => toggleNav()} onKeyDown={() => toggleNav()} role="button" tabIndex={0}>
             <MenuIcon className="cursor-pointer transition hover:opacity-60" height="20px" fill="white" />
           </div>
-          <MobileMenu closeNav={closeNav} />
+          <MobileMenu closeNav={closeNav} isErrorPage={isErrorPage} fullUrl={fullUrl}/>
         </div>
         {dappButton()}
       </div>
