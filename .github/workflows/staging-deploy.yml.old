@@ -1,0 +1,27 @@
+name: Deploy to Netlify Hosting on new-site-tailwind merge
+'on':
+  push:
+    branches:
+      - new-site-tailwind
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.12.1'
+      - name: 🧰 Install Dependencies
+        run: yarn install
+      - name: 📦 Build Project
+        run: yarn build
+      - name: 🚀 Deploy to Netlify
+        uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        with:
+          args: deploy --dir=public --prod
+          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'

@@ -1,54 +1,70 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import React, { useEffect, useState } from "react";
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+import Navbar from "../components/navbar";
+import BackgroundAnimation from "../components/backgroundAnimation";
+import ErrorPage from "../components/errorPage";
+import SocialIcons from "../components/footer/socialIcons";
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+import { BreakpointProvider } from "../providers/breakpoint";
+import { defaultFallbackInView } from "react-intersection-observer";
 
-// markup
+
+import "@fontsource/saira/400.css";
+import "../sass/global.scss";
+
 const NotFoundPage = () => {
-  return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
-  )
-}
 
-export default NotFoundPage
+  const [isMetaMask, setisMetaMask] = useState(false);
+
+  useEffect(() => {
+    // fix for landing page height on some mobile browsers (ios)
+    function setLandingPageHeight(doc) {
+      let prevClientHeight;
+      function handleResize() {
+        const clientHeight = doc.clientHeight;
+        if (clientHeight === prevClientHeight) return;
+        requestAnimationFrame(function updateViewportHeight() {
+          document.querySelector("#home").style.height = clientHeight - clientHeight * 0.01 + "px";
+          prevClientHeight = clientHeight;
+        });
+      }
+      handleResize();
+      return handleResize;
+    }
+    const { clientWidth } = document.documentElement;
+    const { userAgent } = navigator;
+    const iOs = userAgent && userAgent.match(/iPhone|iPad|iPod/i);
+    if (clientWidth < 600 && iOs) {
+      window.addEventListener("resize", setLandingPageHeight(document.documentElement));
+      setLandingPageHeight(document.documentElement);
+    }
+    if (clientWidth < 415 && window?.ethereum?.isMetaMask) {
+      setisMetaMask(true);
+    }
+  }, []);
+
+  const mediaQueries = {
+    xs: "(max-width: 480px)", // use max here for default/smallest
+    sm: "(min-width: 481px)", // use min for rest
+    md: "(min-width: 769px)", // use min for rest
+    lg: "(min-width: 1024px)", // use min for rest
+    xl: "(min-width: 1200px)", // use min for rest
+  };
+
+  // support intersection observer for older browsers
+  if (typeof window !== "undefined" && !window.IntersectionObserver) {
+    defaultFallbackInView(true);
+  }
+  return (
+    <BreakpointProvider queries={mediaQueries}>
+      <Navbar isMetaMask={isMetaMask} isErrorPage={true} />
+      <BackgroundAnimation />
+      <div className="wrapper">
+        <ErrorPage />
+        <SocialIcons />
+      </div>
+    </BreakpointProvider>
+  );
+};
+
+export default NotFoundPage;

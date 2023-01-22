@@ -7,13 +7,23 @@ module.exports = {
     siteUrl: "https://spartanprotcol.org",
     title: "Spartan Protocol",
   },
+  // pathPrefix: `/spartan-site`,
   plugins: [
-    "gatsby-plugin-sass",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
-    "gatsby-transformer-remark",
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        postCssPlugins: [
+          require("tailwindcss"),
+          require("./tailwind.config.js"), // Optional: Load custom Tailwind CSS configuration
+          require("autoprefixer"),
+        ],
+      },
+    },
+    `gatsby-plugin-netlify`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-transformer-remark`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -21,18 +31,21 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: process.env.CONTENTFUL_ID,
-        accessToken: process.env.CONTENTFUL_DELIVERY_API,
-      },
-    },
-    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /assets/ // See below to configure properly
-        }
+          include: /assets/, // See below to configure properly
+        },
+      },
+    },
+    {
+      resolve: "gatsby-source-rest-api",
+      options: {
+        endpoints: [
+          "https://api.github.com/repos/spartan-protocol/SpartanProtocol-DAppV2/contributors",
+          "https://api.github.com/repos/spartan-protocol/spartan-site/contributors",
+          "https://api.github.com/repos/spartan-protocol/spartan-docs/contributors",
+        ],
       },
     },
   ],

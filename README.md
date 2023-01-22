@@ -1,8 +1,12 @@
-# Spartan Protocol
+# Spartan Protocol Site
 
 Repository for the spartanprotocol.org website.
 
 ![image](https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg)
+
+2.  **Add enviro file**
+
+    This is no longer important (CMS dep was removed)
 
 
 2.  **Start developing.**

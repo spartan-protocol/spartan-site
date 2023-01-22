@@ -1,82 +1,345 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import "./variables.scss";
 
-.wrapper {
-  display: grid;
-  column-gap: 20px;
-  grid-template-areas:
-    "header"
-    "swap"
-    "pool"
-    "stake"
-    "synths"
-    "dao"
-    "footer";
+html {
+  background: #000;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scrollbar-color: #fb2715 transparent;
+  scrollbar-width: thin;
 }
 
-.swap {
-  grid-area: swap;
+::-webkit-scrollbar {
+  width: 6px;
+  height: 4px;
+  background-color: transparent;
 }
 
-.pool {
-  grid-area: pool;
-}
-
-.stake {
-  grid-area: stake;
-}
-
-.synths {
-  grid-area: synths;
-}
-
-.dao {
-  grid-area: dao;
+::-webkit-scrollbar-thumb {
+  background: #fb2715;
+  border-radius: 8px;
 }
 
 body {
-  background: $bg;
   margin: 0;
-  font-family: $fontNunito;
 }
 
 a {
   text-decoration: none;
 }
 
-.underline {
-  text-decoration-line: underline;
+// .wrapper {}
+
+// fullscreen canvas on safari mobile
+canvas {
+  height: 100vh !important;
 }
 
-.w-100 {
-  width: 100%;
+.scrollbar-thin {
+  scrollbar-width: thin;
 }
 
-.h-100 {
-  height: 100%;
+// support for older browsers
+.text-white {
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
-.text-center {
-  text-align: center;
+.bg-white {
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
 }
 
-.me-1 {
-  margin-right: 10px;
+.bg-black {
+  background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
 }
 
-.me-2 {
-  margin-right: 20px;
+.text-gray-200 {
+  color: rgba(229, 231, 235, var(--tw-text-opacity));
 }
 
-#swap,
-#pool,
-#stake,
-#synths,
-#dao {
-  scroll-margin-top: 0px;
+.partners {
+  overflow-y: auto;
+  max-height: 330px;
 }
 
-@media only screen and (max-width: 580px) {
-  .hide-sm {
+// Fix for some old/weird devices
+@media (max-width: 352px) {
+  h1,
+  .text-4xl {
+    font-size: 1.6rem !important;
+  }
+  .partners {
+    max-height: 250px;
+  }
+  #contributors {
+    .px-8 {
+      padding-left: 1rem !important;
+      padding-right: 1rem;
+    }
+  }
+}
+
+// Fixes for short devices (i4/i5 etc)
+@media (max-height: 600px) {
+  .mobile-menu-cont {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  .mobile-menu-item {
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+  }
+}
+
+// FIX FOR 14" WINDOWS LAPTOPS
+@media (min-height: 601px) and (max-height: 650px) {
+  .smPhoneImage {
+    width: 6.5rem;
+  }
+  #player {
+    height: 200px;
+  }
+}
+
+// Weird super-landscape area
+@media (min-width: 768px) and (min-height: 480px) and (max-height: 638px) {
+  #token {
+    .logo {
+      display: none;
+    }
+  }
+}
+
+@media (min-height: 480px) and (max-height: 600px) {
+  .smPhoneImage {
+    width: 6rem;
+  }
+  .smPhoneImage2 {
+    width: 4rem;
+    height: 4rem;
+  }
+  .smPhoneButtons {
+    padding: 0.25rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+  .smPhoneImageContainer {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .smPhoneSecurityItem {
+    width: 10rem;
+  }
+  .smPhoneText {
+    font-size: 0.75rem;
+    line-height: 0.8rem;
+  }
+  .smPhoneDistroMargin {
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .smPhoneDistroMargin2 {
+    margin-top: 0.5rem;
+  }
+  #video {
+    iframe {
+      height: 90px;
+    }
+  }
+}
+
+// LANDSCAPE MODE
+@media (min-width: 340px) and (max-height: 479px) {
+  h1 {
+    font-size: 1.25rem !important;
+  }
+
+  svg {
+    max-width: 7rem;
+  }
+
+  #home {
+    > div {
+      flex-direction: column;
+
+      > div {
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+        --tw-space-y-reverse: 0;
+        margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(0px * var(--tw-space-y-reverse));
+        margin-right: calc(3rem * var(--tw-space-x-reverse));
+        margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
+      }
+    }
+    .button-container {
+      margin-top: 30px;
+    }
+    .thirds-ls {
+      width: 32%;
+    }
+    .phoneImgContain-ls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  #pool {
+    svg {
+      max-width: 5.5rem;
+    }
+  }
+
+  #friends {
+    svg {
+      max-width: 20rem;
+    }
+  }
+
+  #pool,
+  #swap,
+  #stake {
+    > div > div {
+      flex-direction: row !important;
+
+      > div {
+        text-align: left !important;
+        width: 32%;
+        margin-top: 0 !important;
+
+        > div {
+          margin-left: 0 !important;
+        }
+      }
+
+      svg {
+        margin-left: 16px;
+        margin-right: 16px;
+      }
+    }
+
+    .button {
+      max-width: 90% !important;
+    }
+  }
+
+  .button {
+    transform: scale(0.8);
+  }
+
+  #contributors {
+    .justify {
+      justify-content: center !important;
+    }
+
+    .list {
+      margin-top: 4px;
+      max-height: 25% !important;
+    }
+
+    .subtitle {
+      width: 100% !important;
+    }
+
+    h1 {
+      font-size: 1.75rem !important;
+    }
+    img {
+      width: 2.2rem !important;
+    }
+  }
+
+  #home {
+    .image-container {
+      width: 200px;
+    }
+
+    .content {
+      flex-direction: row;
+    }
+  }
+
+  #video {
+    iframe {
+      height: 120px !important;
+    }
+
+    .partners {
+      margin-top: 2px !important;
+      overflow-y: auto;
+      max-height: 200px;
+    }
+
+    a > div {
+      margin-top: 2px !important;
+    }
+
+    .w-32 {
+      width: 8rem !important;
+    }
+  }
+
+  #token {
+    .drop-shadow-white {
+      font-size: 1.2rem !important;
+    }
+
+    .bullet-points {
+      max-height: 30%;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      margin-top: 6px;
+    }
+
+    .button {
+      margin-bottom: -6px;
+      margin-top: 10px;
+      transform: scale(0.6);
+    }
+
+    .logo {
+      display: none;
+    }
+
+    .token-container {
+      > div {
+        justify-content: center;
+      }
+
+      max-height: 75%;
+    }
+  }
+
+  .hidden-landscape {
     display: none;
+  }
+
+  .landscape-image {
+    width: 8rem;
+  }
+
+  .landscape-margin {
+    margin: -25px !important;
+  }
+  .landing-text-container {
+    width: 30%;
+    > div > div {
+      width: auto !important;
+    }
+  }
+  .landing-image-container {
+    flex-direction: row;
+    width: 100%;
+    .image-container {
+      width: 250px !important;
+    }
+    .button-container {
+      width: 60%;
+    }
   }
 }

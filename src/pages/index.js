@@ -1,109 +1,110 @@
-import * as React from "react";
+import React, { useEffect, useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-import "@fontsource/saira/100.css"; //
-import "@fontsource/saira/200.css"; //
-import "@fontsource/saira/300.css";
-import "@fontsource/saira/400.css";
-import "@fontsource/saira/500.css";
-import "@fontsource/saira/600.css"; //
-import "@fontsource/saira/700.css"; //
-import "@fontsource/saira/800.css";
-import "@fontsource/saira/900.css";
+import "@fontsource/blinker/400.css"; // .font-blinker
 
-import "@fontsource/saira-condensed/100.css"; //
-import "@fontsource/saira-condensed/200.css"; //
-import "@fontsource/saira-condensed/300.css";
-import "@fontsource/saira-condensed/400.css";
-import "@fontsource/saira-condensed/500.css";
-import "@fontsource/saira-condensed/600.css"; //
-import "@fontsource/saira-condensed/700.css"; //
-import "@fontsource/saira-condensed/800.css";
+import "@fontsource/saira/400.css"; // .font-saira
+import "@fontsource/saira/500.css"; // .font-saira .font-medium
+import "@fontsource/saira/600.css"; // .font-saira .font-semibold
+import "@fontsource/saira/700.css"; // .font-saira .font-bold
 
-import "@fontsource/nunito/400.css"; // Used general/body
-import "@fontsource/nunito/700.css"; // Used hero title
-import "@fontsource/nunito/800.css"; // Used hero title
+import "@fontsource/saira-condensed/400.css"; // .font-sairaCondensed
+import "@fontsource/saira-condensed/600.css"; // .font-sairaCondensed .font-semibold
+
 import "../sass/global.scss";
 
 import Navbar from "../components/navbar";
-import Hero from "../components/hero";
-import Footer from "../components/footer";
-import Header from "../components/header";
+import Swap from "../components/swap";
+import Pool from "../components/pool";
+import Stake from "../components/stake";
+import Tokenomics from "../components/tokenomics";
+import Token from "../components/token";
+import Contributors from "../components/contributors";
+import LandingPage from "../components/landingPage";
+import Video from "../components/video";
+import Friends from "../components/friends";
+import SocialIcons from "../components/footer/socialIcons";
+import BackgroundAnimation from "../components/backgroundAnimation";
 import { BreakpointProvider } from "../providers/breakpoint";
+import { defaultFallbackInView } from "react-intersection-observer";
 
-const IndexPage = () => {
+const IndexPage = ({ serverData }) => {
+  const { totalSupply, circulatingSupply, burnedSupply } = serverData;
+
+  const [isMetaMask, setisMetaMask] = useState(false);
+
+  useEffect(() => {
+    // fix for landing page height on some mobile browsers (ios)
+    function setLandingPageHeight(doc) {
+      let prevClientHeight;
+      function handleResize() {
+        const clientHeight = doc.clientHeight;
+        if (clientHeight === prevClientHeight) return;
+        requestAnimationFrame(function updateViewportHeight() {
+          document.querySelector("#home").style.height = clientHeight - clientHeight * 0.01 + "px";
+          prevClientHeight = clientHeight;
+        });
+      }
+      handleResize();
+      return handleResize;
+    }
+    const { clientWidth } = document.documentElement;
+    const { userAgent } = navigator;
+    const iOs = userAgent && userAgent.match(/iPhone|iPad|iPod/i);
+    if (clientWidth < 600 && iOs) {
+      window.addEventListener("resize", setLandingPageHeight(document.documentElement));
+      setLandingPageHeight(document.documentElement);
+    }
+    if (clientWidth < 415 && window?.ethereum?.isMetaMask) {
+      setisMetaMask(true);
+    }
+  }, []);
+
   const heroData = useStaticQuery(
     graphql`
       query {
-        allContentfulHeaderHero {
+        allRestApiReposSpartanProtocolSpartanProtocolDAppV2Contributors {
           edges {
             node {
-              cexButtonLabel
-              cexButtonLink
-              ctaButton
-              ctaButtonLink
-              discordUrl
-              gitHubUrl
-              bscscanUrl
-              heroBackground {
-                file {
-                  url
-                  fileName
-                }
-              }
-              heroBgNarrow {
-                file {
-                  url
-                  fileName
-                }
-              }
-              tagline
-              telegramUrl
-              title
-              twitterUrl
+              login
+              avatar_url
+              html_url
+              type
+              contributions
             }
           }
         }
-        allContentfulHeroSection(sort: { fields: order, order: ASC }) {
+        allRestApiReposSpartanProtocolSpartanDocsContributors {
           edges {
             node {
-              buttonLabel1
-              buttonLabel2
-              buttonLink1
-              buttonLink2
-              order
-              subtitle
-              title
-              description {
-                description
-              }
-              featureImage {
-                file {
-                  url
-                  fileName
-                }
-              }
-              feature {
-                title
-                description
-              }
-              richFeature {
-                buttonLabel
-                buttonLink
-                description
-                logo {
-                  file {
-                    url
-                    fileName
-                  }
-                }
-              }
+              login
+              avatar_url
+              html_url
+              type
+              contributions
+            }
+          }
+        }
+        allRestApiReposSpartanProtocolSpartanSiteContributors {
+          edges {
+            node {
+              login
+              avatar_url
+              html_url
+              type
+              contributions
             }
           }
         }
       }
     `
   );
+
+  const dappContributors = heroData.allRestApiReposSpartanProtocolSpartanProtocolDAppV2Contributors.edges;
+  const spartanDocsContributors = heroData.allRestApiReposSpartanProtocolSpartanDocsContributors.edges;
+  const spartanSiteContributors = heroData.allRestApiReposSpartanProtocolSpartanSiteContributors.edges;
+
+  const githubContributors = { dappContributors, spartanDocsContributors, spartanSiteContributors };
 
   const mediaQueries = {
     xs: "(max-width: 480px)", // use max here for default/smallest
@@ -113,36 +114,77 @@ const IndexPage = () => {
     xl: "(min-width: 1200px)", // use min for rest
   };
 
+  // support intersection observer for older browsers
+  if (typeof window !== "undefined" && !window.IntersectionObserver) {
+    defaultFallbackInView(true);
+  }
+
   return (
     <BreakpointProvider queries={mediaQueries}>
-      <Navbar />
-      {/* <Jumper /> */}
-      <div className='wrapper'>
-        <Header data={heroData.allContentfulHeaderHero.edges[0].node} />
-        <Hero
-          heroData={heroData.allContentfulHeroSection.edges[0].node}
-          id='swap'
-        />
-        <Hero
-          heroData={heroData.allContentfulHeroSection.edges[1].node}
-          id='pool'
-        />
-        <Hero
-          heroData={heroData.allContentfulHeroSection.edges[2].node}
-          id='stake'
-        />
-        {/* <Hero
-          heroData={heroData.allContentfulHeroSection.edges[3].node}
-          id='synths'
-        /> */}
-        <Hero
-          heroData={heroData.allContentfulHeroSection.edges[4].node}
-          id='dao'
-        />
-        <Footer id='footer' />
+      <Navbar isMetaMask={isMetaMask} isErrorPage={false} />
+      <BackgroundAnimation />
+      <div className="wrapper">
+        <SocialIcons />
+        <LandingPage isMetaMask={isMetaMask} />
+        <Swap isMetaMask={isMetaMask} />
+        <Pool isMetaMask={isMetaMask} />
+        <Stake isMetaMask={isMetaMask} />
+        <Video />
+        <Contributors data={{ githubContributors }} />
+        {/* <Tokenomics /> is for mobile devices only */}
+        <Tokenomics totalSupply={totalSupply} circulatingSupply={circulatingSupply} burnedSupply={burnedSupply} />
+        <Token isMetaMask={isMetaMask} totalSupply={totalSupply} circulatingSupply={circulatingSupply} burnedSupply={burnedSupply} />
+        <Friends />
       </div>
     </BreakpointProvider>
   );
 };
 
 export default IndexPage;
+
+export const Head = () => (
+  <>
+    <title>Spartan Protocol | Permissionless DeFi & stablecoins on BNB Chain (BSC)</title>
+    <meta name="description" content="Liquidity-sensitive AMM algorithm on BNB SmartChain providing permissionless DeFi services. Community-built & run" />
+    {/* <link rel="icon" href="img/favicon.ico" sizes="any" />
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" /> */}
+    <meta name="author" content="Spartan Protocol Community" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://SpartanProtocol.org" />
+    <meta property="og:title" content="Spartan Protocol | Permissionless DeFi & stablecoins on BNB Chain (BSC)" />
+    {/* <meta property="og:image" content="https://spartanprotocol.org/assets/meta-images/opengraph-image.png" /> */}
+    <meta property="og:description" content="Liquidity-sensitive AMM algorithm on BNB Chain providing permissionless DeFi services. Community-built & run" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Spartan Protocol | Permissionless DeFi & stablecoins on BNB Chain (BSC)" />
+    <meta name="twitter:description" content="Liquidity-sensitive AMM algorithm on BNB Chain providing permissionless DeFi services. Community-built & run" />
+    <meta name="twitter:url" content="https://SpartanProtocol.org" />
+    {/* <meta name="twitter:image" content="https://spartanprotocol.org/assets/twitter-image.png" /> */}
+  </>
+);
+
+export async function getServerData() {
+  try {
+    const res = await fetch(`https://api.spartanprotocol.org/api/v1/supply`);
+    if (!res.ok) {
+      console.log("Couldnt retreive supply data, using fallback");
+      throw new Error(`Response failed`);
+    }
+    const data = await res.json();
+    return {
+      props: {
+        totalSupply: data.totalSupply,
+        circulatingSupply: data.circulatingSupply,
+        burnedSupply: data.burned,
+      },
+    };
+  } catch (error) {
+    return {
+      props: {
+        totalSupply: "123056099", // Updated 19/01/2023
+        circulatingSupply: "88258447", // Updated 19/01/2023
+        burnedSupply: "57480308", // Updated 19/01/2023
+      },
+    };
+  }
+}
