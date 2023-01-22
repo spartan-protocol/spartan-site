@@ -19,9 +19,10 @@ const Video = () => {
             <iframe
               id="player"
               allowFullScreen="1"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              title="Spartan Protocol in a nutshell."
-              src="https://www.youtube.com/embed/wnNPJaCmTGw?enablejsapi=1&amp;origin=https%3A%2F%2Fspartanprotocol.org&amp;widgetid=1"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              title="Spartan Protocol explainer video"
+              // src="https://www.youtube-nocookie.com/embed/8tqR1dYmyyE?enablejsapi=1&amp;origin=https%3A%2F%2Fspartanprotocol.org&amp;widgetid=1"
+              src="https://www.youtube-nocookie.com/embed/8tqR1dYmyyE"
               frameBorder="0"
               className="w-[80vw] h-[24vh] md:w-[530px] md:h-[300px] xl:w-[640px] xl:h-[360px]"
             ></iframe>
