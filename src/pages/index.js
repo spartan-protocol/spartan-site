@@ -153,13 +153,13 @@ export const Head = () => (
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://SpartanProtocol.org" />
     <meta property="og:title" content="Spartan Protocol | Permissionless DeFi & stablecoins on BNB Chain (BSC)" />
-    <meta property="og:image" content="./og-image-placeholder.png" />
+    <meta property="og:image" content="./og-img-placeholder.png" />
     <meta property="og:description" content="Liquidity-sensitive AMM algorithm on BNB Chain providing permissionless DeFi services. Community-built & run" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Spartan Protocol | Permissionless DeFi & stablecoins on BNB Chain (BSC)" />
     <meta name="twitter:description" content="Liquidity-sensitive AMM algorithm on BNB Chain providing permissionless DeFi services. Community-built & run" />
     <meta name="twitter:url" content="https://SpartanProtocol.org" />
-    <meta name="twitter:image" content="./og-image-placeholder.png" />
+    <meta name="twitter:image" content="./og-img-placeholder.png" />
   </>
 );
 
