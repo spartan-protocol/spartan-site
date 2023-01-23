@@ -153,13 +153,14 @@ export const Head = () => (
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://SpartanProtocol.org" />
     <meta property="og:title" content="Spartan Protocol | Permissionless DeFi & stablecoins on BNB Chain (BSC)" />
-    <meta property="og:image" content="https://spartanprotocol.org/og-img-placeholder.png" />
+    <meta property="og:image" content="https://spartanprotocol.org/twitter-and-og-image.png" />
     <meta property="og:description" content="Liquidity-sensitive AMM algorithm on BNB Chain providing permissionless DeFi services. Community-built & run" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@SpartanProtocol" />
     <meta name="twitter:title" content="Spartan Protocol | Permissionless DeFi & stablecoins on BNB Chain (BSC)" />
     <meta name="twitter:description" content="Liquidity-sensitive AMM algorithm on BNB Chain providing permissionless DeFi services. Community-built & run" />
     <meta name="twitter:url" content="https://SpartanProtocol.org" />
-    <meta name="twitter:image" content="https://spartanprotocol.org/og-img-placeholder.png" />
+    <meta name="twitter:image" content="https://spartanprotocol.org/twitter-and-og-image.png" />
   </>
 );
 
@@ -181,9 +182,9 @@ export async function getServerData() {
   } catch (error) {
     return {
       props: {
-        totalSupply: "123056099", // Updated 19/01/2023
-        circulatingSupply: "88258447", // Updated 19/01/2023
-        burnedSupply: "57480308", // Updated 19/01/2023
+        totalSupply: "123231009", // Updated 23/01/2023
+        circulatingSupply: "88128267", // Updated 23/01/2023
+        burnedSupply: "57480308", // Updated 23/01/2023
       },
     };
   }
