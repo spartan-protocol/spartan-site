@@ -109,7 +109,7 @@ const Navbar = ({ isMetaMask, isErrorPage }) => {
         <a className="hover:opacity-60 transition" href={`${isErrorPage ? rootPage : ''}#video`}>
           Video
         </a>
-        <a className="hover:opacity-60 transition" href={`${isErrorPage ? rootPage : ''}#contrib$utors`}>
+        <a className="hover:opacity-60 transition" href={`${isErrorPage ? rootPage : ''}#contributors`}>
           Contributors
         </a>
         <a className="hover:opacity-60 transition" href={`${isErrorPage ? rootPage : ''}#token`}>
