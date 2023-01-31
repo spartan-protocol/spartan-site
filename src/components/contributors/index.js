@@ -29,7 +29,7 @@ const Contributors = ({ data }) => {
     },
     {
       name: "AJ",
-      link: "https://twitter.com/CryptoSpartan83",
+      link: "https://twitter.com/DeFiByDefault",
       avatar: {
         static: <StaticImage style={{ margin: "auto" }} className="sm:w-12 w-8 rounded mb-1" src="../../assets/images/aj_avatar.jpg" alt="aj" />,
       },
