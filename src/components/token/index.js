@@ -91,7 +91,7 @@ const Token = ({ isMetaMask, circulatingSupply, burnedSupply }) => {
   return (
     <div
       id="token"
-      className="h-screen min-h-screen overflow-y-auto overflow-x-hidden bg-black justify-center flex sm:w-10/12 sm:mx-auto flex-col snap-start pt-16 font-saira font-medium"
+      className="h-screen min-h-screen overflow-y-auto overflow-x-hidden bg-black justify-center flex sm:w-10/12 sm:mx-auto flex-col snap-start snap-always pt-16 font-saira font-medium"
     >
       <div className="flex flex-col flex-1 items-center justify-center token-container">
         <div className="flex flex-col text-white relative z-20 w-full">

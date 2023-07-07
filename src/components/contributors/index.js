@@ -141,7 +141,7 @@ const Contributors = ({ data }) => {
   };
 
   return (
-    <div id="contributors" className="h-screen max-h-screen xl:max-w-6xl xl:mx-auto overflow-y-auto bg-black justify-center snap-start">
+    <div id="contributors" className="h-screen max-h-screen xl:max-w-6xl xl:mx-auto overflow-y-auto bg-black justify-center snap-start snap-always">
       <div className="flex flex-col flex-1 h-full items-center justify-center">
         <div className="flex flex-col flex-1 justify-center relative max-h-full z-10">
           <div ref={textRef} className="font-saira text-white text-center px-8">
