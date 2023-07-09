@@ -9,7 +9,7 @@ const Stake = ({ isMetaMask }) => {
   const { ref: button2Ref, inView: button2Visible } = useInView({ threshold: 0.3, triggerOnce: true });
 
   return (
-    <div id="stake" className="h-screen max-h-screen overflow-y-auto bg-black justify-center snap-start">
+    <div id="stake" className="h-screen max-h-screen overflow-y-auto bg-black justify-center snap-start snap-always">
       <div className="flex flex-col flex-1 h-full items-center justify-center">
         <div className="flex flex-1 flex-col md:flex-row justify-center items-center relative z-10 space-y-8 md:space-y-0 space-x-0 md:space-x-12">
           <div ref={textRef} className="font-saira text-white px-2 md:px-8 text-center md:text-left">

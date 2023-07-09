@@ -10,7 +10,7 @@ const Token = ({ circulatingSupply, burnedSupply }) => {
   return (
     <div
       id="tokenomics"
-      className="h-screen max-h-screen overflow-y-auto font-saira font-medium sm:hidden bg-black sm:w-10/12 sm:mx-auto justify-center flex flex-col snap-start"
+      className="h-screen max-h-screen overflow-y-auto font-saira font-medium sm:hidden bg-black sm:w-10/12 sm:mx-auto justify-center flex flex-col snap-start snap-always"
     >
       <div className="flex flex-col flex-1 items-center justify-center">
         <div ref={textRef} className="flex flex-col text-white text-center relative z-10 mb-4">

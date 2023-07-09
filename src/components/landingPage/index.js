@@ -4,7 +4,7 @@ import TradeButtons from "../tradeButtons";
 
 const LandingPage = ({ isMetaMask }) => {
   return (
-    <div id="home" className="h-screen bg-black justify-center snap-start">
+    <div id="home" className="h-screen bg-black justify-center snap-start snap-always">
       <div className="flex flex-1 h-full items-center justify-center">
         <div className="flex flex-col flex-1 justify-center items-center">
           <div className="font-saira text-white text-center thirds-ls">
