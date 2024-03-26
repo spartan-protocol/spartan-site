@@ -13,11 +13,7 @@ const TradeButtons = ({ isMetaMask }) => {
     },
     {
       label: "MEXC Exchange",
-      url: "https://www.mexc.com/exchange/SPARTA_USDT?inviteCode=1SsHx",
-    },
-    {
-      label: "BitKan Exchange",
-      url: "https://bitkan.com/referral/SPARTAN",
+      url: "https://www.mexc.com/exchange/SPARTA1_USDT?inviteCode=1SsHx",
     },
   ];
 
